@@ -17,9 +17,11 @@ export default defineConfig({
 	integrations: [
 		react(),
 		emdash({
-			database: sqlite({ url: "file:./data.db" }),
+			database: sqlite({
+				url: process.env.EMDASH_DB_URL || "file:./data.db",
+			}),
 			storage: local({
-				directory: "./uploads",
+				directory: process.env.EMDASH_UPLOADS_DIR || "./uploads",
 				baseUrl: "/_emdash/api/media/file",
 			}),
 			plugins: [auditLogPlugin()],
