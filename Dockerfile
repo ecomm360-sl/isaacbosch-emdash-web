@@ -20,19 +20,13 @@ RUN pnpm install --frozen-lockfile
 RUN pnpm run build
 RUN cd templates/blog && pnpm run build
 
-# Stage 2: Production
+# Stage 2: Production — copy the entire workspace to preserve pnpm symlinks
 FROM node:22-slim AS runtime
 
 WORKDIR /app
 
-# Copy the built blog template output
-COPY --from=builder /app/templates/blog/dist ./dist
-COPY --from=builder /app/templates/blog/seed ./seed
-
-# Copy node_modules (includes workspace links)
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/packages ./packages
-COPY --from=builder /app/templates/blog/node_modules ./templates/blog/node_modules
+# Copy the full workspace (pnpm symlinks require the complete structure)
+COPY --from=builder /app ./
 
 # Create directories for persistent data
 RUN mkdir -p /app/data /app/uploads
@@ -42,5 +36,7 @@ ENV PORT=4321
 ENV NODE_ENV=production
 
 EXPOSE 4321
+
+WORKDIR /app/templates/blog
 
 CMD ["node", "./dist/server/entry.mjs"]
