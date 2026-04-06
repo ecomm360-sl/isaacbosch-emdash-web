@@ -8,6 +8,7 @@ node_modules
 *.md
 !README.md
 demos
+!demos/isaacbosch
 e2e
 scripts
 skills
