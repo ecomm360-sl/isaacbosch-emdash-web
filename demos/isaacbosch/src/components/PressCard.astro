@@ -1,0 +1,136 @@
+---
+interface Props {
+	item: {
+		data: {
+			title: string;
+			source?: string | null;
+			date?: string | null;
+			url?: string | null;
+			summary?: string | null;
+		};
+	};
+}
+
+const { item } = Astro.props;
+const isExternal = !!item.data.url;
+const formattedDate = item.data.date
+	? new Date(item.data.date).toLocaleDateString("es-ES", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+		})
+	: null;
+---
+
+<article class="press-card">
+	{
+		isExternal ? (
+			<a
+				href={item.data.url!}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="card-link"
+			>
+				<h3 class="card-title">
+					{item.data.title}
+					<span class="external-icon" aria-hidden="true">
+						&#8599;
+					</span>
+				</h3>
+				<div class="card-meta">
+					{item.data.source && (
+						<span class="card-source">{item.data.source}</span>
+					)}
+					{item.data.source && formattedDate && (
+						<span class="meta-sep">&middot;</span>
+					)}
+					{formattedDate && <time>{formattedDate}</time>}
+				</div>
+				{item.data.summary && (
+					<p class="card-summary">{item.data.summary}</p>
+				)}
+			</a>
+		) : (
+			<div class="card-link">
+				<h3 class="card-title">{item.data.title}</h3>
+				<div class="card-meta">
+					{item.data.source && (
+						<span class="card-source">{item.data.source}</span>
+					)}
+					{item.data.source && formattedDate && (
+						<span class="meta-sep">&middot;</span>
+					)}
+					{formattedDate && <time>{formattedDate}</time>}
+				</div>
+				{item.data.summary && (
+					<p class="card-summary">{item.data.summary}</p>
+				)}
+			</div>
+		)
+	}
+</article>
+
+<style>
+	.press-card {
+		border-radius: var(--radius);
+		background: var(--color-surface);
+		transition: background 0.15s ease;
+	}
+
+	.press-card:hover {
+		background: var(--color-border);
+	}
+
+	.card-link {
+		display: block;
+		padding: var(--spacing-4) var(--spacing-5);
+		text-decoration: none;
+		color: inherit;
+	}
+
+	a.card-link {
+		cursor: pointer;
+	}
+
+	.card-title {
+		font-size: var(--font-size-base);
+		font-weight: 600;
+		line-height: 1.4;
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-1) 0;
+	}
+
+	.external-icon {
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+		margin-left: var(--spacing-1);
+	}
+
+	.card-meta {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-2);
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+		margin-bottom: var(--spacing-2);
+	}
+
+	.meta-sep {
+		color: var(--color-border);
+	}
+
+	.card-source {
+		font-weight: 500;
+	}
+
+	.card-summary {
+		font-size: var(--font-size-sm);
+		line-height: 1.5;
+		color: var(--color-text-secondary);
+		margin: 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>

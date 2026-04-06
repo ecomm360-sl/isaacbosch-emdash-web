@@ -1,0 +1,123 @@
+---
+export const prerender = false;
+
+import { getTerm, getEntriesByTerm } from "emdash";
+import Base from "../../../layouts/Base.astro";
+import PostCard from "../../../components/PostCard.astro";
+
+const { slug } = Astro.params;
+
+const term = await getTerm("tag", slug!);
+
+if (!term) {
+	return Astro.redirect("/404");
+}
+
+const { entries: posts, cacheHint } = await getEntriesByTerm("tag", slug!);
+
+Astro.cache.set(cacheHint);
+---
+
+<Base
+	title={`Etiqueta: ${term.label}`}
+	description={`Articulos etiquetados con ${term.label}`}
+>
+	<div class="taxonomy-page">
+		<header class="page-header">
+			<p class="page-label">Etiqueta</p>
+			<h1>{term.label}</h1>
+		</header>
+
+		{
+			posts.length === 0 ? (
+				<section class="empty-state">
+					<p>No hay publicaciones con esta etiqueta.</p>
+				</section>
+			) : (
+				<div class="posts-grid">
+					{posts.map((post) => (
+						<PostCard post={post} />
+					))}
+				</div>
+			)
+		}
+
+		<nav class="back-link">
+			<a href="/blog">&larr; Volver al blog</a>
+		</nav>
+	</div>
+</Base>
+
+<style>
+	.taxonomy-page {
+		max-width: var(--wide-width);
+		margin: 0 auto;
+		padding: var(--spacing-16) var(--spacing-6);
+	}
+
+	.page-header {
+		margin-bottom: var(--spacing-10);
+	}
+
+	.page-label {
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: var(--tracking-wider);
+		color: var(--color-accent);
+		margin-bottom: var(--spacing-2);
+	}
+
+	.page-header h1 {
+		font-size: var(--font-size-4xl);
+		font-weight: 700;
+		letter-spacing: var(--tracking-tight);
+	}
+
+	.posts-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--spacing-12) var(--spacing-8);
+	}
+
+	.empty-state {
+		text-align: center;
+		padding: var(--spacing-20) 0;
+		color: var(--color-muted);
+	}
+
+	.back-link {
+		margin-top: var(--spacing-12);
+		padding-top: var(--spacing-6);
+		border-top: 1px solid var(--color-border-subtle);
+	}
+
+	.back-link a {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-secondary);
+		text-decoration: none;
+		transition: color var(--transition-fast);
+	}
+
+	.back-link a:hover {
+		color: var(--color-accent);
+	}
+
+	@media (max-width: 900px) {
+		.taxonomy-page {
+			padding: var(--spacing-8) var(--spacing-4);
+		}
+
+		.posts-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--spacing-8) var(--spacing-6);
+		}
+	}
+
+	@media (max-width: 600px) {
+		.posts-grid {
+			grid-template-columns: 1fr;
+			gap: var(--spacing-8);
+		}
+	}
+</style>

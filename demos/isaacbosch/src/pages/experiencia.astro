@@ -1,0 +1,51 @@
+---
+export const prerender = false;
+
+import { getEmDashEntry, getSeoMeta } from "emdash";
+import { PortableText } from "emdash/ui";
+import Base from "../layouts/Base.astro";
+import SiteBlocks from "../components/SiteBlocks.astro";
+
+const { entry, cacheHint } = await getEmDashEntry("pages", "experiencia");
+Astro.cache.set(cacheHint);
+
+if (!entry) {
+	return Astro.redirect("/404");
+}
+
+const seo = getSeoMeta(entry);
+---
+
+<Base
+	title={seo.title ?? "Experiencia"}
+	description={seo.description}
+	image={seo.image}
+	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
+>
+	<article class="page-content">
+		{entry.data.title && <h1 class="page-title">{entry.data.title}</h1>}
+		{
+			entry.data.content && (
+				<div class="prose">
+					<SiteBlocks value={entry.data.content} />
+				</div>
+			)
+		}
+	</article>
+</Base>
+
+<style>
+	.page-content {
+		max-width: var(--content-width);
+		margin: 0 auto;
+		padding: var(--spacing-16) var(--spacing-6);
+	}
+
+	.page-title {
+		font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+		font-weight: 700;
+		letter-spacing: var(--tracking-tight);
+		line-height: var(--leading-tight);
+		margin: 0 0 var(--spacing-8) 0;
+	}
+</style>

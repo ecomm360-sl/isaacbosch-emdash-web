@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Pagina no encontrada" robots="noindex">
+	<div class="not-found">
+		<h1>404</h1>
+		<p>Pagina no encontrada</p>
+		<a href="/">Volver al inicio</a>
+	</div>
+</Base>
+
+<style>
+	.not-found {
+		text-align: center;
+		padding: var(--spacing-24) var(--spacing-6);
+	}
+
+	.not-found h1 {
+		font-size: var(--font-size-5xl);
+		font-weight: 700;
+		margin-bottom: var(--spacing-2);
+		color: var(--color-border);
+	}
+
+	.not-found p {
+		color: var(--color-muted);
+		font-size: var(--font-size-lg);
+		margin-bottom: var(--spacing-6);
+	}
+
+	.not-found a {
+		color: var(--color-text);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.15s ease;
+	}
+
+	.not-found a:hover {
+		color: var(--color-accent);
+	}
+</style>

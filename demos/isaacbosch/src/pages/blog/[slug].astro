@@ -1,0 +1,206 @@
+---
+export const prerender = false;
+
+import { getEmDashEntry, getSeoMeta, getEntryTerms } from "emdash";
+import { Image, WidgetArea } from "emdash/ui";
+import Base from "../../layouts/Base.astro";
+import SiteBlocks from "../../components/SiteBlocks.astro";
+import TagList from "../../components/TagList.astro";
+
+const { slug } = Astro.params;
+
+const { entry, cacheHint } = await getEmDashEntry("posts", slug!);
+
+if (!entry) {
+	return Astro.redirect("/404");
+}
+
+Astro.cache.set(cacheHint);
+
+const seo = getSeoMeta(entry);
+const tags = await getEntryTerms("posts", entry.data.id, "tag");
+
+const publishedDate = entry.data.publishedAt
+	? entry.data.publishedAt.toLocaleDateString("es-ES", {
+			year: "numeric",
+			month: "long",
+			day: "numeric",
+		})
+	: null;
+
+const publishedTime = entry.data.publishedAt
+	? entry.data.publishedAt.toISOString()
+	: null;
+---
+
+<Base
+	title={seo.title}
+	description={seo.description}
+	image={seo.ogImage}
+	type="article"
+	publishedTime={publishedTime}
+	author="Isaac Bosch"
+	content={{ collection: "posts", id: entry.data.id, slug: entry.id }}
+>
+	<div class="article-layout">
+		<article class="article-content">
+			<header class="article-header">
+				<h1>{entry.data.title}</h1>
+				{publishedDate && <time class="article-date">{publishedDate}</time>}
+			</header>
+
+			{
+				entry.data.featured_image && (
+					<div class="article-image">
+						<Image image={entry.data.featured_image} />
+					</div>
+				)
+			}
+
+			<div class="article-body">
+				{entry.data.content && <SiteBlocks value={entry.data.content} />}
+			</div>
+
+			{
+				tags.length > 0 && (
+					<footer class="article-footer">
+						<TagList tags={tags.map((t) => ({ slug: t.slug, label: t.label }))} />
+					</footer>
+				)
+			}
+		</article>
+
+		<aside class="article-sidebar">
+			<WidgetArea name="sidebar" />
+		</aside>
+	</div>
+</Base>
+
+<style>
+	.article-layout {
+		display: grid;
+		grid-template-columns: 1fr minmax(0, var(--content-width)) 280px 1fr;
+		gap: var(--spacing-12);
+		max-width: var(--wide-width);
+		margin: 0 auto;
+		padding: var(--spacing-16) var(--spacing-6);
+	}
+
+	.article-content {
+		grid-column: 2;
+	}
+
+	.article-sidebar {
+		grid-column: 3;
+		padding-top: var(--spacing-16);
+	}
+
+	.article-header {
+		margin-bottom: var(--spacing-8);
+	}
+
+	.article-header h1 {
+		font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+		font-weight: 700;
+		line-height: var(--leading-tight);
+		letter-spacing: var(--tracking-tight);
+	}
+
+	.article-date {
+		display: block;
+		margin-top: var(--spacing-3);
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+	}
+
+	.article-image {
+		margin-bottom: var(--spacing-8);
+		border-radius: var(--radius-lg);
+		overflow: hidden;
+		background: var(--color-surface);
+	}
+
+	.article-image :global(img) {
+		width: 100%;
+		height: auto;
+	}
+
+	.article-body {
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+	}
+
+	.article-body :global(h2) {
+		margin-top: var(--spacing-10);
+		margin-bottom: var(--spacing-4);
+		font-size: var(--font-size-2xl);
+		color: var(--color-text);
+	}
+
+	.article-body :global(h3) {
+		margin-top: var(--spacing-8);
+		margin-bottom: var(--spacing-3);
+		font-size: var(--font-size-xl);
+		color: var(--color-text);
+	}
+
+	.article-body :global(p) {
+		margin-bottom: var(--spacing-4);
+	}
+
+	.article-body :global(ul),
+	.article-body :global(ol) {
+		margin-bottom: var(--spacing-4);
+		padding-left: var(--spacing-6);
+	}
+
+	.article-body :global(li) {
+		margin-bottom: var(--spacing-2);
+	}
+
+	.article-body :global(blockquote) {
+		margin: var(--spacing-6) 0;
+		padding-left: var(--spacing-4);
+		border-left: 3px solid var(--color-accent);
+		color: var(--color-text);
+		font-style: italic;
+	}
+
+	.article-body :global(a) {
+		color: var(--color-accent);
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.article-body :global(a:hover) {
+		color: var(--color-accent-hover);
+	}
+
+	.article-footer {
+		margin-top: var(--spacing-10);
+		padding-top: var(--spacing-6);
+		border-top: 1px solid var(--color-border-subtle);
+	}
+
+	@media (max-width: 1024px) {
+		.article-layout {
+			grid-template-columns: 1fr;
+			padding: var(--spacing-8) var(--spacing-4);
+		}
+
+		.article-content {
+			grid-column: 1;
+			max-width: var(--content-width);
+			margin: 0 auto;
+		}
+
+		.article-sidebar {
+			grid-column: 1;
+			max-width: var(--content-width);
+			margin: 0 auto;
+			padding-top: var(--spacing-8);
+			border-top: 1px solid var(--color-border-subtle);
+		}
+	}
+</style>

@@ -1,0 +1,129 @@
+---
+import { Image } from "emdash/ui";
+
+interface Props {
+	project: {
+		id: string;
+		data: {
+			title: string;
+			summary?: string | null;
+			client?: string | null;
+			year?: string | number | null;
+			featured_image?: { id: string; src?: string; alt?: string } | null;
+		};
+	};
+}
+
+const { project } = Astro.props;
+---
+
+<article class="project-card">
+	<a href={`/proyectos/${project.id}`} class="card-link">
+		{
+			project.data.featured_image && (
+				<div class="card-image">
+					<Image image={project.data.featured_image} />
+				</div>
+			)
+		}
+		<div class="card-body">
+			<h3 class="card-title">{project.data.title}</h3>
+			{
+				(project.data.client || project.data.year) && (
+					<div class="card-meta">
+						{project.data.client && (
+							<span class="card-client">{project.data.client}</span>
+						)}
+						{project.data.client && project.data.year && (
+							<span class="meta-sep">&middot;</span>
+						)}
+						{project.data.year && <span>{project.data.year}</span>}
+					</div>
+				)
+			}
+			{
+				project.data.summary && (
+					<p class="card-summary">{project.data.summary}</p>
+				)
+			}
+		</div>
+	</a>
+</article>
+
+<style>
+	.project-card {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card-link {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.card-image {
+		aspect-ratio: 16 / 10;
+		overflow: hidden;
+		border-radius: var(--radius);
+		background: var(--color-surface);
+		margin-bottom: var(--spacing-3);
+	}
+
+	.card-image :global(img) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.2s ease;
+	}
+
+	.card-link:hover .card-image :global(img) {
+		transform: scale(1.02);
+	}
+
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-1);
+	}
+
+	.card-title {
+		font-size: var(--font-size-lg);
+		font-weight: 600;
+		line-height: 1.3;
+		color: var(--color-text);
+		margin: 0;
+		transition: color 0.15s ease;
+	}
+
+	.card-link:hover .card-title {
+		color: var(--color-accent);
+	}
+
+	.card-meta {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-2);
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+	}
+
+	.meta-sep {
+		color: var(--color-border);
+	}
+
+	.card-client {
+		font-weight: 500;
+	}
+
+	.card-summary {
+		font-size: var(--font-size-base);
+		line-height: 1.6;
+		color: var(--color-text-secondary);
+		margin: 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>

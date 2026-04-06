@@ -1,0 +1,31 @@
+import node from "@astrojs/node";
+import react from "@astrojs/react";
+import { auditLogPlugin } from "@emdash-cms/plugin-audit-log";
+import { defineConfig } from "astro/config";
+import emdash, { local } from "emdash/astro";
+import { sqlite } from "emdash/db";
+
+export default defineConfig({
+	output: "server",
+	adapter: node({
+		mode: "standalone",
+	}),
+	image: {
+		layout: "constrained",
+		responsiveStyles: true,
+	},
+	integrations: [
+		react(),
+		emdash({
+			database: sqlite({
+				url: process.env.EMDASH_DB_URL || "file:./data.db",
+			}),
+			storage: local({
+				directory: process.env.EMDASH_UPLOADS_DIR || "./uploads",
+				baseUrl: "/_emdash/api/media/file",
+			}),
+			plugins: [auditLogPlugin()],
+		}),
+	],
+	devToolbar: { enabled: false },
+});

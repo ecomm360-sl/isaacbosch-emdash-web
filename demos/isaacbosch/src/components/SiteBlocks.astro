@@ -1,0 +1,27 @@
+---
+import type { PortableTextBlock } from "emdash";
+import { PortableText } from "emdash/ui";
+import Hero from "./blocks/Hero.astro";
+import FAQ from "./blocks/FAQ.astro";
+import Services from "./blocks/Services.astro";
+import Timeline from "./blocks/Timeline.astro";
+import CTA from "./blocks/CTA.astro";
+import Press from "./blocks/Press.astro";
+
+interface Props {
+	value: PortableTextBlock[];
+}
+
+const { value } = Astro.props;
+
+const siteTypes = {
+	"site.hero": Hero,
+	"site.faq": FAQ,
+	"site.services": Services,
+	"site.timeline": Timeline,
+	"site.cta": CTA,
+	"site.press": Press,
+};
+---
+
+<PortableText value={value} components={{ type: siteTypes }} />

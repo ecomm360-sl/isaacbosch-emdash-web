@@ -1,0 +1,1708 @@
+{
+	"$schema": "https://emdashcms.com/seed.schema.json",
+	"version": "1",
+	"meta": {
+		"name": "Isaac Bosch",
+		"description": "Consultor eCommerce B2B e IA - Web personal y blog",
+		"author": "Isaac Bosch"
+	},
+
+	"settings": {
+		"title": "Isaac Bosch",
+		"tagline": "Digitalizo y automatizo procesos integrando ERP, IA y Agentes Autonomos"
+	},
+
+	"collections": [
+		{
+			"slug": "posts",
+			"label": "Posts",
+			"labelSingular": "Post",
+			"supports": ["drafts", "revisions", "search", "seo"],
+			"commentsEnabled": true,
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Titulo",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "featured_image",
+					"label": "Imagen destacada",
+					"type": "image"
+				},
+				{
+					"slug": "content",
+					"label": "Contenido",
+					"type": "portableText",
+					"searchable": true
+				},
+				{
+					"slug": "excerpt",
+					"label": "Extracto",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"slug": "pages",
+			"label": "Paginas",
+			"labelSingular": "Pagina",
+			"supports": ["drafts", "revisions", "search", "seo"],
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Titulo",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "content",
+					"label": "Contenido",
+					"type": "portableText",
+					"searchable": true
+				}
+			]
+		},
+		{
+			"slug": "services",
+			"label": "Servicios",
+			"labelSingular": "Servicio",
+			"supports": ["drafts", "revisions", "seo"],
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Titulo",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "icon",
+					"label": "Icono",
+					"type": "string"
+				},
+				{
+					"slug": "summary",
+					"label": "Resumen",
+					"type": "text",
+					"searchable": true
+				},
+				{
+					"slug": "content",
+					"label": "Contenido",
+					"type": "portableText",
+					"searchable": true
+				},
+				{
+					"slug": "order",
+					"label": "Orden",
+					"type": "integer"
+				}
+			]
+		},
+		{
+			"slug": "press",
+			"label": "Prensa",
+			"labelSingular": "Mencion",
+			"supports": ["drafts"],
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Titulo",
+					"type": "string",
+					"required": true
+				},
+				{
+					"slug": "source",
+					"label": "Fuente",
+					"type": "string"
+				},
+				{
+					"slug": "url",
+					"label": "URL",
+					"type": "string"
+				},
+				{
+					"slug": "date",
+					"label": "Fecha",
+					"type": "string"
+				},
+				{
+					"slug": "summary",
+					"label": "Resumen",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"slug": "projects",
+			"label": "Proyectos",
+			"labelSingular": "Proyecto",
+			"supports": ["drafts", "revisions", "search", "seo"],
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Titulo",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "client",
+					"label": "Cliente",
+					"type": "string"
+				},
+				{
+					"slug": "year",
+					"label": "Ano",
+					"type": "string"
+				},
+				{
+					"slug": "summary",
+					"label": "Resumen",
+					"type": "text",
+					"searchable": true
+				},
+				{
+					"slug": "content",
+					"label": "Contenido",
+					"type": "portableText",
+					"searchable": true
+				},
+				{
+					"slug": "featured_image",
+					"label": "Imagen destacada",
+					"type": "image"
+				},
+				{
+					"slug": "url",
+					"label": "URL del proyecto",
+					"type": "string"
+				}
+			]
+		}
+	],
+
+	"taxonomies": [
+		{
+			"name": "category",
+			"label": "Categorias",
+			"labelSingular": "Categoria",
+			"hierarchical": true,
+			"collections": ["posts"],
+			"terms": [
+				{ "slug": "ecommerce-b2b", "label": "eCommerce B2B" },
+				{ "slug": "inteligencia-artificial", "label": "Inteligencia Artificial" },
+				{ "slug": "automatizacion", "label": "Automatizacion" },
+				{ "slug": "integracion-erp", "label": "Integracion ERP" },
+				{ "slug": "transformacion-digital", "label": "Transformacion Digital" },
+				{ "slug": "consultoria", "label": "Consultoria" },
+				{ "slug": "formacion", "label": "Formacion Corporativa" }
+			]
+		},
+		{
+			"name": "tag",
+			"label": "Etiquetas",
+			"labelSingular": "Etiqueta",
+			"hierarchical": false,
+			"collections": ["posts"],
+			"terms": [
+				{ "slug": "ia-agentes", "label": "Agentes IA" },
+				{ "slug": "chatbots", "label": "Chatbots" },
+				{ "slug": "magento", "label": "Magento" },
+				{ "slug": "prestashop", "label": "PrestaShop" },
+				{ "slug": "shopify", "label": "Shopify" },
+				{ "slug": "sap", "label": "SAP" },
+				{ "slug": "odoo", "label": "Odoo" },
+				{ "slug": "barcelona", "label": "Barcelona" },
+				{ "slug": "espana", "label": "Espana" },
+				{ "slug": "pyme", "label": "PYME" },
+				{ "slug": "b2b", "label": "B2B" },
+				{ "slug": "seo-tag", "label": "SEO" },
+				{ "slug": "roi", "label": "ROI" },
+				{ "slug": "caso-de-exito", "label": "Caso de Exito" },
+				{ "slug": "tendencias", "label": "Tendencias" },
+				{ "slug": "guia", "label": "Guia" },
+				{ "slug": "faq", "label": "FAQ" }
+			]
+		}
+	],
+
+	"bylines": [
+		{
+			"id": "byline-isaac",
+			"slug": "isaac-bosch",
+			"displayName": "Isaac Bosch"
+		}
+	],
+
+	"menus": [
+		{
+			"name": "primary",
+			"label": "Navegacion Principal",
+			"items": [
+				{ "type": "custom", "label": "Inicio", "url": "/" },
+				{ "type": "custom", "label": "Sobre mi", "url": "/sobre-mi" },
+				{ "type": "custom", "label": "Servicios", "url": "/servicios" },
+				{ "type": "custom", "label": "Blog", "url": "/blog" },
+				{ "type": "custom", "label": "Proyectos", "url": "/proyectos" },
+				{ "type": "custom", "label": "Contacto", "url": "/contacto" }
+			]
+		}
+	],
+
+	"widgetAreas": [
+		{
+			"name": "sidebar",
+			"label": "Sidebar",
+			"description": "Sidebar del blog",
+			"widgets": [
+				{
+					"type": "component",
+					"componentId": "core:search",
+					"title": "Buscar"
+				},
+				{
+					"type": "component",
+					"componentId": "core:categories",
+					"title": "Categorias"
+				},
+				{
+					"type": "component",
+					"componentId": "core:tags",
+					"title": "Etiquetas"
+				},
+				{
+					"type": "component",
+					"componentId": "core:recent-posts",
+					"title": "Articulos recientes",
+					"settings": {
+						"count": 5,
+						"showDate": true
+					}
+				}
+			]
+		},
+		{
+			"name": "footer",
+			"label": "Footer",
+			"description": "Widget del footer",
+			"widgets": [
+				{
+					"type": "content",
+					"title": "Sobre Isaac Bosch",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Consultor especializado en eCommerce B2B, integracion ERP e inteligencia artificial. Ayudo a empresas a digitalizar y automatizar sus procesos comerciales desde Barcelona."
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+
+	"redirects": [
+		{
+			"source": "/consultor-empresas",
+			"destination": "/sobre-mi",
+			"type": 301
+		},
+		{
+			"source": "/experiencia-consultor",
+			"destination": "/experiencia",
+			"type": 301
+		},
+		{
+			"source": "/notes",
+			"destination": "/blog",
+			"type": 301
+		},
+		{
+			"source": "/projects",
+			"destination": "/proyectos",
+			"type": 301
+		}
+	],
+
+	"content": {
+		"pages": [
+			{
+				"id": "sobre-mi",
+				"slug": "sobre-mi",
+				"status": "published",
+				"data": {
+					"title": "Sobre mi",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Soy Isaac Bosch, consultor especializado en eCommerce B2B, integracion de sistemas ERP y automatizacion con inteligencia artificial. Desde Barcelona, ayudo a empresas a construir infraestructuras digitales que escalan."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Lo que hago" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Como CEO y fundador de eComm360 (desde 2018), lidero proyectos de eCommerce B2B y automatizacion con IA para empresas que necesitan integrar sus sistemas de gestion con canales de venta online. Antes de eso, funde AlabazWeb (2015), una agencia de desarrollo web especializada en comercio electronico."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Entre 2010 y 2015 fui Director Tecnico en MSMK, donde lideraba el area digital y coordinaba equipos de desarrollo para proyectos de transformacion digital corporativa."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Mi enfoque" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Claridad sobre complejidad."
+								},
+								{
+									"_type": "span",
+									"text": " Las soluciones mas robustas son las que cualquier miembro del equipo puede entender y mantener."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Sistemas escalables."
+								},
+								{
+									"_type": "span",
+									"text": " Cada decision tecnica se toma pensando en el crecimiento futuro, no solo en la necesidad inmediata."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Tecnologia al servicio de las personas."
+								},
+								{
+									"_type": "span",
+									"text": " La automatizacion existe para liberar tiempo y capacidad humana, no para reemplazarla."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Formacion" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Executive MBA por EAE Business School (2015-2019). Posgrado en Transformacion Digital por EADA Business School (2025). Formacion continua en IA aplicada, arquitectura de sistemas y estrategia comercial B2B."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "experiencia",
+				"slug": "experiencia",
+				"status": "published",
+				"data": {
+					"title": "Experiencia profesional",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Mas de 15 anos de trayectoria en tecnologia, eCommerce y transformacion digital."
+								}
+							]
+						},
+						{
+							"_type": "site.timeline",
+							"_key": "timeline-1",
+							"headline": "Trayectoria profesional",
+							"items": [
+								{
+									"year": "2018 - Presente",
+									"title": "CEO & Fundador",
+									"company": "eComm360",
+									"description": "Liderando proyectos de eCommerce B2B y automatizacion con IA. Integracion de ERPs con plataformas de venta online. Desarrollo de agentes autonomos para procesos comerciales.",
+									"current": true
+								},
+								{
+									"year": "2015 - Presente",
+									"title": "CEO & Fundador",
+									"company": "AlabazWeb",
+									"description": "Agencia de desarrollo web especializada en comercio electronico. Proyectos con Magento, PrestaShop, Shopify y soluciones a medida.",
+									"current": true
+								},
+								{
+									"year": "2010 - 2015",
+									"title": "Director Tecnico",
+									"company": "MSMK",
+									"description": "Liderazgo del area digital. Coordinacion de equipos de desarrollo para proyectos de transformacion digital corporativa."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "contacto",
+				"slug": "contacto",
+				"status": "published",
+				"data": {
+					"title": "Contacto",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Hablemos de tu proyecto. Estoy disponible para proyectos remotos globales y presenciales en Barcelona."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Datos de contacto" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Telefono: "
+								},
+								{
+									"_type": "span",
+									"text": "+34 655 588 668 (llamadas y WhatsApp)"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "LinkedIn: "
+								},
+								{
+									"_type": "span",
+									"text": "/in/isaacbosch"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Ubicacion: "
+								},
+								{
+									"_type": "span",
+									"text": "Pla. Urquinaona, 6, 14B, 08010 Barcelona, Espana"
+								}
+							]
+						},
+						{
+							"_type": "site.cta",
+							"_key": "contact-cta",
+							"headline": "Hablamos de tu proyecto?",
+							"description": "Si tienes un proyecto de eCommerce B2B, necesitas automatizar procesos con IA o integrar tu ERP, contactame para una primera consulta sin compromiso.",
+							"primaryCta": { "label": "Enviar mensaje por LinkedIn", "url": "https://linkedin.com/in/isaacbosch" }
+						}
+					]
+				}
+			},
+			{
+				"id": "privacidad",
+				"slug": "privacidad",
+				"status": "published",
+				"data": {
+					"title": "Politica de privacidad",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Esta web recopila datos minimos necesarios para su funcionamiento. No se comparten datos personales con terceros sin consentimiento explicito. Para ejercer tus derechos de acceso, rectificacion o supresion, contacta a traves de los datos indicados en la pagina de contacto."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Cookies" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Esta web utiliza cookies tecnicas necesarias para el funcionamiento del sitio. No se utilizan cookies de rastreo ni publicidad."
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"services": [
+			{
+				"id": "consultoria-ecommerce-b2b",
+				"slug": "consultoria-ecommerce-b2b",
+				"status": "published",
+				"data": {
+					"title": "Consultoria eCommerce B2B",
+					"icon": "shopping-cart",
+					"summary": "Estrategia, implementacion y optimizacion de plataformas de comercio electronico B2B. Seleccion de tecnologia, arquitectura de catalogo y flujos de compra complejos.",
+					"order": 1,
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El eCommerce B2B no es simplemente poner un catalogo online. Implica gestionar precios por cliente, volumenes, aprobaciones de compra, integracion con logistica y multiples listas de precios. Ayudo a empresas a disenar e implementar estas soluciones de forma que realmente se usen y generen valor."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "En que puedo ayudarte" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Seleccion de plataforma segun tus necesidades reales. Diseno de arquitectura de catalogo B2B con precios segmentados y descuentos por volumen. Estrategia de marketplace B2B para fabricantes y distribuidores. Optimizacion de conversion y UX especifica para compradores profesionales."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Resultado esperado" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Una plataforma B2B que reduce friccion en el proceso de compra, libera a tu equipo comercial de tareas repetitivas y abre un canal de venta 24/7 para tus clientes."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "agentes-ia-automatizacion",
+				"slug": "agentes-ia-automatizacion",
+				"status": "published",
+				"data": {
+					"title": "Agentes IA y Automatizacion",
+					"icon": "cpu",
+					"summary": "Diseno e implementacion de agentes de IA autonomos para automatizar procesos comerciales, atencion al cliente y operaciones B2B.",
+					"order": 2,
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Los agentes de IA van mas alla de los chatbots tradicionales. Son sistemas autonomos capaces de tomar decisiones, ejecutar tareas y aprender de los resultados. Desde la automatizacion de la atencion al cliente hasta la gestion autonoma de inventario, los agentes de IA transforman la operativa B2B."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Casos de uso" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Agentes de atencion al cliente que resuelven consultas y procesan pedidos. Automatizacion de catalogos con IA generativa. Agentes de ventas que cualifican leads y preparan propuestas. Sistemas de monitorizacion de precios y competencia con alertas inteligentes."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Mi enfoque" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cada implementacion empieza identificando el proceso con mayor impacto y construyendo un agente que resuelva ese problema concreto. Iteramos, medimos y escalamos solo cuando hay resultados demostrables."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "integracion-erp-ecommerce",
+				"slug": "integracion-erp-ecommerce",
+				"status": "published",
+				"data": {
+					"title": "Integracion ERP-eCommerce",
+					"icon": "link",
+					"summary": "Conexion bidireccional entre sistemas ERP (SAP, Odoo, a medida) y plataformas de eCommerce. Sincronizacion de catalogo, precios, stock y pedidos en tiempo real.",
+					"order": 3,
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "La integracion entre ERP y eCommerce es el paso critico que la mayoria de empresas B2B subestiman. Sin ella, tu equipo duplica trabajo: introduce pedidos manualmente, reconcilia stock a mano y gestiona precios en dos sistemas diferentes."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Que integro" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Catalogo de productos y atributos. Precios personalizados por cliente. Stock en tiempo real desde multiples almacenes. Pedidos bidireccionales. Estados de envio y tracking. He trabajado con SAP Business One, SAP S/4HANA, Odoo, Dynamics y ERPs a medida."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Metodologia" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Mapeo completo de datos entre ambos sistemas. Diseno de la arquitectura de integracion. Implementacion con pruebas exhaustivas. Monitorizacion y optimizacion post-lanzamiento."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "formacion-corporativa",
+				"slug": "formacion-corporativa",
+				"status": "published",
+				"data": {
+					"title": "Formacion Corporativa Digital",
+					"icon": "graduation-cap",
+					"summary": "Programas de formacion para equipos en eCommerce, automatizacion, IA aplicada y transformacion digital. Formatos presenciales y online.",
+					"order": 4,
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "La tecnologia solo funciona si el equipo la entiende y la adopta. Diseno e imparto programas de formacion que transforman la capacidad digital de las organizaciones."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Programas disponibles" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Introduccion al eCommerce B2B para equipos comerciales. IA aplicada al negocio. Automatizacion de procesos con herramientas no-code y agentes IA. Estrategia digital para comites de direccion. Gestion de proyectos de integracion ERP-eCommerce."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Formato" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cada programa se adapta al nivel del equipo. Combino teoria con casos practicos reales y ejercicios hands-on. Formatos presenciales en Barcelona o remotos para equipos distribuidos."
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"press": [
+			{
+				"id": "press-1",
+				"slug": "futuro-ecommerce-b2b-ia-erp",
+				"status": "published",
+				"data": {
+					"title": "El futuro del eCommerce B2B: Integracion con IA y ERP",
+					"source": "eCommerce News",
+					"url": "#",
+					"date": "2024-03-15",
+					"summary": "Articulo sobre como la convergencia de IA, ERP y eCommerce esta transformando el comercio B2B en Espana."
+				}
+			},
+			{
+				"id": "press-2",
+				"slug": "transformacion-digital-sector-b2b",
+				"status": "published",
+				"data": {
+					"title": "Transformacion digital en el sector B2B: Casos de exito",
+					"source": "Retail Digital",
+					"url": "#",
+					"date": "2024-02-20",
+					"summary": "Entrevista sobre los retos y oportunidades de la digitalizacion en empresas B2B espanolas."
+				}
+			},
+			{
+				"id": "press-3",
+				"slug": "agentes-ia-autonomos-comercio-electronico",
+				"status": "published",
+				"data": {
+					"title": "Agentes IA autonomos: La nueva frontera del comercio electronico",
+					"source": "Tech Today",
+					"url": "#",
+					"date": "2024-01-10",
+					"summary": "Analisis sobre como los agentes autonomos estan cambiando la operativa del eCommerce B2B."
+				}
+			},
+			{
+				"id": "press-4",
+				"slug": "automatizacion-procesos-b2b-entrevista",
+				"status": "published",
+				"data": {
+					"title": "Automatizacion de procesos B2B: Entrevista con Isaac Bosch",
+					"source": "Business Innovation",
+					"url": "#",
+					"date": "2023-12-05",
+					"summary": "Conversacion sobre las claves para automatizar con exito los procesos comerciales en el entorno B2B."
+				}
+			}
+		],
+		"posts": [
+			{
+				"id": "post-1",
+				"slug": "guia-completa-ecommerce-b2b-2025",
+				"status": "published",
+				"published_at": "2025-03-10",
+				"data": {
+					"title": "Guia completa de eCommerce B2B en 2025: tendencias, plataformas y estrategias",
+					"excerpt": "Todo lo que necesitas saber para lanzar o escalar tu canal de ventas B2B online en 2025. Plataformas, tendencias y estrategias probadas.",
+					"featured_image": {
+						"$media": {
+							"url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=800&fit=crop",
+							"alt": "Equipo de negocios revisando datos en pantalla",
+							"filename": "ecommerce-b2b-2025.jpg"
+						}
+					},
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "El eCommerce B2B ha dejado de ser opcional. En 2025, las empresas que no ofrecen un canal de venta digital a sus clientes profesionales estan perdiendo cuota de mercado frente a competidores que si lo hacen. Pero montar una tienda B2B online no es simplemente copiar el modelo B2C." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "El estado del mercado B2B digital" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "El mercado global de eCommerce B2B supera ya los 20 billones de dolares y crece a un ritmo del 17% anual. En Espana, la adopcion ha sido mas lenta pero esta acelerando: cada vez mas fabricantes, distribuidores y mayoristas entienden que necesitan un canal digital que complemente al equipo comercial tradicional para pedidos recurrentes." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Tendencias clave para 2025" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La personalizacion basada en IA esta transformando la experiencia de compra B2B. Los catalogos se adaptan automaticamente al historial de cada cliente. Los portales self-service permiten a los compradores gestionar sus pedidos sin intermediarios. La integracion nativa con ERPs ya no es un nice-to-have, es un requisito basico." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Como elegir la plataforma correcta" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "No existe una plataforma perfecta para todos. La eleccion depende del volumen de SKUs, la complejidad de tus precios, el nivel de integracion con tu ERP y el presupuesto disponible. Magento sigue siendo fuerte para catalogos grandes. Shopify Plus gana terreno por su rapidez. PrestaShop es solida para PYMEs europeas." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "guia", "tendencias"] }
+			},
+			{
+				"id": "post-2",
+				"slug": "diferencias-ecommerce-b2b-b2c",
+				"status": "published",
+				"published_at": "2025-02-25",
+				"data": {
+					"title": "Diferencias clave entre eCommerce B2B y B2C: lo que todo directivo debe saber",
+					"excerpt": "El eCommerce B2B y B2C comparten tecnologia pero divergen en casi todo lo demas. Entender las diferencias es critico antes de lanzar tu canal digital.",
+					"featured_image": {
+						"$media": {
+							"url": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&h=800&fit=crop",
+							"alt": "Reunion de negocios con graficos",
+							"filename": "b2b-vs-b2c.jpg"
+						}
+					},
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Un error comun es pensar que el eCommerce B2B es simplemente un eCommerce B2C con facturas. La realidad es que casi todo es diferente: el proceso de decision, los volumenes, los precios y las expectativas del comprador." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Proceso de compra" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "En B2C, una persona decide y compra. En B2B, el proceso implica multiples personas: el usuario que identifica la necesidad, el comprador que gestiona el pedido y el responsable financiero que aprueba. Tu plataforma tiene que soportar estos flujos con roles, aprobaciones y presupuestos." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Estructura de precios" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "En B2C hay un precio para todos. En B2B, cada cliente puede tener un precio diferente basado en su acuerdo comercial, volumen de compra e historial. Tu plataforma necesita un motor de precios sofisticado que se sincronice con el ERP." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "pyme"] }
+			},
+			{
+				"id": "post-3",
+				"slug": "mejores-plataformas-ecommerce-b2b-espana",
+				"status": "published",
+				"published_at": "2025-02-10",
+				"data": {
+					"title": "Las mejores plataformas de eCommerce B2B para empresas en Espana",
+					"excerpt": "Comparativa de las principales plataformas de eCommerce B2B disponibles en el mercado espanol.",
+					"featured_image": {
+						"$media": {
+							"url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop",
+							"alt": "Dashboard de ecommerce en pantalla",
+							"filename": "plataformas-b2b-espana.jpg"
+						}
+					},
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Elegir plataforma es una de las decisiones mas importantes al lanzar un eCommerce B2B. No hay una respuesta universal: depende de tu catalogo, tu ERP, tu equipo tecnico y tu presupuesto." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Magento (Adobe Commerce)" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La opcion mas potente para catalogos grandes. Soporta nativamente cuentas de empresa, listas de precios personalizadas y flujos de aprobacion. La contrapartida es la complejidad y los costes altos. Recomendada para empresas con mas de 10.000 SKUs." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Shopify Plus y PrestaShop" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Shopify Plus ha mejorado sus capacidades B2B. PrestaShop sigue siendo popular en Espana con modulos B2B maduros. Para PYMEs con catalogos de menos de 5.000 SKUs, ambas son opciones solidas con excelente relacion calidad-precio." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "magento", "prestashop", "shopify", "espana"] }
+			},
+			{
+				"id": "post-4",
+				"slug": "como-lanzar-tienda-b2b-online",
+				"status": "published",
+				"published_at": "2025-01-28",
+				"data": {
+					"title": "Como lanzar tu tienda B2B online en 90 dias: paso a paso",
+					"excerpt": "Un plan de accion realista para poner en marcha tu eCommerce B2B en tres meses.",
+					"featured_image": {
+						"$media": {
+							"url": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&h=800&fit=crop",
+							"alt": "Persona trabajando en plan de proyecto",
+							"filename": "lanzar-b2b-90-dias.jpg"
+						}
+					},
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Lanzar un eCommerce B2B no tiene por que ser un proyecto de 18 meses. Con el enfoque correcto, puedes tener un MVP funcional en 90 dias que cubra el 80% de las necesidades de tus clientes." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Semanas 1-4: Definicion y setup" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Define tu alcance minimo. Selecciona la plataforma. Configura el entorno, el catalogo base y la integracion minima con tu ERP." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Semanas 5-12: Desarrollo, testing y lanzamiento" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Implementa los flujos de compra B2B. Conecta la sincronizacion bidireccional con el ERP. Testea con un grupo piloto de clientes reales. Corrige, forma al equipo comercial y lanza progresivamente." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "guia", "pyme"] }
+			},
+			{
+				"id": "post-5",
+				"slug": "marketplace-b2b-oportunidad-fabricantes",
+				"status": "published",
+				"published_at": "2025-01-15",
+				"data": {
+					"title": "Marketplaces B2B: la gran oportunidad para fabricantes y distribuidores",
+					"excerpt": "Los marketplaces B2B estan cambiando las reglas para fabricantes. Como aprovecharlos sin perder el control.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Los marketplaces B2B estan creciendo a un ritmo que pocos anticipaban. Para fabricantes y distribuidores, esto representa tanto una oportunidad como un riesgo." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Estrategia multicanal" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La mejor estrategia es combinar tu eCommerce propio con presencia en marketplaces relevantes. Tu tienda propia es donde construyes marca y mantienes los mejores margenes. Los marketplaces son donde captas nuevos clientes y generas volumen." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "tendencias"] }
+			},
+			{
+				"id": "post-6",
+				"slug": "agentes-ia-ecommerce-guia-practica",
+				"status": "published",
+				"published_at": "2024-12-20",
+				"data": {
+					"title": "Agentes de IA para eCommerce: guia practica para directivos",
+					"excerpt": "Que son los agentes de IA, como se aplican al eCommerce B2B y por donde empezar. Sin hype.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Los agentes de IA son programas autonomos que pueden percibir su entorno, tomar decisiones y ejecutar acciones. A diferencia de un chatbot tradicional, un agente analiza la situacion, planifica y actua." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Aplicaciones reales en eCommerce B2B" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Un agente de atencion al cliente B2B consulta stock en tiempo real, verifica precios personalizados, procesa pedidos y gestiona incidencias. Un agente de ventas cualifica leads y prepara propuestas." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Por donde empezar" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Identifica el proceso que mas tiempo consume a tu equipo y que tiene reglas claras. Construye un agente para ese caso. Midelo durante un mes. Si funciona, escala." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["ia-agentes", "guia", "b2b"] }
+			},
+			{
+				"id": "post-7",
+				"slug": "automatizar-atencion-cliente-ia-b2b",
+				"status": "published",
+				"published_at": "2024-12-05",
+				"data": {
+					"title": "Como automatizar la atencion al cliente con IA en empresas B2B",
+					"excerpt": "La atencion al cliente B2B tiene particularidades que los chatbots genericos no resuelven.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La atencion al cliente en B2B es radicalmente diferente a la B2C. Tus clientes preguntan por disponibilidad de 500 unidades, por el estado de un pedido con 47 lineas, por facturas de hace tres meses. Un chatbot generico no puede con esto." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Lo que necesita un agente de atencion B2B" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Acceso en tiempo real al ERP. Conocimiento del historial del cliente. Capacidad para ejecutar acciones. Integracion con el CRM. Y lo mas importante: saber cuando derivar a un humano." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Resultados tipicos" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Un agente de IA bien configurado resuelve entre el 60% y el 80% de las consultas sin intervencion humana. El tiempo medio de respuesta baja de horas a segundos." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["ia-agentes", "chatbots", "b2b"] }
+			},
+			{
+				"id": "post-8",
+				"slug": "ia-generativa-catalogo-productos-b2b",
+				"status": "published",
+				"published_at": "2024-11-18",
+				"data": {
+					"title": "IA generativa para catalogos de productos B2B: casos de uso reales",
+					"excerpt": "La IA generativa esta transformando la gestion de catalogos B2B. Casos reales de aplicacion.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Si tu catalogo B2B tiene mas de 1.000 productos, sabes lo que cuesta mantener fichas completas y actualizadas. La IA generativa esta cambiando esto de forma radical." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Generacion de descripciones" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "A partir de los atributos tecnicos, un sistema de IA puede generar descripciones comerciales optimizadas para SEO en segundos. Empresas han pasado de tardar 3 meses en catalogar 500 productos a hacerlo en una semana." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Enriquecimiento y traduccion" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La IA puede enriquecer fichas existentes, sugerir categorias, generar etiquetas y crear traducciones de calidad muy superior a la traduccion automatica tradicional." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["ia-agentes", "caso-de-exito", "b2b"] }
+			},
+			{
+				"id": "post-9",
+				"slug": "chatbots-ia-ventas-b2b",
+				"status": "published",
+				"published_at": "2024-11-01",
+				"data": {
+					"title": "Chatbots de IA para ventas B2B: mas alla del soporte basico",
+					"excerpt": "Los chatbots de IA en B2B pueden cualificar leads, preparar ofertas y cerrar ventas recurrentes.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La nueva generacion de chatbots de IA esta cambiando el juego en ventas B2B. Pueden mantener conversaciones comerciales completas, entender necesidades complejas y ejecutar transacciones." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Cualificacion automatica de leads" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Un chatbot de IA puede identificar compradores potenciales, entender sus necesidades y clasificarlos segun su encaje con tu oferta. Todo 24/7, sin esperas." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Ventas recurrentes automatizadas" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Un chatbot puede recordar al cliente que es hora de reabastecer, ofrecer el mismo pedido con un clic y procesar el pedido completo. Esto libera al equipo comercial para oportunidades de mayor valor." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["chatbots", "ia-agentes", "roi"] }
+			},
+			{
+				"id": "post-10",
+				"slug": "automatizacion-procesos-comerciales-ia",
+				"status": "published",
+				"published_at": "2024-10-15",
+				"data": {
+					"title": "Automatizacion de procesos comerciales con IA: ROI real y como empezar",
+					"excerpt": "Datos concretos de ROI y una hoja de ruta para empezar con la automatizacion con IA.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Hay mucho ruido alrededor de la IA. Pero que pasa en la practica? Tras implementar sistemas de automatizacion en docenas de empresas B2B, puedo compartir numeros reales." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "ROI tipico por area" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Atencion al cliente: reduccion del 40-60% del tiempo. Gestion de pedidos: reduccion del 70-90% del procesamiento manual. Catalogacion: reduccion del 80% del tiempo. Cualificacion de leads: aumento del 30-50% en conversion. Retorno tipico en 6-12 meses." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Hoja de ruta" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Audita tus procesos. Identifica los tres con mayor volumen y reglas claras. Prioriza por impacto. Implementa un piloto. Mide durante 30 dias. Escala o ajusta." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["ia-agentes", "roi", "guia"] }
+			},
+			{
+				"id": "post-11",
+				"slug": "integracion-erp-ecommerce-por-que-importa",
+				"status": "published",
+				"published_at": "2024-09-25",
+				"data": {
+					"title": "Integracion ERP-eCommerce: por que es critica para escalar tu negocio B2B",
+					"excerpt": "Sin integracion entre ERP y eCommerce, tu canal digital sera un cuello de botella.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "He visto demasiados proyectos de eCommerce B2B que funcionan bien al principio y colapsan cuando escalan. El patron es siempre el mismo: la tienda funciona, pero alguien tiene que introducir cada pedido manualmente en el ERP." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Que debe integrar" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Catalogo, precios personalizados, stock en tiempo real, pedidos bidireccionales, estados de envio, datos de cliente y facturas. No todo desde el dia uno, pero el diseno debe contemplar la evolucion." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Patrones de integracion" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Integracion directa API-to-API (simple, rigida), middleware dedicado (equilibrio) o plataformas de integracion como servicio (maxima flexibilidad, mayor coste)." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["integracion-erp"], "tag": ["sap", "odoo", "b2b"] }
+			},
+			{
+				"id": "post-12",
+				"slug": "sap-ecommerce-integracion-guia",
+				"status": "published",
+				"published_at": "2024-09-10",
+				"data": {
+					"title": "Integracion SAP con eCommerce: guia tecnica y estrategica",
+					"excerpt": "SAP es el ERP mas usado en grandes empresas. Guia completa para integrarlo con eCommerce.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Integrar SAP con eCommerce es probablemente el proyecto tecnico mas complejo en el ecosistema B2B. Pero bien ejecutado, transforma completamente la operativa de una empresa." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "SAP Business One vs S/4HANA" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "SAP Business One tiene una API REST moderna y conectores disponibles. SAP S/4HANA es mas complejo: APIs OData, IDocs, BAPIs y una arquitectura que requiere conocimiento profundo del ecosistema SAP." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Claves para el exito" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "No subestimes el mapeo de datos. Planifica la gestion de errores desde el principio. Implementa logs y alertas robustos. Involucra al equipo de SAP desde el primer dia." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["integracion-erp"], "tag": ["sap", "guia", "b2b"] }
+			},
+			{
+				"id": "post-13",
+				"slug": "odoo-ecommerce-b2b-ventajas",
+				"status": "published",
+				"published_at": "2024-08-22",
+				"data": {
+					"title": "Odoo y eCommerce B2B: ventajas de una solucion integrada",
+					"excerpt": "Odoo ofrece ERP y eCommerce en una misma plataforma. Cuando tiene sentido usarlo.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Odoo tiene una propuesta unica: ERP y eCommerce en una misma plataforma con integracion nativa. Lo que creas en el ERP aparece automaticamente en la tienda." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Cuando Odoo es la mejor opcion" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Si aun no tienes ERP, si tu catalogo es de tamano medio y si tu equipo es pequeno. Odoo elimina la complejidad de la integracion con una curva de aprendizaje razonable." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Limitaciones" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "El eCommerce de Odoo no tiene la flexibilidad de Magento o Shopify en personalizacion. Las funcionalidades B2B nativas son basicas. Si ya tienes un ERP consolidado, migrar solo por el eCommerce rara vez tiene sentido." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["integracion-erp"], "tag": ["odoo", "b2b", "pyme"] }
+			},
+			{
+				"id": "post-14",
+				"slug": "errores-comunes-integracion-erp-ecommerce",
+				"status": "published",
+				"published_at": "2024-08-05",
+				"data": {
+					"title": "7 errores comunes en la integracion ERP-eCommerce y como evitarlos",
+					"excerpt": "Los errores que veo repetirse en proyectos de integracion y como evitarlos.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Integrar un ERP con eCommerce es un proyecto donde las cosas pueden salir mal de muchas formas. Estos son los errores mas frecuentes." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Errores de planificacion" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "No mapear datos antes de empezar. Subestimar el volumen de datos. No planificar la gestion de errores. Estas tres omisiones causan la mayoria de fracasos en integraciones." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Errores de implementacion" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Sincronizacion en tiempo real cuando batch es suficiente. No implementar idempotencia. No monitorizar la integracion. Lanzar sin fase piloto. Cada uno de estos errores puede hundir un proyecto." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["integracion-erp"], "tag": ["guia", "b2b"] }
+			},
+			{
+				"id": "post-15",
+				"slug": "transformacion-digital-pymes-espana-2025",
+				"status": "published",
+				"published_at": "2024-07-18",
+				"data": {
+					"title": "Transformacion digital de PYMEs en Espana: estado actual y oportunidades en 2025",
+					"excerpt": "El estado de la transformacion digital en PYMEs espanolas y las oportunidades para 2025.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Espana tiene mas del 99% de empresas con menos de 250 empleados. La transformacion digital de estas PYMEs es critica para la competitividad del pais, pero el avance es desigual." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Donde estamos" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Los programas como Kit Digital han acelerado la adopcion basica. Pero hay una brecha entre tener presencia digital y estar realmente digitalizado. Muchas PYMEs tienen tienda online que apenas genera ventas." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Oportunidades para 2025" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La IA esta democratizando capacidades que antes solo tenian las grandes empresas. Las PYMEs que aprovechen estas oportunidades ahora tendran una ventaja competitiva dificil de igualar." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["transformacion-digital"], "tag": ["pyme", "espana", "tendencias"] }
+			},
+			{
+				"id": "post-16",
+				"slug": "digitalizacion-empresa-industrial-barcelona",
+				"status": "published",
+				"published_at": "2024-07-02",
+				"data": {
+					"title": "Digitalizacion de empresas industriales en Barcelona: casos y lecciones",
+					"excerpt": "Experiencias reales de empresas industriales en Barcelona que han dado el salto digital.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Barcelona y su area metropolitana concentran fabricantes de automocion, empresas quimicas, textiles y alimentacion. Muchas llevan decadas con procesos analogicos que limitan su crecimiento." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Patrones comunes" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La resistencia inicial del equipo comercial se transforma en entusiasmo cuando el canal digital les libera de tareas administrativas. La integracion con el ERP es el mayor reto tecnico. El ROI mas rapido viene de automatizar pedidos recurrentes." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "El ecosistema local" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Barcelona tiene talento tecnico, comunidad emprendedora activa y programas de apoyo institucional. Para empresas industriales, la proximidad a este ecosistema es una ventaja competitiva." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["transformacion-digital"], "tag": ["barcelona", "caso-de-exito", "pyme"] }
+			},
+			{
+				"id": "post-17",
+				"slug": "kpis-transformacion-digital-b2b",
+				"status": "published",
+				"published_at": "2024-06-15",
+				"data": {
+					"title": "KPIs de transformacion digital en B2B: que medir y por que",
+					"excerpt": "Los KPIs que realmente importan para medir el progreso de la transformacion digital en B2B.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Sin KPIs claros definidos antes de empezar, es imposible saber si la transformacion digital esta generando valor o simplemente consumiendo recursos." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "KPIs de canal digital" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Porcentaje de pedidos online vs total. Ticket medio online vs offline. Tasa de recompra. Tiempo desde pedido hasta entrega. Estos cuatro indicadores te dan una foto clara de la adopcion." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "KPIs de eficiencia operativa" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Tiempo de procesamiento de pedidos. Tasa de errores. Coste por pedido procesado. Tiempo dedicado a tareas manuales por el equipo comercial." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["transformacion-digital"], "tag": ["roi", "b2b", "guia"] }
+			},
+			{
+				"id": "post-18",
+				"slug": "preguntas-frecuentes-ecommerce-b2b",
+				"status": "published",
+				"published_at": "2024-05-28",
+				"data": {
+					"title": "Preguntas frecuentes sobre eCommerce B2B: respuestas de un consultor",
+					"excerpt": "Las preguntas mas frecuentes sobre eCommerce B2B, respondidas de forma directa.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Despues de anos asesorando a empresas sobre eCommerce B2B, hay preguntas que se repiten en casi todas las reuniones iniciales." }]
+						},
+						{
+							"_type": "site.faq",
+							"_key": "faq-ecommerce",
+							"headline": "Preguntas frecuentes",
+							"items": [
+								{
+									"question": "Necesito una plataforma diferente para B2B y B2C?",
+									"answer": "Depende del volumen de cada canal. Si el B2B es tu negocio principal, te recomiendo una plataforma especializada o una instancia separada."
+								},
+								{
+									"question": "Cuanto tiempo tarda en estar operativo un eCommerce B2B?",
+									"answer": "Un MVP funcional se puede tener en 2-3 meses. Un proyecto completo con integracion ERP, entre 4 y 8 meses."
+								},
+								{
+									"question": "Mis clientes no quieren comprar online, para que lo necesito?",
+									"answer": "En mi experiencia, no es que no quieran: es que no tienen una buena opcion. Cuando ofreces un portal con sus precios y pedidos en dos clics, la adopcion es sorprendentemente rapida."
+								},
+								{
+									"question": "Puedo empezar sin integrar el ERP?",
+									"answer": "Puedes, pero no mas de un mes de prueba. Sin integracion, cada pedido online genera trabajo manual que puede matar el proyecto."
+								},
+								{
+									"question": "Que ROI puedo esperar?",
+									"answer": "Reduccion del 40-70% en coste de procesamiento, aumento del 15-30% en ticket medio y apertura de ventas 24/7 que tipicamente representa un 20-30% del volumen total en el primer ano."
+								}
+							]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["consultoria"], "tag": ["faq", "b2b", "guia"] }
+			},
+			{
+				"id": "post-19",
+				"slug": "preguntas-frecuentes-ia-empresas",
+				"status": "published",
+				"published_at": "2024-05-10",
+				"data": {
+					"title": "Preguntas frecuentes sobre IA en empresas: lo que realmente necesitas saber",
+					"excerpt": "Respuestas claras a las preguntas mas frecuentes de directivos sobre IA.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La IA esta en todas partes. Pero entre el hype y la realidad hay un abismo. Aqui van mis respuestas honestas a las preguntas mas frecuentes." }]
+						},
+						{
+							"_type": "site.faq",
+							"_key": "faq-ia",
+							"headline": "Preguntas frecuentes sobre IA",
+							"items": [
+								{
+									"question": "Mi empresa es pequena, tiene sentido invertir en IA?",
+									"answer": "Si, pero con expectativas realistas. Herramientas como ChatGPT o agentes preconfigurados pueden automatizar tareas concretas con inversion minima."
+								},
+								{
+									"question": "Puede la IA reemplazar a mi equipo comercial?",
+									"answer": "No, y no deberia ser el objetivo. La IA automatiza lo repetitivo. Tu equipo aporta relacion, confianza y criterio. La combinacion es mas potente."
+								},
+								{
+									"question": "Necesito datos perfectos para empezar con IA?",
+									"answer": "No perfectos, pero si minimamente estructurados y accesibles. Si tu catalogo esta en un Excel desactualizado, ese es el primer paso."
+								},
+								{
+									"question": "Cuanto cuesta implementar IA en una empresa B2B?",
+									"answer": "Un piloto: 5.000-20.000 euros. Un proyecto integral: 30.000-100.000 euros. ROI tipico: 6-12 meses."
+								},
+								{
+									"question": "Que pasa con la privacidad y los datos de mis clientes?",
+									"answer": "Asegurate de cumplir con el RGPD y que los datos no se usen para entrenar modelos de terceros sin consentimiento. Existen opciones de IA en tu propia infraestructura."
+								}
+							]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["consultoria"], "tag": ["faq", "ia-agentes", "guia"] }
+			},
+			{
+				"id": "post-20",
+				"slug": "cuanto-cuesta-montar-ecommerce-b2b",
+				"status": "published",
+				"published_at": "2024-04-20",
+				"data": {
+					"title": "Cuanto cuesta montar un eCommerce B2B? Guia de presupuestos 2025",
+					"excerpt": "Desglose realista de costes para montar un eCommerce B2B segun el tamano de tu empresa.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "La pregunta del millon. Cuanto cuesta montar un eCommerce B2B? La respuesta honesta es: depende. Pero puedo darte rangos realistas basados en proyectos reales." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Rango basico: 15.000 - 40.000 euros" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Para PYMEs con catalogo pequeno, plataforma tipo PrestaShop o Shopify, integracion basica con ERP y diseno sobre plantilla. Buena opcion para validar el canal digital." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Rango medio: 40.000 - 120.000 euros" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Para empresas medianas con funcionalidades B2B avanzadas, integracion completa con ERP y diseno a medida. Aqui entran la mayoria de proyectos serios." }]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Rango alto: 120.000 - 300.000+ euros" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [{ "_type": "span", "text": "Para grandes empresas con catalogos masivos, multiples almacenes e idiomas, integracion profunda con SAP y IA integrada. Presupuesta tambien un 15-25% anual para mantenimiento." }]
+						}
+					]
+				},
+				"bylines": [{ "byline": "byline-isaac" }],
+				"taxonomies": { "category": ["consultoria"], "tag": ["faq", "b2b", "roi", "guia"] }
+			}
+		]
+	}
+}
