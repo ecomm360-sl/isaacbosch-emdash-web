@@ -15,41 +15,35 @@ Astro.cache.set(cacheHint);
 const categories = await getTaxonomyTerms("category");
 ---
 
-<Base title="Blog" description="Reflexiones sobre eCommerce B2B e IA Agentica">
+<Base
+	title="Blog"
+	description="Articulos sobre eCommerce B2B, integracion ERP, IA aplicada a negocio y transformacion digital."
+>
 	<div class="blog-page">
 		<header class="page-header">
-			<h1>Blog</h1>
-			<p class="page-subtitle">Reflexiones sobre eCommerce B2B e IA Agentica</p>
+			<span class="page-eyebrow">Blog</span>
+			<h1>Notas sobre eCommerce B2B, IA y automatizacion</h1>
+			<p class="page-subtitle">
+				Reflexiones, guias practicas y aprendizajes sobre como empresas B2B estan integrando ERPs, lanzando canales digitales y automatizando con inteligencia artificial.
+			</p>
 		</header>
 
-		{
-			categories.length > 0 && (
-				<nav class="category-filter">
-					<a href="/blog" class="filter-link active">
-						Todos
-					</a>
-					{categories.map((cat) => (
-						<a href={`/blog/categoria/${cat.slug}`} class="filter-link">
-							{cat.label}
-						</a>
-					))}
-				</nav>
-			)
-		}
+		{categories.length > 0 && (
+			<nav class="category-filter">
+				<a href="/blog" class="filter-link active">Todos</a>
+				{categories.map((cat) => (
+					<a href={`/blog/categoria/${cat.slug}`} class="filter-link">{cat.label}</a>
+				))}
+			</nav>
+		)}
 
-		{
-			posts.length === 0 ? (
-				<section class="empty-state">
-					<p>No hay publicaciones todavia.</p>
-				</section>
-			) : (
-				<div class="posts-grid">
-					{posts.map((post) => (
-						<PostCard post={post} />
-					))}
-				</div>
-			)
-		}
+		{posts.length === 0 ? (
+			<section class="empty-state"><p>No hay publicaciones todavia.</p></section>
+		) : (
+			<div class="posts-grid">
+				{posts.map((post) => <PostCard post={post} />)}
+			</div>
+		)}
 	</div>
 </Base>
 
@@ -57,55 +51,72 @@ const categories = await getTaxonomyTerms("category");
 	.blog-page {
 		max-width: var(--wide-width);
 		margin: 0 auto;
-		padding: var(--spacing-16) var(--spacing-6);
+		padding: var(--spacing-24) var(--spacing-6);
 	}
 
 	.page-header {
-		margin-bottom: var(--spacing-8);
+		max-width: 720px;
+		margin-bottom: var(--spacing-16);
+	}
+
+	.page-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-4);
 	}
 
 	.page-header h1 {
-		font-size: var(--font-size-4xl);
-		font-weight: 700;
-		letter-spacing: var(--tracking-tight);
+		font-family: var(--font-serif);
+		font-size: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: var(--tracking-tighter);
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-6);
 	}
 
 	.page-subtitle {
-		margin-top: var(--spacing-2);
 		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
 		color: var(--color-text-secondary);
+		margin: 0;
 	}
 
 	.category-filter {
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--spacing-2);
-		margin-bottom: var(--spacing-10);
-		padding-bottom: var(--spacing-6);
-		border-bottom: 1px solid var(--color-border-subtle);
+		margin-bottom: var(--spacing-12);
+		padding-bottom: var(--spacing-8);
+		border-bottom: 1px solid var(--color-border);
 	}
 
 	.filter-link {
 		display: inline-block;
-		padding: var(--spacing-1) var(--spacing-4);
+		padding: var(--spacing-2) var(--spacing-4);
 		font-size: var(--font-size-sm);
+		font-weight: 500;
 		color: var(--color-text-secondary);
-		background: var(--color-surface);
-		border-radius: var(--radius);
+		background: transparent;
+		border: 1px solid var(--color-border);
+		border-radius: 999px;
 		text-decoration: none;
-		transition:
-			color var(--transition-fast),
-			background var(--transition-fast);
+		transition: all var(--transition-fast);
 	}
 
 	.filter-link:hover {
 		color: var(--color-text);
-		background: var(--color-border);
+		border-color: var(--color-text);
 	}
 
 	.filter-link.active {
 		color: var(--color-on-accent);
 		background: var(--color-accent);
+		border-color: var(--color-accent);
 	}
 
 	.posts-grid {
@@ -122,19 +133,19 @@ const categories = await getTaxonomyTerms("category");
 
 	@media (max-width: 900px) {
 		.blog-page {
-			padding: var(--spacing-8) var(--spacing-4);
+			padding: var(--spacing-16) var(--spacing-5);
 		}
 
 		.posts-grid {
 			grid-template-columns: repeat(2, 1fr);
-			gap: var(--spacing-8) var(--spacing-6);
+			gap: var(--spacing-10) var(--spacing-6);
 		}
 	}
 
 	@media (max-width: 600px) {
 		.posts-grid {
 			grid-template-columns: 1fr;
-			gap: var(--spacing-8);
+			gap: var(--spacing-10);
 		}
 	}
 </style>

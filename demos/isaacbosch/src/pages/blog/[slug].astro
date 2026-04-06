@@ -45,8 +45,13 @@ const publishedTime = entry.data.publishedAt
 	<div class="article-layout">
 		<article class="article-content">
 			<header class="article-header">
+				<a href="/blog" class="back-link">&larr; Volver al blog</a>
 				<h1>{entry.data.title}</h1>
-				{publishedDate && <time class="article-date">{publishedDate}</time>}
+				<div class="article-meta">
+					<span class="meta-author">Isaac Bosch</span>
+					{publishedDate && <span class="meta-sep">&middot;</span>}
+					{publishedDate && <time class="article-date">{publishedDate}</time>}
+				</div>
 			</header>
 
 			{
@@ -96,21 +101,47 @@ const publishedTime = entry.data.publishedAt
 	}
 
 	.article-header {
+		margin-bottom: var(--spacing-12);
+	}
+
+	.back-link {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+		text-decoration: none;
 		margin-bottom: var(--spacing-8);
+		transition: color var(--transition-fast);
+	}
+
+	.back-link:hover {
+		color: var(--color-accent);
 	}
 
 	.article-header h1 {
-		font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
-		font-weight: 700;
-		line-height: var(--leading-tight);
-		letter-spacing: var(--tracking-tight);
+		font-family: var(--font-serif);
+		font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: var(--tracking-tighter);
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-6);
 	}
 
-	.article-date {
-		display: block;
-		margin-top: var(--spacing-3);
+	.article-meta {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-3);
 		font-size: var(--font-size-sm);
 		color: var(--color-muted);
+	}
+
+	.meta-author {
+		font-weight: 500;
+		color: var(--color-text-secondary);
+	}
+
+	.meta-sep {
+		color: var(--color-muted-light);
 	}
 
 	.article-image {
@@ -127,26 +158,38 @@ const publishedTime = entry.data.publishedAt
 
 	.article-body {
 		font-size: var(--font-size-lg);
-		line-height: var(--leading-relaxed);
+		line-height: var(--leading-prose);
 		color: var(--color-text-secondary);
 	}
 
 	.article-body :global(h2) {
-		margin-top: var(--spacing-10);
+		font-family: var(--font-serif);
+		margin-top: var(--spacing-12);
 		margin-bottom: var(--spacing-4);
 		font-size: var(--font-size-2xl);
+		font-weight: 500;
+		letter-spacing: var(--tracking-tight);
+		line-height: 1.2;
 		color: var(--color-text);
 	}
 
 	.article-body :global(h3) {
-		margin-top: var(--spacing-8);
+		font-family: var(--font-serif);
+		margin-top: var(--spacing-10);
 		margin-bottom: var(--spacing-3);
 		font-size: var(--font-size-xl);
+		font-weight: 500;
+		letter-spacing: var(--tracking-snug);
 		color: var(--color-text);
 	}
 
 	.article-body :global(p) {
-		margin-bottom: var(--spacing-4);
+		margin-bottom: var(--spacing-5);
+	}
+
+	.article-body :global(strong) {
+		color: var(--color-text);
+		font-weight: 600;
 	}
 
 	.article-body :global(ul),
