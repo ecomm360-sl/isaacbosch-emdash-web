@@ -3,7 +3,7 @@ set -e
 
 EMDASH_CLI="node /app/packages/core/dist/cli/index.mjs"
 
-cd /app/templates/blog
+cd /app/demos/isaacbosch
 
 # Initialize EmDash on first run (creates tables, runs migrations)
 if [ ! -f /app/data/data.db ]; then

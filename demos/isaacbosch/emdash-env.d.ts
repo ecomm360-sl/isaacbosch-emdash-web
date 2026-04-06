@@ -5,7 +5,7 @@
 
 import type { ContentBylineCredit, PortableTextBlock } from "emdash";
 
-export interface Page {
+export interface Pagina {
   id: string;
   slug: string | null;
   status: string;
@@ -31,9 +31,59 @@ export interface Post {
   bylines?: ContentBylineCredit[];
 }
 
+export interface Mencion {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  source?: string;
+  url?: string;
+  date?: string;
+  summary?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  bylines?: ContentBylineCredit[];
+}
+
+export interface Proyecto {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  client?: string;
+  year?: string;
+  summary?: string;
+  content?: PortableTextBlock[];
+  featured_image?: { id: string; src?: string; alt?: string; width?: number; height?: number };
+  url?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  bylines?: ContentBylineCredit[];
+}
+
+export interface Servicio {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  icon?: string;
+  summary?: string;
+  content?: PortableTextBlock[];
+  order?: number;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  bylines?: ContentBylineCredit[];
+}
+
 declare module "emdash" {
   interface EmDashCollections {
-    pages: Page;
+    pages: Pagina;
     posts: Post;
+    press: Mencion;
+    projects: Proyecto;
+    services: Servicio;
   }
 }

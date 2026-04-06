@@ -9,16 +9,16 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 COPY tsconfig.base.json tsconfig.json ./
 
-# Copy all packages and the blog template
+# Copy all packages and the isaacbosch demo
 COPY packages/ packages/
-COPY templates/blog/ templates/blog/
+COPY demos/isaacbosch/ demos/isaacbosch/
 
 # Install with shamefully-hoist so all deps are resolvable from any path
 RUN pnpm install --shamefully-hoist
 
 # Build workspace packages first, then the blog template
 RUN pnpm run build
-RUN cd templates/blog && pnpm run build
+RUN cd demos/isaacbosch && pnpm run build
 
 # Stage 2: Production
 FROM node:22-slim AS runtime
@@ -45,6 +45,6 @@ ENV EMDASH_UPLOADS_DIR=/app/uploads
 
 EXPOSE 4321
 
-WORKDIR /app/templates/blog
+WORKDIR /app/demos/isaacbosch
 
 ENTRYPOINT ["/app/docker-entrypoint.sh"]
