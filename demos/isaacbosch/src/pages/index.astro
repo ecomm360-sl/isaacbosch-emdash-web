@@ -27,7 +27,21 @@ const sortedPosts = posts.toSorted((a, b) => {
 >
 	<section class="hero">
 		<div class="hero-inner">
-			<span class="hero-eyebrow">Barcelona &middot; Consultor independiente &middot; Fractional CIO</span>
+			<div class="hero-byline">
+				<img
+					src="/isaac-portrait.jpg"
+					alt="Retrato ilustrado de Isaac Bosch"
+					width="88"
+					height="88"
+					loading="eager"
+					decoding="async"
+					class="hero-portrait"
+				/>
+				<div class="hero-byline-text">
+					<span class="hero-byline-name">Isaac Bosch</span>
+					<span class="hero-eyebrow">Barcelona &middot; Consultor independiente &middot; Fractional CIO</span>
+				</div>
+			</div>
 			<h1 class="hero-title">
 				Convierto empresas industriales en negocios digitales que <em>venden solos</em>.
 			</h1>
@@ -115,14 +129,50 @@ const sortedPosts = posts.toSorted((a, b) => {
 		margin: 0 auto;
 	}
 
+	.hero-byline {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-4);
+		margin-bottom: var(--spacing-8);
+	}
+
+	.hero-portrait {
+		width: 72px;
+		height: 72px;
+		object-fit: cover;
+		object-position: center 18%;
+		border-radius: 50%;
+		background: var(--color-bg-warm);
+		border: 1px solid var(--color-border);
+		flex-shrink: 0;
+		transition: transform var(--transition-base);
+	}
+
+	.hero-byline:hover .hero-portrait {
+		transform: scale(1.04) rotate(-2deg);
+	}
+
+	.hero-byline-text {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	.hero-byline-name {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-base);
+		font-weight: 500;
+		color: var(--color-text);
+		letter-spacing: var(--tracking-snug);
+	}
+
 	.hero-eyebrow {
 		display: inline-block;
-		font-size: var(--font-size-sm);
+		font-size: var(--font-size-xs);
 		font-weight: 500;
 		color: var(--color-muted);
 		letter-spacing: var(--tracking-wide);
 		text-transform: uppercase;
-		margin-bottom: var(--spacing-6);
 	}
 
 	.hero-title {
@@ -322,6 +372,11 @@ const sortedPosts = posts.toSorted((a, b) => {
 	@media (max-width: 640px) {
 		.hero {
 			padding: var(--spacing-20) var(--spacing-5) var(--spacing-16);
+		}
+
+		.hero-portrait {
+			width: 60px;
+			height: 60px;
 		}
 
 		.audiences,
