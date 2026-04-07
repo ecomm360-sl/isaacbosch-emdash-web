@@ -5,7 +5,7 @@ RUN corepack enable && corepack prepare pnpm@10.28.0 --activate
 
 WORKDIR /app
 
-# Copy everything needed for the monorepo build
+# Copy workspace metadata
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 COPY tsconfig.base.json tsconfig.json ./
 
@@ -13,12 +13,18 @@ COPY tsconfig.base.json tsconfig.json ./
 COPY packages/ packages/
 COPY demos/isaacbosch/ demos/isaacbosch/
 
-# Install with shamefully-hoist so all deps are resolvable from any path
-RUN pnpm install --shamefully-hoist
+# Install ONLY the dependencies needed by the isaacbosch demo and its
+# transitive workspace dependencies. The "..." suffix tells pnpm to
+# include workspace deps transitively. This avoids downloading the
+# hundreds of MB pulled in by packages/cloudflare, marketplace, etc.
+# which the demo doesn't use.
+RUN pnpm install --shamefully-hoist --filter "@emdash-cms/demo-isaacbosch..."
 
-# Build workspace packages first, then the blog template
-RUN pnpm run build
-RUN cd demos/isaacbosch && pnpm run build
+# Build only the workspace packages required by the demo, then the demo
+RUN pnpm --filter "@emdash-cms/demo-isaacbosch..." run build
+
+# Prune the pnpm store to reduce image size
+RUN pnpm store prune || true
 
 # Stage 2: Production
 FROM node:22-slim AS runtime
