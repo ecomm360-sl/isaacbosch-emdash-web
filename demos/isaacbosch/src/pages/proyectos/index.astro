@@ -11,15 +11,15 @@ Astro.cache.set(cacheHint);
 ---
 
 <Base
-	title="Proyectos y ecosistema"
-	description="El ecosistema de productos y empresas que he fundado: eComm360, Integrafy, Approsearch y Alabazweb. Proyectos que prueban lo que vendo."
+	title="Mi ecosistema propio"
+	description="eComm360, Integrafy, Approsearch y Alabazweb. Los productos y empresas que he fundado para resolver los problemas que veo repetirse en cada proyecto B2B industrial."
 >
 	<section class="projects-page">
 		<header class="page-header">
-			<span class="page-eyebrow">Ecosistema</span>
-			<h1 class="page-title">No solo asesoro: construyo</h1>
+			<span class="page-eyebrow">Mi ecosistema propio</span>
+			<h1 class="page-title">Empresas y productos que he fundado</h1>
 			<p class="page-subtitle">
-				Ademas de la consultoria, fundo y opero productos propios para resolver los problemas que veo repetirse en cada proyecto B2B. Estos son los que estan vivos hoy.
+				Ademas de consultar, construyo. Cada proyecto en este ecosistema nace de un problema real que vi repetirse en empresas B2B industriales y que decidi resolver con producto propio, no solo con palabras.
 			</p>
 		</header>
 
@@ -32,6 +32,17 @@ Astro.cache.set(cacheHint);
 				{projects.map((project) => <ProjectCard project={project} />)}
 			</div>
 		)}
+
+		<aside class="cross-link">
+			<div class="cross-link-inner">
+				<span class="cross-eyebrow">Clientes</span>
+				<h2 class="cross-title">Has visto con quien he trabajado?</h2>
+				<p class="cross-text">
+					Mas de 90 marcas en 12 sectores: Damm, Cofidis, Cetelem, Caixa, RACC, Vichy Catalan, Cirsa, Intersport, Brownie, PD Paola, Hoffmann, Kibuc, Madden y muchas mas.
+				</p>
+				<a href="/clientes" class="cross-btn">Ver el muro de clientes &rarr;</a>
+			</div>
+		</aside>
 	</section>
 </Base>
 
@@ -83,6 +94,63 @@ Astro.cache.set(cacheHint);
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: var(--spacing-6);
+		margin-bottom: var(--spacing-16);
+	}
+
+	.cross-link {
+		margin-top: var(--spacing-12);
+		padding: var(--spacing-12) var(--spacing-8);
+		background: var(--color-bg-warm);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+	}
+
+	.cross-link-inner {
+		max-width: 640px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.cross-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-3);
+	}
+
+	.cross-title {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-3xl);
+		font-weight: 400;
+		letter-spacing: var(--tracking-tight);
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-4);
+	}
+
+	.cross-text {
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0 0 var(--spacing-6);
+	}
+
+	.cross-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: var(--spacing-3) var(--spacing-6);
+		background: var(--color-text);
+		color: var(--color-bg);
+		border-radius: 9999px;
+		font-weight: 500;
+		text-decoration: none;
+		transition: background var(--transition-fast);
+	}
+
+	.cross-btn:hover {
+		background: var(--color-accent);
 	}
 
 	@media (max-width: 640px) {
@@ -92,6 +160,10 @@ Astro.cache.set(cacheHint);
 
 		.projects-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.cross-link {
+			padding: var(--spacing-8) var(--spacing-6);
 		}
 	}
 </style>
