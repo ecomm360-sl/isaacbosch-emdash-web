@@ -89,6 +89,37 @@ const sortedPosts = posts.toSorted((a, b) => {
 		</div>
 	</section>
 
+	<section class="principles">
+		<div class="principles-inner">
+			<header class="section-header">
+				<span class="section-eyebrow">Principios</span>
+				<h2 class="section-title">Como pienso, como trabajo</h2>
+			</header>
+			<div class="principles-grid">
+				<div class="principle">
+					<span class="principle-num">01</span>
+					<h3 class="principle-title">Claridad</h3>
+					<p class="principle-text">Si no se puede explicar en una servilleta, es demasiado complicado.</p>
+				</div>
+				<div class="principle">
+					<span class="principle-num">02</span>
+					<h3 class="principle-title">Escalabilidad</h3>
+					<p class="principle-text">Diseno a largo plazo. Las decisiones de hoy no deben hipotecar el crecimiento de manana.</p>
+				</div>
+				<div class="principle">
+					<span class="principle-num">03</span>
+					<h3 class="principle-title">Pragmatismo</h3>
+					<p class="principle-text">La tecnologia solo aporta valor cuando simplifica la realidad.</p>
+				</div>
+				<div class="principle">
+					<span class="principle-num">04</span>
+					<h3 class="principle-title">Responsabilidad</h3>
+					<p class="principle-text">Construyo sistemas que no dependen de personas clave. Tu equipo se queda con el control, no con la dependencia.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	{sortedPosts.length > 0 && (
 		<section class="blog-section">
 			<div class="section-inner">
@@ -308,6 +339,55 @@ const sortedPosts = posts.toSorted((a, b) => {
 		gap: var(--spacing-6);
 	}
 
+	/* === Principles === */
+	.principles {
+		padding: var(--spacing-24) var(--spacing-6);
+		background: var(--color-bg);
+		border-top: 1px solid var(--color-border);
+	}
+
+	.principles-inner {
+		max-width: var(--wide-width);
+		margin: 0 auto;
+	}
+
+	.principles-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--spacing-8);
+	}
+
+	.principle {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-3);
+	}
+
+	.principle-num {
+		font-family: var(--font-mono);
+		font-size: var(--font-size-xs);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+	}
+
+	.principle-title {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-2xl);
+		font-weight: 500;
+		letter-spacing: var(--tracking-tight);
+		line-height: 1.1;
+		color: var(--color-text);
+		margin: 0;
+	}
+
+	.principle-text {
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0;
+	}
+
 	/* === Blog === */
 	.blog-section {
 		padding: var(--spacing-24) var(--spacing-6);
@@ -367,6 +447,11 @@ const sortedPosts = posts.toSorted((a, b) => {
 		.posts-grid {
 			grid-template-columns: repeat(2, 1fr);
 		}
+
+		.principles-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--spacing-10);
+		}
 	}
 
 	@media (max-width: 640px) {
@@ -380,13 +465,15 @@ const sortedPosts = posts.toSorted((a, b) => {
 		}
 
 		.audiences,
+		.principles,
 		.blog-section,
 		.cta-section {
 			padding: var(--spacing-16) var(--spacing-5);
 		}
 
 		.audiences-grid,
-		.posts-grid {
+		.posts-grid,
+		.principles-grid {
 			grid-template-columns: 1fr;
 		}
 	}

@@ -368,8 +368,18 @@
 						},
 						{
 							"_type": "block",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Si no se puede explicar en una servilleta, es demasiado complicado."
+								}
+							]
+						},
+						{
+							"_type": "block",
 							"style": "h2",
-							"children": [{ "_type": "span", "text": "Mi enfoque" }]
+							"children": [{ "_type": "span", "text": "Mis cuatro principios" }]
 						},
 						{
 							"_type": "block",
@@ -378,11 +388,11 @@
 								{
 									"_type": "span",
 									"marks": ["strong"],
-									"text": "Claridad sobre complejidad. "
+									"text": "Claridad. "
 								},
 								{
 									"_type": "span",
-									"text": "Las soluciones mas robustas son las que cualquier miembro del equipo puede entender y mantener cuando yo ya no este."
+									"text": "Las soluciones mas robustas son las que cualquier miembro del equipo puede entender y mantener cuando yo ya no este. Si necesita un manual de 200 paginas, esta mal disenada."
 								}
 							]
 						},
@@ -393,11 +403,11 @@
 								{
 									"_type": "span",
 									"marks": ["strong"],
-									"text": "Sistemas escalables. "
+									"text": "Escalabilidad. "
 								},
 								{
 									"_type": "span",
-									"text": "Cada decision tecnica se toma pensando en el crecimiento futuro, no solo en la necesidad inmediata."
+									"text": "Cada decision tecnica se toma pensando en el crecimiento futuro, no solo en la necesidad inmediata. Lo barato hoy es caro manana cuando hay que rehacer."
 								}
 							]
 						},
@@ -408,11 +418,26 @@
 								{
 									"_type": "span",
 									"marks": ["strong"],
-									"text": "Tecnologia al servicio de las personas. "
+									"text": "Pragmatismo. "
 								},
 								{
 									"_type": "span",
-									"text": "La automatizacion existe para liberar tiempo y capacidad humana, no para reemplazarla."
+									"text": "La tecnologia solo aporta valor cuando simplifica la realidad. Sin esa premisa, todo lo demas es ruido."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Responsabilidad. "
+								},
+								{
+									"_type": "span",
+									"text": "Construyo sistemas que no dependen de personas clave. Cuando termino un proyecto, tu equipo se queda con el control y la documentacion. Nunca con la dependencia."
 								}
 							]
 						},
@@ -443,10 +468,34 @@
 									"current": true
 								},
 								{
-									"year": "2010 - 2015",
-									"title": "Director Tecnico",
-									"company": "MSMK",
-									"description": "Liderazgo del area digital. Coordinacion de equipos de desarrollo para proyectos de transformacion digital corporativa."
+									"year": "2017 - 2019",
+									"title": "Formador en Transformacion Digital",
+									"company": "MSMK Madrid",
+									"description": "Programa de formacion ejecutiva en estrategia digital, eCommerce y nuevas tecnologias para directivos."
+								},
+								{
+									"year": "2017 - 2018",
+									"title": "Joven Empresario",
+									"company": "AJE Madrid",
+									"description": "Miembro activo de la asociacion de jovenes empresarios. Networking, mentoring entre pares y participacion en programas de crecimiento."
+								},
+								{
+									"year": "2015 - 2017",
+									"title": "Formador PrestaShop & eCommerce",
+									"company": "Multiples organizaciones",
+									"description": "Cursos y talleres tecnicos sobre PrestaShop y comercio electronico para profesionales y empresas."
+								},
+								{
+									"year": "2014 - 2016",
+									"title": "Mentor de emprendedores",
+									"company": "Fundacion Tomillo",
+									"description": "Acompanamiento a emprendedores en fase inicial: validacion de modelo de negocio, estrategia digital y captacion de primeros clientes."
+								},
+								{
+									"year": "2009 - 2015",
+									"title": "Consultor ERP Odoo",
+									"company": "Concept Up Technology",
+									"description": "Implementacion y desarrollo a medida de Odoo (ERP open source) para PYMEs. Aqui empezo todo lo que hoy hago en integracion ERP-eCommerce."
 								}
 							]
 						},
@@ -462,6 +511,31 @@
 								{
 									"_type": "span",
 									"text": "Executive MBA por EAE Business School (2015-2019). Posgrado en Transformacion Digital por EADA Business School. Miembro activo del Observatorio eCommerce y de AJE Madrid. Formacion continua en IA aplicada, arquitectura de sistemas distribuidos y estrategia comercial B2B."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Fuera del trabajo" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Mi pensamiento esta muy marcado por el estoicismo y la mejora continua: leo a diario, me aplico GTD a rajatabla y rara vez me obsesiono con cosas que no puedo controlar. Fuera de la oficina valoro mucho el montanismo, el bricolaje y todo lo manual. Esa mezcla de cabeza fria y manos sucias es la que se cuela en como entiendo la tecnologia: util, sencilla y a prueba de quien la va a usar."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"text": "La tecnologia solo aporta valor cuando simplifica la realidad."
 								}
 							]
 						},
@@ -606,8 +680,18 @@
 						},
 						{
 							"_type": "block",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El exito de un eCommerce B2B no esta solo en la venta. Esta en la gestion eficiente del post-venta."
+								}
+							]
+						},
+						{
+							"_type": "block",
 							"style": "h2",
-							"children": [{ "_type": "span", "text": "Plataformas y stack" }]
+							"children": [{ "_type": "span", "text": "Cuatro frentes en los que aporto valor" }]
 						},
 						{
 							"_type": "block",
@@ -615,7 +699,177 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "PrestaShop como opcion prioritaria para B2B industrial (mejor relacion control-coste). Shopify Plus cuando la prioridad es velocidad de lanzamiento. Soluciones headless o a medida para casos especificos. Integracion con SAP Business One, SAP S/4HANA, Odoo, Microsoft Dynamics 365 Business Central y ERPs propietarios."
+									"marks": ["strong"],
+									"text": "Optimizacion de procesos. "
+								},
+								{
+									"_type": "span",
+									"text": "Automatizacion de pedidos recurrentes y reduccion de errores administrativos. La mayoria de empresas B2B pierden mas tiempo en gestion que en venta."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Experiencia de cliente. "
+								},
+								{
+									"_type": "span",
+									"text": "Disenos de portales self-service intuitivos donde tus clientes consultan stock real, repiten pedidos en dos clicks y descargan facturas sin llamar a tu comercial."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Integracion tecnologica. "
+								},
+								{
+									"_type": "span",
+									"text": "Conexion fluida entre eCommerce, ERP, CRM, almacen y pasarelas. Ningun dato duplicado, ningun proceso manual."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Escalabilidad. "
+								},
+								{
+									"_type": "span",
+									"text": "Construyo infraestructuras pensadas para crecer: nuevos mercados, nuevos canales, nuevos productos. Sin tirar y rehacer cada dos anos."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Plataformas y ERPs con los que trabajo" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Plataformas eCommerce: "
+								},
+								{
+									"_type": "span",
+									"text": "PrestaShop (prioritaria para B2B industrial), Shopify Plus (cuando la prioridad es velocidad de lanzamiento), Adobe Commerce y soluciones headless o a medida."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "ERPs integrados: "
+								},
+								{
+									"_type": "span",
+									"text": "SAP Business One, SAP S/4HANA, Microsoft Dynamics 365 Business Central, Sage 200, Sage X3, Odoo y desarrollos propietarios. Si tu ERP no esta en esta lista, casi seguro puedo igualmente."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Stack para agentes IA y automatizacion" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "OpenAI API, Anthropic Claude, LangChain, n8n, Make y Python para cuando hay que bajar a codigo. Cada implementacion empieza identificando el proceso con mayor impacto, no aplicando IA por moda."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "blockquote",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Automatiza lo aburrido, escala lo importante."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Formacion para que tu equipo se adueñe del sistema" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "La tecnologia por si sola no transforma empresas. Las personas si. Cierro casi todos los proyectos con un programa de formacion adaptado al equipo y al contexto, en cualquiera de estos tres formatos:"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "In-Company. "
+								},
+								{
+									"_type": "span",
+									"text": "Sesiones presenciales en tus oficinas, personalizadas segun tu contexto. Ideal para equipos que arrancan."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Online en vivo. "
+								},
+								{
+									"_type": "span",
+									"text": "Webinars interactivos para equipos remotos o dispersos geograficamente."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Mentoring 1:1. "
+								},
+								{
+									"_type": "span",
+									"text": "Acompanamiento individualizado para directivos y responsables digitales."
 								}
 							]
 						},
