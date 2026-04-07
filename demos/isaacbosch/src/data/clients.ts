@@ -146,6 +146,32 @@ export const clients: Client[] = [
 	{ slug: "vicent", name: "Vicent", logo: "/clientes/vicent.png", sector: "otros", projectType: DEFAULT_ECOMMERCE },
 	{ slug: "vichy-catalan", name: "Vichy Catalan", logo: "/clientes/vichy-catalan.png", sector: "alimentacion-bebidas", projectType: DEFAULT_B2B_ERP, featured: true },
 	{ slug: "wonders", name: "Wonders", logo: "/clientes/wonders.png", sector: "calzado", projectType: DEFAULT_ECOMMERCE, featured: true },
+
+	// Nueva tanda — REVISAR sectores y tipos de proyecto
+	{ slug: "amazing", name: "Amazing", logo: "/clientes/amazing_logo.jpg", sector: "otros", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "andreanimhs", name: "Andrean Imhs", logo: "/clientes/andreanimhs_logo.jpg", sector: "retail-moda", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "beatrizfurest", name: "Beatriz Furest", logo: "/clientes/beatrizfurest_logo.png", sector: "retail-moda", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "bella-aurora", name: "Bella Aurora", logo: "/clientes/bella_aurora_logo.png", sector: "salud-belleza", projectType: DEFAULT_B2B_ERP, featured: true },
+	{ slug: "calmahouse", name: "Calmahouse", logo: "/clientes/calmahouse.png", sector: "mueble-hogar", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "cuadrostock", name: "Cuadrostock", logo: "/clientes/cuadrostock_logo.jpg", sector: "mueble-hogar", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "decoforhome", name: "Deco For Home", logo: "/clientes/decoforhome_logo.png", sector: "mueble-hogar", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "easybuywine", name: "Easy Buy Wine", logo: "/clientes/easybuywine_logo.png", sector: "alimentacion-bebidas", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "electrohogarvillamil", name: "Electrohogar Villamil", logo: "/clientes/electrohogarvillamil_logo.png", sector: "mueble-hogar", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "elmundodelasalfombras", name: "El Mundo de las Alfombras", logo: "/clientes/elmundodelasalfombras_logo.png", sector: "mueble-hogar", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "elmundodelastelas", name: "El Mundo de las Telas", logo: "/clientes/elmundodelastelas_logo.jpg", sector: "mueble-hogar", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "fontmeco", name: "Fontmeco", logo: "/clientes/fontmeco_logo.jpg", sector: "industrial-maquinaria", projectType: DEFAULT_B2B_ERP },
+	{ slug: "gruporp", name: "Grupo RP", logo: "/clientes/gruporp_logo.jpg", sector: "otros", projectType: DEFAULT_B2B_ERP },
+	{ slug: "habitium", name: "Habitium", logo: "/clientes/habitium_logo.jpg", sector: "mueble-hogar", projectType: DEFAULT_B2B_ERP, featured: true },
+	{ slug: "harley-davidson", name: "Harley-Davidson", logo: "/clientes/harley_davidson_logo.jpg", sector: "automocion", projectType: DEFAULT_ECOMMERCE, featured: true },
+	{ slug: "ladrogueria", name: "La Drogueria", logo: "/clientes/ladrogueria_logo.png", sector: "salud-belleza", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "maderasbarber", name: "Maderas Barber", logo: "/clientes/maderasbarber_logo.jpg", sector: "industrial-maquinaria", projectType: DEFAULT_B2B_ERP },
+	{ slug: "maquinaelectric", name: "Maquina Electric", logo: "/clientes/maquinaelectric_logo.png", sector: "industrial-maquinaria", projectType: DEFAULT_B2B_ERP },
+	{ slug: "masquevideo", name: "Masque Video", logo: "/clientes/masquevideo_logo.jpg", sector: "tecnologia-it", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "n3xtwave", name: "N3xtwave", logo: "/clientes/n3xtwave_logo.jpg", sector: "tecnologia-it", projectType: DEFAULT_PLATFORM },
+	{ slug: "reig-beaux-arts", name: "Reig Beaux Arts", logo: "/clientes/reig_beaux_arts_logo.png", sector: "otros", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "rocaroya", name: "Roca Roya", logo: "/clientes/rocaroya_logo.jpg", sector: "retail-moda", projectType: DEFAULT_ECOMMERCE },
+	{ slug: "vicensvives", name: "Vicens Vives", logo: "/clientes/vicensvives_logo.jpg", sector: "educacion", projectType: DEFAULT_PLATFORM, featured: true },
+	{ slug: "zapatosmarina", name: "Zapatos Marina", logo: "/clientes/zapatosmarina_logo.jpg", sector: "calzado", projectType: DEFAULT_ECOMMERCE },
 ];
 
 export function getClientsBySector(sector: ClientSector): Client[] {
