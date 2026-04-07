@@ -2,7 +2,6 @@
 export const prerender = false;
 
 import { getEmDashEntry, getSeoMeta } from "emdash";
-import { PortableText } from "emdash/ui";
 import Base from "../layouts/Base.astro";
 import SiteBlocks from "../components/SiteBlocks.astro";
 
@@ -18,34 +17,422 @@ const seo = getSeoMeta(entry);
 
 <Base
 	title={seo.title ?? "Contacto"}
-	description={seo.description}
-	image={seo.image}
+	description={seo.description ?? "Contacta con Isaac Bosch para hablar de tu proyecto. Consultoria eCommerce B2B y Fractional CIO."}
+	image={seo.ogImage}
 	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
 >
 	<article class="page-content">
-		{entry.data.title && <h1 class="page-title">{entry.data.title}</h1>}
-		{
-			entry.data.content && (
-				<div class="prose">
-					<SiteBlocks value={entry.data.content} />
+		<header class="page-header">
+			<span class="page-eyebrow">Contacto</span>
+			<h1 class="page-title">{entry.data.title}</h1>
+		</header>
+		{entry.data.content && (
+			<div class="prose">
+				<SiteBlocks value={entry.data.content} />
+			</div>
+		)}
+
+		<section class="form-section">
+			<header class="form-header">
+				<span class="form-eyebrow">Formulario</span>
+				<h2 class="form-title">Cuentame tu situacion</h2>
+				<p class="form-subtitle">
+					Respondo en menos de 24 horas en dias laborales. Si prefieres una respuesta inmediata, escribeme por <a href="https://wa.me/34655588668" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
+				</p>
+			</header>
+
+			<form id="contact-form" class="contact-form" novalidate>
+				<div class="form-row form-row-double">
+					<div class="form-field">
+						<label for="cf-name">Nombre <span class="required">*</span></label>
+						<input
+							type="text"
+							id="cf-name"
+							name="name"
+							required
+							autocomplete="name"
+							minlength="2"
+							maxlength="100"
+						/>
+					</div>
+					<div class="form-field">
+						<label for="cf-email">Email <span class="required">*</span></label>
+						<input
+							type="email"
+							id="cf-email"
+							name="email"
+							required
+							autocomplete="email"
+							maxlength="200"
+						/>
+					</div>
 				</div>
-			)
-		}
+
+				<div class="form-row form-row-double">
+					<div class="form-field">
+						<label for="cf-company">Empresa</label>
+						<input
+							type="text"
+							id="cf-company"
+							name="company"
+							autocomplete="organization"
+							maxlength="120"
+						/>
+					</div>
+					<div class="form-field">
+						<label for="cf-subject">Tipo de consulta</label>
+						<select id="cf-subject" name="subject">
+							<option value="otro">Otra consulta</option>
+							<option value="consultoria-b2b">Consultoria eCommerce B2B</option>
+							<option value="fractional-cio">Fractional CIO</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-field">
+					<label for="cf-message">Mensaje <span class="required">*</span></label>
+					<textarea
+						id="cf-message"
+						name="message"
+						required
+						rows="6"
+						minlength="10"
+						maxlength="4000"
+						placeholder="Cuentame tu situacion: que empresa eres, que necesitas, en que punto estas..."></textarea>
+				</div>
+
+				<!-- Honeypot — hidden from real users -->
+				<div class="hp-field" aria-hidden="true">
+					<label for="cf-website">Website (no rellenar)</label>
+					<input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off" />
+				</div>
+
+				<p class="form-privacy">
+					Al enviar aceptas que use tus datos para responder a tu consulta. Mas info en la <a href="/privacidad">politica de privacidad</a>.
+				</p>
+
+				<div class="form-footer">
+					<button type="submit" class="submit-btn">
+						<span class="btn-label">Enviar mensaje</span>
+						<span class="btn-loading" aria-hidden="true">Enviando...</span>
+					</button>
+				</div>
+
+				<div class="form-feedback form-feedback-success" role="status" hidden>
+					<strong>Mensaje enviado.</strong> Te respondere lo antes posible.
+				</div>
+				<div class="form-feedback form-feedback-error" role="alert" hidden>
+					<strong>No se pudo enviar.</strong> Revisa los datos o escribeme por WhatsApp al
+					<a href="https://wa.me/34655588668" target="_blank" rel="noopener noreferrer">+34 655 588 668</a>.
+				</div>
+			</form>
+		</section>
 	</article>
 </Base>
+
+<script>
+	const form = document.getElementById("contact-form") as HTMLFormElement | null;
+	if (form) {
+		const submitBtn = form.querySelector<HTMLButtonElement>(".submit-btn");
+		const successEl = form.querySelector<HTMLElement>(".form-feedback-success");
+		const errorEl = form.querySelector<HTMLElement>(".form-feedback-error");
+
+		form.addEventListener("submit", async (event) => {
+			event.preventDefault();
+			if (!submitBtn || !successEl || !errorEl) return;
+
+			successEl.hidden = true;
+			errorEl.hidden = true;
+
+			if (!form.checkValidity()) {
+				form.reportValidity();
+				return;
+			}
+
+			submitBtn.disabled = true;
+			form.classList.add("is-submitting");
+
+			const formData = new FormData(form);
+			const payload = {
+				name: String(formData.get("name") || ""),
+				email: String(formData.get("email") || ""),
+				company: String(formData.get("company") || ""),
+				subject: String(formData.get("subject") || ""),
+				message: String(formData.get("message") || ""),
+				website: String(formData.get("website") || ""),
+			};
+
+			try {
+				const response = await fetch("/api/contact", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify(payload),
+				});
+
+				if (!response.ok) {
+					throw new Error(`HTTP ${response.status}`);
+				}
+
+				successEl.hidden = false;
+				form.reset();
+				successEl.scrollIntoView({ behavior: "smooth", block: "center" });
+			} catch (err) {
+				console.error("[contact-form]", err);
+				errorEl.hidden = false;
+				errorEl.scrollIntoView({ behavior: "smooth", block: "center" });
+			} finally {
+				submitBtn.disabled = false;
+				form.classList.remove("is-submitting");
+			}
+		});
+	}
+</script>
 
 <style>
 	.page-content {
 		max-width: var(--content-width);
 		margin: 0 auto;
-		padding: var(--spacing-16) var(--spacing-6);
+		padding: var(--spacing-24) var(--spacing-6) var(--spacing-20);
+	}
+
+	.page-header {
+		margin-bottom: var(--spacing-12);
+	}
+
+	.page-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-4);
 	}
 
 	.page-title {
-		font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
-		font-weight: 700;
+		font-family: var(--font-serif);
+		font-size: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: var(--tracking-tighter);
+		color: var(--color-text);
+		margin: 0;
+	}
+
+	/* === Form section === */
+	.form-section {
+		margin-top: var(--spacing-16);
+		padding-top: var(--spacing-16);
+		border-top: 1px solid var(--color-border);
+	}
+
+	.form-header {
+		margin-bottom: var(--spacing-10);
+	}
+
+	.form-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-3);
+	}
+
+	.form-title {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-3xl);
+		font-weight: 400;
 		letter-spacing: var(--tracking-tight);
-		line-height: var(--leading-tight);
-		margin: 0 0 var(--spacing-8) 0;
+		line-height: 1.15;
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-3);
+	}
+
+	.form-subtitle {
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0;
+	}
+
+	.form-subtitle a {
+		color: var(--color-accent);
+		text-decoration: underline;
+		text-decoration-color: var(--color-accent-soft);
+		text-underline-offset: 3px;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-5);
+	}
+
+	.form-row {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-5);
+	}
+
+	.form-row-double {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--spacing-5);
+	}
+
+	.form-field {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-2);
+	}
+
+	.form-field label {
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-text);
+	}
+
+	.required {
+		color: var(--color-accent);
+	}
+
+	.form-field input,
+	.form-field select,
+	.form-field textarea {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-base);
+		color: var(--color-text);
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius);
+		padding: var(--spacing-3) var(--spacing-4);
+		transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+		width: 100%;
+	}
+
+	.form-field textarea {
+		resize: vertical;
+		min-height: 140px;
+		line-height: var(--leading-relaxed);
+	}
+
+	.form-field input:focus,
+	.form-field select:focus,
+	.form-field textarea:focus {
+		outline: none;
+		border-color: var(--color-accent);
+		box-shadow: 0 0 0 3px var(--color-accent-ring);
+	}
+
+	.form-field input::placeholder,
+	.form-field textarea::placeholder {
+		color: var(--color-muted);
+	}
+
+	.hp-field {
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
+
+	.form-privacy {
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+		line-height: var(--leading-relaxed);
+		margin: 0;
+	}
+
+	.form-privacy a {
+		color: var(--color-text-secondary);
+		text-decoration: underline;
+		text-decoration-color: var(--color-border);
+		text-underline-offset: 3px;
+	}
+
+	.form-footer {
+		display: flex;
+		justify-content: flex-start;
+		margin-top: var(--spacing-2);
+	}
+
+	.submit-btn {
+		display: inline-flex;
+		align-items: center;
+		padding: var(--spacing-4) var(--spacing-8);
+		background: var(--color-text);
+		color: var(--color-bg);
+		border: 1px solid var(--color-text);
+		border-radius: 9999px;
+		font-family: var(--font-sans);
+		font-size: var(--font-size-base);
+		font-weight: 500;
+		cursor: pointer;
+		transition: all var(--transition-fast);
+	}
+
+	.submit-btn:hover:not(:disabled) {
+		background: var(--color-accent);
+		border-color: var(--color-accent);
+	}
+
+	.submit-btn:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+	.btn-loading {
+		display: none;
+	}
+
+	.is-submitting .btn-label {
+		display: none;
+	}
+
+	.is-submitting .btn-loading {
+		display: inline;
+	}
+
+	.form-feedback {
+		padding: var(--spacing-4) var(--spacing-5);
+		border-radius: var(--radius);
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+	}
+
+	.form-feedback-success {
+		background: rgba(85, 199, 220, 0.12);
+		border: 1px solid #55C7DC;
+		color: #144067;
+	}
+
+	.form-feedback-error {
+		background: rgba(220, 80, 80, 0.08);
+		border: 1px solid rgba(220, 80, 80, 0.4);
+		color: #8a2626;
+	}
+
+	.form-feedback a {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	@media (max-width: 640px) {
+		.page-content {
+			padding: var(--spacing-16) var(--spacing-5) var(--spacing-12);
+		}
+
+		.form-row-double {
+			grid-template-columns: 1fr;
+		}
+
+		.submit-btn {
+			width: 100%;
+			justify-content: center;
+		}
 	}
 </style>
