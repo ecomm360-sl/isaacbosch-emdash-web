@@ -142,20 +142,23 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 				<a href="/" class="site-title">{siteTitle}</a>
 				<div class="nav-right">
 					<div class="nav-links">
-						{menu?.items.slice(0, -1).map((item) => (
+						{menu?.items.slice(0, 4).map((item) => (
 							<a href={item.url} target={item.target}>{item.label}</a>
 						))}
-						{menu?.items.length && (
-							<>
-								<span class="nav-sep" aria-hidden="true"></span>
-								<a
-									href={menu.items[menu.items.length - 1].url}
-									target={menu.items[menu.items.length - 1].target}
-									class="nav-cta"
-								>
-									{menu.items[menu.items.length - 1].label}
-								</a>
-							</>
+						{menu && menu.items.length > 4 && (
+							<span class="nav-sep" aria-hidden="true"></span>
+						)}
+						{menu?.items.slice(4, -1).map((item) => (
+							<a href={item.url} target={item.target}>{item.label}</a>
+						))}
+						{menu && menu.items.length > 0 && (
+							<a
+								href={menu.items[menu.items.length - 1].url}
+								target={menu.items[menu.items.length - 1].target}
+								class="nav-cta"
+							>
+								{menu.items[menu.items.length - 1].label}
+							</a>
 						)}
 					</div>
 					{isLoggedIn && (
