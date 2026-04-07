@@ -61,9 +61,13 @@ const isLoggedIn = !!Astro.locals.user;
 const localBusinessJsonLd = JSON.stringify({
 	"@context": "https://schema.org",
 	"@type": "ProfessionalService",
-	"name": "Isaac Bosch - Consultoria eCommerce B2B e IA",
+	"name": "Isaac Bosch - Consultor eCommerce B2B y Fractional CIO",
+	"description":
+		"Consultoria eCommerce B2B y Fractional CIO para empresas industriales. Integracion ERP, automatizacion y direccion tecnologica part-time.",
 	"url": "https://isaacbosch.com",
 	"telephone": "+34655588668",
+	"priceRange": "$$$",
+	"areaServed": "ES",
 	"address": {
 		"@type": "PostalAddress",
 		"streetAddress": "Pla. Urquinaona, 6, 14B",
@@ -72,9 +76,33 @@ const localBusinessJsonLd = JSON.stringify({
 		"addressRegion": "Cataluna",
 		"addressCountry": "ES",
 	},
+	"hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Servicios profesionales",
+		"itemListElement": [
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Consultoria eCommerce B2B Industrial",
+					"url": "https://isaacbosch.com/consultoria-ecommerce-b2b",
+				},
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Fractional CIO para pymes industriales",
+					"url": "https://isaacbosch.com/fractional-cio",
+				},
+			},
+		],
+	},
 	"sameAs": [
 		"https://linkedin.com/in/isaacbosch",
 		"https://x.com/isaacbosch",
+		"https://ecomm360.es",
+		"https://integrafy.io",
 	],
 });
 
@@ -143,23 +171,26 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 				<div class="footer-grid">
 					<div class="footer-brand">
 						<a href="/" class="footer-logo">{siteTitle}</a>
-						<p class="footer-tagline">Consultor eCommerce B2B e IA en Barcelona</p>
+						<p class="footer-tagline">Consultor eCommerce B2B y Fractional CIO</p>
+						<p class="footer-tagline-brand"><em>Del dato al pedido. Sin fricciones.</em></p>
 					</div>
 					<div class="footer-nav">
-						<h4 class="footer-heading">Navegar</h4>
+						<h4 class="footer-heading">Servicios</h4>
 						<ul class="footer-links">
-							<li><a href="/">Inicio</a></li>
-							<li><a href="/blog">Blog</a></li>
-							<li><a href="/servicios">Servicios</a></li>
-							<li><a href="/proyectos">Proyectos</a></li>
+							<li><a href="/consultoria-ecommerce-b2b">Consultoria B2B</a></li>
+							<li><a href="/fractional-cio">Fractional CIO</a></li>
+							<li><a href="/proyectos">Ecosistema</a></li>
+							<li><a href="/recursos">Recursos</a></li>
 						</ul>
 					</div>
 					<div class="footer-nav">
-						<h4 class="footer-heading">Conectar</h4>
+						<h4 class="footer-heading">Sobre</h4>
 						<ul class="footer-links">
-							<li><a href="https://linkedin.com/in/isaacbosch" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-							<li><a href="https://x.com/isaacbosch" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+							<li><a href="/sobre-isaac">Sobre Isaac</a></li>
+							<li><a href="/blog">Blog</a></li>
+							<li><a href="/newsletter">Newsletter</a></li>
 							<li><a href="/contacto">Contacto</a></li>
+							<li><a href="https://linkedin.com/in/isaacbosch" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
 							<li><a href="/rss.xml">RSS</a></li>
 						</ul>
 					</div>
@@ -347,6 +378,7 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 			.footer-brand { max-width: 280px; }
 			.footer-logo { font-family: var(--font-serif); font-size: var(--font-size-xl); font-weight: 500; color: var(--color-text); text-decoration: none; letter-spacing: var(--tracking-tight); }
 			.footer-tagline { margin-top: var(--spacing-3); font-size: var(--font-size-sm); color: var(--color-muted); line-height: var(--leading-relaxed); }
+			.footer-tagline-brand { margin-top: var(--spacing-2); font-family: var(--font-serif); font-size: var(--font-size-sm); color: var(--color-text-secondary); font-style: italic; }
 			.footer-nav { min-width: 0; }
 			.footer-heading { font-size: var(--font-size-xs); font-weight: 500; text-transform: uppercase; letter-spacing: var(--tracking-wider); color: var(--color-muted); margin-bottom: var(--spacing-4); }
 			.footer-links { list-style: none; }

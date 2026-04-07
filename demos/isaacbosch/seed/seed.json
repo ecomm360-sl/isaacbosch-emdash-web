@@ -194,13 +194,10 @@
 			"hierarchical": true,
 			"collections": ["posts"],
 			"terms": [
-				{ "slug": "ecommerce-b2b", "label": "eCommerce B2B" },
-				{ "slug": "inteligencia-artificial", "label": "Inteligencia Artificial" },
-				{ "slug": "automatizacion", "label": "Automatizacion" },
+				{ "slug": "estrategia-b2b", "label": "Estrategia B2B" },
 				{ "slug": "integracion-erp", "label": "Integracion ERP" },
-				{ "slug": "transformacion-digital", "label": "Transformacion Digital" },
-				{ "slug": "consultoria", "label": "Consultoria" },
-				{ "slug": "formacion", "label": "Formacion Corporativa" }
+				{ "slug": "tecnologia", "label": "Tecnologia" },
+				{ "slug": "reflexiones", "label": "Reflexiones" }
 			]
 		},
 		{
@@ -245,10 +242,11 @@
 			"label": "Navegacion Principal",
 			"items": [
 				{ "type": "custom", "label": "Inicio", "url": "/" },
-				{ "type": "custom", "label": "Sobre mi", "url": "/sobre-mi" },
-				{ "type": "custom", "label": "Servicios", "url": "/servicios" },
-				{ "type": "custom", "label": "Blog", "url": "/blog" },
+				{ "type": "custom", "label": "Consultoria B2B", "url": "/consultoria-ecommerce-b2b" },
+				{ "type": "custom", "label": "Fractional CIO", "url": "/fractional-cio" },
 				{ "type": "custom", "label": "Proyectos", "url": "/proyectos" },
+				{ "type": "custom", "label": "Blog", "url": "/blog" },
+				{ "type": "custom", "label": "Sobre Isaac", "url": "/sobre-isaac" },
 				{ "type": "custom", "label": "Contacto", "url": "/contacto" }
 			]
 		}
@@ -312,36 +310,27 @@
 	],
 
 	"redirects": [
-		{
-			"source": "/consultor-empresas",
-			"destination": "/sobre-mi",
-			"type": 301
-		},
-		{
-			"source": "/experiencia-consultor",
-			"destination": "/experiencia",
-			"type": 301
-		},
-		{
-			"source": "/notes",
-			"destination": "/blog",
-			"type": 301
-		},
-		{
-			"source": "/projects",
-			"destination": "/proyectos",
-			"type": 301
-		}
+		{ "source": "/consultor-empresas", "destination": "/sobre-isaac", "type": 301 },
+		{ "source": "/experiencia-consultor", "destination": "/sobre-isaac", "type": 301 },
+		{ "source": "/notes", "destination": "/blog", "type": 301 },
+		{ "source": "/projects", "destination": "/proyectos", "type": 301 },
+		{ "source": "/sobre-mi", "destination": "/sobre-isaac", "type": 301 },
+		{ "source": "/experiencia", "destination": "/sobre-isaac", "type": 301 },
+		{ "source": "/servicios", "destination": "/consultoria-ecommerce-b2b", "type": 301 },
+		{ "source": "/servicios/consultoria-ecommerce-b2b", "destination": "/consultoria-ecommerce-b2b", "type": 301 },
+		{ "source": "/servicios/integracion-erp-ecommerce", "destination": "/consultoria-ecommerce-b2b", "type": 301 },
+		{ "source": "/servicios/agentes-ia-automatizacion", "destination": "/consultoria-ecommerce-b2b", "type": 301 },
+		{ "source": "/servicios/formacion-corporativa", "destination": "/consultoria-ecommerce-b2b", "type": 301 }
 	],
 
 	"content": {
 		"pages": [
 			{
-				"id": "sobre-mi",
-				"slug": "sobre-mi",
+				"id": "sobre-isaac",
+				"slug": "sobre-isaac",
 				"status": "published",
 				"data": {
-					"title": "Sobre mi",
+					"title": "Sobre Isaac Bosch",
 					"content": [
 						{
 							"_type": "block",
@@ -349,14 +338,14 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Soy Isaac Bosch, consultor especializado en eCommerce B2B, integracion de sistemas ERP y automatizacion con inteligencia artificial. Desde Barcelona, ayudo a empresas a construir infraestructuras digitales que escalan."
+									"text": "Llevo la tecnologia comercial a sectores que todavia venden como en 1998. Soy Isaac Bosch, consultor eCommerce B2B y Fractional CIO. Desde Barcelona, ayudo a empresas industriales y de distribucion a digitalizar su canal de ventas e integrar sus sistemas ERP con plataformas online."
 								}
 							]
 						},
 						{
 							"_type": "block",
 							"style": "h2",
-							"children": [{ "_type": "span", "text": "Lo que hago" }]
+							"children": [{ "_type": "span", "text": "Quien soy" }]
 						},
 						{
 							"_type": "block",
@@ -364,7 +353,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Como CEO y fundador de eComm360 (desde 2018), lidero proyectos de eCommerce B2B y automatizacion con IA para empresas que necesitan integrar sus sistemas de gestion con canales de venta online. Antes de eso, funde AlabazWeb (2015), una agencia de desarrollo web especializada en comercio electronico."
+									"text": "Empece en el mundo eCommerce hace mas de 15 anos, cuando vender online en B2B era casi una rareza. Funde Alabazweb en 2015 desarrollando modulos PrestaShop para empresas con procesos comerciales avanzados. En 2018 lance eComm360, la consultora especializada en eCommerce B2B industrial que opero hoy. Mas recientemente, he construido Integrafy (middleware de integracion ERP-eCommerce con cientos de conectores) y Approsearch (motor de busqueda con IA para catalogos B2B extensos)."
 								}
 							]
 						},
@@ -374,7 +363,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Entre 2010 y 2015 fui Director Tecnico en MSMK, donde lideraba el area digital y coordinaba equipos de desarrollo para proyectos de transformacion digital corporativa."
+									"text": "Combino el rol de consultor con el de empresario. Eso me da una doble vision: la de quien aconseja proyectos y la de quien tiene que ejecutarlos en su propia empresa. No vendo teoria. Vendo lo que ya he probado en mis propios productos y en los de mis clientes."
 								}
 							]
 						},
@@ -390,11 +379,11 @@
 								{
 									"_type": "span",
 									"marks": ["strong"],
-									"text": "Claridad sobre complejidad."
+									"text": "Claridad sobre complejidad. "
 								},
 								{
 									"_type": "span",
-									"text": " Las soluciones mas robustas son las que cualquier miembro del equipo puede entender y mantener."
+									"text": "Las soluciones mas robustas son las que cualquier miembro del equipo puede entender y mantener cuando yo ya no este."
 								}
 							]
 						},
@@ -405,11 +394,11 @@
 								{
 									"_type": "span",
 									"marks": ["strong"],
-									"text": "Sistemas escalables."
+									"text": "Sistemas escalables. "
 								},
 								{
 									"_type": "span",
-									"text": " Cada decision tecnica se toma pensando en el crecimiento futuro, no solo en la necesidad inmediata."
+									"text": "Cada decision tecnica se toma pensando en el crecimiento futuro, no solo en la necesidad inmediata."
 								}
 							]
 						},
@@ -420,66 +409,38 @@
 								{
 									"_type": "span",
 									"marks": ["strong"],
-									"text": "Tecnologia al servicio de las personas."
+									"text": "Tecnologia al servicio de las personas. "
 								},
 								{
 									"_type": "span",
-									"text": " La automatizacion existe para liberar tiempo y capacidad humana, no para reemplazarla."
-								}
-							]
-						},
-						{
-							"_type": "block",
-							"style": "h2",
-							"children": [{ "_type": "span", "text": "Formacion" }]
-						},
-						{
-							"_type": "block",
-							"style": "normal",
-							"children": [
-								{
-									"_type": "span",
-									"text": "Executive MBA por EAE Business School (2015-2019). Posgrado en Transformacion Digital por EADA Business School (2025). Formacion continua en IA aplicada, arquitectura de sistemas y estrategia comercial B2B."
-								}
-							]
-						}
-					]
-				}
-			},
-			{
-				"id": "experiencia",
-				"slug": "experiencia",
-				"status": "published",
-				"data": {
-					"title": "Experiencia profesional",
-					"content": [
-						{
-							"_type": "block",
-							"style": "normal",
-							"children": [
-								{
-									"_type": "span",
-									"text": "Mas de 15 anos de trayectoria en tecnologia, eCommerce y transformacion digital."
+									"text": "La automatizacion existe para liberar tiempo y capacidad humana, no para reemplazarla."
 								}
 							]
 						},
 						{
 							"_type": "site.timeline",
-							"_key": "timeline-1",
-							"headline": "Trayectoria profesional",
+							"_key": "trajectory-timeline",
+							"headline": "Trayectoria",
 							"items": [
+								{
+									"year": "2024 - Presente",
+									"title": "Fundador",
+									"company": "Integrafy & Approsearch",
+									"description": "Construccion de productos propios: middleware de integracion ERP-eCommerce y motor de busqueda IA para catalogos industriales.",
+									"current": true
+								},
 								{
 									"year": "2018 - Presente",
 									"title": "CEO & Fundador",
 									"company": "eComm360",
-									"description": "Liderando proyectos de eCommerce B2B y automatizacion con IA. Integracion de ERPs con plataformas de venta online. Desarrollo de agentes autonomos para procesos comerciales.",
+									"description": "Consultora eCommerce B2B industrial. Integracion ERP, agentes IA y automatizacion para fabricantes y distribuidores.",
 									"current": true
 								},
 								{
 									"year": "2015 - Presente",
-									"title": "CEO & Fundador",
-									"company": "AlabazWeb",
-									"description": "Agencia de desarrollo web especializada en comercio electronico. Proyectos con Magento, PrestaShop, Shopify y soluciones a medida.",
+									"title": "Fundador",
+									"company": "Alabazweb",
+									"description": "Modulos PrestaShop para B2B y procesos comerciales avanzados. Marca historica integrada en el ecosistema eComm360.",
 									"current": true
 								},
 								{
@@ -489,6 +450,527 @@
 									"description": "Liderazgo del area digital. Coordinacion de equipos de desarrollo para proyectos de transformacion digital corporativa."
 								}
 							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Formacion y comunidad" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Executive MBA por EAE Business School (2015-2019). Posgrado en Transformacion Digital por EADA Business School. Miembro activo del Observatorio eCommerce y de AJE Madrid. Formacion continua en IA aplicada, arquitectura de sistemas distribuidos y estrategia comercial B2B."
+								}
+							]
+						},
+						{
+							"_type": "site.cta",
+							"_key": "about-cta",
+							"headline": "Hablemos en LinkedIn",
+							"description": "Comparto reflexiones sobre eCommerce B2B, integraciones ERP y empresa en LinkedIn casi a diario. Conectemos.",
+							"primaryCta": { "label": "Conectar en LinkedIn", "url": "https://linkedin.com/in/isaacbosch" }
+						}
+					]
+				}
+			},
+			{
+				"id": "consultoria-ecommerce-b2b",
+				"slug": "consultoria-ecommerce-b2b",
+				"status": "published",
+				"data": {
+					"title": "Consultoria eCommerce B2B Industrial",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Disenar, implementar e integrar un canal de venta digital para empresas industriales y distribuidoras. No es solo poner una tienda online: es conectar tu ERP, automatizar pedidos recurrentes, gestionar precios por cliente y darle a tu equipo comercial herramientas para vender mas con menos friccion."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Para quien trabajo" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Fabricantes, distribuidores y empresas industriales con catalogo extenso, precios diferenciados por cliente, integracion necesaria con ERP y un equipo comercial que pasa demasiado tiempo procesando pedidos manualmente. Si te suena familiar, podemos hablar."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Lo que incluye" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Diagnostico inicial. "
+								},
+								{
+									"_type": "span",
+									"text": "Auditoria honesta de tu stack actual, procesos comerciales y oportunidades reales de digitalizacion. Sin venderte humo."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Estrategia y arquitectura. "
+								},
+								{
+									"_type": "span",
+									"text": "Seleccion de plataforma (PrestaShop, Shopify Plus o solucion a medida), arquitectura de catalogo, modelo de precios B2B y plan de integracion con tu ERP."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Implementacion. "
+								},
+								{
+									"_type": "span",
+									"text": "Direccion del proyecto end-to-end. Con equipo propio o coordinando proveedores, dependiendo de tu situacion."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Formacion y soporte. "
+								},
+								{
+									"_type": "span",
+									"text": "Tu equipo tiene que poder usar la plataforma sin depender de nadie. Por eso siempre cierro proyectos con formacion practica y documentacion accionable."
+								}
+							]
+						},
+						{
+							"_type": "site.timeline",
+							"_key": "metodologia",
+							"headline": "Metodologia en 5 fases",
+							"items": [
+								{
+									"year": "Fase 1",
+									"title": "Toma de requisitos",
+									"description": "Entrevistas con direccion, comercial, logistica y produccion para entender el negocio real, no el ideal."
+								},
+								{
+									"year": "Fase 2",
+									"title": "Diseno de flujos funcionales",
+									"description": "Modelado de procesos: alta de cliente, gestion de catalogo, flujo de pedido, integracion con almacen, facturacion."
+								},
+								{
+									"year": "Fase 3",
+									"title": "Validacion con produccion y logistica",
+									"description": "Antes de tocar codigo, validar que los flujos disenados encajan con la realidad operativa diaria. Aqui se evitan los proyectos fallidos."
+								},
+								{
+									"year": "Fase 4",
+									"title": "Implementacion y testeo",
+									"description": "Desarrollo iterativo con entregas semanales, integracion ERP en paralelo, pruebas con usuarios reales antes del lanzamiento."
+								},
+								{
+									"year": "Fase 5",
+									"title": "Formacion y soporte post-venta",
+									"description": "Onboarding del equipo comercial y administrativo. Documentacion viva. Soporte estructurado los primeros 90 dias."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Plataformas y stack" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "PrestaShop como opcion prioritaria para B2B industrial (mejor relacion control-coste). Shopify Plus cuando la prioridad es velocidad de lanzamiento. Soluciones headless o a medida para casos especificos. Integracion con SAP Business One, SAP S/4HANA, Odoo, Microsoft Dynamics 365 Business Central y ERPs propietarios."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Casos de referencia" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "He liderado proyectos en sectores como mueble, bebidas, construccion y alimentacion. Por confidencialidad no puedo nombrar todos los clientes, pero si quieres referencias concretas para tu sector, las facilito en una primera reunion."
+								}
+							]
+						},
+						{
+							"_type": "site.faq",
+							"_key": "faq-consultoria",
+							"headline": "Preguntas frecuentes",
+							"items": [
+								{
+									"question": "Cuanto dura un proyecto tipico?",
+									"answer": "Entre 4 y 8 meses para una implementacion completa con integracion ERP. Un MVP funcional puedo entregarlo en 90 dias si la situacion lo requiere."
+								},
+								{
+									"question": "Trabajas con equipo propio o externo?",
+									"answer": "Tengo equipo propio en eComm360 para implementaciones completas. Tambien dirijo proyectos como consultor cuando el cliente ya tiene equipo tecnico interno o agencia."
+								},
+								{
+									"question": "Que ERPs has integrado?",
+									"answer": "SAP Business One, SAP S/4HANA, Microsoft Dynamics 365 Business Central, Odoo y varios ERPs propietarios. Si tu ERP no esta en esta lista, probablemente puedo igualmente."
+								},
+								{
+									"question": "Trabajas solo con empresas industriales?",
+									"answer": "Es mi especialidad y donde aporto mas valor. Trabajo tambien con distribuidores y mayoristas. Para B2C puro o servicios profesionales hay consultores mejores que yo."
+								},
+								{
+									"question": "Como cobras?",
+									"answer": "Proyectos cerrados con alcance definido o consultoria por horas para situaciones puntuales. Sin retainers eternos. Te interesa el resultado, no facturarme cada mes sin entregar valor."
+								}
+							]
+						},
+						{
+							"_type": "site.cta",
+							"_key": "consultoria-cta",
+							"headline": "Pide un diagnostico gratuito de 45 minutos",
+							"description": "Cuentame tu situacion. Si encajamos, hablamos del proyecto. Si no, te oriento sobre el siguiente paso aunque sea con otro consultor.",
+							"primaryCta": { "label": "Solicitar diagnostico", "url": "/contacto" }
+						}
+					]
+				}
+			},
+			{
+				"id": "fractional-cio",
+				"slug": "fractional-cio",
+				"status": "published",
+				"data": {
+					"title": "Fractional CIO para pymes industriales",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Direccion tecnologica part-time para empresas industriales y distribuidoras de 20 a 200 personas que necesitan criterio C-level sin poder permitirse un CIO a tiempo completo. Tu CIO externo: presente cuando hace falta, sin overhead cuando no."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "El argumento economico" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Un CIO a tiempo completo con experiencia real en transformacion digital cuesta entre 80 y 120 mil euros anuales mas extras. Una pyme industrial de 30-100 personas no puede ni necesita esa estructura. Pero si necesita criterio tecnologico para no comprar lo que no debe, no contratar lo que no encaja y no perder dos anos en proyectos que se quedan a medias."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El modelo Fractional resuelve eso: un fee mensual fijo, un compromiso de horas dedicadas y acceso directo cuando hay que tomar decisiones criticas. Mucho menor coste, ningun overhead, y resultados desde el primer mes."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Que hago contigo" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Hoja de ruta tecnologica a 12-24 meses. "
+								},
+								{
+									"_type": "span",
+									"text": "Documento vivo que prioriza inversiones, define hitos y conecta cada decision con objetivos de negocio."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Decisiones de plataforma. "
+								},
+								{
+									"_type": "span",
+									"text": "ERP, eCommerce, herramientas de automatizacion, IA aplicada. Te acompano en la seleccion sin compromisos con proveedores concretos."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Gestion del equipo tecnologico externo. "
+								},
+								{
+									"_type": "span",
+									"text": "Soy quien habla con tus proveedores, agencias y desarrolladores en su idioma para que el proyecto avance y entregue valor real."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Supervision de proyectos de integracion. "
+								},
+								{
+									"_type": "span",
+									"text": "Soy quien te dice si el proyecto va bien, si va mal o si deberia replantearse. Sin filtros."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"marks": ["strong"],
+									"text": "Reporting a direccion general. "
+								},
+								{
+									"_type": "span",
+									"text": "Traduzco la complejidad tecnica a metricas y decisiones que el comite directivo entiende y puede actuar."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Por que tiene sentido en B2B industrial" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Las pymes industriales suelen tener procesos comerciales sofisticados pero cultura tecnologica baja. Su personal IT tipicamente cubre operacion (ERP, infraestructura, soporte) pero no tiene capacidad para liderar proyectos estrategicos de digitalizacion del canal de venta. Un Fractional CIO especializado en B2B industrial cubre exactamente ese hueco."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Formato de trabajo" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Entre 16 y 32 horas mensuales segun necesidad. Reunion ejecutiva semanal o quincenal con direccion. Disponibilidad asincrona para decisiones criticas. Una jornada presencial mensual en Barcelona o remoto si tu sede esta en otro punto. Compromisos minimos de 6 meses para ver resultados reales."
+								}
+							]
+						},
+						{
+							"_type": "site.faq",
+							"_key": "faq-cio",
+							"headline": "Preguntas frecuentes",
+							"items": [
+								{
+									"question": "Cuanto cuesta?",
+									"answer": "Fee mensual segun horas dedicadas y duracion del compromiso. Tipicamente entre el 15% y el 35% del coste de un CIO full-time. Te paso una propuesta concreta tras una primera conversacion."
+								},
+								{
+									"question": "Reemplazas a mi responsable IT actual?",
+									"answer": "No. Tu responsable IT sigue gestionando operacion, infraestructura y soporte. Yo cubro la capa estrategica que normalmente le falta tiempo o experiencia para asumir."
+								},
+								{
+									"question": "Trabajas con varios clientes a la vez?",
+									"answer": "Si. El modelo Fractional implica precisamente repartir mi tiempo entre varios clientes que se benefician de un perfil senior sin asumir su coste integro. Un maximo de 4-5 clientes a la vez para garantizar dedicacion real."
+								},
+								{
+									"question": "Necesito tener ya un equipo tecnico?",
+									"answer": "No es imprescindible. Si no tienes equipo tecnico interno, parte de mi rol incluye ayudarte a contratarlo o coordinar proveedores externos."
+								},
+								{
+									"question": "Que pasa al final del compromiso?",
+									"answer": "Te quedas con la documentacion, la hoja de ruta y un equipo (interno o externo) capaz de ejecutarla. Si el proyecto sigue necesitando supervision estrategica, renovamos. Si no, salgo de la operacion sin dejar dependencia."
+								}
+							]
+						},
+						{
+							"_type": "site.cta",
+							"_key": "cio-cta",
+							"headline": "Cuentame tu situacion tecnologica",
+							"description": "Una primera conversacion de 45 minutos sin compromiso. Te dire si encajo en tu situacion o si necesitas algo distinto.",
+							"primaryCta": { "label": "Hablamos", "url": "/contacto" }
+						}
+					]
+				}
+			},
+			{
+				"id": "recursos",
+				"slug": "recursos",
+				"status": "published",
+				"data": {
+					"title": "Recursos para empresas B2B",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Materiales practicos para directivos y responsables digitales que estan transformando su canal B2B. Sin formularios kilometricos ni promesas vacias."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Checklist: 37 puntos para auditar tu eCommerce B2B" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Antes de invertir un euro en un nuevo proyecto eCommerce B2B, esta checklist te ayuda a auditar el estado real de tu canal actual. 37 puntos organizados en 6 bloques: catalogo, precios, integracion ERP, experiencia de compra, equipo y metricas. Pensado para directivos, no para tecnicos. Tiempo de aplicacion: 60 minutos."
+								}
+							]
+						},
+						{
+							"_type": "site.cta",
+							"_key": "lead-magnet",
+							"headline": "Descarga la checklist",
+							"description": "Suscribete a eCommNotes y recibe la checklist en tu email. Sin spam.",
+							"primaryCta": { "label": "Quiero la checklist", "url": "/newsletter" }
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Mas recursos en camino" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Esta seccion crecera con calculadoras de ROI, guias de seleccion de ERP, plantillas de RFP y mas materiales practicos. Todo gratis y sin formularios kilometricos."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "newsletter",
+				"slug": "newsletter",
+				"status": "published",
+				"data": {
+					"title": "eCommNotes - Newsletter",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "eCommNotes es mi newsletter para directivos y responsables digitales que estan construyendo el canal B2B de empresas industriales y de distribucion."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Que vas a recibir" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Reflexiones cortas sobre transformacion digital en B2B, casos reales (sin nombrar clientes), errores que veo repetirse en proyectos de integracion ERP, herramientas y aprendizajes. Un email cada dos semanas, lectura de 5 minutos."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [{ "_type": "span", "text": "Formato y compromiso" }]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cadencia quincenal. Sin spam. Sin promesas de cursos ni embudos infinitos. Si lo que recibes no aporta, das de baja con un click. La idea es que llegue contenido util a quien le sirva, no llenar bandejas de entrada."
+								}
+							]
+						},
+						{
+							"_type": "site.cta",
+							"_key": "newsletter-cta",
+							"headline": "Suscribete a eCommNotes",
+							"description": "Form de suscripcion proximamente. Por ahora, contacta directamente y te apunto manualmente.",
+							"primaryCta": { "label": "Apuntame", "url": "/contacto" }
 						}
 					]
 				}
@@ -606,16 +1088,18 @@
 				}
 			}
 		],
-		"services": [
+		"services": [],
+		"projects": [
 			{
-				"id": "consultoria-ecommerce-b2b",
-				"slug": "consultoria-ecommerce-b2b",
+				"id": "ecomm360",
+				"slug": "ecomm360",
 				"status": "published",
 				"data": {
-					"title": "Consultoria eCommerce B2B",
-					"icon": "shopping-cart",
-					"summary": "Estrategia, implementacion y optimizacion de plataformas de comercio electronico B2B. Seleccion de tecnologia, arquitectura de catalogo y flujos de compra complejos.",
-					"order": 1,
+					"title": "eComm360",
+					"client": "Fundador",
+					"year": "2018 - Presente",
+					"summary": "Consultora eCommerce B2B industrial. Proyectos de integracion ERP, agentes IA y automatizacion para fabricantes y distribuidores.",
+					"url": "https://ecomm360.es",
 					"content": [
 						{
 							"_type": "block",
@@ -623,14 +1107,14 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El eCommerce B2B no es simplemente poner un catalogo online. Implica gestionar precios por cliente, volumenes, aprobaciones de compra, integracion con logistica y multiples listas de precios. Ayudo a empresas a disenar e implementar estas soluciones de forma que realmente se usen y generen valor."
+									"text": "eComm360 es la consultora especializada en eCommerce B2B industrial que fundé y opero desde Barcelona. Trabajamos con fabricantes, distribuidores y empresas industriales en proyectos de digitalizacion del canal de venta, integracion ERP, automatizacion comercial y aplicacion de IA al negocio."
 								}
 							]
 						},
 						{
 							"_type": "block",
 							"style": "h2",
-							"children": [{ "_type": "span", "text": "En que puedo ayudarte" }]
+							"children": [{ "_type": "span", "text": "Que hacemos" }]
 						},
 						{
 							"_type": "block",
@@ -638,22 +1122,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Seleccion de plataforma segun tus necesidades reales. Diseno de arquitectura de catalogo B2B con precios segmentados y descuentos por volumen. Estrategia de marketplace B2B para fabricantes y distribuidores. Optimizacion de conversion y UX especifica para compradores profesionales."
-								}
-							]
-						},
-						{
-							"_type": "block",
-							"style": "h2",
-							"children": [{ "_type": "span", "text": "Resultado esperado" }]
-						},
-						{
-							"_type": "block",
-							"style": "normal",
-							"children": [
-								{
-									"_type": "span",
-									"text": "Una plataforma B2B que reduce friccion en el proceso de compra, libera a tu equipo comercial de tareas repetitivas y abre un canal de venta 24/7 para tus clientes."
+									"text": "Estrategia, implementacion y soporte de proyectos eCommerce B2B end-to-end. Desde la seleccion de plataforma hasta la integracion con SAP, Odoo, Dynamics o ERPs propietarios. Equipo propio especializado en B2B industrial."
 								}
 							]
 						}
@@ -661,14 +1130,15 @@
 				}
 			},
 			{
-				"id": "agentes-ia-automatizacion",
-				"slug": "agentes-ia-automatizacion",
+				"id": "integrafy",
+				"slug": "integrafy",
 				"status": "published",
 				"data": {
-					"title": "Agentes IA y Automatizacion",
-					"icon": "cpu",
-					"summary": "Diseno e implementacion de agentes de IA autonomos para automatizar procesos comerciales, atencion al cliente y operaciones B2B.",
-					"order": 2,
+					"title": "Integrafy",
+					"client": "Fundador",
+					"year": "2024 - Presente",
+					"summary": "Middleware de integracion bidireccional ERP-eCommerce con cientos de conectores listos para produccion. Producto SaaS para empresas industriales.",
+					"url": "https://integrafy.io",
 					"content": [
 						{
 							"_type": "block",
@@ -676,14 +1146,14 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Los agentes de IA van mas alla de los chatbots tradicionales. Son sistemas autonomos capaces de tomar decisiones, ejecutar tareas y aprender de los resultados. Desde la automatizacion de la atencion al cliente hasta la gestion autonoma de inventario, los agentes de IA transforman la operativa B2B."
+									"text": "Integrafy es la respuesta a un problema que veia repetirse en cada proyecto: integrar el ERP con el eCommerce siempre era trabajo a medida, caro y fragil. Integrafy es un middleware que estandariza esa integracion con conectores listos para SAP Business One, SAP S/4HANA, Microsoft Dynamics 365 Business Central, Odoo y mas."
 								}
 							]
 						},
 						{
 							"_type": "block",
 							"style": "h2",
-							"children": [{ "_type": "span", "text": "Casos de uso" }]
+							"children": [{ "_type": "span", "text": "Por que existe" }]
 						},
 						{
 							"_type": "block",
@@ -691,22 +1161,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Agentes de atencion al cliente que resuelven consultas y procesan pedidos. Automatizacion de catalogos con IA generativa. Agentes de ventas que cualifican leads y preparan propuestas. Sistemas de monitorizacion de precios y competencia con alertas inteligentes."
-								}
-							]
-						},
-						{
-							"_type": "block",
-							"style": "h2",
-							"children": [{ "_type": "span", "text": "Mi enfoque" }]
-						},
-						{
-							"_type": "block",
-							"style": "normal",
-							"children": [
-								{
-									"_type": "span",
-									"text": "Cada implementacion empieza identificando el proceso con mayor impacto y construyendo un agente que resuelva ese problema concreto. Iteramos, medimos y escalamos solo cuando hay resultados demostrables."
+									"text": "Porque las empresas B2B no deberian pagar 60.000 euros por una integracion que se podria resolver en dos semanas con la herramienta correcta. Integrafy reduce tiempo, coste y riesgo de los proyectos de integracion ERP-eCommerce."
 								}
 							]
 						}
@@ -714,14 +1169,15 @@
 				}
 			},
 			{
-				"id": "integracion-erp-ecommerce",
-				"slug": "integracion-erp-ecommerce",
+				"id": "approsearch",
+				"slug": "approsearch",
 				"status": "published",
 				"data": {
-					"title": "Integracion ERP-eCommerce",
-					"icon": "link",
-					"summary": "Conexion bidireccional entre sistemas ERP (SAP, Odoo, a medida) y plataformas de eCommerce. Sincronizacion de catalogo, precios, stock y pedidos en tiempo real.",
-					"order": 3,
+					"title": "Approsearch",
+					"client": "Fundador",
+					"year": "2025 - Presente",
+					"summary": "Motor de busqueda con inteligencia artificial para catalogos B2B industriales extensos. Disena experiencias de descubrimiento adaptadas al comprador profesional.",
+					"url": "",
 					"content": [
 						{
 							"_type": "block",
@@ -729,14 +1185,14 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La integracion entre ERP y eCommerce es el paso critico que la mayoria de empresas B2B subestiman. Sin ella, tu equipo duplica trabajo: introduce pedidos manualmente, reconcilia stock a mano y gestiona precios en dos sistemas diferentes."
+									"text": "Approsearch es un motor de busqueda especializado en catalogos B2B industriales con miles de SKUs, atributos tecnicos complejos y compradores profesionales que saben exactamente lo que buscan. Combina busqueda semantica, IA y conocimiento del dominio industrial."
 								}
 							]
 						},
 						{
 							"_type": "block",
 							"style": "h2",
-							"children": [{ "_type": "span", "text": "Que integro" }]
+							"children": [{ "_type": "span", "text": "El problema que resuelve" }]
 						},
 						{
 							"_type": "block",
@@ -744,22 +1200,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Catalogo de productos y atributos. Precios personalizados por cliente. Stock en tiempo real desde multiples almacenes. Pedidos bidireccionales. Estados de envio y tracking. He trabajado con SAP Business One, SAP S/4HANA, Odoo, Dynamics y ERPs a medida."
-								}
-							]
-						},
-						{
-							"_type": "block",
-							"style": "h2",
-							"children": [{ "_type": "span", "text": "Metodologia" }]
-						},
-						{
-							"_type": "block",
-							"style": "normal",
-							"children": [
-								{
-									"_type": "span",
-									"text": "Mapeo completo de datos entre ambos sistemas. Diseno de la arquitectura de integracion. Implementacion con pruebas exhaustivas. Monitorizacion y optimizacion post-lanzamiento."
+									"text": "Los buscadores estandar de eCommerce estan disenados para el consumidor B2C: precio, marca, popularidad. En B2B industrial los criterios son otros: referencias tecnicas, compatibilidades, normativas, plazos de entrega, stock por cliente. Approsearch entiende esos criterios."
 								}
 							]
 						}
@@ -767,14 +1208,15 @@
 				}
 			},
 			{
-				"id": "formacion-corporativa",
-				"slug": "formacion-corporativa",
+				"id": "alabazweb",
+				"slug": "alabazweb",
 				"status": "published",
 				"data": {
-					"title": "Formacion Corporativa Digital",
-					"icon": "graduation-cap",
-					"summary": "Programas de formacion para equipos en eCommerce, automatizacion, IA aplicada y transformacion digital. Formatos presenciales y online.",
-					"order": 4,
+					"title": "Alabazweb",
+					"client": "Fundador",
+					"year": "2015 - Presente",
+					"summary": "Marca historica de modulos PrestaShop para B2B y procesos comerciales avanzados. Adquirida e integrada en el ecosistema eComm360.",
+					"url": "https://alabazweb.com",
 					"content": [
 						{
 							"_type": "block",
@@ -782,14 +1224,14 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La tecnologia solo funciona si el equipo la entiende y la adopta. Diseno e imparto programas de formacion que transforman la capacidad digital de las organizaciones."
+									"text": "Alabazweb es la marca con la que empece a desarrollar soluciones eCommerce especializadas en B2B en 2015. Inicialmente como agencia de desarrollo PrestaShop, evoluciono hacia un catalogo de modulos comerciales avanzados que hoy usan empresas industriales en toda Europa."
 								}
 							]
 						},
 						{
 							"_type": "block",
 							"style": "h2",
-							"children": [{ "_type": "span", "text": "Programas disponibles" }]
+							"children": [{ "_type": "span", "text": "Hoy" }]
 						},
 						{
 							"_type": "block",
@@ -797,22 +1239,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Introduccion al eCommerce B2B para equipos comerciales. IA aplicada al negocio. Automatizacion de procesos con herramientas no-code y agentes IA. Estrategia digital para comites de direccion. Gestion de proyectos de integracion ERP-eCommerce."
-								}
-							]
-						},
-						{
-							"_type": "block",
-							"style": "h2",
-							"children": [{ "_type": "span", "text": "Formato" }]
-						},
-						{
-							"_type": "block",
-							"style": "normal",
-							"children": [
-								{
-									"_type": "span",
-									"text": "Cada programa se adapta al nivel del equipo. Combino teoria con casos practicos reales y ejercicios hands-on. Formatos presenciales en Barcelona o remotos para equipos distribuidos."
+									"text": "Alabazweb forma parte del ecosistema eComm360 como linea de productos PrestaShop. Sigue activa con su catalogo de modulos para B2B, gestion de precios diferenciados, integracion ERP y flujos comerciales avanzados."
 								}
 							]
 						}
@@ -925,7 +1352,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "guia", "tendencias"] }
+				"taxonomies": { "category": ["estrategia-b2b"], "tag": ["b2b", "guia", "tendencias"] }
 			},
 			{
 				"id": "post-2",
@@ -971,7 +1398,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "pyme"] }
+				"taxonomies": { "category": ["estrategia-b2b"], "tag": ["b2b", "pyme"] }
 			},
 			{
 				"id": "post-3",
@@ -1017,7 +1444,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "magento", "prestashop", "shopify", "espana"] }
+				"taxonomies": { "category": ["estrategia-b2b"], "tag": ["b2b", "magento", "prestashop", "shopify", "espana"] }
 			},
 			{
 				"id": "post-4",
@@ -1063,7 +1490,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "guia", "pyme"] }
+				"taxonomies": { "category": ["estrategia-b2b"], "tag": ["b2b", "guia", "pyme"] }
 			},
 			{
 				"id": "post-5",
@@ -1092,7 +1519,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["ecommerce-b2b"], "tag": ["b2b", "tendencias"] }
+				"taxonomies": { "category": ["estrategia-b2b"], "tag": ["b2b", "tendencias"] }
 			},
 			{
 				"id": "post-6",
@@ -1131,7 +1558,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["ia-agentes", "guia", "b2b"] }
+				"taxonomies": { "category": ["tecnologia"], "tag": ["ia-agentes", "guia", "b2b"] }
 			},
 			{
 				"id": "post-7",
@@ -1170,7 +1597,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["ia-agentes", "chatbots", "b2b"] }
+				"taxonomies": { "category": ["tecnologia"], "tag": ["ia-agentes", "chatbots", "b2b"] }
 			},
 			{
 				"id": "post-8",
@@ -1209,7 +1636,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["ia-agentes", "caso-de-exito", "b2b"] }
+				"taxonomies": { "category": ["tecnologia"], "tag": ["ia-agentes", "caso-de-exito", "b2b"] }
 			},
 			{
 				"id": "post-9",
@@ -1248,7 +1675,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["chatbots", "ia-agentes", "roi"] }
+				"taxonomies": { "category": ["tecnologia"], "tag": ["chatbots", "ia-agentes", "roi"] }
 			},
 			{
 				"id": "post-10",
@@ -1287,7 +1714,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["inteligencia-artificial"], "tag": ["ia-agentes", "roi", "guia"] }
+				"taxonomies": { "category": ["tecnologia"], "tag": ["ia-agentes", "roi", "guia"] }
 			},
 			{
 				"id": "post-11",
@@ -1482,7 +1909,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["transformacion-digital"], "tag": ["pyme", "espana", "tendencias"] }
+				"taxonomies": { "category": ["estrategia-b2b"], "tag": ["pyme", "espana", "tendencias"] }
 			},
 			{
 				"id": "post-16",
@@ -1521,7 +1948,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["transformacion-digital"], "tag": ["barcelona", "caso-de-exito", "pyme"] }
+				"taxonomies": { "category": ["reflexiones"], "tag": ["barcelona", "caso-de-exito", "pyme"] }
 			},
 			{
 				"id": "post-17",
@@ -1560,7 +1987,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["transformacion-digital"], "tag": ["roi", "b2b", "guia"] }
+				"taxonomies": { "category": ["estrategia-b2b"], "tag": ["roi", "b2b", "guia"] }
 			},
 			{
 				"id": "post-18",
@@ -1606,7 +2033,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["consultoria"], "tag": ["faq", "b2b", "guia"] }
+				"taxonomies": { "category": ["reflexiones"], "tag": ["faq", "b2b", "guia"] }
 			},
 			{
 				"id": "post-19",
@@ -1652,7 +2079,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["consultoria"], "tag": ["faq", "ia-agentes", "guia"] }
+				"taxonomies": { "category": ["reflexiones"], "tag": ["faq", "ia-agentes", "guia"] }
 			},
 			{
 				"id": "post-20",
@@ -1701,7 +2128,7 @@
 					]
 				},
 				"bylines": [{ "byline": "byline-isaac" }],
-				"taxonomies": { "category": ["consultoria"], "tag": ["faq", "b2b", "roi", "guia"] }
+				"taxonomies": { "category": ["estrategia-b2b"], "tag": ["faq", "b2b", "roi", "guia"] }
 			}
 		]
 	}

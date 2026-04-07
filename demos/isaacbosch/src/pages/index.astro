@@ -4,14 +4,13 @@ export const prerender = false;
 import { getEmDashCollection } from "emdash";
 import Base from "../layouts/Base.astro";
 import PostCard from "../components/PostCard.astro";
-import ServiceCard from "../components/ServiceCard.astro";
-import PressCard from "../components/PressCard.astro";
+import AudienceCard from "../components/AudienceCard.astro";
+import AuthorityStrip from "../components/AuthorityStrip.astro";
+import EcosystemBand from "../components/EcosystemBand.astro";
 
 const { entries: posts, cacheHint } = await getEmDashCollection("posts", {
-	limit: 6,
+	limit: 3,
 });
-const { entries: services } = await getEmDashCollection("services");
-const { entries: press } = await getEmDashCollection("press");
 
 Astro.cache.set(cacheHint);
 
@@ -23,27 +22,61 @@ const sortedPosts = posts.toSorted((a, b) => {
 ---
 
 <Base
-	title="Consultor eCommerce B2B e IA en Barcelona"
-	description="Digitalizo y automatizo procesos integrando ERP, IA y Agentes Autonomos. Consultor eCommerce B2B en Barcelona."
+	title="Consultor eCommerce B2B y Fractional CIO en Barcelona"
+	description="Convierto empresas industriales en negocios digitales que venden solos. Consultor eCommerce B2B, Fractional CIO y fundador de eComm360, Integrafy y Approsearch."
 >
 	<section class="hero">
 		<div class="hero-inner">
-			<span class="hero-eyebrow">Barcelona &middot; Consultor independiente</span>
+			<span class="hero-eyebrow">Barcelona &middot; Consultor independiente &middot; Fractional CIO</span>
 			<h1 class="hero-title">
-				Digitalizo y automatizo procesos B2B con <em>IA y agentes autonomos</em>.
+				Convierto empresas industriales en negocios digitales que <em>venden solos</em>.
 			</h1>
 			<p class="hero-tagline">
-				Ayudo a fabricantes, distribuidores y empresas industriales a integrar su ERP con canales de venta online y automatizar operaciones con inteligencia artificial.
+				Consultor eCommerce B2B y Fractional CIO. Fundador de eComm360, Integrafy, Approsearch y Alabazweb.
 			</p>
 			<div class="hero-ctas">
-				<a href="/servicios" class="btn btn-primary">Ver servicios</a>
-				<a href="/contacto" class="btn btn-secondary">Hablamos?</a>
+				<a href="/consultoria-ecommerce-b2b" class="btn btn-primary">
+					Necesito consultoria B2B
+				</a>
+				<a href="/fractional-cio" class="btn btn-secondary">
+					Busco un Fractional CIO
+				</a>
+			</div>
+			<p class="hero-tagline-brand">
+				<em>Del dato al pedido. Sin fricciones.</em>
+			</p>
+		</div>
+	</section>
+
+	<AuthorityStrip />
+
+	<section class="audiences">
+		<div class="audiences-inner">
+			<header class="section-header">
+				<span class="section-eyebrow">Para quien trabajo</span>
+				<h2 class="section-title">Dos perfiles muy distintos.<br/>Una sola obsesion: cero friccion.</h2>
+			</header>
+			<div class="audiences-grid">
+				<AudienceCard
+					number="01"
+					eyebrow="Empresa industrial"
+					title="Tienes catalogo, ERP y un canal B2B inexistente o roto"
+					description="Eres fabricante o distribuidor con SAP, Odoo, Dynamics o un ERP propietario. Tu equipo comercial procesa pedidos manualmente y sabes que pierdes tiempo, dinero y ventas. Necesitas a alguien que disene la solucion y la ejecute."
+					cta={{ label: "Ver consultoria B2B", url: "/consultoria-ecommerce-b2b" }}
+				/>
+				<AudienceCard
+					number="02"
+					eyebrow="Pyme sin direccion tecnologica"
+					title="Eres una empresa de 20-200 personas y tu equipo IT esta desbordado"
+					description="Tienes responsable IT operativo pero falta criterio C-level para decisiones estrategicas. No te puedes permitir un CIO full-time pero pierdes oportunidades por no tener uno. Necesitas dedicacion senior parcial."
+					cta={{ label: "Ver Fractional CIO", url: "/fractional-cio" }}
+				/>
 			</div>
 		</div>
 	</section>
 
 	{sortedPosts.length > 0 && (
-		<section class="section section-bordered">
+		<section class="blog-section">
 			<div class="section-inner">
 				<header class="section-header">
 					<span class="section-eyebrow">Blog</span>
@@ -57,43 +90,16 @@ const sortedPosts = posts.toSorted((a, b) => {
 		</section>
 	)}
 
-	{services.length > 0 && (
-		<section class="section section-warm">
-			<div class="section-inner">
-				<header class="section-header">
-					<span class="section-eyebrow">Servicios</span>
-					<h2 class="section-title">Como puedo ayudarte</h2>
-					<a href="/servicios" class="section-link">Ver todos los servicios &rarr;</a>
-				</header>
-				<div class="services-grid">
-					{services.map((service) => <ServiceCard service={service} />)}
-				</div>
-			</div>
-		</section>
-	)}
+	<EcosystemBand />
 
-	{press.length > 0 && (
-		<section class="section">
-			<div class="section-inner">
-				<header class="section-header">
-					<span class="section-eyebrow">Prensa</span>
-					<h2 class="section-title">Apariciones en medios</h2>
-					<a href="/prensa" class="section-link">Ver todas &rarr;</a>
-				</header>
-				<div class="press-grid">
-					{press.map((item) => <PressCard item={item} />)}
-				</div>
-			</div>
-		</section>
-	)}
-
-	<section class="section cta-section">
+	<section class="cta-section">
 		<div class="cta-inner">
-			<h2 class="cta-title">Tienes un proyecto en mente?</h2>
+			<span class="cta-eyebrow">Hablamos</span>
+			<h2 class="cta-title">Pide un diagnostico de 45 minutos</h2>
 			<p class="cta-text">
-				Trabajo con empresas que quieren digitalizar sus procesos comerciales sin perder el control. Si crees que puedo ayudarte, hablemos.
+				Cuentame tu situacion. Sin compromiso. Si encajamos, hablamos del proyecto. Si no, te oriento sobre el siguiente paso aunque sea con otro consultor.
 			</p>
-			<a href="/contacto" class="btn btn-primary">Contactar</a>
+			<a href="/contacto" class="btn btn-primary">Solicitar diagnostico</a>
 		</div>
 	</section>
 </Base>
@@ -101,11 +107,11 @@ const sortedPosts = posts.toSorted((a, b) => {
 <style>
 	/* === Hero === */
 	.hero {
-		padding: var(--spacing-32) var(--spacing-6) var(--spacing-24);
+		padding: var(--spacing-32) var(--spacing-6) var(--spacing-20);
 	}
 
 	.hero-inner {
-		max-width: 820px;
+		max-width: 880px;
 		margin: 0 auto;
 	}
 
@@ -147,6 +153,18 @@ const sortedPosts = posts.toSorted((a, b) => {
 		display: flex;
 		gap: var(--spacing-3);
 		flex-wrap: wrap;
+		margin-bottom: var(--spacing-12);
+	}
+
+	.hero-tagline-brand {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-lg);
+		color: var(--color-muted);
+		margin: 0;
+	}
+
+	.hero-tagline-brand em {
+		font-style: italic;
 	}
 
 	/* === Buttons === */
@@ -185,20 +203,13 @@ const sortedPosts = posts.toSorted((a, b) => {
 		border-color: var(--color-text);
 	}
 
-	/* === Sections === */
-	.section {
+	/* === Audiences === */
+	.audiences {
 		padding: var(--spacing-24) var(--spacing-6);
+		background: var(--color-bg);
 	}
 
-	.section-bordered {
-		border-top: 1px solid var(--color-border);
-	}
-
-	.section-warm {
-		background: var(--color-bg-warm);
-	}
-
-	.section-inner {
+	.audiences-inner {
 		max-width: var(--wide-width);
 		margin: 0 auto;
 	}
@@ -206,8 +217,9 @@ const sortedPosts = posts.toSorted((a, b) => {
 	.section-header {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spacing-2);
+		gap: var(--spacing-3);
 		margin-bottom: var(--spacing-12);
+		max-width: 720px;
 	}
 
 	.section-eyebrow {
@@ -223,6 +235,7 @@ const sortedPosts = posts.toSorted((a, b) => {
 		font-size: var(--font-size-3xl);
 		font-weight: 400;
 		letter-spacing: var(--tracking-tight);
+		line-height: 1.15;
 		color: var(--color-text);
 		margin: 0;
 	}
@@ -239,27 +252,32 @@ const sortedPosts = posts.toSorted((a, b) => {
 		color: var(--color-accent);
 	}
 
-	/* === Grids === */
+	.audiences-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--spacing-6);
+	}
+
+	/* === Blog === */
+	.blog-section {
+		padding: var(--spacing-24) var(--spacing-6);
+		background: var(--color-bg-warm);
+	}
+
+	.section-inner {
+		max-width: var(--wide-width);
+		margin: 0 auto;
+	}
+
 	.posts-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: var(--spacing-10) var(--spacing-8);
 	}
 
-	.services-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--spacing-6);
-	}
-
-	.press-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--spacing-6);
-	}
-
 	/* === CTA === */
 	.cta-section {
+		padding: var(--spacing-24) var(--spacing-6);
 		border-top: 1px solid var(--color-border);
 	}
 
@@ -267,6 +285,16 @@ const sortedPosts = posts.toSorted((a, b) => {
 		max-width: 640px;
 		margin: 0 auto;
 		text-align: center;
+	}
+
+	.cta-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-4);
 	}
 
 	.cta-title {
@@ -296,13 +324,14 @@ const sortedPosts = posts.toSorted((a, b) => {
 			padding: var(--spacing-20) var(--spacing-5) var(--spacing-16);
 		}
 
-		.section {
+		.audiences,
+		.blog-section,
+		.cta-section {
 			padding: var(--spacing-16) var(--spacing-5);
 		}
 
-		.posts-grid,
-		.services-grid,
-		.press-grid {
+		.audiences-grid,
+		.posts-grid {
 			grid-template-columns: 1fr;
 		}
 	}

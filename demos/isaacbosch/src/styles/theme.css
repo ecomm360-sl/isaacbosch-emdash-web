@@ -22,12 +22,16 @@
 	--color-surface: #f5f4ed;
 	--color-surface-hover: #ebe9df;
 
-	/* Accent: Anthropic terracotta */
-	--color-accent: #c96442;
-	--color-accent-hover: #a64f31;
-	--color-accent-soft: rgba(201, 100, 66, 0.08);
+	/* Accent: Azul marino eComm360 */
+	--color-accent: #1B5585;
+	--color-accent-hover: #144067;
+	--color-accent-soft: rgba(27, 85, 133, 0.08);
 	--color-on-accent: #faf9f5;
-	--color-accent-ring: rgba(201, 100, 66, 0.2);
+	--color-accent-ring: rgba(27, 85, 133, 0.2);
+
+	/* Secondary accent: Turquesa eComm360 */
+	--color-accent-2: #55C7DC;
+	--color-accent-2-soft: rgba(85, 199, 220, 0.12);
 
 	/* EmDash search */
 	--emdash-search-bg: var(--color-bg);
@@ -142,10 +146,12 @@
 		--color-border-subtle: rgba(245, 244, 237, 0.05);
 		--color-surface: #222220;
 		--color-surface-hover: #2d2d2a;
-		--color-accent: #d97757;
-		--color-accent-hover: #e08866;
-		--color-accent-soft: rgba(217, 119, 87, 0.12);
+		--color-accent: #5B8FB9;
+		--color-accent-hover: #7BAACE;
+		--color-accent-soft: rgba(91, 143, 185, 0.14);
 		--color-on-accent: #1a1a18;
+		--color-accent-2: #55C7DC;
+		--color-accent-2-soft: rgba(85, 199, 220, 0.14);
 	}
 }
 
@@ -161,10 +167,12 @@
 	--color-border-subtle: rgba(245, 244, 237, 0.05);
 	--color-surface: #222220;
 	--color-surface-hover: #2d2d2a;
-	--color-accent: #d97757;
-	--color-accent-hover: #e08866;
-	--color-accent-soft: rgba(217, 119, 87, 0.12);
+	--color-accent: #5B8FB9;
+	--color-accent-hover: #7BAACE;
+	--color-accent-soft: rgba(91, 143, 185, 0.14);
 	--color-on-accent: #1a1a18;
+	--color-accent-2: #55C7DC;
+	--color-accent-2-soft: rgba(85, 199, 220, 0.14);
 }
 
 /* === Global typography overrides === */

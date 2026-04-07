@@ -1,0 +1,163 @@
+---
+export const prerender = false;
+
+import { getEmDashEntry, getSeoMeta, getEmDashCollection } from "emdash";
+import Base from "../layouts/Base.astro";
+import SiteBlocks from "../components/SiteBlocks.astro";
+import PressCard from "../components/PressCard.astro";
+import AuthorityStrip from "../components/AuthorityStrip.astro";
+
+const { entry, cacheHint } = await getEmDashEntry("pages", "sobre-isaac");
+
+if (!entry) {
+	return Astro.redirect("/404");
+}
+
+Astro.cache.set(cacheHint);
+
+const { entries: press } = await getEmDashCollection("press");
+const seo = getSeoMeta(entry);
+
+const personJsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name: "Isaac Bosch",
+	jobTitle: "Consultor eCommerce B2B y Fractional CIO",
+	description:
+		"Consultor eCommerce B2B y Fractional CIO. Ayudo a empresas industriales a digitalizar su canal de ventas e integrar sus sistemas ERP. Fundador de eComm360, Integrafy y Approsearch.",
+	worksFor: [
+		{ "@type": "Organization", name: "eComm360", url: "https://ecomm360.es" },
+		{ "@type": "Organization", name: "Integrafy", url: "https://integrafy.io" },
+		{ "@type": "Organization", name: "Approsearch" },
+		{ "@type": "Organization", name: "Alabazweb", url: "https://alabazweb.com" },
+	],
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Barcelona",
+		addressRegion: "Cataluna",
+		addressCountry: "ES",
+	},
+	url: "https://isaacbosch.com",
+	sameAs: [
+		"https://linkedin.com/in/isaacbosch",
+		"https://x.com/isaacbosch",
+	],
+};
+---
+
+<Base
+	title={seo.title ?? "Sobre Isaac Bosch"}
+	description={seo.description ?? "Consultor eCommerce B2B y Fractional CIO en Barcelona. Fundador de eComm360, Integrafy y Approsearch."}
+	image={seo.ogImage}
+	jsonLd={personJsonLd}
+	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
+>
+	<article class="page-content">
+		<header class="page-header">
+			<span class="page-eyebrow">Sobre mi</span>
+			<h1 class="page-title">{entry.data.title}</h1>
+		</header>
+		{entry.data.content && (
+			<div class="prose">
+				<SiteBlocks value={entry.data.content} />
+			</div>
+		)}
+	</article>
+
+	<AuthorityStrip />
+
+	{press.length > 0 && (
+		<section class="press-section">
+			<div class="section-inner">
+				<header class="section-header">
+					<span class="section-eyebrow">Prensa</span>
+					<h2 class="section-title">Apariciones en medios</h2>
+				</header>
+				<div class="press-grid">
+					{press.map((item) => <PressCard item={item} />)}
+				</div>
+			</div>
+		</section>
+	)}
+</Base>
+
+<style>
+	.page-content {
+		max-width: var(--content-width);
+		margin: 0 auto;
+		padding: var(--spacing-24) var(--spacing-6) var(--spacing-16);
+	}
+
+	.page-header {
+		margin-bottom: var(--spacing-12);
+	}
+
+	.page-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-4);
+	}
+
+	.page-title {
+		font-family: var(--font-serif);
+		font-size: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: var(--tracking-tighter);
+		color: var(--color-text);
+		margin: 0;
+	}
+
+	.press-section {
+		padding: var(--spacing-20) var(--spacing-6);
+		background: var(--color-bg);
+		border-top: 1px solid var(--color-border);
+	}
+
+	.section-inner {
+		max-width: var(--wide-width);
+		margin: 0 auto;
+	}
+
+	.section-header {
+		margin-bottom: var(--spacing-10);
+	}
+
+	.section-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-3);
+	}
+
+	.section-title {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-3xl);
+		font-weight: 400;
+		letter-spacing: var(--tracking-tight);
+		color: var(--color-text);
+		margin: 0;
+	}
+
+	.press-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--spacing-6);
+	}
+
+	@media (max-width: 640px) {
+		.page-content {
+			padding: var(--spacing-16) var(--spacing-5) var(--spacing-12);
+		}
+		.press-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

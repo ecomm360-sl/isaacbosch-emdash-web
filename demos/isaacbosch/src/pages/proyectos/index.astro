@@ -11,30 +11,27 @@ Astro.cache.set(cacheHint);
 ---
 
 <Base
-	title="Proyectos"
-	description="Casos de exito en eCommerce B2B y automatizacion"
+	title="Proyectos y ecosistema"
+	description="El ecosistema de productos y empresas que he fundado: eComm360, Integrafy, Approsearch y Alabazweb. Proyectos que prueban lo que vendo."
 >
 	<section class="projects-page">
 		<header class="page-header">
-			<h1 class="page-title">Proyectos</h1>
+			<span class="page-eyebrow">Ecosistema</span>
+			<h1 class="page-title">No solo asesoro: construyo</h1>
 			<p class="page-subtitle">
-				Casos de exito en eCommerce B2B y automatizacion
+				Ademas de la consultoria, fundo y opero productos propios para resolver los problemas que veo repetirse en cada proyecto B2B. Estos son los que estan vivos hoy.
 			</p>
 		</header>
 
-		{
-			projects.length === 0 ? (
-				<p class="empty-message">
-					Proximamente: casos de exito y proyectos destacados.
-				</p>
-			) : (
-				<div class="projects-grid">
-					{projects.map((project) => (
-						<ProjectCard project={project} />
-					))}
-				</div>
-			)
-		}
+		{projects.length === 0 ? (
+			<p class="empty-message">
+				Proximamente: casos de exito y proyectos destacados.
+			</p>
+		) : (
+			<div class="projects-grid">
+				{projects.map((project) => <ProjectCard project={project} />)}
+			</div>
+		)}
 	</section>
 </Base>
 
@@ -42,22 +39,37 @@ Astro.cache.set(cacheHint);
 	.projects-page {
 		max-width: var(--wide-width);
 		margin: 0 auto;
-		padding: var(--spacing-12) var(--spacing-6) var(--spacing-16);
+		padding: var(--spacing-24) var(--spacing-6) var(--spacing-20);
 	}
 
 	.page-header {
-		margin-bottom: var(--spacing-12);
+		max-width: 720px;
+		margin-bottom: var(--spacing-16);
+	}
+
+	.page-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-4);
 	}
 
 	.page-title {
-		font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
-		font-weight: 700;
-		letter-spacing: var(--tracking-tight);
-		margin: 0 0 var(--spacing-3) 0;
+		font-family: var(--font-serif);
+		font-size: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: var(--tracking-tighter);
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-6);
 	}
 
 	.page-subtitle {
 		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
 		color: var(--color-text-secondary);
 		margin: 0;
 	}
@@ -70,10 +82,14 @@ Astro.cache.set(cacheHint);
 	.projects-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: var(--spacing-8);
+		gap: var(--spacing-6);
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 640px) {
+		.projects-page {
+			padding: var(--spacing-16) var(--spacing-5) var(--spacing-12);
+		}
+
 		.projects-grid {
 			grid-template-columns: 1fr;
 		}

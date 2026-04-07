@@ -1,0 +1,74 @@
+---
+export const prerender = false;
+
+import { getEmDashEntry, getSeoMeta } from "emdash";
+import Base from "../layouts/Base.astro";
+import SiteBlocks from "../components/SiteBlocks.astro";
+
+const { entry, cacheHint } = await getEmDashEntry("pages", "consultoria-ecommerce-b2b");
+
+if (!entry) {
+	return Astro.redirect("/404");
+}
+
+Astro.cache.set(cacheHint);
+
+const seo = getSeoMeta(entry);
+---
+
+<Base
+	title={seo.title ?? "Consultoria eCommerce B2B Industrial"}
+	description={seo.description ?? "Estrategia, implementacion e integracion ERP para empresas industriales. PrestaShop, Shopify, SAP, Odoo, Business Central. Barcelona."}
+	image={seo.ogImage}
+	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
+>
+	<article class="page-content">
+		<header class="page-header">
+			<span class="page-eyebrow">Servicio</span>
+			<h1 class="page-title">{entry.data.title}</h1>
+		</header>
+		{entry.data.content && (
+			<div class="prose">
+				<SiteBlocks value={entry.data.content} />
+			</div>
+		)}
+	</article>
+</Base>
+
+<style>
+	.page-content {
+		max-width: var(--content-width);
+		margin: 0 auto;
+		padding: var(--spacing-24) var(--spacing-6) var(--spacing-20);
+	}
+
+	.page-header {
+		margin-bottom: var(--spacing-12);
+	}
+
+	.page-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-4);
+	}
+
+	.page-title {
+		font-family: var(--font-serif);
+		font-size: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: var(--tracking-tighter);
+		color: var(--color-text);
+		margin: 0;
+	}
+
+	@media (max-width: 640px) {
+		.page-content {
+			padding: var(--spacing-16) var(--spacing-5) var(--spacing-12);
+		}
+	}
+</style>

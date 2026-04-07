@@ -1,0 +1,131 @@
+---
+import { authority } from "../data/authority";
+
+const stats = [
+	{ value: authority.integrationsCount, label: "Integraciones ERP ejecutadas" },
+	{ value: authority.yearsExperience, label: "Anos en eCommerce industrial" },
+	{ value: String(authority.sectorsServed.length), label: "Sectores atendidos" },
+];
+---
+
+<section class="authority-strip">
+	<div class="authority-inner">
+		<div class="stats">
+			{stats.map((stat) => (
+				<div class="stat">
+					<div class="stat-value">{stat.value}</div>
+					<div class="stat-label">{stat.label}</div>
+				</div>
+			))}
+		</div>
+		<div class="sectors">
+			<span class="sectors-label">Sectores</span>
+			<ul class="sectors-list">
+				{authority.sectorsServed.map((sector) => (
+					<li>{sector}</li>
+				))}
+			</ul>
+		</div>
+	</div>
+</section>
+
+<style>
+	.authority-strip {
+		background: var(--color-bg-warm);
+		border-top: 1px solid var(--color-border);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.authority-inner {
+		max-width: var(--wide-width);
+		margin: 0 auto;
+		padding: var(--spacing-12) var(--spacing-6);
+		display: grid;
+		grid-template-columns: 1.4fr 1fr;
+		gap: var(--spacing-12);
+		align-items: center;
+	}
+
+	.stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--spacing-8);
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-2);
+	}
+
+	.stat-value {
+		font-family: var(--font-serif);
+		font-size: clamp(2.5rem, 4vw, 3.5rem);
+		font-weight: 500;
+		line-height: 1;
+		letter-spacing: var(--tracking-tighter);
+		color: var(--color-accent);
+	}
+
+	.stat-label {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-secondary);
+		line-height: var(--leading-snug);
+	}
+
+	.sectors {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-3);
+		padding-left: var(--spacing-8);
+		border-left: 1px solid var(--color-border);
+	}
+
+	.sectors-label {
+		font-size: var(--font-size-xs);
+		font-weight: 500;
+		color: var(--color-muted);
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+	}
+
+	.sectors-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--spacing-2);
+	}
+
+	.sectors-list li {
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-text);
+		padding: var(--spacing-1) var(--spacing-3);
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: 999px;
+	}
+
+	@media (max-width: 900px) {
+		.authority-inner {
+			grid-template-columns: 1fr;
+			gap: var(--spacing-8);
+		}
+
+		.sectors {
+			padding-left: 0;
+			border-left: none;
+			padding-top: var(--spacing-6);
+			border-top: 1px solid var(--color-border);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.stats {
+			grid-template-columns: 1fr;
+			gap: var(--spacing-6);
+		}
+	}
+</style>
