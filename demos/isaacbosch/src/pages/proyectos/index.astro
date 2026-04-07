@@ -8,6 +8,42 @@ import ProjectCard from "../../components/ProjectCard.astro";
 const { entries: projects, cacheHint } = await getEmDashCollection("projects");
 
 Astro.cache.set(cacheHint);
+
+const TYPE_ORDER = ["Empresa", "Producto", "Tienda"] as const;
+type ProjectType = (typeof TYPE_ORDER)[number];
+
+const groups: Record<ProjectType, typeof projects> = {
+	Empresa: [],
+	Producto: [],
+	Tienda: [],
+};
+
+for (const project of projects) {
+	const type = (project.data.client ?? "Empresa") as ProjectType;
+	if (type in groups) {
+		groups[type].push(project);
+	} else {
+		groups.Empresa.push(project);
+	}
+}
+
+const groupMeta: Record<ProjectType, { label: string; eyebrow: string; description: string }> = {
+	Empresa: {
+		eyebrow: "Empresas",
+		label: "Empresas que he fundado",
+		description: "El nucleo del Grupo eCommsistema. Donde diseno, ejecuto y opero todo lo demas.",
+	},
+	Producto: {
+		eyebrow: "Productos",
+		label: "Productos propios",
+		description: "Software que construyo para resolver los problemas que veo repetirse en cada proyecto.",
+	},
+	Tienda: {
+		eyebrow: "Tiendas",
+		label: "Tiendas online propias",
+		description: "Donde aplicamos en nuestra propia carne todo lo que vendemos. Cada tienda es un laboratorio en vivo.",
+	},
+};
 ---
 
 <Base
@@ -17,20 +53,32 @@ Astro.cache.set(cacheHint);
 	<section class="projects-page">
 		<header class="page-header">
 			<span class="page-eyebrow">Mi ecosistema propio</span>
-			<h1 class="page-title">Empresas y productos que he fundado</h1>
+			<h1 class="page-title">Empresas, productos y tiendas que he fundado</h1>
 			<p class="page-subtitle">
-				Ademas de consultar, construyo. Cada proyecto en este ecosistema nace de un problema real que vi repetirse en empresas B2B industriales y que decidi resolver con producto propio, no solo con palabras.
+				Ademas de consultar, construyo. El Grupo eCommsistema es mi laboratorio: tres empresas operativas, tres productos software propios y tres tiendas online donde aplicamos en carne propia todo lo que vendemos.
 			</p>
 		</header>
 
 		{projects.length === 0 ? (
-			<p class="empty-message">
-				Proximamente: casos de exito y proyectos destacados.
-			</p>
+			<p class="empty-message">Proximamente.</p>
 		) : (
-			<div class="projects-grid">
-				{projects.map((project) => <ProjectCard project={project} />)}
-			</div>
+			TYPE_ORDER.map((type) => {
+				const items = groups[type];
+				if (items.length === 0) return null;
+				const meta = groupMeta[type];
+				return (
+					<div class="project-group">
+						<header class="group-header">
+							<span class="group-eyebrow">{meta.eyebrow}</span>
+							<h2 class="group-title">{meta.label}</h2>
+							<p class="group-description">{meta.description}</p>
+						</header>
+						<div class="projects-grid">
+							{items.map((project) => <ProjectCard project={project} />)}
+						</div>
+					</div>
+				);
+			})
 		)}
 
 		<aside class="cross-link">
@@ -90,11 +138,53 @@ Astro.cache.set(cacheHint);
 		font-size: var(--font-size-lg);
 	}
 
+	.project-group {
+		margin-bottom: var(--spacing-20);
+	}
+
+	.project-group:last-of-type {
+		margin-bottom: var(--spacing-12);
+	}
+
+	.group-header {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-3);
+		margin-bottom: var(--spacing-10);
+		padding-bottom: var(--spacing-6);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.group-eyebrow {
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+	}
+
+	.group-title {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-2xl);
+		font-weight: 500;
+		letter-spacing: var(--tracking-tight);
+		line-height: 1.15;
+		color: var(--color-text);
+		margin: 0;
+	}
+
+	.group-description {
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0;
+		max-width: 60ch;
+	}
+
 	.projects-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: var(--spacing-6);
-		margin-bottom: var(--spacing-16);
 	}
 
 	.cross-link {

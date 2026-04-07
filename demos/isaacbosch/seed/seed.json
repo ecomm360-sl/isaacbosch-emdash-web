@@ -1961,9 +1961,9 @@
 				"status": "published",
 				"data": {
 					"title": "eComm360",
-					"client": "Fundador",
-					"year": "2018 - Presente",
-					"summary": "Consultora eCommerce B2B industrial. Proyectos de integracion ERP, agentes IA y automatizacion para fabricantes y distribuidores.",
+					"client": "Empresa",
+					"year": "2012 - Presente",
+					"summary": "La agencia especializada en PrestaShop nacida en 2012. Proyectos de eCommerce B2B, integracion con ERP y transformacion digital industrial. Certificada PrestaShop Expert y Shopify Partner.",
 					"url": "https://ecomm360.es",
 					"content": [
 						{
@@ -1972,7 +1972,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "eComm360 es la consultora especializada en eCommerce B2B industrial que fundé y opero desde Barcelona. Trabajamos con fabricantes, distribuidores y empresas industriales en proyectos de digitalizacion del canal de venta, integracion ERP, automatizacion comercial y aplicacion de IA al negocio."
+									"text": "eComm360 es la agencia especializada en PrestaShop que funde en 2012, nacida con los primeros proyectos basados en la integracion de B2B con ERP. Hoy es la empresa central del Grupo eCommsistema y mi base de operaciones para todos los proyectos de consultoria, desarrollo e integracion para empresas industriales y distribuidoras."
 								}
 							]
 						},
@@ -1992,31 +1992,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Estrategia, implementacion y soporte de proyectos eCommerce B2B end-to-end. Desde la seleccion de plataforma hasta la integracion con SAP, Odoo, Dynamics o ERPs propietarios. Equipo propio especializado en B2B industrial."
-								}
-							]
-						}
-					]
-				}
-			},
-			{
-				"id": "integrafy",
-				"slug": "integrafy",
-				"status": "published",
-				"data": {
-					"title": "Integrafy",
-					"client": "Fundador",
-					"year": "2024 - Presente",
-					"summary": "Middleware de integracion bidireccional ERP-eCommerce con cientos de conectores listos para produccion. Producto SaaS para empresas industriales.",
-					"url": "https://integrafy.io",
-					"content": [
-						{
-							"_type": "block",
-							"style": "normal",
-							"children": [
-								{
-									"_type": "span",
-									"text": "Integrafy es la respuesta a un problema que veia repetirse en cada proyecto: integrar el ERP con el eCommerce siempre era trabajo a medida, caro y fragil. Integrafy es un middleware que estandariza esa integracion con conectores listos para SAP Business One, SAP S/4HANA, Microsoft Dynamics 365 Business Central, Odoo y mas."
+									"text": "Estrategia, implementacion y soporte de proyectos eCommerce B2B y B2C end-to-end. PrestaShop como plataforma prioritaria, con extensiones a Shopify, soluciones headless o desarrollos a medida cuando hace falta. Proyectos internacionales con desarrollo local en Barcelona."
 								}
 							]
 						},
@@ -2026,7 +2002,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Por que existe"
+									"text": "Certificaciones"
 								}
 							]
 						},
@@ -2036,51 +2012,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Porque las empresas B2B no deberian pagar 60.000 euros por una integracion que se podria resolver en dos semanas con la herramienta correcta. Integrafy reduce tiempo, coste y riesgo de los proyectos de integracion ERP-eCommerce."
-								}
-							]
-						}
-					]
-				}
-			},
-			{
-				"id": "approsearch",
-				"slug": "approsearch",
-				"status": "published",
-				"data": {
-					"title": "Approsearch",
-					"client": "Fundador",
-					"year": "2025 - Presente",
-					"summary": "Motor de busqueda con inteligencia artificial para catalogos B2B industriales extensos. Disena experiencias de descubrimiento adaptadas al comprador profesional.",
-					"url": "",
-					"content": [
-						{
-							"_type": "block",
-							"style": "normal",
-							"children": [
-								{
-									"_type": "span",
-									"text": "Approsearch es un motor de busqueda especializado en catalogos B2B industriales con miles de SKUs, atributos tecnicos complejos y compradores profesionales que saben exactamente lo que buscan. Combina busqueda semantica, IA y conocimiento del dominio industrial."
-								}
-							]
-						},
-						{
-							"_type": "block",
-							"style": "h2",
-							"children": [
-								{
-									"_type": "span",
-									"text": "El problema que resuelve"
-								}
-							]
-						},
-						{
-							"_type": "block",
-							"style": "normal",
-							"children": [
-								{
-									"_type": "span",
-									"text": "Los buscadores estandar de eCommerce estan disenados para el consumidor B2C: precio, marca, popularidad. En B2B industrial los criterios son otros: referencias tecnicas, compatibilidades, normativas, plazos de entrega, stock por cliente. Approsearch entiende esos criterios."
+									"text": "PrestaShop Expert (la certificacion mas alta del ecosistema PrestaShop) y Shopify Partner. Mas de 1000 proyectos eCommerce ejecutados desde la fundacion."
 								}
 							]
 						}
@@ -2092,10 +2024,10 @@
 				"slug": "alabazweb",
 				"status": "published",
 				"data": {
-					"title": "Alabazweb",
-					"client": "Fundador",
-					"year": "2015 - Presente",
-					"summary": "Marca historica de modulos PrestaShop para B2B y procesos comerciales avanzados. Adquirida e integrada en el ecosistema eComm360.",
+					"title": "AlabazWeb",
+					"client": "Empresa",
+					"year": "2009 - Presente",
+					"summary": "Empresa pionera fundada en 2009, especializada en desarrollo de tiendas online y modulos PrestaShop para B2B. Certificada PrestaShop Expert. Marca historica integrada en el ecosistema.",
 					"url": "https://alabazweb.com",
 					"content": [
 						{
@@ -2104,7 +2036,27 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Alabazweb es la marca con la que empece a desarrollar soluciones eCommerce especializadas en B2B en 2015. Inicialmente como agencia de desarrollo PrestaShop, evoluciono hacia un catalogo de modulos comerciales avanzados que hoy usan empresas industriales en toda Europa."
+									"text": "AlabazWeb es la empresa con la que arranco mi trayectoria en eCommerce en 2009. Especializada desde el primer dia en el desarrollo de tiendas online y modulos PrestaShop para procesos comerciales avanzados B2B. Certificada PrestaShop Expert."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Lean eCommerce"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "AlabazWeb introdujo una metodologia lean para venta de productos complejos: validar antes de construir, lanzar antes de pulir, iterar con datos reales. Ese ADN sigue vivo en todos los proyectos del grupo."
 								}
 							]
 						},
@@ -2124,7 +2076,435 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Alabazweb forma parte del ecosistema eComm360 como linea de productos PrestaShop. Sigue activa con su catalogo de modulos para B2B, gestion de precios diferenciados, integracion ERP y flujos comerciales avanzados."
+									"text": "AlabazWeb forma parte del ecosistema eCommsistema como linea de productos y modulos PrestaShop. Sigue activa con su catalogo de modulos para B2B, hosting especializado y servicios de marketing online."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "ecommrocket",
+				"slug": "ecommrocket",
+				"status": "published",
+				"data": {
+					"title": "eCommRocket",
+					"client": "Empresa",
+					"year": "Presente",
+					"summary": "Empresa del grupo enfocada al acompanamiento integral de eCommerce: gestion, atencion al cliente, logistica, contenido y adquisicion de tiendas online. Tambien plataforma de inversion 'technology for equity'.",
+					"url": "https://ecommrocket.com",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "eCommRocket es la empresa del grupo dedicada al acompanamiento integral de proyectos eCommerce ya en marcha. Donde eComm360 disena y construye, eCommRocket opera, escala y compra."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Que ofrece"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Gestion eCommerce completa, atencion al cliente, coordinacion logistica, creacion de contenido y compraventa de tiendas online. Tambien actua como plataforma de inversion bajo modelos de 'technology for equity', adquiriendo activos digitales como tiendas, blogs y canales de YouTube."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Por que existe"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Porque muchos eCommerce no necesitan un nuevo proyecto, necesitan operacion seria y escalable. eCommRocket cubre ese hueco entre la consultora y el dia a dia operativo."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "integrafy",
+				"slug": "integrafy",
+				"status": "published",
+				"data": {
+					"title": "Integrafy",
+					"client": "Producto",
+					"year": "Presente",
+					"summary": "Middleware de integracion ERP-eCommerce con esencia de PIM. La herramienta mas querida y usada del grupo. Conecta cualquier eCommerce con SAP, Dynamics, Sage, Odoo y mas.",
+					"url": "https://integrafy.io",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Integrafy es nuestro middleware de integracion ERP-eCommerce con un toque de PIM. Es la herramienta mas querida y usada del grupo, foundational para los origenes mismos del proyecto."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Que hace"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Automatiza la integracion entre cualquier plataforma eCommerce (PrestaShop, Shopify, Adobe Commerce, headless) y los principales ERPs del mercado: SAP Business One, SAP S/4HANA, Microsoft Dynamics 365 Business Central, Sage 200, Sage X3, Odoo y desarrollos propietarios. Tambien conecta con CRMs y otros sistemas de negocio."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Por que existe"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Porque las empresas B2B no deberian pagar 60.000 euros y esperar 6 meses por una integracion que se podria resolver en 2 semanas con la herramienta correcta. Integrafy reduce tiempo, coste y riesgo."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "approsearch",
+				"slug": "approsearch",
+				"status": "published",
+				"data": {
+					"title": "ApproSearch",
+					"client": "Producto",
+					"year": "En breve",
+					"summary": "El buscador personalizable. Motor de busqueda especializado en catalogos eCommerce con dos versiones: open source sobre ElasticSearch y SaaS avanzado. Disponible en breve.",
+					"url": "",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "ApproSearch es nuestro buscador personalizable para eCommerce. Nace de un dolor concreto: los buscadores existentes cobran por peticion (modelo poco rentable a escala) y ofrecen poca personalizacion real."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Dos versiones"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Una version open source basada en ElasticSearch, ideal para equipos tecnicos que quieren control total. Y una version SaaS avanzada con personalizacion, IA y panel de gestion para equipos de marketing y producto que prefieren no tocar codigo."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Estado"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "En breve disponible. Si te interesa probarlo en tu eCommerce, escribeme y entras en la lista de early access."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "kpi-ecommerce",
+				"slug": "kpi-ecommerce",
+				"status": "published",
+				"data": {
+					"title": "KPIeCommerce",
+					"client": "Producto",
+					"year": "En breve",
+					"summary": "El analisis para el merchant. Herramienta de medicion y KPIs para eCommerce. Porque medir en un eCommerce es una obligacion moral, no un nice-to-have.",
+					"url": "",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "KPIeCommerce es la herramienta de analisis pensada para el merchant, no para el data scientist. Medir es siempre clave en un negocio, pero en un eCommerce es una obligacion moral."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Por que existe"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Las herramientas de analytics genericas estan llenas de metricas que no importan y faltan las que si. KPIeCommerce define los KPIs que un merchant de verdad necesita: margen real por producto, LTV por canal, conversion por segmento, retorno por euro invertido. Sin ruido."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Estado"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "En breve disponible. Si quieres ser early adopter, escribeme."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "parafarmacia-vegana",
+				"slug": "parafarmacia-vegana",
+				"status": "published",
+				"data": {
+					"title": "Parafarmacia Vegana",
+					"client": "Tienda",
+					"year": "Presente",
+					"summary": "Una parafarmacia muy especial: 100% vegana. Productos de salud y bienestar para personas que cuidan su entorno y su cuerpo. Construida sobre Shopify.",
+					"url": "https://www.parafarmaciavegana.com",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Parafarmacia Vegana es una parafarmacia online especializada en productos veganos para gente que le importa su entorno y su salud. Es la tienda mas representativa del grupo de tiendas eCommsistema."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Por que importa"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Demuestra como una vertical hiper-nichada puede construir comunidad, fidelizacion y margen sin competir contra Amazon. La estrategia: catalogo cuidadosamente seleccionado, contenido educativo, servicio cercano y plataforma estable sobre Shopify."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Que vende"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cosmetica, suplementos nutricionales, higiene personal, salud y bienestar. Todo certificado vegano y respetuoso con el medio ambiente."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "cesquis",
+				"slug": "cesquis",
+				"status": "published",
+				"data": {
+					"title": "Cesquis",
+					"client": "Tienda",
+					"year": "Presente",
+					"summary": "Cajas regalo y mas para veganos. Tienda especial para gente muy especial: gourmet, gifting y supermercado vegano.",
+					"url": "https://cesquis.com",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cesquis es una tienda especial para gente especial: gourmet vegano, cajas regalo, packs de degustacion y servicios de supermercado vegano. Complemento natural a Parafarmacia Vegana dentro del grupo."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Que vende"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cajas regalo personalizadas, productos gourmet veganos, packs de alimentacion y servicios de supermercado online especializado. Todo orientado al regalo y a la experiencia del cliente vegano."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "tusamigos",
+				"slug": "tusamigos",
+				"status": "published",
+				"data": {
+					"title": "Tusamigos",
+					"client": "Tienda",
+					"year": "Presente",
+					"summary": "La tienda online para nuestros mejores amigos: alimentacion y cuidado para mascotas. El segmento mas querido de la casa.",
+					"url": "https://tusamigos.es",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Tusamigos es la tienda online dedicada al segmento mas querido de la casa: nuestras mascotas. Alimentacion premium, cuidado, complementos y todo lo que necesitan los reyes del hogar."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Que vende"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Alimentacion para perros y gatos, snacks, accesorios, cuidado e higiene, juguetes y articulos especializados para distintas razas y necesidades."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Por que existe"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Porque el mercado de mascotas es uno de los mas estables y emocionales del eCommerce, y porque se merece una tienda construida con la misma seriedad que cualquier otro vertical del grupo."
 								}
 							]
 						}
