@@ -4,7 +4,6 @@ export const prerender = false;
 import { getEmDashCollection } from "emdash";
 import Base from "../layouts/Base.astro";
 import PostCard from "../components/PostCard.astro";
-import AudienceCard from "../components/AudienceCard.astro";
 import AuthorityStrip from "../components/AuthorityStrip.astro";
 import EcosystemBand from "../components/EcosystemBand.astro";
 
@@ -64,28 +63,77 @@ const sortedPosts = posts.toSorted((a, b) => {
 
 	<AuthorityStrip />
 
-	<section class="audiences">
-		<div class="audiences-inner">
+	<section class="problems">
+		<div class="problems-inner">
 			<header class="section-header">
-				<span class="section-eyebrow">Para quien trabajo</span>
-				<h2 class="section-title">Dos perfiles muy distintos.<br/>Una sola obsesion: cero friccion.</h2>
+				<span class="section-eyebrow">Problemas que resuelvo</span>
+				<h2 class="section-title">Lo que probablemente te esta frustrando</h2>
+				<p class="section-lead">
+					Cinco patrones que veo repetirse en empresas industriales y distribuidoras. Si te suena alguno, podemos hablar.
+				</p>
 			</header>
-			<div class="audiences-grid">
-				<AudienceCard
-					number="01"
-					eyebrow="Empresa industrial"
-					title="Tienes catalogo, ERP y un canal B2B inexistente o roto"
-					description="Eres fabricante o distribuidor con SAP, Odoo, Dynamics o un ERP propietario. Tu equipo comercial procesa pedidos manualmente y sabes que pierdes tiempo, dinero y ventas. Necesitas a alguien que disene la solucion y la ejecute."
-					cta={{ label: "Ver consultoria B2B", url: "/servicios/consultoria-ecommerce-b2b" }}
-				/>
-				<AudienceCard
-					number="02"
-					eyebrow="Pyme sin direccion tecnologica"
-					title="Eres una empresa de 20-200 personas y tu equipo IT esta desbordado"
-					description="Tienes responsable IT operativo pero falta criterio C-level para decisiones estrategicas. No te puedes permitir un CIO full-time pero pierdes oportunidades por no tener uno. Necesitas dedicacion senior parcial."
-					cta={{ label: "Ver Fractional CIO", url: "/fractional-cio" }}
-				/>
-			</div>
+			<ol class="problems-list">
+				<li class="problem">
+					<a href="/servicios/consultoria-ecommerce-b2b" class="problem-link">
+						<span class="problem-num">01</span>
+						<div class="problem-body">
+							<h3 class="problem-title">Tu equipo procesa pedidos B2B a mano</h3>
+							<p class="problem-text">
+								Cada pedido pasa por un comercial que lo introduce manualmente en el ERP. Errores, duplicaciones, dias de retraso. Lo que deberia ser automatico es tu cuello de botella diario.
+							</p>
+							<span class="problem-cta">Consultoria eCommerce B2B &rarr;</span>
+						</div>
+					</a>
+				</li>
+				<li class="problem">
+					<a href="/servicios/integracion-erp-ecommerce" class="problem-link">
+						<span class="problem-num">02</span>
+						<div class="problem-body">
+							<h3 class="problem-title">Tu ERP y tu tienda online viven en mundos paralelos</h3>
+							<p class="problem-text">
+								Los precios se actualizan en SAP pero la web no se entera. El stock cambia en el almacen pero el cliente sigue viendo el dato de ayer. Reconciliacion manual cada noche, sobreventa cada semana.
+							</p>
+							<span class="problem-cta">Integracion ERP - eCommerce &rarr;</span>
+						</div>
+					</a>
+				</li>
+				<li class="problem">
+					<a href="/servicios/consultor-agentes-ia-automatizaciones" class="problem-link">
+						<span class="problem-num">03</span>
+						<div class="problem-body">
+							<h3 class="problem-title">Tu equipo pierde horas en tareas que la IA ya resuelve</h3>
+							<p class="problem-text">
+								Catalogacion de productos, atencion a consultas repetitivas, generacion de ofertas, seguimiento de pedidos. Procesos donde el criterio humano casi nunca aporta valor real. La IA aplicada al B2B ya esta lista para hacerlos.
+							</p>
+							<span class="problem-cta">Agentes IA y automatizaciones &rarr;</span>
+						</div>
+					</a>
+				</li>
+				<li class="problem">
+					<a href="/fractional-cio" class="problem-link">
+						<span class="problem-num">04</span>
+						<div class="problem-body">
+							<h3 class="problem-title">No tienes criterio C-level para decidir tu hoja de ruta tecnologica</h3>
+							<p class="problem-text">
+								Tienes responsable IT operativo pero falta direccion estrategica. No te puedes permitir un CIO full-time, pero pierdes oportunidades, dinero y tiempo por no tener uno. Necesitas un perfil senior part-time, no otro proveedor.
+							</p>
+							<span class="problem-cta">Fractional CIO &rarr;</span>
+						</div>
+					</a>
+				</li>
+				<li class="problem">
+					<a href="/servicios/formacion-empresarial-digitalizacion" class="problem-link">
+						<span class="problem-num">05</span>
+						<div class="problem-body">
+							<h3 class="problem-title">Tu equipo necesita formarse pero los cursos genericos no sirven</h3>
+							<p class="problem-text">
+								Has probado bonificaciones, masterclasses gratuitas, suscripciones a plataformas. Nada se queda. Lo que tu equipo necesita es contenido aplicado a tu sector, tu stack y tus problemas reales.
+							</p>
+							<span class="problem-cta">Formacion empresarial digital &rarr;</span>
+						</div>
+					</a>
+				</li>
+			</ol>
 		</div>
 	</section>
 
@@ -284,15 +332,94 @@ const sortedPosts = posts.toSorted((a, b) => {
 		border-color: var(--color-text);
 	}
 
-	/* === Audiences === */
-	.audiences {
+	/* === Problems === */
+	.problems {
 		padding: var(--spacing-24) var(--spacing-6);
 		background: var(--color-bg);
 	}
 
-	.audiences-inner {
-		max-width: var(--wide-width);
+	.problems-inner {
+		max-width: 920px;
 		margin: 0 auto;
+	}
+
+	.section-lead {
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: var(--spacing-4) 0 0;
+		max-width: 720px;
+	}
+
+	.problems-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.problem {
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.problem-link {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: var(--spacing-8);
+		padding: var(--spacing-10) var(--spacing-2);
+		text-decoration: none;
+		color: inherit;
+		transition: background var(--transition-base);
+	}
+
+	.problem-link:hover {
+		background: var(--color-bg-warm);
+	}
+
+	.problem-num {
+		font-family: var(--font-mono);
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		padding-top: var(--spacing-2);
+	}
+
+	.problem-body {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-3);
+		min-width: 0;
+	}
+
+	.problem-title {
+		font-family: var(--font-serif);
+		font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+		font-weight: 500;
+		line-height: 1.2;
+		letter-spacing: var(--tracking-tight);
+		color: var(--color-text);
+		margin: 0;
+		transition: color var(--transition-fast);
+	}
+
+	.problem-link:hover .problem-title {
+		color: var(--color-accent);
+	}
+
+	.problem-text {
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0;
+		max-width: 60ch;
+	}
+
+	.problem-cta {
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		margin-top: var(--spacing-2);
 	}
 
 	.section-header {
@@ -331,12 +458,6 @@ const sortedPosts = posts.toSorted((a, b) => {
 
 	.section-link:hover {
 		color: var(--color-accent);
-	}
-
-	.audiences-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--spacing-6);
 	}
 
 	/* === Principles === */
@@ -464,17 +585,26 @@ const sortedPosts = posts.toSorted((a, b) => {
 			height: 60px;
 		}
 
-		.audiences,
+		.problems,
 		.principles,
 		.blog-section,
 		.cta-section {
 			padding: var(--spacing-16) var(--spacing-5);
 		}
 
-		.audiences-grid,
 		.posts-grid,
 		.principles-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.problem-link {
+			grid-template-columns: 1fr;
+			gap: var(--spacing-3);
+			padding: var(--spacing-8) var(--spacing-1);
+		}
+
+		.problem-num {
+			padding-top: 0;
 		}
 	}
 </style>
