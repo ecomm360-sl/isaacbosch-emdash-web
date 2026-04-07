@@ -16,6 +16,19 @@ const sortedServices = services.toSorted((a, b) => {
 	const orderB = b.data.order ?? 99;
 	return orderA - orderB;
 });
+
+// Fractional CIO is rendered separately because it has its own
+// standalone landing at /fractional-cio/ instead of /servicios/X
+const fractionalCioCard = {
+	id: "fractional-cio",
+	data: {
+		title: "Fractional CIO para pymes industriales",
+		summary:
+			"Direccion tecnologica part-time para empresas industriales de 20-200 personas que necesitan criterio C-level sin asumir el coste de un CIO full-time.",
+		icon: "user",
+		order: 5,
+	},
+};
 ---
 
 <Base
@@ -27,24 +40,14 @@ const sortedServices = services.toSorted((a, b) => {
 			<span class="page-eyebrow">Servicios</span>
 			<h1 class="page-title">Como puedo ayudarte</h1>
 			<p class="page-subtitle">
-				Cuatro especialidades complementarias para empresas industriales y distribuidoras que estan transformando su canal de venta digital. Trabajo en proyectos cerrados, consultoria por horas y direccion tecnologica part-time.
+				Cinco especialidades complementarias para empresas industriales y distribuidoras que estan transformando su canal de venta digital. Trabajo en proyectos cerrados, consultoria por horas y direccion tecnologica part-time.
 			</p>
 		</header>
 
-		{sortedServices.length === 0 ? (
-			<p class="empty-message">Proximamente.</p>
-		) : (
-			<div class="services-grid">
-				{sortedServices.map((service) => <ServiceCard service={service} />)}
-			</div>
-		)}
-
-		<aside class="services-cta">
-			<p>
-				<strong>Necesitas direccion tecnologica continua?</strong> Tambien ofrezco
-				<a href="/fractional-cio">Fractional CIO</a> para empresas que requieren un perfil C-level part-time.
-			</p>
-		</aside>
+		<div class="services-grid">
+			{sortedServices.map((service) => <ServiceCard service={service} />)}
+			<ServiceCard service={fractionalCioCard} href="/fractional-cio" />
+		</div>
 	</section>
 </Base>
 
@@ -91,30 +94,6 @@ const sortedServices = services.toSorted((a, b) => {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: var(--spacing-6);
-	}
-
-	.empty-message {
-		color: var(--color-muted);
-		font-size: var(--font-size-lg);
-	}
-
-	.services-cta {
-		margin-top: var(--spacing-16);
-		padding: var(--spacing-6) var(--spacing-8);
-		background: var(--color-bg-warm);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-lg);
-	}
-
-	.services-cta p {
-		margin: 0;
-		font-size: var(--font-size-base);
-		line-height: var(--leading-relaxed);
-		color: var(--color-text-secondary);
-	}
-
-	.services-cta a {
-		color: var(--color-accent);
 	}
 
 	@media (max-width: 640px) {

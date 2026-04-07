@@ -9,15 +9,17 @@ interface Props {
 			order?: number | null;
 		};
 	};
+	href?: string;
 }
 
-const { service } = Astro.props;
+const { service, href } = Astro.props;
 
 const ICON_MAP: Record<string, string> = {
 	"shopping-cart": "01",
 	"cpu": "02",
 	"link": "03",
 	"graduation-cap": "04",
+	"user": "05",
 };
 
 const indicator =
@@ -26,10 +28,12 @@ const indicator =
 		: service.data.icon
 		? ICON_MAP[service.data.icon] || ""
 		: "";
+
+const linkHref = href ?? `/servicios/${service.id}`;
 ---
 
 <article class="service-card">
-	<a href={`/servicios/${service.id}`} class="card-link">
+	<a href={linkHref} class="card-link">
 		<div class="card-header">
 			{indicator && <span class="card-number">{indicator}</span>}
 			<h3 class="card-title">{service.data.title}</h3>
