@@ -2,9 +2,9 @@
 import { authority } from "../data/authority";
 
 const stats = [
-	{ value: authority.integrationsCount, label: "Integraciones ERP ejecutadas" },
-	{ value: authority.yearsExperience, label: "Anos en eCommerce industrial" },
-	{ value: String(authority.sectorsServed.length), label: "Sectores atendidos" },
+	{ value: authority.integrationsCount, label: "Proyectos eCommerce" },
+	{ value: authority.yearsExperience, label: "Anos en el sector eCommerce" },
+	{ value: `${authority.sectorsServed.length}+`, label: "Sectores atendidos" },
 ];
 ---
 
@@ -24,6 +24,7 @@ const stats = [
 				{authority.sectorsServed.map((sector) => (
 					<li>{sector}</li>
 				))}
+				<li class="sectors-more">y muchos mas</li>
 			</ul>
 		</div>
 	</div>
@@ -106,6 +107,16 @@ const stats = [
 		background: var(--color-bg);
 		border: 1px solid var(--color-border);
 		border-radius: 999px;
+	}
+
+	.sectors-list .sectors-more {
+		background: transparent;
+		border: none;
+		color: var(--color-muted);
+		font-style: italic;
+		font-family: var(--font-serif);
+		font-weight: 400;
+		padding-left: var(--spacing-2);
 	}
 
 	@media (max-width: 900px) {

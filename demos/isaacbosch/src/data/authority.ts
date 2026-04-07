@@ -15,17 +15,30 @@ export interface EcosystemProduct {
 }
 
 export const authority = {
-	// REVISAR — Cantidad real de integraciones ERP ejecutadas
-	integrationsCount: "100+",
+	// Proyectos eCommerce ejecutados
+	integrationsCount: "1000+",
 
-	// REVISAR — Años en eCommerce industrial
+	// Anos de experiencia en el sector eCommerce
 	yearsExperience: "15+",
 
-	// REVISAR — Sectores reales atendidos
-	sectorsServed: ["Mueble", "Bebidas", "Construccion", "Alimentacion", "Industrial"],
+	// Sectores atendidos (orden importa, primero los mas representativos)
+	sectorsServed: [
+		"Industria",
+		"Construccion",
+		"Retail",
+		"Alimentacion",
+		"Bebidas",
+		"Mueble",
+		"Personalizados",
+		"Moda",
+		"Banca",
+		"Electrodomesticos",
+		"Informatica",
+		"Hogar",
+	],
 
-	// REVISAR — Total proyectos completados
-	projectsCompleted: "100+",
+	// Total proyectos completados
+	projectsCompleted: "1000+",
 
 	// REVISAR — Confirmar URLs y descripciones
 	ecosystemProducts: [
