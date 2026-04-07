@@ -142,9 +142,21 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 				<a href="/" class="site-title">{siteTitle}</a>
 				<div class="nav-right">
 					<div class="nav-links">
-						{menu?.items.map((item) => (
+						{menu?.items.slice(0, -1).map((item) => (
 							<a href={item.url} target={item.target}>{item.label}</a>
 						))}
+						{menu?.items.length && (
+							<>
+								<span class="nav-sep" aria-hidden="true"></span>
+								<a
+									href={menu.items[menu.items.length - 1].url}
+									target={menu.items[menu.items.length - 1].target}
+									class="nav-cta"
+								>
+									{menu.items[menu.items.length - 1].label}
+								</a>
+							</>
+						)}
 					</div>
 					{isLoggedIn && (
 						<a href="/_emdash/admin" class="nav-admin">Admin</a>
@@ -326,9 +338,22 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 			}
 			.site-title:hover { color: var(--color-accent); }
 			.nav-right { display: flex; align-items: center; gap: var(--spacing-6); }
-			.nav-links { display: flex; gap: var(--spacing-5); font-size: var(--font-size-sm); }
+			.nav-links { display: flex; align-items: center; gap: var(--spacing-5); font-size: var(--font-size-sm); }
 			.nav-links a { text-decoration: none; color: var(--color-text); transition: color var(--transition-fast); }
 			.nav-links a:hover { color: var(--color-accent); }
+			.nav-sep { display: inline-block; width: 1px; height: 18px; background: var(--color-border); margin: 0 var(--spacing-1); }
+			.nav-cta {
+				padding: var(--spacing-2) var(--spacing-4);
+				background: var(--color-text);
+				color: var(--color-bg) !important;
+				border-radius: 9999px;
+				font-weight: 500;
+				transition: background var(--transition-fast), color var(--transition-fast);
+			}
+			.nav-cta:hover {
+				background: var(--color-accent);
+				color: var(--color-on-accent) !important;
+			}
 			.nav-admin { font-size: var(--font-size-sm); color: var(--color-muted); text-decoration: none; opacity: 0.5; transition: opacity var(--transition-fast); }
 			.nav-admin:hover { opacity: 1; }
 

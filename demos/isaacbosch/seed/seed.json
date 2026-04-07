@@ -241,12 +241,10 @@
 			"name": "primary",
 			"label": "Navegacion Principal",
 			"items": [
-				{ "type": "custom", "label": "Inicio", "url": "/" },
-				{ "type": "custom", "label": "Consultoria B2B", "url": "/consultoria-ecommerce-b2b" },
+				{ "type": "custom", "label": "Consultor eCommerce", "url": "/consultoria-ecommerce-b2b" },
 				{ "type": "custom", "label": "Fractional CIO", "url": "/fractional-cio" },
 				{ "type": "custom", "label": "Proyectos", "url": "/proyectos" },
-				{ "type": "custom", "label": "Blog", "url": "/blog" },
-				{ "type": "custom", "label": "Sobre Isaac", "url": "/sobre-isaac" },
+				{ "type": "custom", "label": "Sobre mi", "url": "/sobre-isaac" },
 				{ "type": "custom", "label": "Contacto", "url": "/contacto" }
 			]
 		}
