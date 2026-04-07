@@ -331,11 +331,6 @@
 				},
 				{
 					"type": "custom",
-					"label": "Fractional CIO",
-					"url": "/fractional-cio"
-				},
-				{
-					"type": "custom",
 					"label": "Proyectos",
 					"url": "/proyectos"
 				},
