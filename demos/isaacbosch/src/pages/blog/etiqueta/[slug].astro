@@ -4,6 +4,8 @@ export const prerender = false;
 import { getTerm, getEntriesByTerm } from "emdash";
 import Base from "../../../layouts/Base.astro";
 import PostCard from "../../../components/PostCard.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import { buildItemListSchema, type BreadcrumbItem } from "../../../lib/seo";
 
 const { slug } = Astro.params;
 
@@ -13,17 +15,45 @@ if (!term) {
 	return Astro.redirect("/404");
 }
 
-const { entries: posts, cacheHint } = await getEntriesByTerm("tag", slug!);
+type PostEntry = {
+	id: string;
+	data: {
+		title: string;
+		excerpt?: string | null;
+		featured_image?: { id: string; src?: string; alt?: string } | null;
+		publishedAt?: Date | null;
+	};
+};
 
-Astro.cache.set(cacheHint);
+const posts = (await getEntriesByTerm("posts", "tag", slug!)) as PostEntry[];
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Blog", url: "/blog" },
+	{ name: term.label, url: `/blog/etiqueta/${term.slug}` },
+];
+
+const tagListSchema = buildItemListSchema({
+	name: `Etiqueta: ${term.label}`,
+	items: posts.map((p) => ({
+		name: p.data.title,
+		url: `/blog/${p.id}`,
+		description: p.data.excerpt ?? undefined,
+	})),
+});
 ---
 
 <Base
 	title={`Etiqueta: ${term.label}`}
 	description={`Articulos etiquetados con ${term.label}`}
+	ogType="page"
+	ogSlug={`blog-etiqueta-${term.slug}`}
+	breadcrumbs={breadcrumbs}
+	jsonLd={tagListSchema}
 >
 	<div class="taxonomy-page">
 		<header class="page-header">
+			<Breadcrumbs items={breadcrumbs} />
 			<p class="page-label">Etiqueta</p>
 			<h1>{term.label}</h1>
 		</header>

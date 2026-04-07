@@ -3,6 +3,8 @@ export const prerender = false;
 
 import { getEmDashEntry, getSeoMeta } from "emdash";
 import Base from "../layouts/Base.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { buildContactPageSchema, type BreadcrumbItem } from "../lib/seo";
 
 const { entry, cacheHint } = await getEmDashEntry("pages", "contacto");
 Astro.cache.set(cacheHint);
@@ -19,6 +21,13 @@ const WHATSAPP_URL =
 	"https://wa.me/34655588668?text=Hola%20Isaac%2C%20me%20gustaria%20hablar%20contigo";
 const LINKEDIN_URL = "https://linkedin.com/in/isaacbosch";
 const EMAIL = "mail@isaacbosch.com";
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Contacto", url: "/contacto" },
+];
+
+const contactSchema = buildContactPageSchema();
 ---
 
 <Base
@@ -26,9 +35,14 @@ const EMAIL = "mail@isaacbosch.com";
 	description={seo.description ?? "Contacta con Isaac Bosch para hablar de tu proyecto. Consultoria eCommerce B2B y Fractional CIO."}
 	image={seo.ogImage}
 	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
+	ogType="page"
+	ogSlug="contacto"
+	breadcrumbs={breadcrumbs}
+	jsonLd={contactSchema}
 >
 	<section class="contact-page">
 		<header class="page-header">
+			<Breadcrumbs items={breadcrumbs} />
 			<span class="page-eyebrow">Contacto</span>
 			<h1 class="page-title">Hablamos</h1>
 			<p class="page-subtitle">

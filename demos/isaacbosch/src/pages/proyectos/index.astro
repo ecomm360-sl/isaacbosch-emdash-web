@@ -4,6 +4,7 @@ export const prerender = false;
 import { getEmDashCollection } from "emdash";
 import Base from "../../layouts/Base.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
+import { buildItemListSchema } from "../../lib/seo";
 
 const { entries: projects, cacheHint } = await getEmDashCollection("projects");
 
@@ -44,11 +45,23 @@ const groupMeta: Record<ProjectType, { label: string; eyebrow: string; descripti
 		description: "Donde aplicamos en nuestra propia carne todo lo que vendemos. Cada tienda es un laboratorio en vivo.",
 	},
 };
+
+const projectsListSchema = buildItemListSchema({
+	name: "Mi ecosistema propio",
+	items: projects.map((p) => ({
+		name: p.data.title,
+		url: `/proyectos/${p.id}`,
+		description: p.data.summary ?? undefined,
+	})),
+});
 ---
 
 <Base
 	title="Mi ecosistema propio"
 	description="eComm360, Integrafy, Approsearch y Alabazweb. Los productos y empresas que he fundado para resolver los problemas que veo repetirse en cada proyecto B2B industrial."
+	ogType="page"
+	ogSlug="proyectos"
+	jsonLd={projectsListSchema}
 >
 	<section class="projects-page">
 		<header class="page-header">

@@ -4,6 +4,8 @@ export const prerender = false;
 import { getTerm, getEntriesByTerm } from "emdash";
 import Base from "../../../layouts/Base.astro";
 import PostCard from "../../../components/PostCard.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import { buildItemListSchema, type BreadcrumbItem } from "../../../lib/seo";
 
 const { slug } = Astro.params;
 
@@ -13,17 +15,45 @@ if (!term) {
 	return Astro.redirect("/404");
 }
 
-const { entries: posts, cacheHint } = await getEntriesByTerm("category", slug!);
+type PostEntry = {
+	id: string;
+	data: {
+		title: string;
+		excerpt?: string | null;
+		featured_image?: { id: string; src?: string; alt?: string } | null;
+		publishedAt?: Date | null;
+	};
+};
 
-Astro.cache.set(cacheHint);
+const posts = (await getEntriesByTerm("posts", "category", slug!)) as PostEntry[];
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Blog", url: "/blog" },
+	{ name: term.label, url: `/blog/categoria/${term.slug}` },
+];
+
+const categoryListSchema = buildItemListSchema({
+	name: `Categoria: ${term.label}`,
+	items: posts.map((p) => ({
+		name: p.data.title,
+		url: `/blog/${p.id}`,
+		description: p.data.excerpt ?? undefined,
+	})),
+});
 ---
 
 <Base
 	title={`Categoria: ${term.label}`}
 	description={`Articulos sobre ${term.label}`}
+	ogType="page"
+	ogSlug={`blog-categoria-${term.slug}`}
+	breadcrumbs={breadcrumbs}
+	jsonLd={categoryListSchema}
 >
 	<div class="taxonomy-page">
 		<header class="page-header">
+			<Breadcrumbs items={breadcrumbs} />
 			<p class="page-label">Categoria</p>
 			<h1>{term.label}</h1>
 		</header>

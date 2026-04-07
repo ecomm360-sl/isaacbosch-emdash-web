@@ -4,14 +4,27 @@ export const prerender = false;
 import { getEmDashCollection } from "emdash";
 import Base from "../layouts/Base.astro";
 import PressCard from "../components/PressCard.astro";
+import { buildItemListSchema } from "../lib/seo";
 
 const { entries: press, cacheHint } = await getEmDashCollection("press");
 Astro.cache.set(cacheHint);
+
+const pressListSchema = buildItemListSchema({
+	name: "Apariciones en prensa",
+	items: press.map((p) => ({
+		name: p.data.title,
+		url: p.data.url ?? "/prensa",
+		description: p.data.summary ?? undefined,
+	})),
+});
 ---
 
 <Base
 	title="Prensa"
 	description="Apariciones en prensa y medios de comunicacion."
+	ogType="page"
+	ogSlug="prensa"
+	jsonLd={pressListSchema}
 >
 	<section class="press-page">
 		<header class="page-header">

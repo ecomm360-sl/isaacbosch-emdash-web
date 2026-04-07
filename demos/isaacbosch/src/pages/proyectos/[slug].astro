@@ -5,15 +5,23 @@ import { getEmDashEntry, getSeoMeta } from "emdash";
 import { Image } from "emdash/ui";
 import Base from "../../layouts/Base.astro";
 import SiteBlocks from "../../components/SiteBlocks.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import type { BreadcrumbItem } from "../../lib/seo";
 
 const { slug } = Astro.params;
 const result = await getEmDashEntry("projects", slug!);
-if (!result) return Astro.redirect("/404");
+if (!result || !result.entry) return Astro.redirect("/404");
 
 const { entry: project, cacheHint } = result;
 Astro.cache.set(cacheHint);
 
 const seo = getSeoMeta(project);
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Proyectos", url: "/proyectos" },
+	{ name: project.data.title, url: `/proyectos/${project.id}` },
+];
 ---
 
 <Base
@@ -24,6 +32,9 @@ const seo = getSeoMeta(project);
 	canonical={seo.canonical}
 	type="website"
 	content={{ collection: "projects", id: project.data.id, slug: project.id }}
+	ogType="proyecto"
+	ogSlug={project.id}
+	breadcrumbs={breadcrumbs}
 >
 	<article class="project-detail">
 		{
@@ -36,7 +47,7 @@ const seo = getSeoMeta(project);
 
 		<div class="project-content">
 			<header class="project-header">
-				<a href="/proyectos" class="back-link">&larr; Ecosistema</a>
+				<Breadcrumbs items={breadcrumbs} />
 				<span class="project-eyebrow">Proyecto</span>
 				<h1 class="project-title">{project.data.title}</h1>
 				{(project.data.client || project.data.year) && (

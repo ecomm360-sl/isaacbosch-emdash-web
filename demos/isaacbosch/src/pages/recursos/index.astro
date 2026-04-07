@@ -4,6 +4,8 @@ export const prerender = false;
 import { getEmDashEntry, getSeoMeta } from "emdash";
 import Base from "../../layouts/Base.astro";
 import SiteBlocks from "../../components/SiteBlocks.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import type { BreadcrumbItem } from "../../lib/seo";
 
 const { entry, cacheHint } = await getEmDashEntry("pages", "recursos");
 
@@ -14,6 +16,11 @@ if (!entry) {
 Astro.cache.set(cacheHint);
 
 const seo = getSeoMeta(entry);
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Recursos", url: "/recursos" },
+];
 ---
 
 <Base
@@ -21,9 +28,13 @@ const seo = getSeoMeta(entry);
 	description={seo.description ?? "Materiales practicos para directivos y responsables digitales transformando su canal B2B."}
 	image={seo.ogImage}
 	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
+	ogType="page"
+	ogSlug="recursos"
+	breadcrumbs={breadcrumbs}
 >
 	<article class="page-content">
 		<header class="page-header">
+			<Breadcrumbs items={breadcrumbs} />
 			<span class="page-eyebrow">Recursos gratuitos</span>
 			<h1 class="page-title">{entry.data.title}</h1>
 		</header>

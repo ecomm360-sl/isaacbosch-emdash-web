@@ -4,6 +4,7 @@ export const prerender = false;
 import { getEmDashCollection } from "emdash";
 import Base from "../../layouts/Base.astro";
 import ServiceCard from "../../components/ServiceCard.astro";
+import { buildItemListSchema } from "../../lib/seo";
 
 const { entries: services, cacheHint } = await getEmDashCollection("services", {
 	orderBy: { order: "asc" },
@@ -29,11 +30,34 @@ const fractionalCioCard = {
 		order: 5,
 	},
 };
+
+const serviceListItems = [
+	...sortedServices.map((s) => ({
+		name: s.data.title,
+		url: `/servicios/${s.id}`,
+		description: s.data.summary ?? undefined,
+	})),
+	{
+		name: fractionalCioCard.data.title,
+		url: "/fractional-cio",
+		description: fractionalCioCard.data.summary,
+	},
+];
+
+const itemListSchema = buildItemListSchema({
+	name: "Servicios de Isaac Bosch",
+	description:
+		"Consultoria eCommerce B2B, agentes de IA, integracion ERP, formacion y direccion tecnologica part-time.",
+	items: serviceListItems,
+});
 ---
 
 <Base
 	title="Servicios"
 	description="Consultoria eCommerce B2B, agentes de IA, integracion ERP y formacion empresarial en digitalizacion. Servicios para empresas industriales que necesitan transformar su canal digital."
+	ogType="page"
+	ogSlug="servicios"
+	jsonLd={itemListSchema}
 >
 	<section class="services-page">
 		<header class="page-header">

@@ -6,6 +6,8 @@ import Base from "../layouts/Base.astro";
 import SiteBlocks from "../components/SiteBlocks.astro";
 import PressCard from "../components/PressCard.astro";
 import AuthorityStrip from "../components/AuthorityStrip.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { buildPersonSchema, type BreadcrumbItem } from "../lib/seo";
 
 const { entry, cacheHint } = await getEmDashEntry("pages", "sobre-isaac");
 
@@ -18,42 +20,25 @@ Astro.cache.set(cacheHint);
 const { entries: press } = await getEmDashCollection("press");
 const seo = getSeoMeta(entry);
 
-const personJsonLd = {
-	"@context": "https://schema.org",
-	"@type": "Person",
-	name: "Isaac Bosch",
-	jobTitle: "Consultor eCommerce B2B y Fractional CIO",
-	description:
-		"Consultor eCommerce B2B y Fractional CIO. Ayudo a empresas industriales a digitalizar su canal de ventas e integrar sus sistemas ERP. Fundador de eComm360, Integrafy y Approsearch.",
-	worksFor: [
-		{ "@type": "Organization", name: "eComm360", url: "https://ecomm360.es" },
-		{ "@type": "Organization", name: "Integrafy", url: "https://integrafy.io" },
-		{ "@type": "Organization", name: "Approsearch" },
-		{ "@type": "Organization", name: "Alabazweb", url: "https://alabazweb.com" },
-	],
-	address: {
-		"@type": "PostalAddress",
-		addressLocality: "Barcelona",
-		addressRegion: "Cataluna",
-		addressCountry: "ES",
-	},
-	url: "https://isaacbosch.com",
-	sameAs: [
-		"https://linkedin.com/in/isaacbosch",
-		"https://x.com/isaacbosch",
-	],
-};
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Sobre Isaac", url: "/sobre-isaac" },
+];
 ---
 
 <Base
 	title={seo.title ?? "Sobre Isaac Bosch"}
 	description={seo.description ?? "Consultor eCommerce B2B y Fractional CIO en Barcelona. Fundador de eComm360, Integrafy y Approsearch."}
 	image={seo.ogImage}
-	jsonLd={personJsonLd}
+	jsonLd={buildPersonSchema()}
 	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
+	ogType="page"
+	ogSlug="sobre-isaac"
+	breadcrumbs={breadcrumbs}
 >
 	<article class="page-content">
 		<header class="page-header">
+			<Breadcrumbs items={breadcrumbs} />
 			<span class="page-eyebrow">Sobre mi</span>
 			<h1 class="page-title">{entry.data.title}</h1>
 		</header>

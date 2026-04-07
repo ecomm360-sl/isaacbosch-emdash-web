@@ -4,6 +4,7 @@ export const prerender = false;
 import Base from "../layouts/Base.astro";
 import ClientCard from "../components/ClientCard.astro";
 import { clients, getSectorsWithCounts } from "../data/clients";
+import { buildItemListSchema } from "../lib/seo";
 
 const sectors = getSectorsWithCounts();
 const totalClients = clients.length;
@@ -12,11 +13,23 @@ const totalClients = clients.length;
 const sortedClients = [...clients].sort((a, b) =>
 	a.name.localeCompare(b.name, "es"),
 );
+
+const clientsListSchema = buildItemListSchema({
+	name: "Clientes",
+	description: "Marcas con las que Isaac Bosch ha trabajado",
+	items: sortedClients.slice(0, 30).map((c) => ({
+		name: c.name,
+		url: c.url ?? "/clientes",
+	})),
+});
 ---
 
 <Base
 	title="Clientes"
 	description="Mas de 15 anos trabajando con marcas como Damm, Cofidis, Cetelem, Caixa, RACC, Vichy Catalan, Cirsa, Intersport, Brownie, PD Paola, Hoffmann, Kibuc, Madden y muchas mas. Consultoria eCommerce B2B, integracion ERP y transformacion digital."
+	ogType="page"
+	ogSlug="clientes"
+	jsonLd={clientsListSchema}
 >
 	<section class="clients-page">
 		<header class="page-header">

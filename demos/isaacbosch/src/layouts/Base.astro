@@ -8,6 +8,19 @@ import {
 } from "emdash/ui";
 import { createPublicPageContext } from "emdash/page";
 import "../styles/theme.css";
+import { SITE_NAME, TWITTER_HANDLE, SITE_URL } from "../data/site-meta";
+import {
+	buildOgImageUrl,
+	buildOrganizationSchema,
+	buildProfessionalServiceSchema,
+	buildWebSiteSchema,
+	buildBreadcrumbList,
+	buildSpeakableSchema,
+	getCanonicalUrl,
+	type BreadcrumbItem,
+	type JsonLd,
+	type OgPageType,
+} from "../lib/seo";
 
 interface Props {
 	title: string;
@@ -20,14 +33,18 @@ interface Props {
 	modifiedTime?: string | null;
 	author?: string | null;
 	content?: { collection: string; id: string; slug?: string | null };
-	jsonLd?: Record<string, unknown>;
+	jsonLd?: JsonLd | JsonLd[];
+	breadcrumbs?: BreadcrumbItem[];
+	ogType?: OgPageType;
+	ogSlug?: string;
+	speakable?: string[];
 }
 
 const {
 	title,
 	description,
 	image,
-	canonical,
+	canonical: canonicalProp,
 	robots,
 	type = "website",
 	publishedTime,
@@ -35,11 +52,29 @@ const {
 	author,
 	content,
 	jsonLd,
+	breadcrumbs,
+	ogType,
+	ogSlug,
+	speakable,
 } = Astro.props;
-const siteTitle = "Isaac Bosch";
+
+const siteTitle = SITE_NAME;
 const fullTitle = title.includes(siteTitle) ? title : `${title} — ${siteTitle}`;
 
 const menu = await getMenu("primary");
+
+// === Canonical: always explicit, normalized ===
+const canonical = canonicalProp ?? getCanonicalUrl(Astro.url);
+
+// === OG image: explicit > dynamic > fallback ===
+let resolvedImage: string | null = image ?? null;
+if (!resolvedImage && ogType && ogSlug) {
+	resolvedImage = buildOgImageUrl({ type: ogType, slug: ogSlug });
+}
+if (!resolvedImage) {
+	// Fallback to home OG (works for any page without explicit OG)
+	resolvedImage = `${SITE_URL}/og/page/home.png`;
+}
 
 const pageCtx = createPublicPageContext({
 	Astro,
@@ -48,64 +83,36 @@ const pageCtx = createPublicPageContext({
 	title: fullTitle,
 	description,
 	canonical,
-	image,
+	image: resolvedImage,
 	content,
-	seo: { ogImage: image, robots },
+	seo: { ogImage: resolvedImage, robots },
 	articleMeta: { publishedTime, modifiedTime, author },
 	siteName: siteTitle,
 });
 
 const isLoggedIn = !!Astro.locals.user;
 
-const localBusinessJsonLd = JSON.stringify({
-	"@context": "https://schema.org",
-	"@type": "ProfessionalService",
-	"name": "Isaac Bosch - Consultor eCommerce B2B y Fractional CIO",
-	"description":
-		"Consultoria eCommerce B2B y Fractional CIO para empresas industriales. Integracion ERP, automatizacion y direccion tecnologica part-time.",
-	"url": "https://isaacbosch.com",
-	"telephone": "+34655588668",
-	"priceRange": "$$$",
-	"areaServed": "ES",
-	"address": {
-		"@type": "PostalAddress",
-		"streetAddress": "Pla. Urquinaona, 6, 14B",
-		"addressLocality": "Barcelona",
-		"postalCode": "08010",
-		"addressRegion": "Cataluna",
-		"addressCountry": "ES",
-	},
-	"hasOfferCatalog": {
-		"@type": "OfferCatalog",
-		"name": "Servicios profesionales",
-		"itemListElement": [
-			{
-				"@type": "Offer",
-				"itemOffered": {
-					"@type": "Service",
-					"name": "Consultoria eCommerce B2B Industrial",
-					"url": "https://isaacbosch.com/servicios/consultoria-ecommerce-b2b",
-				},
-			},
-			{
-				"@type": "Offer",
-				"itemOffered": {
-					"@type": "Service",
-					"name": "Fractional CIO para pymes industriales",
-					"url": "https://isaacbosch.com/fractional-cio",
-				},
-			},
-		],
-	},
-	"sameAs": [
-		"https://linkedin.com/in/isaacbosch",
-		"https://x.com/isaacbosch",
-		"https://ecomm360.es",
-		"https://integrafy.io",
-	],
-});
+// === Global JSON-LD: Organization + ProfessionalService + WebSite ===
+const globalSchemas: JsonLd[] = [
+	buildOrganizationSchema(),
+	buildProfessionalServiceSchema(),
+	buildWebSiteSchema(),
+];
 
-const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
+if (breadcrumbs && breadcrumbs.length > 0) {
+	globalSchemas.push(buildBreadcrumbList(breadcrumbs));
+}
+
+if (speakable && speakable.length > 0) {
+	globalSchemas.push(buildSpeakableSchema(speakable));
+}
+
+// === Per-page extra JSON-LD passed via prop (supports single or array) ===
+const extraSchemas: JsonLd[] = jsonLd
+	? Array.isArray(jsonLd)
+		? jsonLd
+		: [jsonLd]
+	: [];
 ---
 
 <!doctype html>
@@ -115,13 +122,20 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="alternate" hreflang="es" href={canonical || Astro.url.href} />
+		<link rel="canonical" href={canonical} />
+		<link rel="alternate" hreflang="es" href={canonical} />
+		<link rel="alternate" hreflang="x-default" href={canonical} />
+		<meta name="twitter:site" content={TWITTER_HANDLE} />
+		<meta name="twitter:creator" content={TWITTER_HANDLE} />
+		<meta property="og:locale" content="es_ES" />
 		<title>{fullTitle}</title>
 		<EmDashHead page={pageCtx} />
-		<script is:inline type="application/ld+json" set:html={localBusinessJsonLd} />
-		{extraJsonLd && (
-			<script is:inline type="application/ld+json" set:html={extraJsonLd} />
-		)}
+		{globalSchemas.map((schema) => (
+			<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+		))}
+		{extraSchemas.map((schema) => (
+			<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+		))}
 		<script is:inline>
 			(function () {
 				var c = document.cookie;

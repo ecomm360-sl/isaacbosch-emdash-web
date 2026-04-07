@@ -46,7 +46,8 @@
 					"label": "Extracto",
 					"type": "text"
 				}
-			]
+			],
+			"urlPattern": "/blog/{slug}"
 		},
 		{
 			"slug": "pages",
@@ -72,7 +73,8 @@
 					"type": "portableText",
 					"searchable": true
 				}
-			]
+			],
+			"urlPattern": "/{slug}"
 		},
 		{
 			"slug": "services",
@@ -113,7 +115,8 @@
 					"label": "Orden",
 					"type": "integer"
 				}
-			]
+			],
+			"urlPattern": "/servicios/{slug}"
 		},
 		{
 			"slug": "press",
@@ -201,7 +204,8 @@
 					"label": "URL del proyecto",
 					"type": "string"
 				}
-			]
+			],
+			"urlPattern": "/proyectos/{slug}"
 		}
 	],
 	"taxonomies": [

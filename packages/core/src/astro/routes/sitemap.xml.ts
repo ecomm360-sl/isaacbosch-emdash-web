@@ -57,9 +57,20 @@ export const GET: APIRoute = async ({ locals, url }) => {
 		];
 
 		for (const entry of entries) {
-			// Default URL pattern: /{collection}/{identifier}
-			// Encode path segments to handle slugs with spaces/unicode/reserved chars
-			const loc = `${siteUrl}/${encodeURIComponent(entry.collection)}/${encodeURIComponent(entry.identifier)}`;
+			// Use the collection's urlPattern if defined, otherwise fall back
+			// to the default `/{collection}/{identifier}` pattern. The pattern
+			// supports `{slug}` and `{id}` placeholders.
+			const encodedSlug = encodeURIComponent(entry.identifier);
+			let path: string;
+			if (entry.urlPattern) {
+				path = entry.urlPattern
+					.replace("{slug}", encodedSlug)
+					.replace("{id}", encodedSlug);
+				if (!path.startsWith("/")) path = `/${path}`;
+			} else {
+				path = `/${encodeURIComponent(entry.collection)}/${encodedSlug}`;
+			}
+			const loc = `${siteUrl}${path}`;
 
 			lines.push("  <url>");
 			lines.push(`    <loc>${escapeXml(loc)}</loc>`);

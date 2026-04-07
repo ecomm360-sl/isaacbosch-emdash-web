@@ -18,6 +18,8 @@ export interface SitemapContentEntry {
 	identifier: string;
 	/** ISO date of last modification */
 	updatedAt: string;
+	/** Optional per-collection URL pattern with {slug}/{id} placeholders */
+	urlPattern?: string | null;
 }
 
 export interface SitemapDataResponse {
@@ -45,7 +47,7 @@ export async function handleSitemapData(
 		// Find all SEO-enabled collections
 		const collections = await db
 			.selectFrom("_emdash_collections")
-			.select(["slug"])
+			.select(["slug", "url_pattern"])
 			.where("has_seo", "=", 1)
 			.execute();
 
@@ -95,6 +97,7 @@ export async function handleSitemapData(
 						collection: col.slug,
 						identifier: row.slug || row.id,
 						updatedAt: row.updated_at,
+						urlPattern: col.url_pattern,
 					});
 				}
 			} catch (err) {

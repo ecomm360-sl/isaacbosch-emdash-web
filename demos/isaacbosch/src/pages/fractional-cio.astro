@@ -4,6 +4,8 @@ export const prerender = false;
 import { getEmDashEntry, getSeoMeta } from "emdash";
 import Base from "../layouts/Base.astro";
 import SiteBlocks from "../components/SiteBlocks.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { buildServiceSchema, type BreadcrumbItem } from "../lib/seo";
 
 const { entry, cacheHint } = await getEmDashEntry("pages", "fractional-cio");
 
@@ -14,6 +16,20 @@ if (!entry) {
 Astro.cache.set(cacheHint);
 
 const seo = getSeoMeta(entry);
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Servicios", url: "/servicios" },
+	{ name: "Fractional CIO", url: "/fractional-cio" },
+];
+
+const fractionalCioSchema = buildServiceSchema({
+	name: "Fractional CIO para pymes industriales",
+	description:
+		"Direccion tecnologica part-time para empresas industriales de 20-200 personas que necesitan criterio C-level sin asumir el coste de un CIO full-time.",
+	url: "/fractional-cio",
+	slug: "fractional-cio",
+});
 ---
 
 <Base
@@ -21,9 +37,14 @@ const seo = getSeoMeta(entry);
 	description={seo.description ?? "Direccion tecnologica part-time para empresas de 20-200 personas en sector industrial y distribucion. Sin overhead de CIO full-time. Barcelona."}
 	image={seo.ogImage}
 	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
+	ogType="page"
+	ogSlug="fractional-cio"
+	breadcrumbs={breadcrumbs}
+	jsonLd={fractionalCioSchema}
 >
 	<article class="page-content">
 		<header class="page-header">
+			<Breadcrumbs items={breadcrumbs} />
 			<span class="page-eyebrow">Servicio</span>
 			<h1 class="page-title">{entry.data.title}</h1>
 		</header>
