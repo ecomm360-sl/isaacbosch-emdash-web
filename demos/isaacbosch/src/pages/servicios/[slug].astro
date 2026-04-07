@@ -2,30 +2,35 @@
 export const prerender = false;
 
 import { getEmDashEntry, getSeoMeta } from "emdash";
-import Base from "../layouts/Base.astro";
-import SiteBlocks from "../components/SiteBlocks.astro";
+import Base from "../../layouts/Base.astro";
+import SiteBlocks from "../../components/SiteBlocks.astro";
 
-const { entry, cacheHint } = await getEmDashEntry("pages", "consultoria-ecommerce-b2b");
+const { slug } = Astro.params;
 
-if (!entry) {
+const result = await getEmDashEntry("services", slug!);
+
+if (!result || !result.entry) {
 	return Astro.redirect("/404");
 }
 
+const { entry, cacheHint } = result;
 Astro.cache.set(cacheHint);
 
 const seo = getSeoMeta(entry);
 ---
 
 <Base
-	title={seo.title ?? "Consultoria eCommerce B2B Industrial"}
-	description={seo.description ?? "Estrategia, implementacion e integracion ERP para empresas industriales. PrestaShop, Shopify, SAP, Odoo, Business Central. Barcelona."}
+	title={seo.title ?? entry.data.title}
+	description={seo.description ?? entry.data.summary}
 	image={seo.ogImage}
-	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
+	content={{ collection: "services", id: entry.data.id, slug: entry.id }}
 >
 	<article class="page-content">
 		<header class="page-header">
+			<a href="/servicios" class="back-link">&larr; Servicios</a>
 			<span class="page-eyebrow">Servicio</span>
 			<h1 class="page-title">{entry.data.title}</h1>
+			{entry.data.summary && <p class="page-subtitle">{entry.data.summary}</p>}
 		</header>
 		{entry.data.content && (
 			<div class="prose">
@@ -46,6 +51,19 @@ const seo = getSeoMeta(entry);
 		margin-bottom: var(--spacing-12);
 	}
 
+	.back-link {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+		text-decoration: none;
+		margin-bottom: var(--spacing-8);
+		transition: color var(--transition-fast);
+	}
+
+	.back-link:hover {
+		color: var(--color-accent);
+	}
+
 	.page-eyebrow {
 		display: inline-block;
 		font-size: var(--font-size-sm);
@@ -63,6 +81,13 @@ const seo = getSeoMeta(entry);
 		line-height: 1.1;
 		letter-spacing: var(--tracking-tighter);
 		color: var(--color-text);
+		margin: 0 0 var(--spacing-6);
+	}
+
+	.page-subtitle {
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
 		margin: 0;
 	}
 
