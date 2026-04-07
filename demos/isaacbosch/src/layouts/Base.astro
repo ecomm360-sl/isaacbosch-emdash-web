@@ -161,6 +161,15 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 							</a>
 						)}
 					</div>
+					<button
+						type="button"
+						class="mobile-contact-trigger"
+						aria-label="Abrir opciones de contacto"
+						aria-expanded="false"
+						data-overlay-trigger="contact"
+					>
+						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+					</button>
 					{isLoggedIn && (
 						<a href="/_emdash/admin" class="nav-admin">Admin</a>
 					)}
@@ -171,6 +180,93 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 		<main>
 			<slot />
 		</main>
+
+		<button
+			type="button"
+			class="mobile-menu-trigger"
+			aria-label="Abrir menu"
+			aria-expanded="false"
+			data-overlay-trigger="menu"
+		>
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+		</button>
+
+		<div class="mobile-overlay" id="overlay-menu" role="dialog" aria-modal="true" aria-label="Menu de navegacion" hidden>
+			<button
+				type="button"
+				class="overlay-close"
+				aria-label="Cerrar menu"
+				data-overlay-close
+			>
+				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+			</button>
+			<nav class="overlay-menu">
+				{menu?.items.slice(0, -1).map((item) => (
+					<a href={item.url} class="overlay-menu-item">{item.label}</a>
+				))}
+				{menu && menu.items.length > 0 && (
+					<>
+						<span class="overlay-menu-divider" aria-hidden="true"></span>
+						<a
+							href={menu.items[menu.items.length - 1].url}
+							class="overlay-menu-item overlay-menu-cta"
+						>
+							{menu.items[menu.items.length - 1].label}
+						</a>
+					</>
+				)}
+			</nav>
+			<p class="overlay-tagline">
+				<em>Del dato al pedido. Sin fricciones.</em>
+			</p>
+		</div>
+
+		<div class="mobile-overlay" id="overlay-contact" role="dialog" aria-modal="true" aria-label="Opciones de contacto" hidden>
+			<button
+				type="button"
+				class="overlay-close"
+				aria-label="Cerrar opciones de contacto"
+				data-overlay-close
+			>
+				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+			</button>
+			<div class="overlay-contact-inner">
+				<header class="overlay-contact-header">
+					<span class="overlay-eyebrow">Hablamos</span>
+					<h2 class="overlay-title">Como prefieres contactar?</h2>
+				</header>
+				<div class="contact-options">
+					<a
+						href="https://wa.me/34655588668?text=Hola%20Isaac%2C%20me%20gustaria%20hablar%20contigo"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="contact-option"
+					>
+						<span class="contact-option-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></svg>
+						</span>
+						<span class="contact-option-text">
+							<span class="contact-option-title">WhatsApp</span>
+							<span class="contact-option-desc">Respuesta rapida en horario laboral</span>
+						</span>
+						<span class="contact-option-arrow" aria-hidden="true">→</span>
+					</a>
+					<a href="/contacto" class="contact-option">
+						<span class="contact-option-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+						</span>
+						<span class="contact-option-text">
+							<span class="contact-option-title">Enviar mensaje</span>
+							<span class="contact-option-desc">Formulario de contacto y mas datos</span>
+						</span>
+						<span class="contact-option-arrow" aria-hidden="true">→</span>
+					</a>
+				</div>
+				<p class="overlay-phone">
+					<a href="tel:+34655588668">+34 655 588 668</a>
+				</p>
+			</div>
+		</div>
 
 		<footer class="site-footer">
 			<div class="footer-inner">
@@ -271,6 +367,84 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 			window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
 				if (getStoredTheme() === "system") root.classList.toggle("dark", e.matches);
 			});
+
+			// === Mobile overlays (menu + contact) ===
+			const overlays = {
+				menu: document.getElementById("overlay-menu"),
+				contact: document.getElementById("overlay-contact"),
+			} as const;
+			const triggers = document.querySelectorAll<HTMLButtonElement>("[data-overlay-trigger]");
+			const closers = document.querySelectorAll<HTMLButtonElement>("[data-overlay-close]");
+			let activeOverlay: HTMLElement | null = null;
+			let lastFocused: HTMLElement | null = null;
+
+			function openOverlay(name: "menu" | "contact") {
+				const overlay = overlays[name];
+				if (!overlay) return;
+				if (activeOverlay) closeOverlay();
+				lastFocused = document.activeElement as HTMLElement;
+				overlay.hidden = false;
+				// Force reflow so the transition triggers
+				void overlay.offsetWidth;
+				overlay.classList.add("is-open");
+				document.body.classList.add("no-scroll");
+				activeOverlay = overlay;
+				// Update aria-expanded on the matching trigger
+				triggers.forEach((t) => {
+					if (t.dataset.overlayTrigger === name) t.setAttribute("aria-expanded", "true");
+				});
+				// Focus first focusable element
+				const focusable = overlay.querySelector<HTMLElement>("button, a, [tabindex]");
+				focusable?.focus();
+			}
+
+			function closeOverlay() {
+				if (!activeOverlay) return;
+				const overlay = activeOverlay;
+				overlay.classList.remove("is-open");
+				document.body.classList.remove("no-scroll");
+				triggers.forEach((t) => t.setAttribute("aria-expanded", "false"));
+				const handleEnd = () => {
+					overlay.hidden = true;
+					overlay.removeEventListener("transitionend", handleEnd);
+				};
+				overlay.addEventListener("transitionend", handleEnd);
+				activeOverlay = null;
+				lastFocused?.focus();
+				lastFocused = null;
+			}
+
+			triggers.forEach((trigger) => {
+				trigger.addEventListener("click", () => {
+					const name = trigger.dataset.overlayTrigger as "menu" | "contact" | undefined;
+					if (name) openOverlay(name);
+				});
+			});
+
+			closers.forEach((closer) => {
+				closer.addEventListener("click", closeOverlay);
+			});
+
+			// Close when clicking on the overlay backdrop (not on inner content)
+			Object.values(overlays).forEach((overlay) => {
+				if (!overlay) return;
+				overlay.addEventListener("click", (e) => {
+					if (e.target === overlay) closeOverlay();
+				});
+			});
+
+			// Escape key closes
+			document.addEventListener("keydown", (e) => {
+				if (e.key === "Escape" && activeOverlay) closeOverlay();
+			});
+
+			// Auto-close when navigating via menu links
+			document.querySelectorAll<HTMLAnchorElement>(".overlay-menu-item").forEach((link) => {
+				link.addEventListener("click", () => {
+					// Let the navigation happen, then close (the page reload will handle cleanup)
+					closeOverlay();
+				});
+			});
 		</script>
 
 		<style is:global>
@@ -357,6 +531,253 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 				background: var(--color-accent);
 				color: var(--color-on-accent) !important;
 			}
+
+			/* === Mobile contact trigger (header) === */
+			.mobile-contact-trigger {
+				display: none;
+				width: 40px;
+				height: 40px;
+				align-items: center;
+				justify-content: center;
+				background: transparent;
+				border: 1px solid var(--color-border);
+				border-radius: 9999px;
+				color: var(--color-text);
+				cursor: pointer;
+				transition: all var(--transition-fast);
+			}
+			.mobile-contact-trigger:hover {
+				background: var(--color-text);
+				color: var(--color-bg);
+				border-color: var(--color-text);
+			}
+
+			/* === Floating hamburger trigger === */
+			.mobile-menu-trigger {
+				display: none;
+				position: fixed;
+				bottom: max(24px, env(safe-area-inset-bottom, 24px));
+				left: 50%;
+				transform: translateX(-50%);
+				width: 56px;
+				height: 56px;
+				align-items: center;
+				justify-content: center;
+				background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+				backdrop-filter: blur(16px) saturate(180%);
+				-webkit-backdrop-filter: blur(16px) saturate(180%);
+				border: 1px solid var(--color-border);
+				border-radius: 50%;
+				color: var(--color-text);
+				cursor: pointer;
+				z-index: 90;
+				box-shadow: var(--shadow-lg);
+				transition: transform var(--transition-fast), background var(--transition-fast);
+			}
+			.mobile-menu-trigger:hover,
+			.mobile-menu-trigger:active {
+				transform: translateX(-50%) scale(1.05);
+				background: var(--color-bg);
+			}
+
+			/* === Mobile overlays (full screen) === */
+			.mobile-overlay {
+				position: fixed;
+				inset: 0;
+				width: 100vw;
+				height: 100vh;
+				height: 100dvh;
+				background: var(--color-bg);
+				z-index: 200;
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 220ms cubic-bezier(0.4, 0, 0.2, 1), transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+				overflow-y: auto;
+				display: flex;
+				flex-direction: column;
+			}
+			.mobile-overlay[hidden] {
+				display: none;
+			}
+			.mobile-overlay.is-open {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.overlay-close {
+				position: absolute;
+				top: max(16px, env(safe-area-inset-top, 16px));
+				right: 16px;
+				width: 44px;
+				height: 44px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: transparent;
+				border: none;
+				color: var(--color-text);
+				cursor: pointer;
+				border-radius: 50%;
+				transition: background var(--transition-fast);
+				z-index: 1;
+			}
+			.overlay-close:hover {
+				background: var(--color-surface);
+			}
+
+			/* === Menu overlay === */
+			.overlay-menu {
+				display: flex;
+				flex-direction: column;
+				gap: var(--spacing-4);
+				padding: var(--spacing-24) var(--spacing-8) var(--spacing-8);
+				flex-grow: 1;
+				justify-content: center;
+			}
+			.overlay-menu-item {
+				font-family: var(--font-serif);
+				font-size: clamp(2rem, 8vw, 2.75rem);
+				font-weight: 400;
+				line-height: 1.1;
+				letter-spacing: var(--tracking-tight);
+				color: var(--color-text);
+				text-decoration: none;
+				transition: color var(--transition-fast), transform var(--transition-fast);
+			}
+			.overlay-menu-item:active,
+			.overlay-menu-item:hover {
+				color: var(--color-accent);
+				transform: translateX(4px);
+			}
+			.overlay-menu-divider {
+				display: block;
+				width: 48px;
+				height: 1px;
+				background: var(--color-border);
+				margin: var(--spacing-2) 0;
+			}
+			.overlay-menu-cta {
+				color: var(--color-accent);
+			}
+			.overlay-tagline {
+				font-family: var(--font-serif);
+				font-size: var(--font-size-base);
+				color: var(--color-muted);
+				padding: 0 var(--spacing-8) var(--spacing-12);
+				margin: 0;
+			}
+			.overlay-tagline em {
+				font-style: italic;
+			}
+
+			/* === Contact overlay === */
+			.overlay-contact-inner {
+				display: flex;
+				flex-direction: column;
+				gap: var(--spacing-8);
+				padding: var(--spacing-24) var(--spacing-6) var(--spacing-12);
+				flex-grow: 1;
+				justify-content: center;
+				max-width: 480px;
+				margin: 0 auto;
+				width: 100%;
+			}
+			.overlay-contact-header {
+				display: flex;
+				flex-direction: column;
+				gap: var(--spacing-3);
+			}
+			.overlay-eyebrow {
+				font-size: var(--font-size-sm);
+				font-weight: 500;
+				color: var(--color-accent);
+				letter-spacing: var(--tracking-wide);
+				text-transform: uppercase;
+			}
+			.overlay-title {
+				font-family: var(--font-serif);
+				font-size: clamp(2rem, 7vw, 2.5rem);
+				font-weight: 500;
+				line-height: 1.1;
+				letter-spacing: var(--tracking-tight);
+				color: var(--color-text);
+				margin: 0;
+			}
+			.contact-options {
+				display: flex;
+				flex-direction: column;
+				gap: var(--spacing-4);
+			}
+			.contact-option {
+				display: flex;
+				align-items: center;
+				gap: var(--spacing-5);
+				padding: var(--spacing-6);
+				background: var(--color-bg-warm);
+				border: 1px solid var(--color-border);
+				border-radius: var(--radius-lg);
+				color: inherit;
+				text-decoration: none;
+				transition: all var(--transition-base);
+			}
+			.contact-option:active,
+			.contact-option:hover {
+				border-color: var(--color-accent);
+				background: var(--color-bg);
+				transform: translateY(-2px);
+				box-shadow: var(--shadow-md);
+			}
+			.contact-option-icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 48px;
+				height: 48px;
+				flex-shrink: 0;
+				background: var(--color-bg);
+				border: 1px solid var(--color-border);
+				border-radius: 50%;
+				color: var(--color-accent);
+			}
+			.contact-option-text {
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+				flex-grow: 1;
+				min-width: 0;
+			}
+			.contact-option-title {
+				font-family: var(--font-serif);
+				font-size: var(--font-size-xl);
+				font-weight: 500;
+				color: var(--color-text);
+				letter-spacing: var(--tracking-snug);
+			}
+			.contact-option-desc {
+				font-size: var(--font-size-sm);
+				color: var(--color-muted);
+				line-height: 1.4;
+			}
+			.contact-option-arrow {
+				font-size: var(--font-size-xl);
+				color: var(--color-accent);
+				flex-shrink: 0;
+			}
+			.overlay-phone {
+				font-size: var(--font-size-sm);
+				color: var(--color-muted);
+				text-align: center;
+				margin: 0;
+			}
+			.overlay-phone a {
+				color: var(--color-text-secondary);
+				text-decoration: none;
+			}
+
+			/* === Body scroll lock === */
+			:global(body.no-scroll) {
+				overflow: hidden;
+				touch-action: none;
+			}
 			.nav-admin { font-size: var(--font-size-sm); color: var(--color-muted); text-decoration: none; opacity: 0.5; transition: opacity var(--transition-fast); }
 			.nav-admin:hover { opacity: 1; }
 
@@ -396,7 +817,7 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 				.footer-grid { grid-template-columns: 1fr 1fr; gap: var(--spacing-8); }
 				.footer-brand { grid-column: span 2; max-width: none; }
 			}
-			@media (max-width: 640px) {
+			@media (max-width: 768px) {
 				.site-header {
 					top: var(--spacing-3);
 					margin-top: var(--spacing-3);
@@ -404,32 +825,29 @@ const extraJsonLd = jsonLd ? JSON.stringify(jsonLd) : null;
 					width: calc(100% - var(--spacing-6));
 				}
 				.nav {
-					flex-direction: row;
-					flex-wrap: wrap;
-					justify-content: space-between;
-					align-items: center;
+					padding: var(--spacing-2) var(--spacing-4) var(--spacing-2) var(--spacing-5);
+					border-radius: 9999px;
 					height: auto;
-					gap: var(--spacing-2);
-					padding: var(--spacing-3) var(--spacing-5);
-					border-radius: var(--radius-xl);
 				}
 				.site-title { font-size: var(--font-size-base); }
-				.nav-right { display: flex; align-items: center; gap: var(--spacing-3); }
-				.nav-links {
-					display: flex;
-					gap: var(--spacing-3);
-					flex-wrap: wrap;
-					justify-content: flex-end;
-				}
-				.nav-links a { font-size: var(--font-size-xs); }
-				.nav-admin { font-size: var(--font-size-xs); }
+				.nav-right { display: flex; align-items: center; gap: var(--spacing-2); }
+				.nav-links { display: none; }
+				.nav-admin { display: none; }
+				.mobile-contact-trigger { display: inline-flex; }
+				.mobile-menu-trigger { display: inline-flex; }
 				main {
 					margin-top: 0;
 					padding-top: var(--spacing-6);
+					padding-bottom: var(--spacing-24);
 				}
+				.footer-grid { grid-template-columns: 1fr 1fr; gap: var(--spacing-8); }
+				.footer-brand { grid-column: span 2; max-width: none; }
+				.footer-bottom { flex-direction: column; gap: var(--spacing-4); text-align: center; }
+			}
+
+			@media (max-width: 480px) {
 				.footer-grid { grid-template-columns: 1fr; }
 				.footer-brand { grid-column: span 1; }
-				.footer-bottom { flex-direction: column; gap: var(--spacing-4); text-align: center; }
 			}
 		</style>
 
