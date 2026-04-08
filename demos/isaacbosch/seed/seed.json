@@ -420,12 +420,12 @@
 	"redirects": [
 		{
 			"source": "/consultor-empresas",
-			"destination": "/sobre-isaac",
+			"destination": "/blog/consultor-empresas",
 			"type": 301
 		},
 		{
 			"source": "/experiencia-consultor",
-			"destination": "/sobre-isaac",
+			"destination": "/blog/experiencia-consultor",
 			"type": 301
 		},
 		{
@@ -4136,6 +4136,380 @@
 						"b2b",
 						"roi",
 						"guia"
+					]
+				}
+			},
+			{
+				"id": "post-21",
+				"slug": "consultor-empresas",
+				"status": "published",
+				"published_at": "2026-04-08",
+				"data": {
+					"title": "Consultor para empresas industriales: cuando y por que te conviene contratar uno",
+					"excerpt": "Cuando una empresa industrial necesita un consultor externo de eCommerce B2B, que aporta frente a una agencia o un equipo interno, y como evaluar el ROI real.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "La mayoria de fabricantes y distribuidores que llegan a mi tienen el mismo problema: saben que necesitan vender online pero no saben por donde empezar, no tienen un equipo digital interno, y las agencias que han contactado les ofrecen 'paquetes' que no encajan con su realidad operativa. Aqui es donde entra la figura del consultor independiente."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Que hace exactamente un consultor de eCommerce B2B"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Un consultor no es un programador, ni un diseñador, ni un community manager. Es alguien que entiende tu negocio (margenes, ciclos de venta, ERP, comerciales) y traduce eso a una arquitectura digital que funciona. En la practica eso significa: auditar lo que tienes, definir la estrategia, elegir las herramientas (plataforma eCommerce, integracion ERP, PIM, CRM), y supervisar la implementacion sin quedarte atado a un proveedor."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cuando contratar un consultor en lugar de una agencia"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "La diferencia clave: una agencia te vende horas de produccion. Un consultor te vende criterio. Tienes que contratar consultor cuando todavia no sabes que necesitas, cuando vas a invertir bastante (mas de 30k) y quieres que alguien independiente valide cada decision, o cuando la complejidad esta en la integracion (ERP, logistica, multitarifa por cliente) y no en el diseño."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Una agencia es la opcion correcta cuando ya tienes el plan claro, el alcance esta definido, y solo necesitas brazos que ejecuten."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cuando tiene sentido un equipo interno"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Un equipo interno full-time de eCommerce solo se justifica cuando vendes mas de 1-2 millones online al año o tienes operativa diaria intensa (catalogo cambiante, miles de pedidos, atencion al cliente B2B). Por debajo de eso, el coste fijo no compensa y conviene tirar de consultor + agencia + freelancers."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Como evaluar el ROI de un consultor"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El error mas comun es medir un consultor por horas trabajadas. La medida correcta es: cuantas decisiones malas te ha evitado tomar. Una sola decision tecnica equivocada en una migracion ERP o en la eleccion de plataforma puede costar 50.000-200.000 euros y un año de retraso. Si el consultor te evita una de esas, ya ha pagado su contrato 10 veces."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "En mi experiencia, una buena consultoria estrategica de 3-6 meses cuesta entre 8.000 y 25.000 euros segun el alcance, y el ROI llega antes de los 12 meses cuando hay decisiones tecnicas grandes en juego."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Que NO esperes de un consultor"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "No esperes que escriba codigo, no esperes que te haga los disenos, no esperes que cierre proveedores en tu nombre, y no esperes que se quede 'para siempre'. El trabajo bien hecho de un consultor termina cuando tu equipo (interno o externo) puede operar sin el. Si te encuentras dependiendo del consultor para cada decision pasados los 6 meses, algo no esta funcionando."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Como elegir bien"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Tres cosas que separan al bueno del malo: que haya operado el negocio (no solo asesorado), que tenga referencias verificables del sector industrial concreto, y que sepa decir que NO. Un consultor que dice si a todo lo que propones esta vendiendo horas, no criterio."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Si quieres ver casos concretos de proyectos en empresas industriales y B2B, puedes revisar la seccion de proyectos. Y si crees que tu situacion encaja, hablamos sin compromiso desde la pagina de contacto."
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "post-22",
+				"slug": "experiencia-consultor",
+				"status": "published",
+				"published_at": "2026-04-08",
+				"data": {
+					"title": "15+ años como consultor eCommerce B2B: lo que he aprendido sobre digitalizar empresas industriales",
+					"excerpt": "Una mirada honesta a 15 años trabajando con fabricantes, distribuidores y mayoristas. Las cosas que funcionan, las que no, y los errores que se repiten una y otra vez.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Llevo desde 2009 ayudando a empresas a vender online. Empece montando tiendas para PYMES en una etapa en la que 'tener pagina web' aun era un debate, y he acabado dirigiendo proyectos de transformacion digital para fabricantes industriales con ERPs complejos y catalogos de decenas de miles de referencias. Esto es lo que he visto."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El sector industrial vende como en 1998 (todavia)"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "La mayoria de fabricantes con los que trabajo siguen teniendo procesos comerciales basados en email, telefono, PDF y Excel. No es porque no quieran cambiar, es porque cambiar implica tocar el ERP, retreinar comerciales y romper inercias de 30 años. La parte tecnica es la mas facil. La parte humana es la que para los proyectos."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El error mas caro: empezar por la plataforma"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Casi todas las empresas que llegan ya han 'mirado plataformas'. Han hecho demos con Shopify, PrestaShop, Magento, BigCommerce, Sana Commerce... y vienen confundidas. La eleccion de plataforma deberia ser la ULTIMA decision, no la primera. Antes hay que definir: a quien vendes (cliente final, distribuidor, ambos), que datos tiene tu ERP, que integraciones necesitas, y cual es el presupuesto realista a 3 años. Sin eso, cualquier plataforma te quedara grande o pequeña."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Lo que mejor funciona en B2B industrial"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Tres cosas que casi siempre funcionan: precio personalizado por cliente (B2B no es B2C, los descuentos por contrato son la norma), pedidos rapidos por referencia/SKU (los clientes profesionales no quieren navegar el catalogo, quieren teclear codigos), y disponibilidad real conectada al ERP (los pedidos sin stock son la primera causa de baja de clientes B2B online)."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Lo que vende muy bien y casi nunca funciona"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El 'portal de cliente' con miles de funcionalidades. Las plataformas vendoras lo enseñan en demos preciosas y todos los directivos lo quieren. En la practica, la mayoria de funcionalidades nunca se usan, complican el proyecto y retrasan el go-live. Mejor MVP funcional en 3 meses que portal perfecto en 18."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El 80/20 de las integraciones ERP"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El 80% del valor de un eCommerce B2B esta en cuatro flujos: catalogo (productos + precios), stock, pedidos y clientes. Si esos cuatro funcionan en tiempo real con tu ERP (SAP B1, Business Central, Odoo, Sage o el que sea), tienes el 80% del proyecto resuelto. El 20% restante (devoluciones, facturas en PDF, contabilidad analitica) suele ser donde las consultoras meten meses de trabajo innecesario."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Errores que se repiten en todos los proyectos"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Uno: subestimar la limpieza de datos del ERP. La gran mayoria de fabricantes tienen catalogos sucios, descripciones incompletas, fotos malas o inexistentes. Si lanzas online con eso, fracasas. Hay que meter 2-3 meses de limpieza de datos antes de empezar."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Dos: no involucrar a los comerciales desde el dia 1. Si los comerciales perciben el eCommerce como una amenaza a su comision, sabotean el proyecto. La solucion es estructurar el modelo para que el comercial cobre tambien por las ventas online de sus clientes (y se convierte en aliado)."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Tres: lanzar sin plan de migracion de clientes. Tener la web no sirve de nada si no haces un onboarding activo, formacion, soporte y seguimiento durante los primeros 6 meses. La adopcion no es automatica."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Que ha cambiado en 15 años"
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "El cambio mas grande es la madurez del cliente B2B. En 2009 tenia que convencer a cada empresa de que 'esto del eCommerce' tenia sentido. Hoy los directivos llegan ya convencidos y la conversacion es sobre como hacerlo bien, no sobre si hacerlo. Eso ha hecho que los proyectos sean mas grandes, mas tecnicos y con mas riesgo, pero tambien mas estrategicos."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Lo que no ha cambiado: la diferencia entre un proyecto que funciona y uno que fracasa nunca es la tecnologia. Es siempre la decision, la disciplina y el seguimiento."
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Si quieres hablar sobre tu situacion concreta, puedes contactarme directamente o revisar los servicios para ver como estructuramos cada tipo de proyecto."
+								}
+							]
+						}
 					]
 				}
 			}
