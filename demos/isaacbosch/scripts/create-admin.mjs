@@ -78,6 +78,14 @@ if (existing) {
 	console.log(`Created admin user ${userId}.`);
 }
 
+// --- 1b. Mark setup as complete ------------------------------------------
+
+db.prepare(
+	`INSERT INTO options (name, value) VALUES ('emdash:setup_complete', 'true')
+	 ON CONFLICT(name) DO UPDATE SET value = 'true'`,
+).run();
+console.log("Marked setup as complete.");
+
 // --- 2. Generate magic link token (60 min expiry) ------------------------
 
 const token = generateToken();
