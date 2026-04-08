@@ -46,12 +46,16 @@ RUN mkdir -p /app/data /app/uploads
 ENV HOST=0.0.0.0
 ENV PORT=4321
 ENV NODE_ENV=production
-ENV EMDASH_DB_URL=file:/app/data/data.db
-ENV EMDASH_UPLOADS_DIR=/app/uploads
-# Resend env vars (set these in Easypanel runtime, NOT here):
+ENV EMDASH_DB_URL=file:/data/data.db
+ENV EMDASH_UPLOADS_DIR=/data/uploads
+# Set these in Easypanel runtime env vars:
+#   ADMIN_EMAIL           — email of the admin user; on every boot the
+#                            entrypoint creates/promotes this user and
+#                            prints a single-use magic link to the logs.
 #   RESEND_API_KEY        — your Resend API key
 #   RESEND_FROM           — verified sender, e.g. "Isaac Bosch <hola@isaacbosch.com>"
 #   CONTACT_EMAIL_TO      — destination inbox for contact form submissions
+#   SITE_URL              — public origin, e.g. https://isaacbosch.com
 
 EXPOSE 4321
 

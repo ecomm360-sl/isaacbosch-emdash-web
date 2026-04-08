@@ -26,8 +26,8 @@ if (!emailArg) {
 const email = emailArg.toLowerCase().trim();
 const name = nameArg || email.split("@")[0];
 
-const dbPathRaw = process.env.EMDASH_DB_URL || "./data.db";
-const dbPath = dbPathRaw.replace(/^file:/, "");
+const dbPathRaw = process.env.EMDASH_DB_URL || "file:/data/data.db";
+const dbPath = dbPathRaw.replace(/^file:\/\//, "").replace(/^file:/, "");
 const siteUrl = (process.env.SITE_URL || "http://localhost:4321").replace(/\/$/, "");
 
 console.log(`DB:    ${dbPath}`);
