@@ -18,8 +18,17 @@ export default defineConfig({
 	site: siteUrl,
 	output: "server",
 	adapter: node({
-		mode: "middleware",
+		mode: "standalone",
 	}),
+	// Astro 6 ignores X-Forwarded-Host unless the host is in this list.
+	// Without this, behind Easypanel/Traefik, Astro.url falls back to
+	// http://localhost:4321 and breaks cookies, magic links, passkeys.
+	security: {
+		allowedDomains: [
+			{ hostname: "isaacbosch.com", protocol: "https" },
+			{ hostname: "**.easypanel.host", protocol: "https" },
+		],
+	},
 	redirects: {
 		"/prensa": { status: 301, destination: "/medios" },
 	},

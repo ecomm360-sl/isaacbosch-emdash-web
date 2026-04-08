@@ -44,5 +44,5 @@ if [ -n "$ADMIN_EMAIL" ]; then
   echo ""
 fi
 
-# Start the server (custom wrapper that rewrites host from x-forwarded-host)
-exec node ./server.mjs
+# Start the server
+exec node ./dist/server/entry.mjs
