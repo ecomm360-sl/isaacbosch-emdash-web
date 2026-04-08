@@ -16,6 +16,11 @@ console.log("DB:", dbPath);
 
 const db = new Database(dbPath);
 
+// Force EVERY user to admin (role 50). Useful when the magic-link login
+// is hitting a user row whose role wasn't promoted for some reason.
+const promoted = db.prepare("UPDATE users SET role = 50, disabled = 0").run();
+console.log(`Promoted ${promoted.changes} user(s) to admin (role 50).`);
+
 // List users + roles for debugging
 const users = db.prepare("SELECT id, email, role, disabled FROM users").all();
 console.log("\nUsers:");
