@@ -5,8 +5,18 @@ import { defineConfig } from "astro/config";
 import emdash, { local } from "emdash/astro";
 import { sqlite } from "emdash/db";
 
+// IMPORTANT: astro.config.mjs is evaluated at BUILD time, not runtime, so
+// process.env values get baked into the bundle. To support both local dev
+// (relative paths) and Docker/Easypanel (persistent /data volume) we
+// switch on NODE_ENV which is set to "production" inside the Dockerfile.
+const isProd = process.env.NODE_ENV === "production";
+const dbUrl = process.env.EMDASH_DB_URL || (isProd ? "file:/data/data.db" : "file:./data.db");
+const uploadsDir = process.env.EMDASH_UPLOADS_DIR || (isProd ? "/data/uploads" : "./uploads");
+const siteUrl =
+	process.env.SITE_URL || "https://isaac-dev-isaacbosch-emdash-web.inhusc.easypanel.host";
+
 export default defineConfig({
-	site: process.env.SITE_URL || "https://isaac-dev-isaacbosch-emdash-web.inhusc.easypanel.host",
+	site: siteUrl,
 	output: "server",
 	adapter: node({
 		mode: "standalone",
@@ -21,11 +31,9 @@ export default defineConfig({
 	integrations: [
 		react(),
 		emdash({
-			database: sqlite({
-				url: process.env.EMDASH_DB_URL || "file:./data.db",
-			}),
+			database: sqlite({ url: dbUrl }),
 			storage: local({
-				directory: process.env.EMDASH_UPLOADS_DIR || "./uploads",
+				directory: uploadsDir,
 				baseUrl: "/_emdash/api/media/file",
 			}),
 			plugins: [auditLogPlugin()],
