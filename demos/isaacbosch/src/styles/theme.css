@@ -198,6 +198,7 @@ h1 {
 	font-size: var(--font-size-base);
 	line-height: var(--leading-prose);
 	color: var(--color-text-secondary);
+	max-width: var(--content-width);
 }
 
 .prose p, .article-body p {
@@ -225,6 +226,14 @@ h1 {
 .prose strong, .article-body strong {
 	color: var(--color-text);
 	font-weight: 600;
+}
+
+/* Constrain page headers (eyebrow + h1 + subtitle) to readable width
+ * within wide page containers, so the title doesn't span 1080px on
+ * pages that use the wide layout.
+ */
+.page-header {
+	max-width: var(--content-width);
 }
 
 .prose a, .article-body a {
