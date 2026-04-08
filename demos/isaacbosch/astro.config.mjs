@@ -6,6 +6,7 @@ import emdash, { local } from "emdash/astro";
 import { sqlite } from "emdash/db";
 
 export default defineConfig({
+	site: process.env.SITE_URL || "https://isaac-dev-isaacbosch-emdash-web.inhusc.easypanel.host",
 	output: "server",
 	adapter: node({
 		mode: "standalone",
