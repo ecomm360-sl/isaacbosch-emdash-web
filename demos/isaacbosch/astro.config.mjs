@@ -18,7 +18,7 @@ export default defineConfig({
 	site: siteUrl,
 	output: "server",
 	adapter: node({
-		mode: "standalone",
+		mode: "middleware",
 	}),
 	redirects: {
 		"/prensa": { status: 301, destination: "/medios" },
