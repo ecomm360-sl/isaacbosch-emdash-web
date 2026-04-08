@@ -7,6 +7,7 @@ import SiteBlocks from "../components/SiteBlocks.astro";
 import PressCard from "../components/PressCard.astro";
 import AuthorityStrip from "../components/AuthorityStrip.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Credentials from "../components/Credentials.astro";
 import { buildPersonSchema, type BreadcrumbItem } from "../lib/seo";
 
 const { entry, cacheHint } = await getEmDashEntry("pages", "sobre-isaac");
@@ -47,6 +48,8 @@ const breadcrumbs: BreadcrumbItem[] = [
 				<SiteBlocks value={entry.data.content} />
 			</div>
 		)}
+
+		<Credentials />
 	</article>
 
 	<AuthorityStrip />
