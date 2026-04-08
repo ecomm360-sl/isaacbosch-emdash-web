@@ -340,6 +340,11 @@
 				},
 				{
 					"type": "custom",
+					"label": "Medios",
+					"url": "/medios"
+				},
+				{
+					"type": "custom",
 					"label": "Sobre mi",
 					"url": "/sobre-isaac"
 				},
@@ -456,6 +461,11 @@
 		{
 			"source": "/servicios/formacion-corporativa",
 			"destination": "/servicios/formacion-empresarial-digitalizacion",
+			"type": 301
+		},
+		{
+			"source": "/prensa",
+			"destination": "/medios",
 			"type": 301
 		}
 	],

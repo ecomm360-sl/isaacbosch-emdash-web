@@ -1,0 +1,824 @@
+---
+export const prerender = false;
+
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import {
+	buildItemListSchema,
+	type BreadcrumbItem,
+	type JsonLd,
+} from "../lib/seo";
+
+type MediaType = "Entrevista" | "Articulo" | "NDP";
+
+interface DirectoryEntry {
+	year: number;
+	media: string;
+	title: string;
+	type: MediaType;
+	url?: string;
+}
+
+interface FeaturedEntry {
+	media: string;
+	type: MediaType;
+	typeLabel: string;
+	headline: string;
+	date: string;
+	url?: string;
+}
+
+const logoStrip = [
+	"Expansion",
+	"La Vanguardia",
+	"Emprendedores",
+	"RTVE",
+	"Silicon.es",
+	"Europa Press",
+	"El Confidencial Digital",
+	"Que!",
+];
+
+const featured: FeaturedEntry[] = [
+	{
+		media: "La Vanguardia (supl. Dinero)",
+		type: "Entrevista",
+		typeLabel: "Entrevista",
+		headline: "Entrevista sobre eCommerce B2B y eComm360",
+		date: "Feb 2019",
+	},
+	{
+		media: "RTVE Radio 4 — Club 21",
+		type: "Entrevista",
+		typeLabel: "Entrevista radio",
+		headline:
+			"Isaac Bosch en Club 21 con David Escamilla — eComm360 y Alabazweb",
+		date: "Mar 2019",
+	},
+	{
+		media: "Emprendedores",
+		type: "Articulo",
+		typeLabel: "Articulo de opinion",
+		headline: "La nueva arquitectura del eCommerce B2B industrial",
+		date: "Oct 2025",
+	},
+	{
+		media: "Expansion",
+		type: "NDP",
+		typeLabel: "Nota de prensa",
+		headline: "eComm360 aterriza en Ecuador con cinco proyectos",
+		date: "Dic 2018",
+	},
+	{
+		media: "Silicon.es",
+		type: "NDP",
+		typeLabel: "Nota de prensa",
+		headline: "eComm360 compra Alabazweb y refuerza su dominio en PrestaShop",
+		date: "Feb 2019",
+		url: "https://www.silicon.es/ecomm360-compra-alabazweb-y-refuerza-su-dominio-en-prestashop-2390045",
+	},
+	{
+		media: "Cronica Global / elEspanol",
+		type: "Articulo",
+		typeLabel: "Articulo",
+		headline: "La nueva arquitectura del eCommerce B2B industrial",
+		date: "Oct 2025",
+	},
+];
+
+const directory: DirectoryEntry[] = [
+	{ year: 2019, media: "La Vanguardia (Dinero)", title: "Entrevista — eCommerce B2B", type: "Entrevista" },
+	{ year: 2019, media: "RTVE Radio 4 — Club 21", title: "Entrevista con David Escamilla", type: "Entrevista" },
+	{ year: 2025, media: "Emprendedores", title: "La nueva arquitectura del eCommerce B2B industrial", type: "Articulo" },
+	{ year: 2025, media: "Cronica Global / elEspanol", title: "La nueva arquitectura del eCommerce B2B industrial", type: "Articulo" },
+	{ year: 2026, media: "Emprendedores", title: "eComm360 impulsa el exito digital con tiendas Shopify y ERP", type: "Articulo" },
+	{ year: 2018, media: "Expansion", title: "eComm360 aterriza en Ecuador con cinco proyectos", type: "NDP" },
+	{ year: 2018, media: "La Vanguardia", title: "La consultora barcelonesa eComm360 aterriza en Ecuador", type: "NDP" },
+	{ year: 2018, media: "ABC (agencias)", title: "Consultora barcelonesa eComm360 aterriza en Ecuador", type: "NDP" },
+	{
+		year: 2019,
+		media: "Silicon.es",
+		title: "eComm360 compra Alabazweb y refuerza dominio PrestaShop",
+		type: "NDP",
+		url: "https://www.silicon.es/ecomm360-compra-alabazweb-y-refuerza-su-dominio-en-prestashop-2390045",
+	},
+	{ year: 2019, media: "EconomiaDeHoy", title: "eComm360 incorpora a su grupo a Alabazweb", type: "NDP" },
+	{ year: 2019, media: "El Referente", title: "eComm360 y Alabazweb, grupo de empresas PrestaShop", type: "NDP" },
+	{
+		year: 2025,
+		media: "Metales y Metalurgia",
+		title: "El 70% de las empresas industriales pierden ventas por canales B2B obsoletos",
+		type: "NDP",
+		url: "https://www.metalesymaquinas.com/texto-diario/mostrar/5371876/70-empresas-industriales-pierden-ventas-canales-b2b-obsoletos",
+	},
+	{
+		year: 2025,
+		media: "Automatica e Instrumentacion",
+		title: "La falta de innovacion en ventas frena el crecimiento industrial",
+		type: "NDP",
+		url: "https://www.automaticaeinstrumentacion.com/texto-diario/mostrar/5375130/falta-innovacion-procesos-venta-frena-crecimiento-industria",
+	},
+	{
+		year: 2025,
+		media: "Muy Canal",
+		title: "70% de empresas industriales pierden ventas por canales B2B obsoletos",
+		type: "NDP",
+		url: "https://www.muycanal.com/2025/07/14/70-empresas-industriales-pierden-ventas-canales-b2b-obsoletos",
+	},
+	{
+		year: 2025,
+		media: "Menudas Empresas",
+		title: "Por que el 70% de las empresas industriales estan perdiendo ventas?",
+		type: "NDP",
+		url: "https://menudasempresas.com/por-que-el-70-de-las-empresas-industriales-estan-perdiendo-ventas/",
+	},
+	{ year: 2026, media: "Europa Press", title: "eComm360 impulsa el exito digital con Shopify y gestion ERP", type: "NDP" },
+	{ year: 2025, media: "El Confidencial Digital", title: "El cambio del eCommerce B2B industrial empieza por los datos", type: "NDP" },
+	{ year: 2025, media: "Region Digital", title: "La nueva arquitectura del eCommerce B2B industrial", type: "NDP" },
+	{ year: 2025, media: "Periodista Digital", title: "Data Fabric, PIM e IA para transformar la eficiencia comercial", type: "NDP" },
+	{ year: 2025, media: "Que!", title: "La nueva arquitectura del eCommerce B2B industrial", type: "NDP" },
+];
+
+// Sort directory by year desc
+const sortedDirectory = [...directory].sort((a, b) => b.year - a.year);
+
+const metrics = [
+	{ value: "40+", label: "Medios" },
+	{ value: "200+", label: "Publicaciones" },
+	{ value: "1,6M", label: "Impresiones estimadas" },
+	{ value: "2018", label: "Desde" },
+];
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Medios", url: "/medios" },
+];
+
+const mediaListSchema: JsonLd = buildItemListSchema({
+	name: "Apariciones en medios — Isaac Bosch",
+	description:
+		"Entrevistas, articulos de opinion y notas de prensa sobre Isaac Bosch y eComm360 desde 2018.",
+	items: sortedDirectory.slice(0, 30).map((d) => ({
+		name: d.title,
+		url: d.url ?? "/medios",
+		description: `${d.media} (${d.year})`,
+	})),
+});
+---
+
+<Base
+	title="Medios"
+	description="Apariciones de Isaac Bosch y eComm360 en prensa: entrevistas en La Vanguardia, RTVE, Emprendedores, Expansion, Silicon.es, Europa Press, El Confidencial Digital y mas. Mas de 200 publicaciones desde 2018."
+	ogType="page"
+	ogSlug="medios"
+	breadcrumbs={breadcrumbs}
+	jsonLd={mediaListSchema}
+>
+	<section class="medios-page">
+		<header class="page-header">
+			<Breadcrumbs items={breadcrumbs} />
+			<span class="page-eyebrow">Presencia en medios</span>
+			<h1 class="page-title">Sala de prensa</h1>
+			<p class="page-subtitle">
+				Mas de 6 anos apareciendo en medios especializados, prensa generalista
+				y radio nacional hablando de eCommerce B2B, integracion ERP y
+				transformacion digital industrial.
+			</p>
+		</header>
+
+		<!-- ======== CAPA 1: Logo strip ======== -->
+		<div class="logo-strip" aria-label="Medios destacados">
+			<ul>
+				{logoStrip.map((name) => (
+					<li>{name}</li>
+				))}
+			</ul>
+		</div>
+
+		<!-- ======== CAPA 2: Featured cards ======== -->
+		<div class="featured-section">
+			<h2 class="section-title">Apariciones destacadas</h2>
+			<div class="featured-grid">
+				{featured.map((item) => {
+					const Tag = item.url ? "a" : "article";
+					const tagProps = item.url
+						? { href: item.url, target: "_blank", rel: "noopener noreferrer" }
+						: {};
+					return (
+						<Tag class="feat-card" data-type={item.type} {...tagProps}>
+							<div class="feat-top">
+								<span class="feat-media">{item.media}</span>
+								<span class={`feat-badge feat-badge-${item.type.toLowerCase()}`}>
+									{item.typeLabel}
+								</span>
+							</div>
+							<h3 class="feat-headline">{item.headline}</h3>
+							<div class="feat-bottom">
+								<time class="feat-date">{item.date}</time>
+								{item.url && (
+									<span class="feat-arrow" aria-hidden="true">↗</span>
+								)}
+							</div>
+						</Tag>
+					);
+				})}
+			</div>
+		</div>
+
+		<!-- ======== CAPA 3: Metrics ======== -->
+		<div class="metrics">
+			{metrics.map((m) => (
+				<div class="metric">
+					<div class="metric-value">{m.value}</div>
+					<div class="metric-label">{m.label}</div>
+				</div>
+			))}
+		</div>
+
+		<!-- ======== CAPA 3: Directory ======== -->
+		<div class="directory-section">
+			<header class="dir-header">
+				<h2 class="section-title">Directorio completo</h2>
+				<p class="dir-lead">
+					{sortedDirectory.length} apariciones registradas. Filtra por tipo o haz click en las que tienen enlace para leer la pieza original.
+				</p>
+			</header>
+
+			<nav class="dir-filters" aria-label="Filtrar por tipo">
+				<button type="button" class="filter-chip is-active" data-filter="all">
+					Todos <span class="filter-count">{sortedDirectory.length}</span>
+				</button>
+				<button type="button" class="filter-chip" data-filter="Entrevista">
+					Entrevistas
+					<span class="filter-count">
+						{sortedDirectory.filter((d) => d.type === "Entrevista").length}
+					</span>
+				</button>
+				<button type="button" class="filter-chip" data-filter="Articulo">
+					Articulos propios
+					<span class="filter-count">
+						{sortedDirectory.filter((d) => d.type === "Articulo").length}
+					</span>
+				</button>
+				<button type="button" class="filter-chip" data-filter="NDP">
+					Notas de prensa
+					<span class="filter-count">
+						{sortedDirectory.filter((d) => d.type === "NDP").length}
+					</span>
+				</button>
+			</nav>
+
+			<ol class="dir-list" id="dir-list">
+				{sortedDirectory.map((entry, i) => {
+					const Tag = entry.url ? "a" : "div";
+					const tagProps = entry.url
+						? { href: entry.url, target: "_blank", rel: "noopener noreferrer" }
+						: {};
+					const hidden = i >= 8;
+					return (
+						<li
+							class="dir-item"
+							data-type={entry.type}
+							data-initial-hidden={hidden ? "true" : "false"}
+							style={hidden ? "display: none" : ""}
+						>
+							<Tag class="dir-row" {...tagProps}>
+								<span class="dir-year">{entry.year}</span>
+								<span class="dir-media">{entry.media}</span>
+								<span class="dir-title">{entry.title}</span>
+								<span class={`dir-badge dir-badge-${entry.type.toLowerCase()}`}>
+									{entry.type === "NDP" ? "Nota" : entry.type}
+								</span>
+								{entry.url && (
+									<span class="dir-arrow" aria-hidden="true">↗</span>
+								)}
+							</Tag>
+						</li>
+					);
+				})}
+			</ol>
+
+			<div class="dir-footer">
+				<button type="button" class="dir-toggle" id="dir-toggle">
+					<span class="dir-toggle-more">Ver mas ({sortedDirectory.length - 8} mas)</span>
+					<span class="dir-toggle-less">Ver menos</span>
+				</button>
+			</div>
+		</div>
+	</section>
+</Base>
+
+<script>
+	const chips = document.querySelectorAll<HTMLButtonElement>(".filter-chip");
+	const items = document.querySelectorAll<HTMLElement>(".dir-item");
+	const toggle = document.getElementById("dir-toggle") as HTMLButtonElement | null;
+	let expanded = false;
+	let activeFilter = "all";
+
+	function applyVisibility() {
+		items.forEach((item, index) => {
+			const matchesFilter =
+				activeFilter === "all" || item.dataset.type === activeFilter;
+			let visible = matchesFilter;
+
+			// When showing all (filter=all) and collapsed, only show first 8
+			if (matchesFilter && activeFilter === "all" && !expanded && index >= 8) {
+				visible = false;
+			}
+			item.style.display = visible ? "" : "none";
+		});
+
+		// Hide the toggle button when filter is not "all" (filtered view shows everything)
+		if (toggle) {
+			toggle.style.display = activeFilter === "all" ? "" : "none";
+		}
+	}
+
+	chips.forEach((chip) => {
+		chip.addEventListener("click", () => {
+			chips.forEach((c) => c.classList.remove("is-active"));
+			chip.classList.add("is-active");
+			activeFilter = chip.dataset.filter || "all";
+			applyVisibility();
+		});
+	});
+
+	toggle?.addEventListener("click", () => {
+		expanded = !expanded;
+		toggle.classList.toggle("is-expanded", expanded);
+		applyVisibility();
+	});
+</script>
+
+<style>
+	.medios-page {
+		max-width: var(--wide-width);
+		margin: 0 auto;
+		padding: var(--spacing-24) var(--spacing-6) var(--spacing-20);
+	}
+
+	.page-header {
+		max-width: 760px;
+		margin-bottom: var(--spacing-16);
+	}
+
+	.page-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-4);
+	}
+
+	.page-title {
+		font-family: var(--font-serif);
+		font-size: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: var(--tracking-tighter);
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-6);
+	}
+
+	.page-subtitle {
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0;
+	}
+
+	/* ===== CAPA 1: Logo strip ===== */
+	.logo-strip {
+		margin-bottom: var(--spacing-16);
+		padding: var(--spacing-6) var(--spacing-4);
+		border-top: 1px solid var(--color-border);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.logo-strip ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.logo-strip li {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-base);
+		font-weight: 500;
+		color: var(--color-text);
+		letter-spacing: var(--tracking-snug);
+		padding: var(--spacing-2) var(--spacing-5);
+		position: relative;
+	}
+
+	.logo-strip li:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 1px;
+		height: 18px;
+		background: var(--color-border);
+	}
+
+	/* ===== Section title ===== */
+	.section-title {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-2xl);
+		font-weight: 500;
+		letter-spacing: var(--tracking-tight);
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-8);
+	}
+
+	/* ===== CAPA 2: Featured grid ===== */
+	.featured-section {
+		margin-bottom: var(--spacing-20);
+	}
+
+	.featured-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		gap: var(--spacing-5);
+	}
+
+	.feat-card {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-3);
+		padding: var(--spacing-6);
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		text-decoration: none;
+		color: inherit;
+		transition: all var(--transition-base);
+	}
+
+	.feat-card:hover {
+		border-color: var(--color-accent);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-md);
+	}
+
+	.feat-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: var(--spacing-3);
+	}
+
+	.feat-media {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-xs);
+		font-weight: 600;
+		color: var(--color-text-secondary);
+		text-transform: uppercase;
+		letter-spacing: var(--tracking-wide);
+		flex-grow: 1;
+		min-width: 0;
+	}
+
+	.feat-badge {
+		display: inline-block;
+		padding: 3px 10px;
+		font-size: 10px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-radius: 999px;
+		white-space: nowrap;
+	}
+
+	.feat-badge-entrevista,
+	.dir-badge-entrevista {
+		background: rgba(34, 197, 94, 0.12);
+		color: #15803d;
+	}
+
+	.feat-badge-articulo,
+	.dir-badge-articulo {
+		background: rgba(245, 158, 11, 0.14);
+		color: #b45309;
+	}
+
+	.feat-badge-ndp,
+	.dir-badge-ndp {
+		background: rgba(27, 85, 133, 0.1);
+		color: #1B5585;
+	}
+
+	.feat-headline {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-lg);
+		font-weight: 500;
+		line-height: 1.3;
+		color: var(--color-text);
+		margin: 0;
+		flex-grow: 1;
+	}
+
+	.feat-card:hover .feat-headline {
+		color: var(--color-accent);
+	}
+
+	.feat-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: var(--spacing-3);
+		border-top: 1px solid var(--color-border-subtle);
+	}
+
+	.feat-date {
+		font-size: var(--font-size-xs);
+		color: var(--color-muted);
+	}
+
+	.feat-arrow {
+		font-size: var(--font-size-sm);
+		color: var(--color-accent);
+	}
+
+	/* ===== Metrics ===== */
+	.metrics {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--spacing-4);
+		margin-bottom: var(--spacing-20);
+		padding: var(--spacing-10) var(--spacing-8);
+		background: var(--color-bg-warm);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+	}
+
+	.metric {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-2);
+		text-align: center;
+	}
+
+	.metric-value {
+		font-family: var(--font-serif);
+		font-size: clamp(2rem, 3vw, 2.75rem);
+		font-weight: 500;
+		line-height: 1;
+		letter-spacing: var(--tracking-tighter);
+		color: var(--color-accent);
+	}
+
+	.metric-label {
+		font-size: var(--font-size-xs);
+		font-weight: 500;
+		color: var(--color-text-secondary);
+		text-transform: uppercase;
+		letter-spacing: var(--tracking-wide);
+	}
+
+	/* ===== Directory ===== */
+	.directory-section {
+		margin-bottom: var(--spacing-12);
+	}
+
+	.dir-header {
+		margin-bottom: var(--spacing-8);
+	}
+
+	.dir-lead {
+		font-size: var(--font-size-base);
+		color: var(--color-text-secondary);
+		margin: var(--spacing-2) 0 0;
+		line-height: var(--leading-relaxed);
+	}
+
+	.dir-filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--spacing-2);
+		margin-bottom: var(--spacing-6);
+		padding-bottom: var(--spacing-4);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.filter-chip {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--spacing-2);
+		padding: var(--spacing-2) var(--spacing-4);
+		font-family: var(--font-sans);
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-text-secondary);
+		background: transparent;
+		border: 1px solid var(--color-border);
+		border-radius: 9999px;
+		cursor: pointer;
+		transition: all var(--transition-fast);
+	}
+
+	.filter-chip:hover {
+		color: var(--color-text);
+		border-color: var(--color-text);
+	}
+
+	.filter-chip.is-active {
+		color: var(--color-on-accent);
+		background: var(--color-accent);
+		border-color: var(--color-accent);
+	}
+
+	.filter-count {
+		font-family: var(--font-mono);
+		font-size: var(--font-size-xs);
+		opacity: 0.7;
+	}
+
+	/* ===== Directory list ===== */
+	.dir-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.dir-item {
+		border-bottom: 1px solid var(--color-border-subtle);
+	}
+
+	.dir-row {
+		display: grid;
+		grid-template-columns: 60px 200px 1fr auto auto;
+		gap: var(--spacing-4);
+		align-items: center;
+		padding: var(--spacing-4) var(--spacing-2);
+		text-decoration: none;
+		color: inherit;
+		transition: background var(--transition-fast);
+	}
+
+	a.dir-row:hover {
+		background: var(--color-bg-warm);
+	}
+
+	.dir-year {
+		font-family: var(--font-mono);
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+	}
+
+	.dir-media {
+		font-size: var(--font-size-sm);
+		font-weight: 600;
+		color: var(--color-text);
+	}
+
+	.dir-title {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-secondary);
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.dir-badge {
+		display: inline-block;
+		padding: 2px 8px;
+		font-size: 10px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-radius: 4px;
+		white-space: nowrap;
+	}
+
+	.dir-arrow {
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+		transition: color var(--transition-fast);
+	}
+
+	a.dir-row:hover .dir-arrow {
+		color: var(--color-accent);
+	}
+
+	/* ===== Toggle ===== */
+	.dir-footer {
+		display: flex;
+		justify-content: center;
+		margin-top: var(--spacing-6);
+	}
+
+	.dir-toggle {
+		padding: var(--spacing-3) var(--spacing-6);
+		background: transparent;
+		border: 1px solid var(--color-border);
+		border-radius: 9999px;
+		font-family: var(--font-sans);
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-text-secondary);
+		cursor: pointer;
+		transition: all var(--transition-fast);
+	}
+
+	.dir-toggle:hover {
+		border-color: var(--color-text);
+		color: var(--color-text);
+	}
+
+	.dir-toggle-less {
+		display: none;
+	}
+
+	.dir-toggle.is-expanded .dir-toggle-more {
+		display: none;
+	}
+
+	.dir-toggle.is-expanded .dir-toggle-less {
+		display: inline;
+	}
+
+	/* ===== Responsive ===== */
+	@media (max-width: 900px) {
+		.metrics {
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--spacing-6);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.dir-row {
+			grid-template-columns: auto 1fr auto;
+			gap: var(--spacing-3);
+		}
+
+		.dir-media {
+			grid-column: 1 / -1;
+			grid-row: 1;
+		}
+
+		.dir-year {
+			grid-column: 1;
+			grid-row: 2;
+		}
+
+		.dir-title {
+			grid-column: 2;
+			grid-row: 2;
+			white-space: normal;
+		}
+
+		.dir-badge {
+			grid-column: 3;
+			grid-row: 2;
+		}
+
+		.dir-arrow {
+			grid-column: 4;
+			grid-row: 2;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.medios-page {
+			padding: var(--spacing-16) var(--spacing-5) var(--spacing-12);
+		}
+
+		.logo-strip ul {
+			gap: 0;
+		}
+
+		.logo-strip li {
+			padding: var(--spacing-1) var(--spacing-3);
+			font-size: var(--font-size-sm);
+		}
+
+		.featured-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.metrics {
+			grid-template-columns: 1fr 1fr;
+			padding: var(--spacing-6);
+		}
+
+		.dir-filters {
+			overflow-x: auto;
+			flex-wrap: nowrap;
+			padding-bottom: var(--spacing-3);
+		}
+
+		.filter-chip {
+			flex-shrink: 0;
+		}
+	}
+</style>

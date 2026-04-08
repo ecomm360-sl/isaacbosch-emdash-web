@@ -10,6 +10,9 @@ export default defineConfig({
 	adapter: node({
 		mode: "standalone",
 	}),
+	redirects: {
+		"/prensa": { status: 301, destination: "/medios" },
+	},
 	image: {
 		layout: "constrained",
 		responsiveStyles: true,
