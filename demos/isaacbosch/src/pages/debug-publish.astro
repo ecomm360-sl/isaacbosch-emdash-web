@@ -4,48 +4,39 @@ export const prerender = false;
 const collection = Astro.url.searchParams.get("collection") || "posts";
 const id = Astro.url.searchParams.get("id") || "";
 
-const locals = Astro.locals as {
-	user?: { id: string; role: number; email: string };
-	emdash?: {
-		handleContentGet?: (c: string, i: string) => Promise<unknown>;
-		handleContentPublish?: (c: string, i: string) => Promise<unknown>;
-	};
-};
+const log: Array<unknown> = [];
 
-let log: Array<{ step: string; result: unknown }> = [];
+// @ts-ignore
+const user = Astro.locals.user;
+log.push({ step: "user", value: user || "NOT LOGGED IN" });
 
-log.push({
-	step: "1. user",
-	result: locals.user || "NO USER — not logged in",
-});
+// @ts-ignore
+const emdash = Astro.locals.emdash;
+log.push({ step: "emdash present?", value: !!emdash });
 
-if (locals.user && locals.emdash?.handleContentGet && id) {
+if (id && emdash) {
 	try {
-		const got = await locals.emdash.handleContentGet(collection, id);
-		log.push({ step: "2. handleContentGet", result: got });
-	} catch (e: unknown) {
-		log.push({ step: "2. handleContentGet THREW", result: String(e) });
+		const got = await emdash.handleContentGet(collection, id);
+		log.push({ step: "handleContentGet", value: got });
+	} catch (e) {
+		log.push({ step: "handleContentGet THREW", value: String(e) });
 	}
-}
 
-if (locals.user && locals.emdash?.handleContentPublish && id) {
 	try {
-		const pub = await locals.emdash.handleContentPublish(collection, id);
-		log.push({ step: "3. handleContentPublish", result: pub });
-	} catch (e: unknown) {
-		log.push({ step: "3. handleContentPublish THREW", result: String(e) });
+		const pub = await emdash.handleContentPublish(collection, id);
+		log.push({ step: "handleContentPublish", value: pub });
+	} catch (e) {
+		log.push({ step: "handleContentPublish THREW", value: String(e) });
 	}
 }
 
 const dump = JSON.stringify(log, null, 2);
 ---
 
-<!doctype html>
 <html>
-<head><meta charset="utf-8"><title>Debug publish</title></head>
-<body style="font-family: monospace; padding: 24px; background: #faf9f5;">
+<body style="font-family: monospace; padding: 24px;">
 	<h1>Debug publish</h1>
-	<p>Pass <code>?collection=posts&id=&lt;id-or-slug&gt;</code> in the URL.</p>
-	<pre style="background: white; padding: 16px; border: 1px solid #ddd; border-radius: 4px; overflow-x: auto; white-space: pre-wrap; word-break: break-all;">{dump}</pre>
+	<p>?collection=posts&id=&lt;slug&gt;</p>
+	<pre style="white-space: pre-wrap; word-break: break-all;">{dump}</pre>
 </body>
 </html>
