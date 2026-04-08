@@ -20,13 +20,16 @@ echo "EMDASH_DB_URL=$EMDASH_DB_URL"
 echo "Resolved DB path: $DB_PATH"
 
 # Initialize EmDash on first run (creates tables, runs migrations, seeds content)
+# IMPORTANT: pass --database explicitly. The CLI does NOT read EMDASH_DB_URL —
+# it has its own default of ./data.db which would put the DB in the cwd
+# (/app/demos/isaacbosch/data.db) and bypass the persistent volume entirely.
 if [ ! -f "$DB_PATH" ]; then
   echo "First run: initializing EmDash at $DB_PATH ..."
-  $EMDASH_CLI init
-  $EMDASH_CLI seed
+  $EMDASH_CLI init --database "$DB_PATH"
+  $EMDASH_CLI seed seed/seed.json --database "$DB_PATH"
 else
   echo "Existing DB at $DB_PATH — running migrations only ..."
-  $EMDASH_CLI init || true
+  $EMDASH_CLI init --database "$DB_PATH" || true
 fi
 
 # Auto-create / promote admin user from ADMIN_EMAIL env var.
