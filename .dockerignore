@@ -11,6 +11,7 @@ demos
 !demos/isaacbosch
 e2e
 scripts
+!demos/isaacbosch/scripts
 skills
 docs
 slidev
