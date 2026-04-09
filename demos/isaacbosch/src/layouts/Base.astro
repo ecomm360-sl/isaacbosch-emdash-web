@@ -70,15 +70,15 @@ const {
 } = Astro.props;
 
 const siteTitle = SITE_NAME;
-// SEO: keep title ≤ 60 chars to avoid truncation in SERP.
-// Only append " — Isaac Bosch" if the result stays under 60 chars.
+// SEO: keep title ≤ 60 chars AND always differentiate from H1.
+// Strategy: try " — Isaac Bosch" (15 chars), else " | IB" (5 chars).
+// This prevents H1 = Title (flagged by SE Ranking as over-optimized).
 const MAX_TITLE_LENGTH = 60;
-const withSuffix = `${title} — ${siteTitle}`;
+const longSuffix = ` — ${siteTitle}`;
+const shortSuffix = " | IB";
 const fullTitle = title.includes(siteTitle)
 	? title
-	: withSuffix.length <= MAX_TITLE_LENGTH
-		? withSuffix
-		: title;
+	: `${title}${(title + longSuffix).length <= MAX_TITLE_LENGTH ? longSuffix : shortSuffix}`;
 
 const menu = await getMenu("primary");
 
