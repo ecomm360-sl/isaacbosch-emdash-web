@@ -52,7 +52,9 @@
 					"type": "text"
 				}
 			],
-			"urlPattern": "/blog/{slug}"
+			"urlPattern": "/blog/{slug}",
+			"has_seo": true,
+			"url_pattern": "/blog/{slug}"
 		},
 		{
 			"slug": "pages",
@@ -79,7 +81,9 @@
 					"searchable": true
 				}
 			],
-			"urlPattern": "/{slug}"
+			"urlPattern": "/{slug}",
+			"has_seo": true,
+			"url_pattern": "/{slug}"
 		},
 		{
 			"slug": "services",
@@ -121,7 +125,9 @@
 					"type": "integer"
 				}
 			],
-			"urlPattern": "/servicios/{slug}"
+			"urlPattern": "/servicios/{slug}",
+			"has_seo": true,
+			"url_pattern": "/servicios/{slug}"
 		},
 		{
 			"slug": "press",
@@ -157,7 +163,8 @@
 					"label": "Resumen",
 					"type": "text"
 				}
-			]
+			],
+			"has_seo": false
 		},
 		{
 			"slug": "projects",
@@ -210,7 +217,9 @@
 					"type": "string"
 				}
 			],
-			"urlPattern": "/proyectos/{slug}"
+			"urlPattern": "/proyectos/{slug}",
+			"has_seo": true,
+			"url_pattern": "/proyectos/{slug}"
 		}
 	],
 	"taxonomies": [
