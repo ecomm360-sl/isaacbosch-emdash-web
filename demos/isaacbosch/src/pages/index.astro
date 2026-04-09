@@ -10,6 +10,8 @@ import ClientLogosStrip from "../components/ClientLogosStrip.astro";
 import Testimonials from "../components/Testimonials.astro";
 import { buildFaqPageSchema } from "../lib/seo";
 
+const CALENDLY_URL = import.meta.env.PUBLIC_CALENDLY_URL as string | undefined;
+
 const { entries: posts, cacheHint } = await getEmDashCollection("posts", {
 	limit: 3,
 });
@@ -74,6 +76,7 @@ const homeFaqSchema = buildFaqPageSchema([
 					height="88"
 					loading="eager"
 					decoding="async"
+					fetchpriority="high"
 					class="hero-portrait"
 				/>
 				<div class="hero-byline-text">
@@ -236,7 +239,25 @@ const homeFaqSchema = buildFaqPageSchema([
 			<p class="cta-text">
 				Cuéntame tu situación. Sin compromiso. Si encajamos, hablamos del proyecto. Si no, te oriento sobre el siguiente paso aunque sea con otro consultor.
 			</p>
-			<a href="/contacto" class="btn btn-primary">Solicitar diagnóstico</a>
+			<div class="cta-buttons">
+				{CALENDLY_URL ? (
+					<>
+						<a
+							href={CALENDLY_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn btn-primary"
+						>
+							Reservar 45 min directamente
+						</a>
+						<a href="/contacto" class="btn btn-secondary">
+							O escríbeme por formulario
+						</a>
+					</>
+				) : (
+					<a href="/contacto" class="btn btn-primary">Solicitar diagnóstico</a>
+				)}
+			</div>
 		</div>
 	</section>
 </Base>
