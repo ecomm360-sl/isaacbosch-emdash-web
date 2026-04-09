@@ -1,6 +1,6 @@
 {
 	"$schema": "https://emdashcms.com/seed.schema.json",
-	"versión": "1",
+	"version": "1",
 	"meta": {
 		"name": "Isaac Bosch",
 		"description": "Consultor eCommerce B2B e IA - Web personal y blog",
@@ -22,7 +22,7 @@
 			"labelSingular": "Post",
 			"supports": [
 				"drafts",
-				"revisións",
+				"revisions",
 				"search",
 				"seo"
 			],
@@ -52,9 +52,7 @@
 					"type": "text"
 				}
 			],
-			"urlPattern": "/blog/{slug}",
-			"has_seo": true,
-			"url_pattern": "/blog/{slug}"
+			"urlPattern": "/blog/{slug}"
 		},
 		{
 			"slug": "pages",
@@ -62,7 +60,7 @@
 			"labelSingular": "Página",
 			"supports": [
 				"drafts",
-				"revisións",
+				"revisions",
 				"search",
 				"seo"
 			],
@@ -81,9 +79,7 @@
 					"searchable": true
 				}
 			],
-			"urlPattern": "/{slug}",
-			"has_seo": true,
-			"url_pattern": "/{slug}"
+			"urlPattern": "/{slug}"
 		},
 		{
 			"slug": "services",
@@ -91,7 +87,7 @@
 			"labelSingular": "Servicio",
 			"supports": [
 				"drafts",
-				"revisións",
+				"revisions",
 				"seo"
 			],
 			"fields": [
@@ -125,9 +121,7 @@
 					"type": "integer"
 				}
 			],
-			"urlPattern": "/servicios/{slug}",
-			"has_seo": true,
-			"url_pattern": "/servicios/{slug}"
+			"urlPattern": "/servicios/{slug}"
 		},
 		{
 			"slug": "press",
@@ -163,8 +157,7 @@
 					"label": "Resumen",
 					"type": "text"
 				}
-			],
-			"has_seo": false
+			]
 		},
 		{
 			"slug": "projects",
@@ -172,7 +165,7 @@
 			"labelSingular": "Proyecto",
 			"supports": [
 				"drafts",
-				"revisións",
+				"revisions",
 				"search",
 				"seo"
 			],
@@ -217,9 +210,7 @@
 					"type": "string"
 				}
 			],
-			"urlPattern": "/proyectos/{slug}",
-			"has_seo": true,
-			"url_pattern": "/proyectos/{slug}"
+			"urlPattern": "/proyectos/{slug}"
 		}
 	],
 	"taxonomies": [
