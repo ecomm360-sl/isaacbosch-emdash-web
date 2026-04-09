@@ -6,7 +6,7 @@
   Layout: generous whitespace, content-focused, no heavy borders
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+/* Google Fonts loaded async via <link> in Base.astro to avoid render-blocking */
 
 :root {
 	/* === Anthropic-inspired warm palette === */
@@ -15,8 +15,8 @@
 	--color-bg-warm: #f0ede3;         /* Section accent */
 	--color-text: #141413;            /* Near black */
 	--color-text-secondary: #30302e;  /* Dark warm gray */
-	--color-muted: #87867f;           /* Warm gray */
-	--color-muted-light: #c2c0b6;     /* Light warm gray */
+	--color-muted: #6b6a65;           /* Warm gray — darkened for WCAG AA 4.5:1 on cream (was #87867f) */
+	--color-muted-light: #9b9a93;     /* Light warm gray — darkened for contrast (was #c2c0b6) */
 	--color-border: rgba(20, 20, 19, 0.08);
 	--color-border-subtle: rgba(20, 20, 19, 0.04);
 	--color-surface: #f5f4ed;

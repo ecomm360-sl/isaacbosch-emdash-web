@@ -1,6 +1,7 @@
 ---
 export const prerender = false;
 
+import { Image } from "astro:assets";
 import { getEmDashEntry, getSeoMeta, getEmDashCollection } from "emdash";
 import Base from "../layouts/Base.astro";
 import SiteBlocks from "../components/SiteBlocks.astro";
@@ -9,6 +10,7 @@ import AuthorityStrip from "../components/AuthorityStrip.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import Credentials from "../components/Credentials.astro";
 import type { BreadcrumbItem } from "../lib/seo";
+import portraitSrc from "../assets/isaac-portrait.jpg";
 
 const { entry, cacheHint } = await getEmDashEntry("pages", "sobre-isaac");
 
@@ -62,11 +64,11 @@ const breadcrumbs: BreadcrumbItem[] = [
 				</div>
 			</div>
 			<div class="hero-portrait">
-				<img
-					src="/isaac-portrait.jpg"
+				<Image
+					src={portraitSrc}
 					alt="Retrato ilustrado de Isaac Bosch"
-					width="480"
-					height="480"
+					width={960}
+					height={960}
 					loading="eager"
 					decoding="async"
 				/>

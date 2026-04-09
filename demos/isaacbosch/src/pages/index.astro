@@ -1,6 +1,7 @@
 ---
 export const prerender = false;
 
+import { Image } from "astro:assets";
 import { getEmDashCollection } from "emdash";
 import Base from "../layouts/Base.astro";
 import PostCard from "../components/PostCard.astro";
@@ -9,6 +10,7 @@ import EcosystemBand from "../components/EcosystemBand.astro";
 import ClientLogosStrip from "../components/ClientLogosStrip.astro";
 import Testimonials from "../components/Testimonials.astro";
 import { buildFaqPageSchema } from "../lib/seo";
+import portraitSrc from "../assets/isaac-portrait.jpg";
 
 const CALENDLY_URL = import.meta.env.PUBLIC_CALENDLY_URL as string | undefined;
 
@@ -69,11 +71,11 @@ const homeFaqSchema = buildFaqPageSchema([
 	<section class="hero">
 		<div class="hero-inner">
 			<div class="hero-byline">
-				<img
-					src="/isaac-portrait.jpg"
+				<Image
+					src={portraitSrc}
 					alt="Retrato ilustrado de Isaac Bosch"
-					width="88"
-					height="88"
+					width={176}
+					height={176}
 					loading="eager"
 					decoding="async"
 					fetchpriority="high"
