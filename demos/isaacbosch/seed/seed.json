@@ -472,6 +472,141 @@
 			"source": "/prensa",
 			"destination": "/medios",
 			"type": 301
+		},
+		{
+			"source": "/privacidad",
+			"destination": "/politica-privacidad",
+			"type": 301
+		},
+		{
+			"source": "/posts/experiencia-consultor",
+			"destination": "/blog/experiencia-consultor",
+			"type": 301
+		},
+		{
+			"source": "/posts/consultor-empresas",
+			"destination": "/blog/consultor-empresas",
+			"type": 301
+		},
+		{
+			"source": "/posts/cuanto-cuesta-montar-ecommerce-b2b",
+			"destination": "/blog/cuanto-cuesta-montar-ecommerce-b2b",
+			"type": 301
+		},
+		{
+			"source": "/posts/preguntas-frecuentes-ia-empresas",
+			"destination": "/blog/preguntas-frecuentes-ia-empresas",
+			"type": 301
+		},
+		{
+			"source": "/posts/preguntas-frecuentes-ecommerce-b2b",
+			"destination": "/blog/preguntas-frecuentes-ecommerce-b2b",
+			"type": 301
+		},
+		{
+			"source": "/category/estrategia-b2b",
+			"destination": "/blog/categoria/estrategia-b2b",
+			"type": 301
+		},
+		{
+			"source": "/category/integracion-erp",
+			"destination": "/blog/categoria/integracion-erp",
+			"type": 301
+		},
+		{
+			"source": "/category/reflexiones",
+			"destination": "/blog/categoria/reflexiones",
+			"type": 301
+		},
+		{
+			"source": "/category/tecnologia",
+			"destination": "/blog/categoria/tecnologia",
+			"type": 301
+		},
+		{
+			"source": "/tag/ia-agentes",
+			"destination": "/blog/etiqueta/ia-agentes",
+			"type": 301
+		},
+		{
+			"source": "/tag/b2b",
+			"destination": "/blog/etiqueta/b2b",
+			"type": 301
+		},
+		{
+			"source": "/tag/barcelona",
+			"destination": "/blog/etiqueta/barcelona",
+			"type": 301
+		},
+		{
+			"source": "/tag/caso-de-exito",
+			"destination": "/blog/etiqueta/caso-de-exito",
+			"type": 301
+		},
+		{
+			"source": "/tag/chatbots",
+			"destination": "/blog/etiqueta/chatbots",
+			"type": 301
+		},
+		{
+			"source": "/tag/espana",
+			"destination": "/blog/etiqueta/espana",
+			"type": 301
+		},
+		{
+			"source": "/tag/faq",
+			"destination": "/blog/etiqueta/faq",
+			"type": 301
+		},
+		{
+			"source": "/tag/guia",
+			"destination": "/blog/etiqueta/guia",
+			"type": 301
+		},
+		{
+			"source": "/tag/magento",
+			"destination": "/blog/etiqueta/magento",
+			"type": 301
+		},
+		{
+			"source": "/tag/odoo",
+			"destination": "/blog/etiqueta/odoo",
+			"type": 301
+		},
+		{
+			"source": "/tag/pyme",
+			"destination": "/blog/etiqueta/pyme",
+			"type": 301
+		},
+		{
+			"source": "/tag/prestashop",
+			"destination": "/blog/etiqueta/prestashop",
+			"type": 301
+		},
+		{
+			"source": "/tag/roi",
+			"destination": "/blog/etiqueta/roi",
+			"type": 301
+		},
+		{
+			"source": "/tag/sap",
+			"destination": "/blog/etiqueta/sap",
+			"type": 301
+		},
+		{
+			"source": "/tag/seo-tag",
+			"destination": "/blog/etiqueta/seo-tag",
+			"type": 301
+		},
+		{
+			"source": "/tag/shopify",
+			"destination": "/blog/etiqueta/shopify",
+			"type": 301
+		},
+		{
+			"source": "/tag/tendencias",
+			"destination": "/blog/etiqueta/tendencias",
+			"type": 301
 		}
 	],
 	"content": {
@@ -2175,7 +2310,7 @@
 					"client": "Producto",
 					"year": "Presente",
 					"summary": "Middleware de integración ERP-eCommerce con esencia de PIM. La herramienta más querida y usada del grupo. Conecta cualquier eCommerce con SAP, Dynamics, Sage, Odoo y mas.",
-					"url": "https://integrafy.io",
+					"url": "https://integrafy.com",
 					"content": [
 						{
 							"_type": "block",

@@ -55,7 +55,7 @@ export const authority = {
 			tagline: "Middleware ERP-eCommerce",
 			description:
 				"Plataforma de integracion bidireccional entre sistemas ERP (SAP, Odoo, Business Central) y plataformas de eCommerce. Cien conectores listos para produccion.",
-			url: "https://integrafy.io",
+			url: "https://integrafy.com",
 			year: "2024",
 		},
 		{

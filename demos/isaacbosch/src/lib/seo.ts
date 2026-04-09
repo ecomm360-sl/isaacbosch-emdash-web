@@ -99,7 +99,7 @@ export function buildPersonSchema(): JsonLd {
 		],
 		founder: [
 			{ "@type": "Organization", name: "eComm360", url: "https://ecomm360.es" },
-			{ "@type": "Organization", name: "Integrafy", url: "https://integrafy.io" },
+			{ "@type": "Organization", name: "Integrafy", url: "https://integrafy.com" },
 			{ "@type": "Organization", name: "ApproSearch" },
 			{ "@type": "Organization", name: "AlabazWeb", url: "https://alabazweb.com" },
 		],

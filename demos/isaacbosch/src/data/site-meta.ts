@@ -39,7 +39,7 @@ export const SAME_AS = [
 	TWITTER_URL,
 	"https://ecomm360.es",
 	"https://ecommsistema.com",
-	"https://integrafy.io",
+	"https://integrafy.com",
 	"https://alabazweb.com",
 ] as const;
 

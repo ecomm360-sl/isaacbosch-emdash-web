@@ -70,7 +70,15 @@ const {
 } = Astro.props;
 
 const siteTitle = SITE_NAME;
-const fullTitle = title.includes(siteTitle) ? title : `${title} — ${siteTitle}`;
+// SEO: keep title ≤ 60 chars to avoid truncation in SERP.
+// Only append " — Isaac Bosch" if the result stays under 60 chars.
+const MAX_TITLE_LENGTH = 60;
+const withSuffix = `${title} — ${siteTitle}`;
+const fullTitle = title.includes(siteTitle)
+	? title
+	: withSuffix.length <= MAX_TITLE_LENGTH
+		? withSuffix
+		: title;
 
 const menu = await getMenu("primary");
 
@@ -138,12 +146,16 @@ const extraSchemas: JsonLd[] = jsonLd
 		{GTM_ID && <link rel="preconnect" href="https://www.googletagmanager.com" />}
 		{LINKEDIN_PARTNER_ID && <link rel="preconnect" href="https://snap.licdn.com" />}
 		{CLARITY_PROJECT_ID && <link rel="preconnect" href="https://www.clarity.ms" />}
-		<link rel="canonical" href={canonical} />
+		<!-- canonical + hreflang emitted by EmDashHead via pageCtx.canonical -->
 		<link rel="alternate" hreflang="es" href={canonical} />
 		<link rel="alternate" hreflang="x-default" href={canonical} />
+		<meta name="robots" content="index, follow" />
 		<meta name="twitter:site" content={TWITTER_HANDLE} />
 		<meta name="twitter:creator" content={TWITTER_HANDLE} />
 		<meta property="og:locale" content="es_ES" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<title>{fullTitle}</title>
 		<EmDashHead page={pageCtx} />
 		{globalSchemas.map((schema) => (
