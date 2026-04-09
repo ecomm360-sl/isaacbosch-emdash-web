@@ -1,0 +1,199 @@
+---
+export const prerender = false;
+
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { EMAIL } from "../data/site-meta";
+import type { BreadcrumbItem } from "../lib/seo";
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Política de cookies", url: "/politica-cookies" },
+];
+---
+
+<Base
+	title="Política de cookies"
+	description="Información sobre las cookies usadas en isaacbosch.com y cómo gestionarlas."
+	ogType="page"
+	ogSlug="politica-cookies"
+	breadcrumbs={breadcrumbs}
+	robots="noindex, follow"
+>
+	<article class="legal-page">
+		<header class="page-header">
+			<Breadcrumbs items={breadcrumbs} />
+			<span class="page-eyebrow">Cookies</span>
+			<h1 class="page-title">Política de cookies</h1>
+			<p class="page-subtitle">
+				Información sobre las cookies que utiliza este sitio web en
+				cumplimiento de la Directiva ePrivacy y la guía de la AEPD.
+			</p>
+		</header>
+
+		<div class="legal-content prose">
+			<h2>1. ¿Qué son las cookies?</h2>
+			<p>
+				Las cookies son pequeños archivos de texto que un sitio web almacena
+				en tu dispositivo (ordenador, tablet, móvil) cuando lo visitas. Sirven
+				para que el sitio recuerde información sobre tu visita, como tus
+				preferencias o tu sesión.
+			</p>
+
+			<h2>2. Cookies utilizadas en este sitio</h2>
+			<p>
+				Este sitio utiliza el mínimo número de cookies necesario para
+				funcionar. Solo cargamos cookies analíticas o publicitarias si has
+				dado tu consentimiento explícito.
+			</p>
+
+			<h3>2.1 Cookies técnicas (estrictamente necesarias)</h3>
+			<p>
+				No requieren consentimiento. Sin ellas el sitio no puede funcionar
+				correctamente.
+			</p>
+			<ul>
+				<li><strong>theme</strong> — Recuerda tu preferencia de tema (claro/oscuro). Duración: persistente.</li>
+				<li><strong>astro-session</strong> — Sesión técnica para el panel de administración (solo para usuarios autenticados). Duración: sesión.</li>
+			</ul>
+
+			<h3>2.2 Cookies analíticas (requieren consentimiento)</h3>
+			<p>
+				Solo se cargan si has aceptado expresamente. Permiten medir el uso del
+				sitio para mejorarlo.
+			</p>
+			<ul>
+				<li><strong>Google Analytics 4</strong> (_ga, _ga_*) — Identificador de usuario anónimo, comportamiento en el sitio. Duración: hasta 2 años. Proveedor: Google LLC. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de privacidad de Google</a>.</li>
+				<li><strong>Microsoft Clarity</strong> (_clck, _clsk) — Heatmaps y session recordings anonimizados. Duración: hasta 1 año. Proveedor: Microsoft Corporation. <a href="https://clarity.microsoft.com/terms" target="_blank" rel="noopener noreferrer">Política de privacidad de Clarity</a>.</li>
+			</ul>
+
+			<h3>2.3 Cookies de marketing (requieren consentimiento)</h3>
+			<ul>
+				<li><strong>LinkedIn Insight Tag</strong> (lidc, bcookie, li_gc) — Permite medir el rendimiento de campañas en LinkedIn y construir audiencias. Duración: hasta 2 años. Proveedor: LinkedIn Corporation (Microsoft). <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Política de privacidad de LinkedIn</a>.</li>
+			</ul>
+
+			<h2>3. Cómo gestionar las cookies</h2>
+			<p>
+				Puedes aceptar, rechazar o configurar las cookies en cualquier momento
+				desde el panel de cookies del sitio (cuando esté disponible) o desde
+				la configuración de tu navegador:
+			</p>
+			<ul>
+				<li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+				<li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+				<li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+				<li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+			</ul>
+			<p>
+				Ten en cuenta que rechazar las cookies puede afectar a la
+				funcionalidad del sitio.
+			</p>
+
+			<h2>4. Actualización de esta política</h2>
+			<p>
+				Esta política puede actualizarse para reflejar cambios en las cookies
+				utilizadas. La versión vigente será siempre la publicada en esta URL.
+			</p>
+
+			<h2>5. Contacto</h2>
+			<p>
+				Para cualquier consulta sobre el uso de cookies, puedes escribir a
+				<a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+			</p>
+
+			<p class="legal-update">
+				<em>Última actualización: abril de 2026.</em>
+			</p>
+			<p class="legal-disclaimer">
+				<strong>[REVISAR antes de publicar]</strong> Plantilla básica.
+				Asegúrate de que el listado de cookies coincide con las que
+				efectivamente carga el sitio en producción tras configurar el
+				tracking. Ajustar duración y proveedor de cada cookie según los IDs
+				reales que se aporten.
+			</p>
+		</div>
+	</article>
+</Base>
+
+<style>
+	.legal-page {
+		max-width: 760px;
+		margin: 0 auto;
+		padding: var(--spacing-24) var(--spacing-6) var(--spacing-20);
+	}
+	.page-header { margin-bottom: var(--spacing-12); }
+	.page-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-4);
+	}
+	.page-title {
+		font-family: var(--font-serif);
+		font-size: clamp(2rem, 3vw + 0.5rem, 2.75rem);
+		font-weight: 500;
+		line-height: 1.1;
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-6);
+	}
+	.page-subtitle {
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0;
+	}
+	.legal-content :global(h2) {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-xl);
+		font-weight: 500;
+		color: var(--color-text);
+		margin: var(--spacing-10) 0 var(--spacing-4);
+	}
+	.legal-content :global(h3) {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-lg);
+		font-weight: 500;
+		color: var(--color-text);
+		margin: var(--spacing-8) 0 var(--spacing-3);
+	}
+	.legal-content :global(p) {
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0 0 var(--spacing-4);
+	}
+	.legal-content :global(ul) {
+		margin: 0 0 var(--spacing-6);
+		padding-left: var(--spacing-6);
+		color: var(--color-text-secondary);
+	}
+	.legal-content :global(li) {
+		margin-bottom: var(--spacing-2);
+		line-height: var(--leading-relaxed);
+	}
+	.legal-content :global(a) {
+		color: var(--color-accent);
+		text-decoration: underline;
+	}
+	.legal-update {
+		margin-top: var(--spacing-12);
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+	}
+	.legal-disclaimer {
+		margin-top: var(--spacing-6);
+		padding: var(--spacing-4);
+		background: var(--color-bg-warm);
+		border-left: 3px solid var(--color-accent);
+		font-size: var(--font-size-sm);
+		color: var(--color-text-secondary);
+	}
+	@media (max-width: 640px) {
+		.legal-page {
+			padding: var(--spacing-16) var(--spacing-5) var(--spacing-12);
+		}
+	}
+</style>

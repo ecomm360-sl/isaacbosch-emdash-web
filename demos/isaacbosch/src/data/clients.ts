@@ -2,8 +2,8 @@
  * Clients Isaac Bosch has worked with.
  *
  * REVISAR Y CONFIRMAR ANTES DE PUBLICAR.
- * La mayoria de sectores y tipos de proyecto son un primer pase basado en el
- * conocimiento publico de cada marca. Valida y corrige los que sean incorrectos.
+ * La mayoría de sectores y tipos de proyecto son un primer pase basado en el
+ * conocimiento público de cada marca. Valida y corrige los que sean incorrectos.
  *
  * Logos en /public/clientes/ (filenames en kebab-case).
  */
@@ -23,17 +23,17 @@ export type ClientSector =
 	| "otros";
 
 export const CLIENT_SECTORS: Record<ClientSector, string> = {
-	"alimentacion-bebidas": "Alimentacion y bebidas",
+	"alimentacion-bebidas": "Alimentación y bebidas",
 	"retail-moda": "Retail y moda",
 	"calzado": "Calzado",
 	"industrial-maquinaria": "Industrial y maquinaria",
 	"mueble-hogar": "Mueble y hogar",
 	"salud-belleza": "Salud y belleza",
 	"servicios-financieros": "Servicios financieros",
-	"tecnologia-it": "Tecnologia e IT",
+	"tecnologia-it": "Tecnología e IT",
 	"ocio-juguetes": "Ocio y juguetes",
-	"educacion": "Educacion",
-	"automocion": "Automocion",
+	"educacion": "Educación",
+	"automocion": "Automoción",
 	"otros": "Otros",
 };
 
@@ -48,8 +48,8 @@ export interface Client {
 }
 
 // Default project types used as templates
-const DEFAULT_ECOMMERCE = "eCommerce + integracion";
-const DEFAULT_B2B_ERP = "eCommerce B2B + integracion ERP";
+const DEFAULT_ECOMMERCE = "eCommerce + integración";
+const DEFAULT_B2B_ERP = "eCommerce B2B + integración ERP";
 const DEFAULT_PLATFORM = "Plataforma digital";
 
 export const clients: Client[] = [

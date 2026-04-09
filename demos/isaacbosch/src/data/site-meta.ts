@@ -9,8 +9,9 @@
 export const SITE_URL = "https://isaacbosch.com";
 export const SITE_NAME = "Isaac Bosch";
 export const SITE_TITLE = "Isaac Bosch — Consultor eCommerce B2B y Fractional CIO";
+// Mantener <=155 caracteres para evitar truncado en SERP móvil.
 export const SITE_DESCRIPTION =
-	"Transformación digital industrial para vender y operar mejor. Consultor eCommerce B2B, integración ERP e IA aplicada. Fractional CIO en Barcelona.";
+	"Consultor eCommerce B2B y Fractional CIO en Barcelona. Transformación digital industrial: integración ERP, IA aplicada y vender mejor.";
 export const SITE_LOCALE = "es_ES";
 export const SITE_LANG = "es";
 

@@ -5,6 +5,7 @@ import { getEmDashEntry, getSeoMeta } from "emdash";
 import Base from "../layouts/Base.astro";
 import SiteBlocks from "../components/SiteBlocks.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
+import CaseStudy from "../components/CaseStudy.astro";
 import { buildServiceSchema, type BreadcrumbItem } from "../lib/seo";
 
 const { entry, cacheHint } = await getEmDashEntry("pages", "fractional-cio");
@@ -53,6 +54,7 @@ const fractionalCioSchema = buildServiceSchema({
 				<SiteBlocks value={entry.data.content} />
 			</div>
 		)}
+		<CaseStudy slug="fractional-cio" />
 	</article>
 </Base>
 

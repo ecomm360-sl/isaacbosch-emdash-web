@@ -6,6 +6,8 @@ import Base from "../layouts/Base.astro";
 import PostCard from "../components/PostCard.astro";
 import AuthorityStrip from "../components/AuthorityStrip.astro";
 import EcosystemBand from "../components/EcosystemBand.astro";
+import ClientLogosStrip from "../components/ClientLogosStrip.astro";
+import Testimonials from "../components/Testimonials.astro";
 import { buildFaqPageSchema } from "../lib/seo";
 
 const { entries: posts, cacheHint } = await getEmDashCollection("posts", {
@@ -100,6 +102,8 @@ const homeFaqSchema = buildFaqPageSchema([
 	</section>
 
 	<AuthorityStrip />
+
+	<ClientLogosStrip />
 
 	<section class="problems">
 		<div class="problems-inner">
@@ -205,6 +209,8 @@ const homeFaqSchema = buildFaqPageSchema([
 			</div>
 		</div>
 	</section>
+
+	<Testimonials />
 
 	{sortedPosts.length > 0 && (
 		<section class="blog-section">

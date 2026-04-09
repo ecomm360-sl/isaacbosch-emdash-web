@@ -1,0 +1,116 @@
+---
+/**
+ * ClientLogosStrip — strip horizontal de logos de clientes destacados
+ * para la home. Filtra clients.ts por featured=true.
+ */
+import { clients } from "../data/clients";
+
+const featuredClients = clients.filter((c) => c.featured).slice(0, 14);
+---
+
+<section class="logos-strip" aria-label="Marcas con las que he trabajado">
+	<div class="logos-strip-inner">
+		<p class="logos-strip-eyebrow">He trabajado con marcas como</p>
+		<ul class="logos-strip-list">
+			{featuredClients.map((c) => (
+				<li class="logo-item">
+					<img
+						src={c.logo}
+						alt={c.name}
+						loading="lazy"
+						decoding="async"
+						width="120"
+						height="48"
+					/>
+				</li>
+			))}
+		</ul>
+		<a href="/clientes" class="logos-strip-link">
+			Ver todos los clientes ({clients.length}+) &rarr;
+		</a>
+	</div>
+</section>
+
+<style>
+	.logos-strip {
+		padding: var(--spacing-12) var(--spacing-6);
+		background: var(--color-bg-warm);
+		border-top: 1px solid var(--color-border);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.logos-strip-inner {
+		max-width: var(--wide-width);
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.logos-strip-eyebrow {
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-muted);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin: 0 0 var(--spacing-8);
+	}
+
+	.logos-strip-list {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 var(--spacing-8);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: var(--spacing-10) var(--spacing-12);
+	}
+
+	.logo-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 48px;
+	}
+
+	.logo-item img {
+		max-height: 40px;
+		max-width: 120px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+		filter: grayscale(100%) opacity(0.6);
+		transition:
+			filter var(--transition-base),
+			transform var(--transition-base);
+	}
+
+	.logo-item img:hover {
+		filter: grayscale(0%) opacity(1);
+		transform: scale(1.05);
+	}
+
+	.logos-strip-link {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		color: var(--color-accent);
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.logos-strip-link:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 640px) {
+		.logos-strip {
+			padding: var(--spacing-10) var(--spacing-5);
+		}
+		.logos-strip-list {
+			gap: var(--spacing-6) var(--spacing-8);
+		}
+		.logo-item img {
+			max-height: 32px;
+			max-width: 96px;
+		}
+	}
+</style>

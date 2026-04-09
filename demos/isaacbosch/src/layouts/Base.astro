@@ -359,7 +359,7 @@ const extraSchemas: JsonLd[] = jsonLd
 						</span>
 						<span class="contact-option-text">
 							<span class="contact-option-title">WhatsApp</span>
-							<span class="contact-option-desc">Respuesta rapida en horario laboral</span>
+							<span class="contact-option-desc">Respuesta rápida en horario laboral</span>
 						</span>
 						<span class="contact-option-arrow" aria-hidden="true">→</span>
 					</a>
@@ -389,7 +389,7 @@ const extraSchemas: JsonLd[] = jsonLd
 						<h4 class="footer-heading">Servicios</h4>
 						<ul class="footer-links">
 							<li><a href="/servicios">Todos los servicios</a></li>
-							<li><a href="/servicios/consultoria-ecommerce-b2b">Consultoria B2B</a></li>
+							<li><a href="/servicios/consultoria-ecommerce-b2b">Consultoría B2B</a></li>
 							<li><a href="/fractional-cio">Fractional CIO</a></li>
 							<li><a href="/proyectos">Mi ecosistema</a></li>
 							<li><a href="/clientes">Clientes</a></li>
@@ -411,9 +411,16 @@ const extraSchemas: JsonLd[] = jsonLd
 						<WidgetArea name="footer" />
 					</div>
 				</div>
+				<div class="footer-legal">
+					<ul class="footer-legal-links">
+						<li><a href="/aviso-legal">Aviso legal</a></li>
+						<li><a href="/politica-privacidad">Política de privacidad</a></li>
+						<li><a href="/politica-cookies">Política de cookies</a></li>
+					</ul>
+				</div>
 				<div class="footer-bottom">
 					<p class="footer-copyright">
-						&copy; {new Date().getFullYear()} Isaac Bosch &middot; Hecho con intencion y cafe &middot; <a href="https://emdashcms.com">EmDash</a>
+						&copy; {new Date().getFullYear()} Isaac Bosch &middot; Hecho con intención y café &middot; <a href="https://emdashcms.com">EmDash</a>
 					</p>
 					<div class="theme-switcher">
 						<button type="button" class="theme-btn" data-theme="light" aria-label="Modo claro">
@@ -958,6 +965,10 @@ const extraSchemas: JsonLd[] = jsonLd
 			.footer-widgets-section :global(.widget) { color: var(--color-text-secondary); }
 			.footer-widgets-section :global(.widget__title) { font-size: var(--font-size-xs); font-weight: 500; text-transform: uppercase; letter-spacing: var(--tracking-wider); color: var(--color-muted); margin-bottom: var(--spacing-4); }
 			.footer-widgets-section :global(.widget__content) { color: var(--color-text-secondary); font-size: var(--font-size-sm); line-height: var(--leading-relaxed); }
+			.footer-legal { padding: var(--spacing-6) 0; border-top: 1px solid var(--color-border); }
+			.footer-legal-links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: var(--spacing-6); justify-content: flex-start; }
+			.footer-legal-links a { font-size: var(--font-size-sm); color: var(--color-text-secondary); text-decoration: none; }
+			.footer-legal-links a:hover { color: var(--color-accent); text-decoration: underline; }
 			.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: var(--spacing-6); border-top: 1px solid var(--color-border); }
 			.footer-copyright { font-size: var(--font-size-sm); color: var(--color-muted); }
 			.footer-copyright a { color: var(--color-text-secondary); }

@@ -1,0 +1,211 @@
+---
+export const prerender = false;
+
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { ADDRESS, EMAIL } from "../data/site-meta";
+import type { BreadcrumbItem } from "../lib/seo";
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: "Inicio", url: "/" },
+	{ name: "Política de privacidad", url: "/politica-privacidad" },
+];
+---
+
+<Base
+	title="Política de privacidad"
+	description="Cómo se tratan los datos personales en isaacbosch.com en cumplimiento del RGPD y la LOPDGDD."
+	ogType="page"
+	ogSlug="politica-privacidad"
+	breadcrumbs={breadcrumbs}
+	robots="noindex, follow"
+>
+	<article class="legal-page">
+		<header class="page-header">
+			<Breadcrumbs items={breadcrumbs} />
+			<span class="page-eyebrow">Privacidad</span>
+			<h1 class="page-title">Política de privacidad</h1>
+			<p class="page-subtitle">
+				Información sobre el tratamiento de tus datos personales en
+				cumplimiento del RGPD (UE 2016/679) y la LOPDGDD (LO 3/2018).
+			</p>
+		</header>
+
+		<div class="legal-content prose">
+			<h2>1. Responsable del tratamiento</h2>
+			<ul>
+				<li><strong>Responsable:</strong> Isaac Bosch</li>
+				<li><strong>NIF:</strong> [REVISAR — completar]</li>
+				<li><strong>Domicilio:</strong> {ADDRESS.streetAddress}, {ADDRESS.postalCode} {ADDRESS.addressLocality}, {ADDRESS.addressRegion}, España</li>
+				<li><strong>Email:</strong> <a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
+			</ul>
+
+			<h2>2. Finalidades del tratamiento</h2>
+			<p>Tratamos tus datos personales para las siguientes finalidades:</p>
+			<ul>
+				<li><strong>Atender consultas:</strong> cuando contactas a través del formulario web, WhatsApp o email.</li>
+				<li><strong>Gestión de servicios profesionales:</strong> cuando contratas servicios de consultoría, formación o Fractional CIO.</li>
+				<li><strong>Newsletter (opcional):</strong> envío de comunicaciones técnicas relacionadas con eCommerce B2B y digitalización industrial, solo si te has suscrito expresamente.</li>
+				<li><strong>Análisis estadístico de uso del sitio:</strong> mediante herramientas analíticas (ver Política de cookies).</li>
+				<li><strong>Cumplimiento de obligaciones legales:</strong> facturación, fiscales y mercantiles.</li>
+			</ul>
+
+			<h2>3. Base jurídica</h2>
+			<ul>
+				<li><strong>Consentimiento</strong> del interesado al rellenar el formulario o suscribirse a la newsletter.</li>
+				<li><strong>Ejecución de contrato</strong> en los servicios contratados.</li>
+				<li><strong>Interés legítimo</strong> del responsable para análisis estadísticos agregados.</li>
+				<li><strong>Cumplimiento de obligaciones legales</strong> aplicables (Ley General Tributaria, Código de Comercio).</li>
+			</ul>
+
+			<h2>4. Plazo de conservación</h2>
+			<p>
+				Los datos se conservarán durante el tiempo estrictamente necesario para
+				la finalidad para la que fueron recogidos, y posteriormente durante
+				los plazos exigidos por la legislación aplicable (mínimo 6 años para
+				datos contables y fiscales).
+			</p>
+			<p>
+				Para consultas no derivadas en contratación, los datos se conservarán
+				máximo 2 años desde el último contacto, salvo solicitud expresa de
+				supresión.
+			</p>
+
+			<h2>5. Destinatarios y transferencias internacionales</h2>
+			<p>
+				Tus datos no se ceden a terceros salvo obligación legal. Pueden ser
+				accesibles por los siguientes encargados de tratamiento, siempre con
+				contrato firmado conforme al artículo 28 del RGPD:
+			</p>
+			<ul>
+				<li><strong>Resend</strong> (envío de email transaccional). Datos: dirección de email, contenido del mensaje. Ubicación: UE/EEUU con cláusulas contractuales tipo.</li>
+				<li><strong>Cloudflare</strong> (hosting CDN y seguridad). Datos: IP y headers de petición. Ubicación: global con cláusulas contractuales tipo.</li>
+				<li><strong>Google LLC</strong> (Google Analytics 4 — opcional, requiere consentimiento). Datos: identificador anonimizado, comportamiento en el sitio. Ubicación: EEUU con cláusulas contractuales tipo.</li>
+				<li><strong>LinkedIn (Microsoft)</strong> (LinkedIn Insight Tag — opcional). Datos: identificador, página visitada. Ubicación: EEUU.</li>
+				<li><strong>Microsoft Clarity</strong> (heatmaps y session recordings — opcional). Datos: comportamiento anonimizado en el sitio. Ubicación: EEUU.</li>
+				<li>
+					<em>[REVISAR — añadir cualquier otro encargado relevante: gestoría, CRM, etc.]</em>
+				</li>
+			</ul>
+
+			<h2>6. Derechos del interesado</h2>
+			<p>Puedes ejercer en cualquier momento los siguientes derechos:</p>
+			<ul>
+				<li><strong>Acceso:</strong> conocer qué datos tuyos tratamos.</li>
+				<li><strong>Rectificación:</strong> corregir datos inexactos.</li>
+				<li><strong>Supresión ("derecho al olvido"):</strong> eliminar tus datos cuando ya no sean necesarios.</li>
+				<li><strong>Limitación del tratamiento:</strong> en los supuestos previstos por la normativa.</li>
+				<li><strong>Oposición:</strong> al tratamiento basado en interés legítimo.</li>
+				<li><strong>Portabilidad:</strong> recibir tus datos en formato estructurado.</li>
+				<li><strong>Retirada del consentimiento:</strong> cuando éste sea la base del tratamiento.</li>
+				<li><strong>Reclamación ante la AEPD:</strong> a través de <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">aepd.es</a>.</li>
+			</ul>
+			<p>
+				Para ejercer cualquiera de estos derechos puedes escribir a
+				<a href={`mailto:${EMAIL}`}>{EMAIL}</a> indicando claramente tu solicitud
+				y adjuntando una copia de un documento que acredite tu identidad.
+			</p>
+
+			<h2>7. Medidas de seguridad</h2>
+			<p>
+				Aplicamos medidas técnicas y organizativas apropiadas para garantizar
+				un nivel de seguridad adecuado al riesgo: cifrado HTTPS en todo el
+				sitio, contraseñas robustas, autenticación con passkeys/magic links,
+				control de accesos, copias de seguridad y revisión periódica.
+			</p>
+
+			<h2>8. Modificaciones</h2>
+			<p>
+				Esta política puede actualizarse para adaptarla a cambios normativos o
+				en los servicios. La versión vigente será siempre la publicada en esta
+				URL.
+			</p>
+
+			<p class="legal-update">
+				<em>Última actualización: abril de 2026.</em>
+			</p>
+			<p class="legal-disclaimer">
+				<strong>[REVISAR antes de publicar]</strong> Plantilla básica. Recomiendo
+				validación legal del texto y completar los apartados marcados como
+				REVISAR (NIF, encargados de tratamiento adicionales) antes de
+				publicar.
+			</p>
+		</div>
+	</article>
+</Base>
+
+<style>
+	.legal-page {
+		max-width: 760px;
+		margin: 0 auto;
+		padding: var(--spacing-24) var(--spacing-6) var(--spacing-20);
+	}
+	.page-header { margin-bottom: var(--spacing-12); }
+	.page-eyebrow {
+		display: inline-block;
+		font-size: var(--font-size-sm);
+		font-weight: 500;
+		color: var(--color-accent);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		margin-bottom: var(--spacing-4);
+	}
+	.page-title {
+		font-family: var(--font-serif);
+		font-size: clamp(2rem, 3vw + 0.5rem, 2.75rem);
+		font-weight: 500;
+		line-height: 1.1;
+		color: var(--color-text);
+		margin: 0 0 var(--spacing-6);
+	}
+	.page-subtitle {
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0;
+	}
+	.legal-content :global(h2) {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-xl);
+		font-weight: 500;
+		color: var(--color-text);
+		margin: var(--spacing-10) 0 var(--spacing-4);
+	}
+	.legal-content :global(p) {
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-secondary);
+		margin: 0 0 var(--spacing-4);
+	}
+	.legal-content :global(ul) {
+		margin: 0 0 var(--spacing-6);
+		padding-left: var(--spacing-6);
+		color: var(--color-text-secondary);
+	}
+	.legal-content :global(li) {
+		margin-bottom: var(--spacing-2);
+		line-height: var(--leading-relaxed);
+	}
+	.legal-content :global(a) {
+		color: var(--color-accent);
+		text-decoration: underline;
+	}
+	.legal-update {
+		margin-top: var(--spacing-12);
+		font-size: var(--font-size-sm);
+		color: var(--color-muted);
+	}
+	.legal-disclaimer {
+		margin-top: var(--spacing-6);
+		padding: var(--spacing-4);
+		background: var(--color-bg-warm);
+		border-left: 3px solid var(--color-accent);
+		font-size: var(--font-size-sm);
+		color: var(--color-text-secondary);
+	}
+	@media (max-width: 640px) {
+		.legal-page {
+			padding: var(--spacing-16) var(--spacing-5) var(--spacing-12);
+		}
+	}
+</style>
