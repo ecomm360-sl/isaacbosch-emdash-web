@@ -1,7 +1,7 @@
 /**
  * Site-wide metadata constants used by SEO helpers, schemas and OG images.
  *
- * REVISAR: cuando isaacbosch.com este apuntando aqui, mantener esa URL.
+ * REVISAR: cuando isaacbosch.com esté apuntando aquí, mantener esa URL.
  * Mientras tanto cambia SITE_URL al dominio Easypanel si quieres URLs absolutas
  * coherentes en sitemap.xml, llms.txt, etc.
  */
@@ -10,7 +10,7 @@ export const SITE_URL = "https://isaacbosch.com";
 export const SITE_NAME = "Isaac Bosch";
 export const SITE_TITLE = "Isaac Bosch — Consultor eCommerce B2B y Fractional CIO";
 export const SITE_DESCRIPTION =
-	"Transformacion digital industrial para vender y operar mejor. Consultor eCommerce B2B, integracion ERP e IA aplicada. Fractional CIO en Barcelona.";
+	"Transformación digital industrial para vender y operar mejor. Consultor eCommerce B2B, integración ERP e IA aplicada. Fractional CIO en Barcelona.";
 export const SITE_LOCALE = "es_ES";
 export const SITE_LANG = "es";
 
@@ -26,7 +26,7 @@ export const ADDRESS = {
 	streetAddress: "Pla. Urquinaona, 6, 14B",
 	addressLocality: "Barcelona",
 	postalCode: "08010",
-	addressRegion: "Cataluna",
+	addressRegion: "Cataluña",
 	addressCountry: "ES",
 } as const;
 
@@ -44,7 +44,7 @@ export const SAME_AS = [
 
 export const KNOWS_ABOUT = [
 	"eCommerce B2B",
-	"Integracion ERP",
+	"Integración ERP",
 	"PrestaShop",
 	"Magento",
 	"Shopify Plus",
@@ -57,13 +57,13 @@ export const KNOWS_ABOUT = [
 	"Fractional CIO",
 	"Inteligencia Artificial aplicada al negocio",
 	"Agentes IA",
-	"Transformacion digital industrial",
-	"Automatizacion de procesos comerciales",
+	"Transformación digital industrial",
+	"Automatización de procesos comerciales",
 ] as const;
 
 export const SERVICES_CATALOG = [
 	{
-		name: "Consultoria eCommerce B2B Industrial",
+		name: "Consultoría eCommerce B2B Industrial",
 		slug: "consultoria-ecommerce-b2b",
 		url: `${SITE_URL}/servicios/consultoria-ecommerce-b2b`,
 	},
@@ -73,12 +73,12 @@ export const SERVICES_CATALOG = [
 		url: `${SITE_URL}/servicios/consultor-agentes-ia-automatizaciones`,
 	},
 	{
-		name: "Integracion ERP - eCommerce",
+		name: "Integración ERP - eCommerce",
 		slug: "integracion-erp-ecommerce",
 		url: `${SITE_URL}/servicios/integracion-erp-ecommerce`,
 	},
 	{
-		name: "Formacion Empresarial en Digitalizacion",
+		name: "Formación Empresarial en Digitalización",
 		slug: "formacion-empresarial-digitalizacion",
 		url: `${SITE_URL}/servicios/formacion-empresarial-digitalizacion`,
 	},

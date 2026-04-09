@@ -32,7 +32,7 @@ const groupMeta: Record<ProjectType, { label: string; eyebrow: string; descripti
 	Empresa: {
 		eyebrow: "Empresas",
 		label: "Empresas que he fundado",
-		description: "El nucleo del Grupo eCommsistema. Donde diseno, ejecuto y opero todo lo demas.",
+		description: "El núcleo del Grupo eCommsistema. Donde diseño, ejecuto y opero todo lo demás.",
 	},
 	Producto: {
 		eyebrow: "Productos",
@@ -68,12 +68,12 @@ const projectsListSchema = buildItemListSchema({
 			<span class="page-eyebrow">Mi ecosistema propio</span>
 			<h1 class="page-title">Empresas, productos y tiendas que he fundado</h1>
 			<p class="page-subtitle">
-				Ademas de consultar, construyo. El Grupo eCommsistema es mi laboratorio: tres empresas operativas, tres productos software propios y tres tiendas online donde aplicamos en carne propia todo lo que vendemos.
+				Además de consultar, construyo. El Grupo eCommsistema es mi laboratorio: tres empresas operativas, tres productos software propios y tres tiendas online donde aplicamos en carne propia todo lo que vendemos.
 			</p>
 		</header>
 
 		{projects.length === 0 ? (
-			<p class="empty-message">Proximamente.</p>
+			<p class="empty-message">Próximamente.</p>
 		) : (
 			TYPE_ORDER.map((type) => {
 				const items = groups[type];
@@ -97,9 +97,9 @@ const projectsListSchema = buildItemListSchema({
 		<aside class="cross-link">
 			<div class="cross-link-inner">
 				<span class="cross-eyebrow">Clientes</span>
-				<h2 class="cross-title">Has visto con quien he trabajado?</h2>
+				<h2 class="cross-title">¿Has visto con quién he trabajado?</h2>
 				<p class="cross-text">
-					Mas de 90 marcas en 12 sectores: Damm, Cofidis, Cetelem, Caixa, RACC, Vichy Catalan, Cirsa, Intersport, Brownie, PD Paola, Hoffmann, Kibuc, Madden y muchas mas.
+					Más de 90 marcas en 12 sectores: Damm, Cofidis, Cetelem, Caixa, RACC, Vichy Catalán, Cirsa, Intersport, Brownie, PD Paola, Hoffmann, Kibuc, Madden y muchas más.
 				</p>
 				<a href="/clientes" class="cross-btn">Ver el muro de clientes &rarr;</a>
 			</div>

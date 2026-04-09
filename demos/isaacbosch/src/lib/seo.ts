@@ -70,7 +70,7 @@ export function buildPersonSchema(): JsonLd {
 		familyName: "Bosch",
 		jobTitle: "Consultor eCommerce B2B y Fractional CIO",
 		description:
-			"Consultor en eCommerce B2B, integracion ERP y arquitectura digital. Empresario desde los 20 anos. Fundador de eComm360, Integrafy, ApproSearch y Alabazweb.",
+			"Consultor en eCommerce B2B, integración ERP y arquitectura digital. Empresario desde los 20 años. Fundador de eComm360, Integrafy, ApproSearch y Alabazweb.",
 		url: SITE_URL,
 		image: `${SITE_URL}/isaac-portrait.jpg`,
 		address: {

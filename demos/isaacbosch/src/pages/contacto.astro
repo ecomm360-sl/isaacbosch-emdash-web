@@ -18,7 +18,7 @@ const seo = getSeoMeta(entry);
 const PHONE_DISPLAY = "+34 655 588 668";
 const PHONE_TEL = "+34655588668";
 const WHATSAPP_URL =
-	"https://wa.me/34655588668?text=Hola%20Isaac%2C%20me%20gustaria%20hablar%20contigo";
+	"https://wa.me/34655588668?text=Hola%20Isaac%2C%20me%20gustar%C3%ADa%20hablar%20contigo";
 const LINKEDIN_URL = "https://linkedin.com/in/isaacbosch";
 const EMAIL = "mail@isaacbosch.com";
 
@@ -32,7 +32,7 @@ const contactSchema = buildContactPageSchema();
 
 <Base
 	title={seo.title ?? "Contacto"}
-	description={seo.description ?? "Contacta con Isaac Bosch para hablar de tu proyecto. Consultoria eCommerce B2B y Fractional CIO."}
+	description={seo.description ?? "Contacta con Isaac Bosch para hablar de tu proyecto. Consultoría eCommerce B2B y Fractional CIO."}
 	image={seo.ogImage}
 	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
 	ogType="page"
@@ -46,14 +46,14 @@ const contactSchema = buildContactPageSchema();
 			<span class="page-eyebrow">Contacto</span>
 			<h1 class="page-title">Hablamos</h1>
 			<p class="page-subtitle">
-				Cuentame tu situacion. Si encajamos, hablamos del proyecto. Si no, te oriento sobre el siguiente paso aunque sea con otro consultor.
+				Cuéntame tu situación. Si encajamos, hablamos del proyecto. Si no, te oriento sobre el siguiente paso aunque sea con otro consultor.
 			</p>
 		</header>
 
 		<div class="contact-grid">
 			<aside class="contact-info">
 				<header class="info-header">
-					<span class="info-eyebrow">Como contactar</span>
+					<span class="info-eyebrow">Cómo contactar</span>
 					<h2 class="info-title">Elige el canal que prefieras</h2>
 				</header>
 
@@ -65,7 +65,7 @@ const contactSchema = buildContactPageSchema();
 							</span>
 							<span class="channel-body">
 								<span class="channel-label">WhatsApp</span>
-								<span class="channel-value">Respuesta rapida en horario laboral</span>
+								<span class="channel-value">Respuesta rápida en horario laboral</span>
 							</span>
 							<span class="channel-arrow" aria-hidden="true">&rarr;</span>
 						</a>
@@ -110,8 +110,8 @@ const contactSchema = buildContactPageSchema();
 
 				<div class="info-meta">
 					<div class="meta-item">
-						<span class="meta-label">Ubicacion</span>
-						<span class="meta-value">Pla. Urquinaona, 6, 14B<br/>08010 Barcelona, Espana</span>
+						<span class="meta-label">Ubicación</span>
+						<span class="meta-value">Pla. Urquinaona, 6, 14B<br/>08010 Barcelona, España</span>
 					</div>
 					<div class="meta-item">
 						<span class="meta-label">Disponibilidad</span>
@@ -119,7 +119,7 @@ const contactSchema = buildContactPageSchema();
 					</div>
 					<div class="meta-item">
 						<span class="meta-label">Tiempo de respuesta</span>
-						<span class="meta-value">Menos de 24h en dias laborales</span>
+						<span class="meta-value">Menos de 24h en días laborales</span>
 					</div>
 				</div>
 			</aside>
@@ -127,9 +127,9 @@ const contactSchema = buildContactPageSchema();
 			<section class="contact-form-wrap">
 				<header class="form-header">
 					<span class="form-eyebrow">Formulario</span>
-					<h2 class="form-title">O cuentame por aqui</h2>
+					<h2 class="form-title">O cuéntame por aquí</h2>
 					<p class="form-subtitle">
-						Te respondo en menos de 24 horas en dias laborales. Cuanto mas concreto seas, mejor te puedo orientar.
+						Te respondo en menos de 24 horas en días laborales. Cuanto más concreto seas, mejor te puedo orientar.
 					</p>
 				</header>
 
@@ -175,7 +175,7 @@ const contactSchema = buildContactPageSchema();
 							<label for="cf-subject">Tipo de consulta</label>
 							<select id="cf-subject" name="subject">
 								<option value="otro">Otra consulta</option>
-								<option value="consultoria-b2b">Consultoria eCommerce B2B</option>
+								<option value="consultoria-b2b">Consultoría eCommerce B2B</option>
 								<option value="fractional-cio">Fractional CIO</option>
 							</select>
 						</div>
@@ -190,7 +190,7 @@ const contactSchema = buildContactPageSchema();
 							rows="6"
 							minlength="10"
 							maxlength="4000"
-							placeholder="Cuentame tu situacion: que empresa eres, que necesitas, en que punto estas..."></textarea>
+							placeholder="Cuéntame tu situación: qué empresa eres, qué necesitas, en qué punto estás..."></textarea>
 					</div>
 
 					<!-- Honeypot — hidden from real users -->
@@ -200,7 +200,7 @@ const contactSchema = buildContactPageSchema();
 					</div>
 
 					<p class="form-privacy">
-						Al enviar aceptas que use tus datos para responder a tu consulta. Mas info en la <a href="/privacidad">politica de privacidad</a>.
+						Al enviar aceptas que use tus datos para responder a tu consulta. Más info en la <a href="/politica-privacidad">política de privacidad</a>.
 					</p>
 
 					<div class="form-footer">
@@ -211,10 +211,10 @@ const contactSchema = buildContactPageSchema();
 					</div>
 
 					<div class="form-feedback form-feedback-success" role="status" hidden>
-						<strong>Mensaje enviado.</strong> Te respondere lo antes posible.
+						<strong>Mensaje enviado.</strong> Te responderé lo antes posible.
 					</div>
 					<div class="form-feedback form-feedback-error" role="alert" hidden>
-						<strong>No se pudo enviar.</strong> Revisa los datos o escribeme por WhatsApp al
+						<strong>No se pudo enviar.</strong> Revisa los datos o escríbeme por WhatsApp al
 						<a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">{PHONE_DISPLAY}</a>.
 					</div>
 				</form>

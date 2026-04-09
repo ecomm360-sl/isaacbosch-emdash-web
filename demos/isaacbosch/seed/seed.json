@@ -1,6 +1,6 @@
 {
 	"$schema": "https://emdashcms.com/seed.schema.json",
-	"version": "1",
+	"versión": "1",
 	"meta": {
 		"name": "Isaac Bosch",
 		"description": "Consultor eCommerce B2B e IA - Web personal y blog",
@@ -8,7 +8,7 @@
 	},
 	"settings": {
 		"title": "Isaac Bosch",
-		"tagline": "Digitalizo y automatizo procesos integrando ERP, IA y Agentes Autonomos"
+		"tagline": "Digitalizo y automatizo procesos integrando ERP, IA y Agentes Autónomos"
 	},
 	"collections": [
 		{
@@ -17,7 +17,7 @@
 			"labelSingular": "Post",
 			"supports": [
 				"drafts",
-				"revisions",
+				"revisións",
 				"search",
 				"seo"
 			],
@@ -25,7 +25,7 @@
 			"fields": [
 				{
 					"slug": "title",
-					"label": "Titulo",
+					"label": "Título",
 					"type": "string",
 					"required": true,
 					"searchable": true
@@ -51,18 +51,18 @@
 		},
 		{
 			"slug": "pages",
-			"label": "Paginas",
-			"labelSingular": "Pagina",
+			"label": "Páginas",
+			"labelSingular": "Página",
 			"supports": [
 				"drafts",
-				"revisions",
+				"revisións",
 				"search",
 				"seo"
 			],
 			"fields": [
 				{
 					"slug": "title",
-					"label": "Titulo",
+					"label": "Título",
 					"type": "string",
 					"required": true,
 					"searchable": true
@@ -82,13 +82,13 @@
 			"labelSingular": "Servicio",
 			"supports": [
 				"drafts",
-				"revisions",
+				"revisións",
 				"seo"
 			],
 			"fields": [
 				{
 					"slug": "title",
-					"label": "Titulo",
+					"label": "Título",
 					"type": "string",
 					"required": true,
 					"searchable": true
@@ -128,7 +128,7 @@
 			"fields": [
 				{
 					"slug": "title",
-					"label": "Titulo",
+					"label": "Título",
 					"type": "string",
 					"required": true
 				},
@@ -160,14 +160,14 @@
 			"labelSingular": "Proyecto",
 			"supports": [
 				"drafts",
-				"revisions",
+				"revisións",
 				"search",
 				"seo"
 			],
 			"fields": [
 				{
 					"slug": "title",
-					"label": "Titulo",
+					"label": "Título",
 					"type": "string",
 					"required": true,
 					"searchable": true
@@ -211,8 +211,8 @@
 	"taxonomies": [
 		{
 			"name": "category",
-			"label": "Categorias",
-			"labelSingular": "Categoria",
+			"label": "Categorías",
+			"labelSingular": "Categoría",
 			"hierarchical": true,
 			"collections": [
 				"posts"
@@ -223,12 +223,12 @@
 					"label": "Estrategia B2B"
 				},
 				{
-					"slug": "integracion-erp",
-					"label": "Integracion ERP"
+					"slug": "integración-erp",
+					"label": "Integración ERP"
 				},
 				{
-					"slug": "tecnologia",
-					"label": "Tecnologia"
+					"slug": "tecnología",
+					"label": "Tecnología"
 				},
 				{
 					"slug": "reflexiones",
@@ -278,8 +278,8 @@
 					"label": "Barcelona"
 				},
 				{
-					"slug": "espana",
-					"label": "Espana"
+					"slug": "España",
+					"label": "España"
 				},
 				{
 					"slug": "pyme",
@@ -298,16 +298,16 @@
 					"label": "ROI"
 				},
 				{
-					"slug": "caso-de-exito",
-					"label": "Caso de Exito"
+					"slug": "caso-de-éxito",
+					"label": "Caso de Éxito"
 				},
 				{
 					"slug": "tendencias",
 					"label": "Tendencias"
 				},
 				{
-					"slug": "guia",
-					"label": "Guia"
+					"slug": "guía",
+					"label": "Guía"
 				},
 				{
 					"slug": "faq",
@@ -345,7 +345,7 @@
 				},
 				{
 					"type": "custom",
-					"label": "Sobre mi",
+					"label": "Sobre mí",
 					"url": "/sobre-isaac"
 				},
 				{
@@ -375,7 +375,7 @@
 				{
 					"type": "component",
 					"componentId": "core:categories",
-					"title": "Categorias"
+					"title": "Categorías"
 				},
 				{
 					"type": "component",
@@ -385,7 +385,7 @@
 				{
 					"type": "component",
 					"componentId": "core:recent-posts",
-					"title": "Articulos recientes",
+					"title": "Artículos recientes",
 					"settings": {
 						"count": 5,
 						"showDate": true
@@ -408,7 +408,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Consultor especializado en eCommerce B2B, integracion ERP e inteligencia artificial. Ayudo a empresas a digitalizar y automatizar sus procesos comerciales desde Barcelona."
+									"text": "Consultor especializado en eCommerce B2B, integración ERP e inteligencia artificial. Ayudo a empresas a digitalizar y automatizar sus procesos comerciales desde Barcelona."
 								}
 							]
 						}
@@ -454,13 +454,13 @@
 			"type": 301
 		},
 		{
-			"source": "/servicios/agentes-ia-automatizacion",
-			"destination": "/servicios/consultor-agentes-ia-automatizaciones",
+			"source": "/servicios/agentes-ia-automatización",
+			"destination": "/servicios/consultor-agentes-ia-automatizaciónes",
 			"type": 301
 		},
 		{
-			"source": "/servicios/formacion-corporativa",
-			"destination": "/servicios/formacion-empresarial-digitalizacion",
+			"source": "/servicios/formación-corporativa",
+			"destination": "/servicios/formación-empresarial-digitalización",
 			"type": 301
 		},
 		{
@@ -484,7 +484,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Llevo la tecnologia comercial a sectores que todavia venden como en 1998. Soy Isaac Bosch, consultor eCommerce B2B y Fractional CIO. Desde Barcelona, ayudo a empresas industriales y de distribucion a digitalizar su canal de ventas e integrar sus sistemas ERP con plataformas online."
+									"text": "Llevo la tecnología comercial a sectores que todavía venden como en 1998. Soy Isaac Bosch, consultor eCommerce B2B y Fractional CIO. Desde Barcelona, ayudo a empresas industriales y de distribución a digitalizar su canal de ventas e integrar sus sistemas ERP con plataformas online."
 								}
 							]
 						},
@@ -504,7 +504,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Empece en el mundo eCommerce hace mas de 15 anos, cuando vender online en B2B era casi una rareza. Funde Alabazweb en 2015 desarrollando modulos PrestaShop para empresas con procesos comerciales avanzados. En 2018 lance eComm360, la consultora especializada en eCommerce B2B industrial que opero hoy. Mas recientemente, he construido Integrafy (middleware de integracion ERP-eCommerce con cientos de conectores) y Approsearch (motor de busqueda con IA para catalogos B2B extensos)."
+									"text": "Empece en el mundo eCommerce hace mas de 15 años, cuando vender online en B2B era casí una rareza. Funde Alabazweb en 2015 desarrollando modulos PrestaShop para empresas con procesos comerciales avanzados. En 2018 lance eComm360, la consultora especializada en eCommerce B2B industrial que opero hoy. Mas recientemente, he construido Integrafy (middleware de integración ERP-eCommerce con cientos de conectores) y Approsearch (motor de busqueda con IA para catálogos B2B extensos)."
 								}
 							]
 						},
@@ -514,7 +514,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Combino el rol de consultor con el de empresario. Eso me da una doble vision: la de quien aconseja proyectos y la de quien tiene que ejecutarlos en su propia empresa. No vendo teoria. Vendo lo que ya he probado en mis propios productos y en los de mis clientes."
+									"text": "Combino el rol de consultor con el de empresario. Eso me da una doble visión: la de quien aconseja proyectos y la de quien tiene que ejecutarlos en su propia empresa. No vendo teoria. Vendo lo que ya he probado en mis propios productos y en los de mis clientes."
 								}
 							]
 						},
@@ -524,7 +524,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Si no se puede explicar en una servilleta, es demasiado complicado."
+									"text": "Si no se puede explicar en una servilleta, es demásiado complicado."
 								}
 							]
 						},
@@ -551,7 +551,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Las soluciones mas robustas son las que cualquier miembro del equipo puede entender y mantener cuando yo ya no este. Si necesita un manual de 200 paginas, esta mal disenada."
+									"text": "Las soluciónes mas robustas son las que cualquier miembro del equipo puede entender y mantener cuando yo ya no este. Si necesita un manual de 200 páginas, esta mal diseñada."
 								}
 							]
 						},
@@ -568,7 +568,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Cada decision tecnica se toma pensando en el crecimiento futuro, no solo en la necesidad inmediata. Lo barato hoy es caro manana cuando hay que rehacer."
+									"text": "Cada decisión técnica se toma pensando en el crecimiento futuro, no solo en la necesidad inmediata. Lo barato hoy es caro mañana cuando hay que rehacer."
 								}
 							]
 						},
@@ -585,7 +585,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "La tecnologia solo aporta valor cuando simplifica la realidad. Sin esa premisa, todo lo demas es ruido."
+									"text": "La tecnología solo aporta valor cuando simplifica la realidad. Sin esa premisa, todo lo demás es ruido."
 								}
 							]
 						},
@@ -602,7 +602,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Construyo sistemas que no dependen de personas clave. Cuando termino un proyecto, tu equipo se queda con el control y la documentacion. Nunca con la dependencia."
+									"text": "Construyo sistemás que no dependen de personas clave. Cuando termino un proyecto, tu equipo se queda con el control y la documentacion. Nunca con la dependencia."
 								}
 							]
 						},
@@ -615,28 +615,28 @@
 									"year": "2024 - Presente",
 									"title": "Fundador",
 									"company": "Integrafy & Approsearch",
-									"description": "Construccion de productos propios: middleware de integracion ERP-eCommerce y motor de busqueda IA para catalogos industriales.",
+									"description": "Construcción de productos propios: middleware de integración ERP-eCommerce y motor de busqueda IA para catálogos industriales.",
 									"current": true
 								},
 								{
 									"year": "2018 - Presente",
 									"title": "CEO & Fundador",
 									"company": "eComm360",
-									"description": "Consultora eCommerce B2B industrial. Integracion ERP, agentes IA y automatizacion para fabricantes y distribuidores.",
+									"description": "Consultora eCommerce B2B industrial. Integración ERP, agentes IA y automatización para fabricantes y distribuidores.",
 									"current": true
 								},
 								{
 									"year": "2015 - Presente",
 									"title": "Fundador",
 									"company": "Alabazweb",
-									"description": "Modulos PrestaShop para B2B y procesos comerciales avanzados. Marca historica integrada en el ecosistema eComm360.",
+									"description": "Modulos PrestaShop para B2B y procesos comerciales avanzados. Marca histórica integrada en el ecosistema eComm360.",
 									"current": true
 								},
 								{
 									"year": "2017 - 2019",
-									"title": "Formador en Transformacion Digital",
+									"title": "Formador en Transformación Digital",
 									"company": "MSMK Madrid",
-									"description": "Programa de formacion ejecutiva en estrategia digital, eCommerce y nuevas tecnologias para directivos."
+									"description": "Programa de formación ejecutiva en estrategia digital, eCommerce y nuevas tecnologías para directivos."
 								},
 								{
 									"year": "2017 - 2018",
@@ -647,8 +647,8 @@
 								{
 									"year": "2015 - 2017",
 									"title": "Formador PrestaShop & eCommerce",
-									"company": "Multiples organizaciones",
-									"description": "Cursos y talleres tecnicos sobre PrestaShop y comercio electronico para profesionales y empresas."
+									"company": "Múltiples organizaciones",
+									"description": "Cursos y talleres técnicos sobre PrestaShop y comercio electronico para profesionales y empresas."
 								},
 								{
 									"year": "2014 - 2016",
@@ -660,7 +660,7 @@
 									"year": "2009 - 2015",
 									"title": "Consultor ERP Odoo",
 									"company": "Concept Up Technology",
-									"description": "Implementacion y desarrollo a medida de Odoo (ERP open source) para PYMEs. Aqui empezo todo lo que hoy hago en integracion ERP-eCommerce."
+									"description": "Implementacion y desarrollo a medida de Odoo (ERP open source) para PYMEs. Aquí empezo todo lo que hoy hago en integración ERP-eCommerce."
 								}
 							]
 						},
@@ -670,7 +670,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Formacion y comunidad"
+									"text": "Formación y comunidad"
 								}
 							]
 						},
@@ -680,7 +680,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Executive MBA por EAE Business School (2015-2019). Posgrado en Transformacion Digital por EADA Business School. Miembro activo del Observatorio eCommerce y de AJE Madrid. Formacion continua en IA aplicada, arquitectura de sistemas distribuidos y estrategia comercial B2B."
+									"text": "Executive MBA por EAE Business School (2015-2019). Posgrado en Transformación Digital por EADA Business School. Miembro activo del Observatorio eCommerce y de AJE Madrid. Formación continua en IA aplicada, arquitectura de sistemas distribuidos y estrategia comercial B2B."
 								}
 							]
 						},
@@ -700,7 +700,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Mi pensamiento esta muy marcado por el estoicismo y la mejora continua: leo a diario, me aplico GTD a rajatabla y rara vez me obsesiono con cosas que no puedo controlar. Fuera de la oficina valoro mucho el montanismo, el bricolaje y todo lo manual. Esa mezcla de cabeza fria y manos sucias es la que se cuela en como entiendo la tecnologia: util, sencilla y a prueba de quien la va a usar."
+									"text": "Mi pensamiento esta muy marcado por el estoicismo y la mejora continua: leo a diario, me aplico GTD a rajatabla y rara vez me obsesiono con cosas que no puedo controlar. Fuera de la oficina valoro mucho el montanismo, el bricolaje y todo lo manual. Esa mezcla de cabeza fria y manos sucias es la qué se cuela en como entiendo la tecnología: útil, sencilla y a prueba de quien la va a usar."
 								}
 							]
 						},
@@ -710,7 +710,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La tecnologia solo aporta valor cuando simplifica la realidad."
+									"text": "La tecnología solo aporta valor cuando simplifica la realidad."
 								}
 							]
 						},
@@ -718,7 +718,7 @@
 							"_type": "site.cta",
 							"_key": "about-cta",
 							"headline": "Hablemos en LinkedIn",
-							"description": "Comparto reflexiones sobre eCommerce B2B, integraciones ERP y empresa en LinkedIn casi a diario. Conectemos.",
+							"description": "Comparto reflexiones sobre eCommerce B2B, integraciónes ERP y empresa en LinkedIn casí a diario. Conectemos.",
 							"primaryCta": {
 								"label": "Conectar en LinkedIn",
 								"url": "https://linkedin.com/in/isaacbosch"
@@ -740,7 +740,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Direccion tecnologica part-time para empresas industriales y distribuidoras de 20 a 200 personas que necesitan criterio C-level sin poder permitirse un CIO a tiempo completo. Tu CIO externo: presente cuando hace falta, sin overhead cuando no."
+									"text": "Dirección tecnológica part-time para empresas industriales y distribuidoras de 20 a 200 personas que necesitan criterio C-level sin poder permitirse un CIO a tiempo completo. Tu CIO externo: presente cuando hace falta, sin overhead cuando no."
 								}
 							]
 						},
@@ -760,7 +760,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Un CIO a tiempo completo con experiencia real en transformacion digital cuesta entre 80 y 120 mil euros anuales mas extras. Una pyme industrial de 30-100 personas no puede ni necesita esa estructura. Pero si necesita criterio tecnologico para no comprar lo que no debe, no contratar lo que no encaja y no perder dos anos en proyectos que se quedan a medias."
+									"text": "Un CIO a tiempo completo con experiencia real en transformación digital cuestá entre 80 y 120 mil euros anuales mas extras. Una pyme industrial de 30-100 personas no puede ni necesita esa estructura. Pero si necesita criterio tecnológico para no comprar lo que no debe, no contratar lo que no encaja y no perder dos anos en proyectos que se quedan a medías."
 								}
 							]
 						},
@@ -770,7 +770,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El modelo Fractional resuelve eso: un fee mensual fijo, un compromiso de horas dedicadas y acceso directo cuando hay que tomar decisiones criticas. Mucho menor coste, ningun overhead, y resultados desde el primer mes."
+									"text": "El modelo Fractional resuelve eso: un fee mensual fijo, un compromiso de horas dedicadas y acceso directo cuando hay que tomar decisiónes críticas. Mucho menor coste, ningun overhead, y resultados desde el primer mes."
 								}
 							]
 						},
@@ -780,7 +780,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que hago contigo"
+									"text": "Qué hago contigo"
 								}
 							]
 						},
@@ -793,11 +793,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Hoja de ruta tecnologica a 12-24 meses. "
+									"text": "Hoja de ruta tecnológica a 12-24 meses. "
 								},
 								{
 									"_type": "span",
-									"text": "Documento vivo que prioriza inversiones, define hitos y conecta cada decision con objetivos de negocio."
+									"text": "Documento vivo que prioriza inversiónes, define hitos y conecta cada decisión con objetivos de negocio."
 								}
 							]
 						},
@@ -810,11 +810,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Decisiones de plataforma. "
+									"text": "Decisiónes de plataforma. "
 								},
 								{
 									"_type": "span",
-									"text": "ERP, eCommerce, herramientas de automatizacion, IA aplicada. Te acompano en la seleccion sin compromisos con proveedores concretos."
+									"text": "ERP, eCommerce, herramientas de automatización, IA aplicada. Te acompano en la selección sin compromisos con proveedores concretos."
 								}
 							]
 						},
@@ -827,11 +827,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Gestion del equipo tecnologico externo. "
+									"text": "Gestión del equipo tecnológico externo. "
 								},
 								{
 									"_type": "span",
-									"text": "Soy quien habla con tus proveedores, agencias y desarrolladores en su idioma para que el proyecto avance y entregue valor real."
+									"text": "Soy quien habla con tus proveedores, agencias y desarrolladores en su idioma para qué el proyecto avance y entregue valor real."
 								}
 							]
 						},
@@ -844,11 +844,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Supervision de proyectos de integracion. "
+									"text": "Supervisión de proyectos de integración. "
 								},
 								{
 									"_type": "span",
-									"text": "Soy quien te dice si el proyecto va bien, si va mal o si deberia replantearse. Sin filtros."
+									"text": "Soy quien te dice si el proyecto va bien, si va mal o si debería replantearse. Sin filtros."
 								}
 							]
 						},
@@ -861,11 +861,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Reporting a direccion general. "
+									"text": "Reporting a dirección general. "
 								},
 								{
 									"_type": "span",
-									"text": "Traduzco la complejidad tecnica a metricas y decisiones que el comite directivo entiende y puede actuar."
+									"text": "Traduzco la complejidad técnica a metricas y decisiónes que el comite directivo entiende y puede actuar."
 								}
 							]
 						},
@@ -875,7 +875,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Por que tiene sentido en B2B industrial"
+									"text": "Por qué tiene sentido en B2B industrial"
 								}
 							]
 						},
@@ -885,7 +885,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Las pymes industriales suelen tener procesos comerciales sofisticados pero cultura tecnologica baja. Su personal IT tipicamente cubre operacion (ERP, infraestructura, soporte) pero no tiene capacidad para liderar proyectos estrategicos de digitalizacion del canal de venta. Un Fractional CIO especializado en B2B industrial cubre exactamente ese hueco."
+									"text": "Las pymes industriales suelen tener procesos comerciales sofisticados pero cultura tecnológica baja. Su personal IT típicamente cubre operación (ERP, infraestructura, soporte) pero no tiene capacidad para liderar proyectos estratégicos de digitalización del canal de venta. Un Fractional CIO especializado en B2B industrial cubre exactamente ese hueco."
 								}
 							]
 						},
@@ -905,7 +905,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Entre 16 y 32 horas mensuales segun necesidad. Reunion ejecutiva semanal o quincenal con direccion. Disponibilidad asincrona para decisiones criticas. Una jornada presencial mensual en Barcelona o remoto si tu sede esta en otro punto. Compromisos minimos de 6 meses para ver resultados reales."
+									"text": "Entre 16 y 32 horas mensuales segun necesidad. Reunión ejecutiva semanal o quincenal con dirección. Disponibilidad asíncrona para decisiónes críticas. Una jornada presencial mensual en Barcelona o remoto si tu sede está en otro punto. Compromisos mínimos de 6 meses para ver resultados reales."
 								}
 							]
 						},
@@ -915,31 +915,31 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"question": "Cuanto cuesta?",
-									"answer": "Fee mensual segun horas dedicadas y duracion del compromiso. Tipicamente entre el 15% y el 35% del coste de un CIO full-time. Te paso una propuesta concreta tras una primera conversacion."
+									"questión": "¿Cuánto cuesta?",
+									"answer": "Fee mensual segun horas dedicadas y duracion del compromiso. Tipicamente entre el 15% y el 35% del coste de un CIO full-time. Te paso una propuestá concreta tras una primera conversacion."
 								},
 								{
-									"question": "Reemplazas a mi responsable IT actual?",
-									"answer": "No. Tu responsable IT sigue gestionando operacion, infraestructura y soporte. Yo cubro la capa estrategica que normalmente le falta tiempo o experiencia para asumir."
+									"questión": "Reemplazas a mi responsable IT actual?",
+									"answer": "No. Tu responsable IT sigue gestiónando operación, infraestructura y soporte. Yo cubro la capa estratégica qué normalmente le falta tiempo o experiencia para asumir."
 								},
 								{
-									"question": "Trabajas con varios clientes a la vez?",
-									"answer": "Si. El modelo Fractional implica precisamente repartir mi tiempo entre varios clientes que se benefician de un perfil senior sin asumir su coste integro. Un maximo de 4-5 clientes a la vez para garantizar dedicacion real."
+									"questión": "Trabajas con varios clientes a la vez?",
+									"answer": "Si. El modelo Fractional implica precisamente repartir mi tiempo entre varios clientes que se benefician de un perfil senior sin asumir su coste integro. Un máximo de 4-5 clientes a la vez para garantizar dedicacion real."
 								},
 								{
-									"question": "Necesito tener ya un equipo tecnico?",
-									"answer": "No es imprescindible. Si no tienes equipo tecnico interno, parte de mi rol incluye ayudarte a contratarlo o coordinar proveedores externos."
+									"questión": "Necesito tener ya un equipo tecnico?",
+									"answer": "No es imprescindible. Si no tienes equipo técnico interno, parte de mi rol incluye ayudarte a contratarlo o coordinar proveedores externos."
 								},
 								{
-									"question": "Que pasa al final del compromiso?",
-									"answer": "Te quedas con la documentacion, la hoja de ruta y un equipo (interno o externo) capaz de ejecutarla. Si el proyecto sigue necesitando supervision estrategica, renovamos. Si no, salgo de la operacion sin dejar dependencia."
+									"questión": "Qué pasa al final del compromiso?",
+									"answer": "Te quedas con la documentacion, la hoja de ruta y un equipo (interno o externo) capaz de ejecutarla. Si el proyecto sigue necesitando supervisión estratégica, renovamos. Si no, salgo de la operación sin dejar dependencia."
 								}
 							]
 						},
 						{
 							"_type": "site.cta",
 							"_key": "cio-cta",
-							"headline": "Cuentame tu situacion tecnologica",
+							"headline": "Cuentame tu situacion tecnológica",
 							"description": "Una primera conversacion de 45 minutos sin compromiso. Te dire si encajo en tu situacion o si necesitas algo distinto.",
 							"primaryCta": {
 								"label": "Hablamos",
@@ -962,7 +962,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Materiales practicos para directivos y responsables digitales que estan transformando su canal B2B. Sin formularios kilometricos ni promesas vacias."
+									"text": "Materiales prácticos para directivos y responsables digitales que estan transformando su canal B2B. Sin formularios kilometricos ni promesas vacias."
 								}
 							]
 						},
@@ -982,7 +982,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Antes de invertir un euro en un nuevo proyecto eCommerce B2B, esta checklist te ayuda a auditar el estado real de tu canal actual. 37 puntos organizados en 6 bloques: catalogo, precios, integracion ERP, experiencia de compra, equipo y metricas. Pensado para directivos, no para tecnicos. Tiempo de aplicacion: 60 minutos."
+									"text": "Antes de invertir un euro en un nuevo proyecto eCommerce B2B, esta checklist te ayuda a auditar el estado real de tu canal actual. 37 puntos organizados en 6 bloques: catálogo, precios, integración ERP, experiencia de compra, equipo y metricas. Pensado para directivos, no para técnicos. Tiempo de aplicación: 60 minutos."
 								}
 							]
 						},
@@ -1012,7 +1012,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Esta seccion crecera con calculadoras de ROI, guias de seleccion de ERP, plantillas de RFP y mas materiales practicos. Todo gratis y sin formularios kilometricos."
+									"text": "Esta seccion crecera con calculadoras de ROI, guías de selección de ERP, plantillas de RFP y mas materiales prácticos. Todo gratis y sin formularios kilometricos."
 								}
 							]
 						}
@@ -1032,7 +1032,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "eCommNotes es mi newsletter para directivos y responsables digitales que estan construyendo el canal B2B de empresas industriales y de distribucion."
+									"text": "eCommNotes es mi newsletter para directivos y responsables digitales que estan construyendo el canal B2B de empresas industriales y de distribución."
 								}
 							]
 						},
@@ -1042,7 +1042,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que vas a recibir"
+									"text": "Qué vas a recibir"
 								}
 							]
 						},
@@ -1052,7 +1052,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Reflexiones cortas sobre transformacion digital en B2B, casos reales (sin nombrar clientes), errores que veo repetirse en proyectos de integracion ERP, herramientas y aprendizajes. Un email cada dos semanas, lectura de 5 minutos."
+									"text": "Reflexiones cortas sobre transformación digital en B2B, casos reales (sin nombrar clientes), errores que veo repetirse en proyectos de integración ERP, herramientas y aprendizajes. Un email cada dos semanas, lectura de 5 minutos."
 								}
 							]
 						},
@@ -1072,7 +1072,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Cadencia quincenal. Sin spam. Sin promesas de cursos ni embudos infinitos. Si lo que recibes no aporta, das de baja con un click. La idea es que llegue contenido util a quien le sirva, no llenar bandejas de entrada."
+									"text": "Cadencia quincenal. Sin spam. Sin promesas de cursos ni embudos infinitos. Si lo que recibes no aporta, das de baja con un click. La idea es que llegue contenido útil a quien le sirva, no llenar bandejas de entrada."
 								}
 							]
 						},
@@ -1080,7 +1080,7 @@
 							"_type": "site.cta",
 							"_key": "newsletter-cta",
 							"headline": "Suscribete a eCommNotes",
-							"description": "Form de suscripcion proximamente. Por ahora, contacta directamente y te apunto manualmente.",
+							"description": "Form de suscripcion próximamente. Por ahora, contacta directamente y te apunto manualmente.",
 							"primaryCta": {
 								"label": "Apuntame",
 								"url": "/contacto"
@@ -1125,7 +1125,7 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Telefono: "
+									"text": "Teléfono: "
 								},
 								{
 									"_type": "span",
@@ -1163,7 +1163,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Pla. Urquinaona, 6, 14B, 08010 Barcelona, Espana"
+									"text": "Pla. Urquinaona, 6, 14B, 08010 Barcelona, España"
 								}
 							]
 						},
@@ -1185,7 +1185,7 @@
 				"slug": "privacidad",
 				"status": "published",
 				"data": {
-					"title": "Politica de privacidad",
+					"title": "Política de privacidad",
 					"content": [
 						{
 							"_type": "block",
@@ -1193,7 +1193,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Esta web recopila datos minimos necesarios para su funcionamiento. No se comparten datos personales con terceros sin consentimiento explicito. Para ejercer tus derechos de acceso, rectificacion o supresion, contacta a traves de los datos indicados en la pagina de contacto."
+									"text": "Esta web recopila datos mínimos necesarios para su funciónamiento. No se comparten datos personales con terceros sin consentimiento explicito. Para ejercer tus derechos de acceso, rectificacion o supresion, contacta a traves de los datos indicados en la página de contacto."
 								}
 							]
 						},
@@ -1213,7 +1213,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Esta web utiliza cookies tecnicas necesarias para el funcionamiento del sitio. No se utilizan cookies de rastreo ni publicidad."
+									"text": "Esta web utiliza cookies técnicas necesarias para el funciónamiento del sitio. No se utilizan cookies de rastreo ni publicidad."
 								}
 							]
 						}
@@ -1230,7 +1230,7 @@
 					"title": "Consultoria eCommerce B2B Industrial",
 					"icon": "shopping-cart",
 					"order": 1,
-					"summary": "Estrategia, implementacion e integracion ERP para empresas industriales y distribuidoras. PrestaShop, Shopify Plus, Adobe Commerce y soluciones a medida con metodologia probada.",
+					"summary": "Estrategia, implementacion e integración ERP para empresas industriales y distribuidoras. PrestaShop, Shopify Plus, Adobe Commerce y soluciónes a medida con metodología probada.",
 					"content": [
 						{
 							"_type": "block",
@@ -1238,7 +1238,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Disenar, implementar e integrar un canal de venta digital para empresas industriales y distribuidoras. No es solo poner una tienda online: es conectar tu ERP, automatizar pedidos recurrentes, gestionar precios por cliente y darle a tu equipo comercial herramientas para vender mas con menos friccion."
+									"text": "Diseñar, implementar e integrar un canal de venta digital para empresas industriales y distribuidoras. No es solo poner una tienda online: es conectar tu ERP, automatizar pedidos recurrentes, gestiónar precios por cliente y darle a tu equipo comercial herramientas para vender mas con menos friccion."
 								}
 							]
 						},
@@ -1248,7 +1248,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El exito de un eCommerce B2B no esta solo en la venta. Esta en la gestion eficiente del post-venta."
+									"text": "El éxito de un eCommerce B2B no esta solo en la venta. Esta en la gestión eficiente del post-venta."
 								}
 							]
 						},
@@ -1268,7 +1268,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Fabricantes, distribuidores y empresas industriales con catalogo extenso, precios diferenciados por cliente, integracion necesaria con ERP y un equipo comercial que pasa demasiado tiempo procesando pedidos manualmente. Si te suena familiar, podemos hablar."
+									"text": "Fabricantes, distribuidores y empresas industriales con catálogo extenso, precios diferenciados por cliente, integración necesaria con ERP y un equipo comercial que pasa demásiado tiempo procesando pedidos manualmente. Si te suena familiar, podemos hablar."
 								}
 							]
 						},
@@ -1295,7 +1295,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Automatizacion de pedidos recurrentes y reduccion de errores administrativos. La mayoria de empresas B2B pierden mas tiempo en gestion que en venta."
+									"text": "Automatización de pedidos recurrentes y reducción de errores administrativos. La mayoria de empresas B2B pierden mas tiempo en gestión que en venta."
 								}
 							]
 						},
@@ -1312,7 +1312,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Disenos de portales self-service donde tus clientes consultan stock real, repiten pedidos en dos clicks y descargan facturas sin llamar a tu comercial."
+									"text": "Diseños de portales self-service donde tus clientes consultan stock real, repiten pedidos en dos clicks y descargan facturas sin llamar a tu comercial."
 								}
 							]
 						},
@@ -1325,11 +1325,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Integracion tecnologica. "
+									"text": "Integración tecnológica. "
 								},
 								{
 									"_type": "span",
-									"text": "Conexion fluida entre eCommerce, ERP, CRM, almacen y pasarelas. Ningun dato duplicado, ningun proceso manual."
+									"text": "Conexión fluida entre eCommerce, ERP, CRM, almacén y pasarelas. Ningun dato duplicado, ningun proceso manual."
 								}
 							]
 						},
@@ -1346,39 +1346,39 @@
 								},
 								{
 									"_type": "span",
-									"text": "Construyo infraestructuras pensadas para crecer: nuevos mercados, nuevos canales, nuevos productos. Sin tirar y rehacer cada dos anos."
+									"text": "Construyo infraestructuras pensadas para crecer: nuevos mercados, nuevos canales, nuevos productos. Sin tirar y rehacer cada dos años."
 								}
 							]
 						},
 						{
 							"_type": "site.timeline",
-							"_key": "metodologia",
-							"headline": "Metodologia en 5 fases",
+							"_key": "metodología",
+							"headline": "Metodología en 5 fases",
 							"items": [
 								{
 									"year": "Fase 1",
 									"title": "Toma de requisitos",
-									"description": "Entrevistas con direccion, comercial, logistica y produccion para entender el negocio real, no el ideal."
+									"description": "Entrevistas con dirección, comercial, logistica y producción para entender el negocio real, no el ideal."
 								},
 								{
 									"year": "Fase 2",
-									"title": "Diseno de flujos funcionales",
-									"description": "Modelado de procesos: alta de cliente, gestion de catalogo, flujo de pedido, integracion con almacen, facturacion."
+									"title": "Diseño de flujos funciónales",
+									"description": "Modelado de procesos: alta de cliente, gestión de catálogo, flujo de pedido, integración con almacén, facturacion."
 								},
 								{
 									"year": "Fase 3",
-									"title": "Validacion con produccion y logistica",
-									"description": "Antes de tocar codigo, validar que los flujos disenados encajan con la realidad operativa diaria. Aqui se evitan los proyectos fallidos."
+									"title": "Validacion con producción y logistica",
+									"description": "Antes de tocar codigo, validar que los flujos diseñados encajan con la realidad operativa diaria. Aquí se evitan los proyectos fallídos."
 								},
 								{
 									"year": "Fase 4",
 									"title": "Implementacion y testeo",
-									"description": "Desarrollo iterativo con entregas semanales, integracion ERP en paralelo, pruebas con usuarios reales antes del lanzamiento."
+									"description": "Desarrollo iterativo con entregas semanales, integración ERP en paralelo, pruebas con usuarios reales antes del lanzamiento."
 								},
 								{
 									"year": "Fase 5",
-									"title": "Formacion y soporte post-venta",
-									"description": "Onboarding del equipo comercial y administrativo. Documentacion viva. Soporte estructurado los primeros 90 dias."
+									"title": "Formación y soporte post-venta",
+									"description": "Onboarding del equipo comercial y administrativo. Documentacion viva. Soporte estructurado los primeros 90 días."
 								}
 							]
 						},
@@ -1398,7 +1398,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "PrestaShop como opcion prioritaria para B2B industrial (mejor relacion control-coste). Shopify Plus cuando la prioridad es velocidad de lanzamiento. Adobe Commerce para catalogos masivos. Soluciones headless o a medida para casos especificos."
+									"text": "PrestaShop como opción prioritaria para B2B industrial (mejor relacion control-coste). Shopify Plus cuando la prioridad es velocidad de lanzamiento. Adobe Commerce para catálogos masivos. Soluciónes headless o a medida para casos específicos."
 								}
 							]
 						},
@@ -1408,19 +1408,19 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"question": "Cuanto dura un proyecto tipico?",
-									"answer": "Entre 4 y 8 meses para una implementacion completa con integracion ERP. Un MVP funcional puedo entregarlo en 90 dias si la situacion lo requiere."
+									"questión": "Cuanto dura un proyecto típico?",
+									"answer": "Entre 4 y 8 meses para una implementacion completa con integración ERP. Un MVP funciónal puedo entregarlo en 90 días si la situacion lo requiere."
 								},
 								{
-									"question": "Trabajas con equipo propio o externo?",
-									"answer": "Tengo equipo propio en eComm360 para implementaciones completas. Tambien dirijo proyectos como consultor cuando el cliente ya tiene equipo tecnico interno o agencia."
+									"questión": "Trabajas con equipo propio o externo?",
+									"answer": "Tengo equipo propio en eComm360 para implementaciones completas. También dirijo proyectos como consultor cuando el cliente ya tiene equipo técnico interno o agencia."
 								},
 								{
-									"question": "Trabajas solo con empresas industriales?",
-									"answer": "Es mi especialidad y donde aporto mas valor. Trabajo tambien con distribuidores y mayoristas. Para B2C puro o servicios profesionales hay consultores mejores que yo."
+									"questión": "Trabajas solo con empresas industriales?",
+									"answer": "Es mi especialidad y donde aporto mas valor. Trabajo también con distribuidores y mayoristas. Para B2C puro o servicios profesionales hay consultores mejores que yo."
 								},
 								{
-									"question": "Como cobras?",
+									"questión": "Como cobras?",
 									"answer": "Proyectos cerrados con alcance definido o consultoria por horas para situaciones puntuales. Sin retainers eternos. Te interesa el resultado, no facturarme cada mes sin entregar valor."
 								}
 							]
@@ -1428,7 +1428,7 @@
 						{
 							"_type": "site.cta",
 							"_key": "consultoria-cta",
-							"headline": "Pide un diagnostico gratuito de 45 minutos",
+							"headline": "Pide un díagnostico gratuito de 45 minutos",
 							"description": "Cuentame tu situacion. Si encajamos, hablamos del proyecto. Si no, te oriento sobre el siguiente paso aunque sea con otro consultor.",
 							"primaryCta": {
 								"label": "Solicitar diagnostico",
@@ -1439,14 +1439,14 @@
 				}
 			},
 			{
-				"id": "consultor-agentes-ia-automatizaciones",
-				"slug": "consultor-agentes-ia-automatizaciones",
+				"id": "consultor-agentes-ia-automatizaciónes",
+				"slug": "consultor-agentes-ia-automatizaciónes",
 				"status": "published",
 				"data": {
-					"title": "Consultor de Agentes de IA y Automatizaciones",
+					"title": "Consultor de Agentes de IA y Automatizaciónes",
 					"icon": "cpu",
 					"order": 2,
-					"summary": "Diseno e implementacion de agentes IA autonomos que automatizan procesos comerciales, atencion al cliente, catalogos y operaciones B2B. Sin hype, con resultados medibles.",
+					"summary": "Diseño e implementacion de agentes IA autónomos que automatizan procesos comerciales, atención al cliente, catálogos y operaciónes B2B. Sin hype, con resultados medibles.",
 					"content": [
 						{
 							"_type": "block",
@@ -1454,7 +1454,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Los agentes de IA van mas alla de los chatbots. Son sistemas autonomos que perciben su entorno, toman decisiones y ejecutan tareas. Aplicados al B2B industrial transforman la operativa diaria: atencion al cliente, catalogo, ventas, soporte y back office."
+									"text": "Los agentes de IA van más allá de los chatbots. Son sistemas autónomos que perciben su entorno, toman decisiónes y ejecutan tareas. Aplicados al B2B industrial transforman la operativa diaria: atención al cliente, catálogo, ventas, soporte y back office."
 								}
 							]
 						},
@@ -1487,11 +1487,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Atencion al cliente. "
+									"text": "Atención al cliente. "
 								},
 								{
 									"_type": "span",
-									"text": "Resolucion de consultas con acceso al ERP en tiempo real, procesamiento de pedidos, gestion de devoluciones y cualificacion automatica de leads. El equipo humano se queda con lo que requiere criterio."
+									"text": "Resolución de consultas con acceso al ERP en tiempo real, procesamiento de pedidos, gestión de devoluciones y cualificacion automática de leads. El equipo humano se queda con lo que requiere criterio."
 								}
 							]
 						},
@@ -1504,11 +1504,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Operaciones. "
+									"text": "Operaciónes. "
 								},
 								{
 									"_type": "span",
-									"text": "Procesamiento de documentos financieros, conciliacion bancaria, supervision de stock, coordinacion de cadena de suministro y alertas inteligentes."
+									"text": "Procesamiento de documentos financieros, conciliacion bancaria, supervisión de stock, coordinacion de cadena de suministro y alertas inteligentes."
 								}
 							]
 						},
@@ -1521,11 +1521,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Catalogo y contenido. "
+									"text": "Catálogo y contenido. "
 								},
 								{
 									"_type": "span",
-									"text": "Generacion automatica de descripciones de producto, traducciones, etiquetas SEO, posts y newsletters a partir de los atributos tecnicos del ERP."
+									"text": "Generación automática de descripciónes de producto, traducciones, etiquetas SEO, posts y newsletters a partir de los atributos técnicos del ERP."
 								}
 							]
 						},
@@ -1538,11 +1538,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Analisis predictivo. "
+									"text": "Análisis predictivo. "
 								},
 								{
 									"_type": "span",
-									"text": "Seguimiento de KPIs, deteccion de anomalias, prediccion de demanda y alertas sobre patrones criticos antes de que el problema escale."
+									"text": "Seguimiento de KPIs, deteccion de anomalias, prediccion de demanda y alertas sobre patrones críticos antes de qué el problema escale."
 								}
 							]
 						},
@@ -1562,7 +1562,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "OpenAI API, Anthropic Claude, LangChain, LlamaIndex, n8n, Make, Zapier y Python para cuando hay que bajar a codigo. Eleccion de stack en funcion del problema, no de la moda."
+									"text": "OpenAI API, Anthropic Claude, LangChain, LlamaIndex, n8n, Make, Zapier y Python para cuando hay que bajar a codigo. Eleccion de stack en función del problema, no de la moda."
 								}
 							]
 						},
@@ -1592,20 +1592,20 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"question": "Cuanto cuesta un proyecto de IA aplicada?",
-									"answer": "Un piloto enfocado a un proceso concreto: 5.000-20.000 euros. Un proyecto integral con varios agentes conectados al ERP: 30.000-100.000 euros. ROI tipico entre 6 y 12 meses."
+									"questión": "¿Cuánto cuesta un proyecto de IA aplicada?",
+									"answer": "Un piloto enfocado a un proceso concreto: 5.000-20.000 euros. Un proyecto integral con varios agentes conectados al ERP: 30.000-100.000 euros. ROI típico entre 6 y 12 meses."
 								},
 								{
-									"question": "Necesito tener mis datos perfectos para empezar?",
-									"answer": "No perfectos, pero si minimamente estructurados. Si tu catalogo esta en un Excel desactualizado, ese es el primer paso del proyecto."
+									"questión": "Necesito tener mis datos perfectos para empezar?",
+									"answer": "No perfectos, pero si mínimamente estructurados. Si tu catálogo está en un Excel desactualizado, ese es el primer paso del proyecto."
 								},
 								{
-									"question": "La IA va a reemplazar a mi equipo?",
-									"answer": "No, y no deberia ser el objetivo. La IA automatiza lo repetitivo. Tu equipo aporta criterio, relacion y excepciones. La combinacion es mas potente que cualquiera por separado."
+									"questión": "La IA va a reemplazar a mi equipo?",
+									"answer": "No, y no debería ser el objetivo. La IA automatiza lo repetitivo. Tu equipo aporta criterio, relacion y excepciones. La combinacion es mas potente que cualquiera por separado."
 								},
 								{
-									"question": "Que pasa con los datos de mis clientes?",
-									"answer": "Cumplo RGPD por diseno. Existen opciones de IA en infraestructura propia (Llama, Mistral, Claude empresarial) cuando la confidencialidad es critica."
+									"questión": "Qué pasa con los datos de mis clientes?",
+									"answer": "Cumplo RGPD por diseño. Existen opciónes de IA en infraestructura propia (Llama, Mistral, Claude empresarial) cuando la confidencialidad es crítica."
 								}
 							]
 						},
@@ -1613,7 +1613,7 @@
 							"_type": "site.cta",
 							"_key": "ia-cta",
 							"headline": "Hablamos sobre tu primer agente?",
-							"description": "Identificamos juntos el proceso con mayor impacto en tu empresa y disenamos el agente que lo automatice. Empezamos con un piloto medible.",
+							"description": "Identificamos juntos el proceso con mayor impacto en tu empresa y diseñamos el agente que lo automatice. Empezamos con un piloto medible.",
 							"primaryCta": {
 								"label": "Cuentame tu caso",
 								"url": "/contacto"
@@ -1623,14 +1623,14 @@
 				}
 			},
 			{
-				"id": "integracion-erp-ecommerce",
-				"slug": "integracion-erp-ecommerce",
+				"id": "integración-erp-ecommerce",
+				"slug": "integración-erp-ecommerce",
 				"status": "published",
 				"data": {
-					"title": "Integracion ERP - eCommerce",
+					"title": "Integración ERP - eCommerce",
 					"icon": "link",
 					"order": 3,
-					"summary": "Conexion bidireccional entre tu ERP (SAP, Dynamics, Sage, Odoo) y tu plataforma eCommerce. Sincronizacion de catalogo, precios B2B, stock, pedidos y facturacion en tiempo real.",
+					"summary": "Conexión bidirecciónal entre tu ERP (SAP, Dynamics, Sage, Odoo) y tu plataforma eCommerce. Sincronizacion de catálogo, precios B2B, stock, pedidos y facturacion en tiempo real.",
 					"content": [
 						{
 							"_type": "block",
@@ -1638,7 +1638,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El exito de un eCommerce no esta solo en la venta, sino en la gestion eficiente del post-venta. Una integracion ERP bien disenada elimina la duplicidad de tareas, reduce errores de stock, acelera tiempos de entrega y libera al equipo comercial de operativa repetitiva."
+									"text": "El éxito de un eCommerce no esta solo en la venta, sino en la gestión eficiente del post-venta. Una integración ERP bien diseñada elimina la duplicidad de tareas, reduce errores de stock, acelera tiempos de entrega y libera al equipo comercial de operativa repetitiva."
 								}
 							]
 						},
@@ -1648,7 +1648,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Sin integracion, tu canal digital es un cuello de botella. Con integracion, es un acelerador."
+									"text": "Sin integración, tu canal digital es un cuello de botella. Con integración, es un acelerador."
 								}
 							]
 						},
@@ -1675,7 +1675,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Disponibilidad real reflejada en la web, evitando sobreventa y reservas fantasma. Soporte multi-almacen y multi-zona horaria."
+									"text": "Disponibilidad real reflejada en la web, evitando sobreventa y reservas fantasma. Soporte multi-almacén y multi-zona horaria."
 								}
 							]
 						},
@@ -1688,7 +1688,7 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Gestion de pedidos. "
+									"text": "Gestión de pedidos. "
 								},
 								{
 									"_type": "span",
@@ -1729,7 +1729,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "SAP Business One, SAP S/4HANA, Microsoft Dynamics 365 Business Central, Sage 200, Sage X3, Odoo y desarrollos propietarios. Si tu ERP no esta en esta lista, casi seguro tambien puedo."
+									"text": "SAP Business One, SAP S/4HANA, Microsoft Dynamics 365 Business Central, Sage 200, Sage X3, Odoo y desarrollos propietarios. Si tu ERP no está en está lista, casí seguro también puedo."
 								}
 							]
 						},
@@ -1739,7 +1739,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Patrones de integracion"
+									"text": "Patrones de integración"
 								}
 							]
 						},
@@ -1749,7 +1749,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Tres patrones principales: integracion directa API-to-API (mas simple, mas rigida), middleware dedicado (equilibrio entre flexibilidad y complejidad) y plataformas de integracion como servicio (maxima flexibilidad, mayor coste operativo). La eleccion depende del volumen, frecuencia de sincronizacion y complejidad de las transformaciones."
+									"text": "Tres patrones principales: integración directa API-to-API (mas simple, mas rigida), middleware dedicado (equilibrio entre flexibilidad y complejidad) y plataformas de integración como servicio (máxima flexibilidad, mayor coste operativo). La eleccion depende del volumen, frecuencia de sincronizacion y complejidad de las transformaciónes."
 								}
 							]
 						},
@@ -1759,30 +1759,30 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"question": "Cuanto tarda integrar un ERP con un eCommerce?",
-									"answer": "Entre 6 semanas y 4 meses dependiendo del ERP, el volumen de datos y la complejidad de las reglas comerciales. Una integracion basica de catalogo y pedidos puede estar lista en 6 semanas."
+									"questión": "Cuanto tarda integrar un ERP con un eCommerce?",
+									"answer": "Entre 6 semanas y 4 meses dependiendo del ERP, el volumen de datos y la complejidad de las reglas comerciales. Una integración básica de catálogo y pedidos puede estar lista en 6 semanas."
 								},
 								{
-									"question": "Que pasa si mi ERP es muy antiguo o muy custom?",
-									"answer": "Trabajable. Construyo middleware a medida cuando los conectores estandar no llegan. He integrado ERPs propietarios sin documentacion publica."
+									"questión": "Qué pasa si mi ERP es muy antiguo o muy custom?",
+									"answer": "Trabajable. Construyo middleware a medida cuando los conectores estandar no llegan. He integrado ERPs propietarios sin documentacion pública."
 								},
 								{
-									"question": "Sincronizacion en tiempo real o por lotes?",
-									"answer": "Lo que tenga sentido para cada flujo. El stock suele necesitar tiempo real. El catalogo puede ser por lotes nocturnos. El pedido siempre tiempo real. No todo necesita ser instantaneo."
+									"questión": "Sincronizacion en tiempo real o por lotes?",
+									"answer": "Lo que tenga sentido para cada flujo. El stock suele necesitar tiempo real. El catálogo puede ser por lotes nocturnos. El pedido siempre tiempo real. No todo necesita ser instantaneo."
 								},
 								{
-									"question": "Y el mantenimiento despues?",
-									"answer": "Toda integracion necesita monitorizacion y soporte. Implemento logs, alertas y dashboards desde el dia uno para que tu equipo pueda ver el estado y reaccionar."
+									"questión": "Y el mantenimiento después?",
+									"answer": "Toda integración necesita monitorizacion y soporte. Implemento logs, alertas y dashboards desde el día uno para qué tu equipo pueda ver el estado y reaccionar."
 								}
 							]
 						},
 						{
 							"_type": "site.cta",
 							"_key": "erp-cta",
-							"headline": "Analicemos tu arquitectura de integracion ideal",
+							"headline": "Analicemos tu arquitectura de integración ideal",
 							"description": "Cuentame tu ERP, tu plataforma actual o futura, y los puntos de friccion que estas viendo. Te propongo el plan mas eficiente.",
 							"primaryCta": {
-								"label": "Solicitar analisis",
+								"label": "Solicitar análisis",
 								"url": "/contacto"
 							}
 						}
@@ -1790,14 +1790,14 @@
 				}
 			},
 			{
-				"id": "formacion-empresarial-digitalizacion",
-				"slug": "formacion-empresarial-digitalizacion",
+				"id": "formación-empresarial-digitalización",
+				"slug": "formación-empresarial-digitalización",
 				"status": "published",
 				"data": {
-					"title": "Formacion Empresarial en Digitalizacion",
+					"title": "Formación Empresarial en Digitalización",
 					"icon": "graduation-cap",
 					"order": 4,
-					"summary": "Programas de formacion en eCommerce, IA aplicada y automatizacion para equipos directivos y operativos. Presencial en Barcelona, online o mentoring 1:1.",
+					"summary": "Programas de formación en eCommerce, IA aplicada y automatización para equipos directivos y operativos. Presencial en Barcelona, online o mentoring 1:1.",
 					"content": [
 						{
 							"_type": "block",
@@ -1805,7 +1805,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La tecnologia por si sola no transforma empresas. Las personas si. Diseno e imparto programas de formacion que desarrollan competencias digitales reales en equipos de todos los niveles, desde direccion general hasta perfiles operativos."
+									"text": "La tecnología por si sola no transforma empresas. Las personas si. Diseño e imparto programas de formación que desarrollan competencias digitales reales en equipos de todos los niveles, desde dirección general hasta perfiles operativos."
 								}
 							]
 						},
@@ -1815,7 +1815,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Areas de especializacion"
+									"text": "Áreas de especializacion"
 								}
 							]
 						},
@@ -1832,7 +1832,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Modelos de negocio, optimizacion de conversion, gestion de catalogo y precios, logistica digital, marketplaces e integraciones."
+									"text": "Modelos de negocio, optimizacion de conversión, gestión de catálogo y precios, logistica digital, marketplaces e integraciónes."
 								}
 							]
 						},
@@ -1845,11 +1845,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Inteligencia Artificial Practica. "
+									"text": "Inteligencia Artificial Práctica. "
 								},
 								{
 									"_type": "span",
-									"text": "Prompt engineering aplicado a negocio, herramientas productivas con IA, agentes autonomos, automatizacion de procesos repetitivos y analisis con LLMs."
+									"text": "Prompt engineering aplicado a negocio, herramientas productivas con IA, agentes autónomos, automatización de procesos repetitivos y análisis con LLMs."
 								}
 							]
 						},
@@ -1862,11 +1862,11 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Transformacion digital ejecutiva. "
+									"text": "Transformación digital ejecutiva. "
 								},
 								{
 									"_type": "span",
-									"text": "Sesiones para comites de direccion sobre estrategia digital, seleccion de plataformas, evaluacion de inversion tecnologica y gestion del cambio."
+									"text": "Sesiones para comites de dirección sobre estrategia digital, selección de plataformas, evaluacion de inversión tecnológica y gestión del cambio."
 								}
 							]
 						},
@@ -1910,7 +1910,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Webinars interactivos para equipos remotos o dispersos. Mismo material, ejercicios practicos y Q&A en directo."
+									"text": "Webinars interactivos para equipos remotos o dispersos. Mismo material, ejercicios prácticos y Q&A en directo."
 								}
 							]
 						},
@@ -1927,38 +1927,38 @@
 								},
 								{
 									"_type": "span",
-									"text": "Acompanamiento individualizado para directivos, fundadores y responsables digitales que necesitan un sparring para decisiones criticas."
+									"text": "Acompanamiento individualizado para directivos, fundadores y responsables digitales que necesitan un sparring para decisiónes críticas."
 								}
 							]
 						},
 						{
 							"_type": "site.faq",
-							"_key": "faq-formacion",
+							"_key": "faq-formación",
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"question": "Cuanto dura una formacion tipica?",
-									"answer": "Sesiones ejecutivas de medio dia, programas intensivos de 2-5 dias, o trayectos largos de 2-3 meses con sesiones semanales. Lo adapto al contexto."
+									"questión": "Cuanto dura una formación típica?",
+									"answer": "Sesiones ejecutivas de medio día, programas intensivos de 2-5 días, o trayectos largos de 2-3 meses con sesiones semanales. Lo adapto al contexto."
 								},
 								{
-									"question": "Trabajas con bonificacion FUNDAE?",
-									"answer": "Si, los programas In-Company son bonificables a traves de la Fundacion Estatal para la Formacion en el Empleo. Te ayudo con la documentacion."
+									"questión": "Trabajas con bonificacion FUNDAE?",
+									"answer": "Si, los programas In-Company son bonificables a traves de la Fundacion Estatal para la Formación en el Empleo. Te ayudo con la documentacion."
 								},
 								{
-									"question": "Para que niveles trabajas?",
-									"answer": "Desde comites de direccion (estrategia digital, decisiones de plataforma) hasta equipos operativos (uso practico de herramientas, IA aplicada). Adapto el contenido al nivel y rol."
+									"questión": "Para qué niveles trabajas?",
+									"answer": "Desde comites de dirección (estrategia digital, decisiónes de plataforma) hasta equipos operativos (uso práctico de herramientas, IA aplicada). Adapto el contenido al nivel y rol."
 								},
 								{
-									"question": "Dais certificacion?",
-									"answer": "Si, certificado de aprovechamiento al finalizar cada programa, util para itinerarios formativos internos y bonificacion FUNDAE."
+									"questión": "Dais certificacion?",
+									"answer": "Si, certificado de aprovechamiento al finalizar cada programa, útil para itinerarios formativos internos y bonificacion FUNDAE."
 								}
 							]
 						},
 						{
 							"_type": "site.cta",
-							"_key": "formacion-cta",
-							"headline": "Disenamos un plan de formacion a medida",
-							"description": "Cuentame el equipo, el nivel actual y los objetivos. Te paso una propuesta concreta con formato, duracion y precio cerrado.",
+							"_key": "formación-cta",
+							"headline": "Diseñamos un plan de formación a medida",
+							"description": "Cuentame el equipo, el nivel actual y los objetivos. Te paso una propuestá concreta con formato, duracion y precio cerrado.",
 							"primaryCta": {
 								"label": "Solicitar propuesta",
 								"url": "/contacto"
@@ -1977,7 +1977,7 @@
 					"title": "eComm360",
 					"client": "Empresa",
 					"year": "2012 - Presente",
-					"summary": "La agencia especializada en PrestaShop nacida en 2012. Proyectos de eCommerce B2B, integracion con ERP y transformacion digital industrial. Certificada PrestaShop Expert y Shopify Partner.",
+					"summary": "La agencia especializada en PrestaShop nacida en 2012. Proyectos de eCommerce B2B, integración con ERP y transformación digital industrial. Certificada PrestaShop Expert y Shopify Partner.",
 					"url": "https://ecomm360.es",
 					"content": [
 						{
@@ -1986,7 +1986,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "eComm360 es la agencia especializada en PrestaShop que funde en 2012, nacida con los primeros proyectos basados en la integracion de B2B con ERP. Hoy es la empresa central del Grupo eCommsistema y mi base de operaciones para todos los proyectos de consultoria, desarrollo e integracion para empresas industriales y distribuidoras."
+									"text": "eComm360 es la agencia especializada en PrestaShop que funde en 2012, nacida con los primeros proyectos basados en la integración de B2B con ERP. Hoy es la empresa central del Grupo eCommsistema y mi base de operaciónes para todos los proyectos de consultoria, desarrollo e integración para empresas industriales y distribuidoras."
 								}
 							]
 						},
@@ -1996,7 +1996,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que hacemos"
+									"text": "Qué hacemos"
 								}
 							]
 						},
@@ -2006,7 +2006,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Estrategia, implementacion y soporte de proyectos eCommerce B2B y B2C end-to-end. PrestaShop como plataforma prioritaria, con extensiones a Shopify, soluciones headless o desarrollos a medida cuando hace falta. Proyectos internacionales con desarrollo local en Barcelona."
+									"text": "Estrategia, implementacion y soporte de proyectos eCommerce B2B y B2C end-to-end. PrestaShop como plataforma prioritaria, con extensiónes a Shopify, soluciónes headless o desarrollos a medida cuando hace falta. Proyectos internacionales con desarrollo local en Barcelona."
 								}
 							]
 						},
@@ -2041,7 +2041,7 @@
 					"title": "AlabazWeb",
 					"client": "Empresa",
 					"year": "2009 - Presente",
-					"summary": "Empresa pionera fundada en 2009, especializada en desarrollo de tiendas online y modulos PrestaShop para B2B. Certificada PrestaShop Expert. Marca historica integrada en el ecosistema.",
+					"summary": "Empresa pionera fundada en 2009, especializada en desarrollo de tiendas online y modulos PrestaShop para B2B. Certificada PrestaShop Expert. Marca histórica integrada en el ecosistema.",
 					"url": "https://alabazweb.com",
 					"content": [
 						{
@@ -2050,7 +2050,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "AlabazWeb es la empresa con la que arranco mi trayectoria en eCommerce en 2009. Especializada desde el primer dia en el desarrollo de tiendas online y modulos PrestaShop para procesos comerciales avanzados B2B. Certificada PrestaShop Expert."
+									"text": "AlabazWeb es la empresa con la qué arranco mi trayectoria en eCommerce en 2009. Especializada desde el primer día en el desarrollo de tiendas online y modulos PrestaShop para procesos comerciales avanzados B2B. Certificada PrestaShop Expert."
 								}
 							]
 						},
@@ -2070,7 +2070,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "AlabazWeb introdujo una metodologia lean para venta de productos complejos: validar antes de construir, lanzar antes de pulir, iterar con datos reales. Ese ADN sigue vivo en todos los proyectos del grupo."
+									"text": "AlabazWeb introdujo una metodología lean para venta de productos complejos: validar antes de construir, lanzar antes de pulir, iterar con datos reales. Ese ADN sigue vivo en todos los proyectos del grupo."
 								}
 							]
 						},
@@ -2090,7 +2090,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "AlabazWeb forma parte del ecosistema eCommsistema como linea de productos y modulos PrestaShop. Sigue activa con su catalogo de modulos para B2B, hosting especializado y servicios de marketing online."
+									"text": "AlabazWeb forma parte del ecosistema eCommsistema como linea de productos y modulos PrestaShop. Sigue activa con su catálogo de modulos para B2B, hosting especializado y servicios de marketing online."
 								}
 							]
 						}
@@ -2105,7 +2105,7 @@
 					"title": "eCommRocket",
 					"client": "Empresa",
 					"year": "Presente",
-					"summary": "Empresa del grupo enfocada al acompanamiento integral de eCommerce: gestion, atencion al cliente, logistica, contenido y adquisicion de tiendas online. Tambien plataforma de inversion 'technology for equity'.",
+					"summary": "Empresa del grupo enfocada al acompanamiento integral de eCommerce: gestión, atención al cliente, logistica, contenido y adquisicion de tiendas online. También plataforma de inversión 'technology for equity'.",
 					"url": "https://ecommrocket.com",
 					"content": [
 						{
@@ -2114,7 +2114,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "eCommRocket es la empresa del grupo dedicada al acompanamiento integral de proyectos eCommerce ya en marcha. Donde eComm360 disena y construye, eCommRocket opera, escala y compra."
+									"text": "eCommRocket es la empresa del grupo dedicada al acompanamiento integral de proyectos eCommerce ya en marcha. Donde eComm360 diseña y construye, eCommRocket opera, escala y compra."
 								}
 							]
 						},
@@ -2124,7 +2124,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que ofrece"
+									"text": "Qué ofrece"
 								}
 							]
 						},
@@ -2134,7 +2134,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Gestion eCommerce completa, atencion al cliente, coordinacion logistica, creacion de contenido y compraventa de tiendas online. Tambien actua como plataforma de inversion bajo modelos de 'technology for equity', adquiriendo activos digitales como tiendas, blogs y canales de YouTube."
+									"text": "Gestión eCommerce completa, atención al cliente, coordinacion logistica, creacion de contenido y compraventa de tiendas online. También actua como plataforma de inversión bajo modelos de 'technology for equity', adquiriendo activos digitales como tiendas, blogs y canales de YouTube."
 								}
 							]
 						},
@@ -2144,7 +2144,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Por que existe"
+									"text": "Por qué existe"
 								}
 							]
 						},
@@ -2154,7 +2154,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Porque muchos eCommerce no necesitan un nuevo proyecto, necesitan operacion seria y escalable. eCommRocket cubre ese hueco entre la consultora y el dia a dia operativo."
+									"text": "Porque muchos eCommerce no necesitan un nuevo proyecto, necesitan operación sería y escalable. eCommRocket cubre ese hueco entre la consultora y el día a día operativo."
 								}
 							]
 						}
@@ -2169,7 +2169,7 @@
 					"title": "Integrafy",
 					"client": "Producto",
 					"year": "Presente",
-					"summary": "Middleware de integracion ERP-eCommerce con esencia de PIM. La herramienta mas querida y usada del grupo. Conecta cualquier eCommerce con SAP, Dynamics, Sage, Odoo y mas.",
+					"summary": "Middleware de integración ERP-eCommerce con esencia de PIM. La herramienta más querida y usada del grupo. Conecta cualquier eCommerce con SAP, Dynamics, Sage, Odoo y mas.",
 					"url": "https://integrafy.io",
 					"content": [
 						{
@@ -2178,7 +2178,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Integrafy es nuestro middleware de integracion ERP-eCommerce con un toque de PIM. Es la herramienta mas querida y usada del grupo, foundational para los origenes mismos del proyecto."
+									"text": "Integrafy es nuestro middleware de integración ERP-eCommerce con un toque de PIM. Es la herramienta más querida y usada del grupo, foundational para los origenes mismos del proyecto."
 								}
 							]
 						},
@@ -2188,7 +2188,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que hace"
+									"text": "Qué hace"
 								}
 							]
 						},
@@ -2198,7 +2198,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Automatiza la integracion entre cualquier plataforma eCommerce (PrestaShop, Shopify, Adobe Commerce, headless) y los principales ERPs del mercado: SAP Business One, SAP S/4HANA, Microsoft Dynamics 365 Business Central, Sage 200, Sage X3, Odoo y desarrollos propietarios. Tambien conecta con CRMs y otros sistemas de negocio."
+									"text": "Automatiza la integración entre cualquier plataforma eCommerce (PrestaShop, Shopify, Adobe Commerce, headless) y los principales ERPs del mercado: SAP Business One, SAP S/4HANA, Microsoft Dynamics 365 Business Central, Sage 200, Sage X3, Odoo y desarrollos propietarios. También conecta con CRMs y otros sistemas de negocio."
 								}
 							]
 						},
@@ -2208,7 +2208,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Por que existe"
+									"text": "Por qué existe"
 								}
 							]
 						},
@@ -2218,7 +2218,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Porque las empresas B2B no deberian pagar 60.000 euros y esperar 6 meses por una integracion que se podria resolver en 2 semanas con la herramienta correcta. Integrafy reduce tiempo, coste y riesgo."
+									"text": "Porque las empresas B2B no deberían pagar 60.000 euros y esperar 6 meses por una integración que se podría resolver en 2 semanas con la herramienta correcta. Integrafy reduce tiempo, coste y riesgo."
 								}
 							]
 						}
@@ -2233,7 +2233,7 @@
 					"title": "ApproSearch",
 					"client": "Producto",
 					"year": "En breve",
-					"summary": "El buscador personalizable. Motor de busqueda especializado en catalogos eCommerce con dos versiones: open source sobre ElasticSearch y SaaS avanzado. Disponible en breve.",
+					"summary": "El buscador personalizable. Motor de busqueda especializado en catálogos eCommerce con dos versiónes: open source sobre ElasticSearch y SaaS avanzado. Disponible en breve.",
 					"url": "",
 					"content": [
 						{
@@ -2252,7 +2252,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Dos versiones"
+									"text": "Dos versiónes"
 								}
 							]
 						},
@@ -2262,7 +2262,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Una version open source basada en ElasticSearch, ideal para equipos tecnicos que quieren control total. Y una version SaaS avanzada con personalizacion, IA y panel de gestion para equipos de marketing y producto que prefieren no tocar codigo."
+									"text": "Una versión open source basada en ElasticSearch, ideal para equipos técnicos que quieren control total. Y una versión SaaS avanzada con personalizacion, IA y panel de gestión para equipos de marketing y producto que prefieren no tocar codigo."
 								}
 							]
 						},
@@ -2297,7 +2297,7 @@
 					"title": "KPIeCommerce",
 					"client": "Producto",
 					"year": "En breve",
-					"summary": "El analisis para el merchant. Herramienta de medicion y KPIs para eCommerce. Porque medir en un eCommerce es una obligacion moral, no un nice-to-have.",
+					"summary": "El análisis para el merchant. Herramienta de medicion y KPIs para eCommerce. Porque medir en un eCommerce es una obligacion moral, no un nice-to-have.",
 					"url": "",
 					"content": [
 						{
@@ -2306,7 +2306,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "KPIeCommerce es la herramienta de analisis pensada para el merchant, no para el data scientist. Medir es siempre clave en un negocio, pero en un eCommerce es una obligacion moral."
+									"text": "KPIeCommerce es la herramienta de análisis pensada para el merchant, no para el data scientist. Medir es siempre clave en un negocio, pero en un eCommerce es una obligacion moral."
 								}
 							]
 						},
@@ -2316,7 +2316,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Por que existe"
+									"text": "Por qué existe"
 								}
 							]
 						},
@@ -2326,7 +2326,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Las herramientas de analytics genericas estan llenas de metricas que no importan y faltan las que si. KPIeCommerce define los KPIs que un merchant de verdad necesita: margen real por producto, LTV por canal, conversion por segmento, retorno por euro invertido. Sin ruido."
+									"text": "Las herramientas de analytics genericas estan llenas de metricas que no importan y faltan las que si. KPIeCommerce define los KPIs que un merchant de verdad necesita: margen real por producto, LTV por canal, conversión por segmento, retorno por euro invertido. Sin ruido."
 								}
 							]
 						},
@@ -2380,7 +2380,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Por que importa"
+									"text": "Por qué importa"
 								}
 							]
 						},
@@ -2390,7 +2390,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Demuestra como una vertical hiper-nichada puede construir comunidad, fidelizacion y margen sin competir contra Amazon. La estrategia: catalogo cuidadosamente seleccionado, contenido educativo, servicio cercano y plataforma estable sobre Shopify."
+									"text": "Demuestra como una vertical hiper-nichada puede construir comunidad, fidelizacion y margen sin competir contra Amazon. La estrategia: catálogo cuidadosamente selecciónado, contenido educativo, servicio cercano y plataforma estable sobre Shopify."
 								}
 							]
 						},
@@ -2400,7 +2400,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que vende"
+									"text": "Qué vende"
 								}
 							]
 						},
@@ -2425,7 +2425,7 @@
 					"title": "Cesquis",
 					"client": "Tienda",
 					"year": "Presente",
-					"summary": "Cajas regalo y mas para veganos. Tienda especial para gente muy especial: gourmet, gifting y supermercado vegano.",
+					"summary": "Cajas regalo y mas para vegaños. Tienda especial para gente muy especial: gourmet, gifting y supermercado vegano.",
 					"url": "https://cesquis.com",
 					"content": [
 						{
@@ -2444,7 +2444,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que vende"
+									"text": "Qué vende"
 								}
 							]
 						},
@@ -2454,7 +2454,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Cajas regalo personalizadas, productos gourmet veganos, packs de alimentacion y servicios de supermercado online especializado. Todo orientado al regalo y a la experiencia del cliente vegano."
+									"text": "Cajas regalo personalizadas, productos gourmet vegaños, packs de alimentacion y servicios de supermercado online especializado. Todo orientado al regalo y a la experiencia del cliente vegano."
 								}
 							]
 						}
@@ -2469,7 +2469,7 @@
 					"title": "Tusamigos",
 					"client": "Tienda",
 					"year": "Presente",
-					"summary": "La tienda online para nuestros mejores amigos: alimentacion y cuidado para mascotas. El segmento mas querido de la casa.",
+					"summary": "La tienda online para nuestros mejores amigos: alimentacion y cuidado para mascotas. El segmento más querido de la casa.",
 					"url": "https://tusamigos.es",
 					"content": [
 						{
@@ -2478,7 +2478,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Tusamigos es la tienda online dedicada al segmento mas querido de la casa: nuestras mascotas. Alimentacion premium, cuidado, complementos y todo lo que necesitan los reyes del hogar."
+									"text": "Tusamigos es la tienda online dedicada al segmento más querido de la casa: nuestras mascotas. Alimentacion premium, cuidado, complementos y todo lo que necesitan los reyes del hogar."
 								}
 							]
 						},
@@ -2488,7 +2488,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que vende"
+									"text": "Qué vende"
 								}
 							]
 						},
@@ -2498,7 +2498,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Alimentacion para perros y gatos, snacks, accesorios, cuidado e higiene, juguetes y articulos especializados para distintas razas y necesidades."
+									"text": "Alimentacion para perros y gatos, snacks, accesorios, cuidado e higiene, juguetes y artículos especializados para distintas razas y necesidades."
 								}
 							]
 						},
@@ -2508,7 +2508,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Por que existe"
+									"text": "Por qué existe"
 								}
 							]
 						},
@@ -2532,58 +2532,58 @@
 				"slug": "futuro-ecommerce-b2b-ia-erp",
 				"status": "published",
 				"data": {
-					"title": "El futuro del eCommerce B2B: Integracion con IA y ERP",
+					"title": "El futuro del eCommerce B2B: Integración con IA y ERP",
 					"source": "eCommerce News",
 					"url": "#",
 					"date": "2024-03-15",
-					"summary": "Articulo sobre como la convergencia de IA, ERP y eCommerce esta transformando el comercio B2B en Espana."
+					"summary": "Artículo sobre como la convergencia de IA, ERP y eCommerce esta transformando el comercio B2B en España."
 				}
 			},
 			{
 				"id": "press-2",
-				"slug": "transformacion-digital-sector-b2b",
+				"slug": "transformación-digital-sector-b2b",
 				"status": "published",
 				"data": {
-					"title": "Transformacion digital en el sector B2B: Casos de exito",
+					"title": "Transformación digital en el sector B2B: Casos de éxito",
 					"source": "Retail Digital",
 					"url": "#",
 					"date": "2024-02-20",
-					"summary": "Entrevista sobre los retos y oportunidades de la digitalizacion en empresas B2B espanolas."
+					"summary": "Entrevista sobre los retos y oportunidades de la digitalización en empresas B2B españolas."
 				}
 			},
 			{
 				"id": "press-3",
-				"slug": "agentes-ia-autonomos-comercio-electronico",
+				"slug": "agentes-ia-autónomos-comercio-electronico",
 				"status": "published",
 				"data": {
-					"title": "Agentes IA autonomos: La nueva frontera del comercio electronico",
+					"title": "Agentes IA autónomos: La nueva frontera del comercio electronico",
 					"source": "Tech Today",
 					"url": "#",
 					"date": "2024-01-10",
-					"summary": "Analisis sobre como los agentes autonomos estan cambiando la operativa del eCommerce B2B."
+					"summary": "Análisis sobre como los agentes autónomos estan cambiando la operativa del eCommerce B2B."
 				}
 			},
 			{
 				"id": "press-4",
-				"slug": "automatizacion-procesos-b2b-entrevista",
+				"slug": "automatización-procesos-b2b-entrevista",
 				"status": "published",
 				"data": {
-					"title": "Automatizacion de procesos B2B: Entrevista con Isaac Bosch",
+					"title": "Automatización de procesos B2B: Entrevista con Isaac Bosch",
 					"source": "Business Innovation",
 					"url": "#",
 					"date": "2023-12-05",
-					"summary": "Conversacion sobre las claves para automatizar con exito los procesos comerciales en el entorno B2B."
+					"summary": "Conversacion sobre las claves para automatizar con éxito los procesos comerciales en el entorno B2B."
 				}
 			}
 		],
 		"posts": [
 			{
 				"id": "post-1",
-				"slug": "guia-completa-ecommerce-b2b-2025",
+				"slug": "guía-completa-ecommerce-b2b-2025",
 				"status": "published",
 				"published_at": "2025-03-10",
 				"data": {
-					"title": "Guia completa de eCommerce B2B en 2025: tendencias, plataformas y estrategias",
+					"title": "Guía completa de eCommerce B2B en 2025: tendencias, plataformas y estrategias",
 					"excerpt": "Todo lo que necesitas saber para lanzar o escalar tu canal de ventas B2B online en 2025. Plataformas, tendencias y estrategias probadas.",
 					"featured_image": {
 						"$media": {
@@ -2599,7 +2599,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El eCommerce B2B ha dejado de ser opcional. En 2025, las empresas que no ofrecen un canal de venta digital a sus clientes profesionales estan perdiendo cuota de mercado frente a competidores que si lo hacen. Pero montar una tienda B2B online no es simplemente copiar el modelo B2C."
+									"text": "El eCommerce B2B ha dejado de ser opciónal. En 2025, las empresas que no ofrecen un canal de venta digital a sus clientes profesionales estan perdiendo cuota de mercado frente a competidores que si lo hacen. Pero montar una tienda B2B online no es simplemente copiar el modelo B2C."
 								}
 							]
 						},
@@ -2619,7 +2619,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El mercado global de eCommerce B2B supera ya los 20 billones de dolares y crece a un ritmo del 17% anual. En Espana, la adopcion ha sido mas lenta pero esta acelerando: cada vez mas fabricantes, distribuidores y mayoristas entienden que necesitan un canal digital que complemente al equipo comercial tradicional para pedidos recurrentes."
+									"text": "El mercado global de eCommerce B2B supera ya los 20 billones de dólares y crece a un ritmo del 17% anual. En España, la adopción ha sido mas lenta pero esta acelerando: cada vez más fabricantes, distribuidores y mayoristas entienden qué necesitan un canal digital que complemente al equipo comercial tradicional para pedidos recurrentes."
 								}
 							]
 						},
@@ -2639,7 +2639,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La personalizacion basada en IA esta transformando la experiencia de compra B2B. Los catalogos se adaptan automaticamente al historial de cada cliente. Los portales self-service permiten a los compradores gestionar sus pedidos sin intermediarios. La integracion nativa con ERPs ya no es un nice-to-have, es un requisito basico."
+									"text": "La personalizacion basada en IA esta transformando la experiencia de compra B2B. Los catálogos se adaptan automáticamente al historial de cada cliente. Los portales self-service permiten a los compradores gestiónar sus pedidos sin intermediarios. La integración nativa con ERPs ya no es un nice-to-have, es un requisito básico."
 								}
 							]
 						},
@@ -2649,7 +2649,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Como elegir la plataforma correcta"
+									"text": "Cómo elegir la plataforma correcta"
 								}
 							]
 						},
@@ -2659,7 +2659,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "No existe una plataforma perfecta para todos. La eleccion depende del volumen de SKUs, la complejidad de tus precios, el nivel de integracion con tu ERP y el presupuesto disponible. Magento sigue siendo fuerte para catalogos grandes. Shopify Plus gana terreno por su rapidez. PrestaShop es solida para PYMEs europeas."
+									"text": "No existe una plataforma perfecta para todos. La eleccion depende del volumen de SKUs, la complejidad de tus precios, el nivel de integración con tu ERP y el presupuesto disponible. Magento sigue siendo fuerte para catálogos grandes. Shopify Plus gana terreno por su rapidez. PrestaShop es solida para PYMEs europeas."
 								}
 							]
 						}
@@ -2676,7 +2676,7 @@
 					],
 					"tag": [
 						"b2b",
-						"guia",
+						"guía",
 						"tendencias"
 					]
 				}
@@ -2688,11 +2688,11 @@
 				"published_at": "2025-02-25",
 				"data": {
 					"title": "Diferencias clave entre eCommerce B2B y B2C: lo que todo directivo debe saber",
-					"excerpt": "El eCommerce B2B y B2C comparten tecnologia pero divergen en casi todo lo demas. Entender las diferencias es critico antes de lanzar tu canal digital.",
+					"excerpt": "El eCommerce B2B y B2C comparten tecnología pero divergen en casí todo lo demás. Entender las diferencias es crítico antes de lanzar tu canal digital.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&h=800&fit=crop",
-							"alt": "Reunion de negocios con graficos",
+							"alt": "Reunión de negocios con graficos",
 							"filename": "b2b-vs-b2c.jpg"
 						}
 					},
@@ -2703,7 +2703,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Un error comun es pensar que el eCommerce B2B es simplemente un eCommerce B2C con facturas. La realidad es que casi todo es diferente: el proceso de decision, los volumenes, los precios y las expectativas del comprador."
+									"text": "Un error común es pensar que el eCommerce B2B es simplemente un eCommerce B2C con facturas. La realidad es que casí todo es diferente: el proceso de decisión, los volumenes, los precios y las expectativas del comprador."
 								}
 							]
 						},
@@ -2723,7 +2723,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "En B2C, una persona decide y compra. En B2B, el proceso implica multiples personas: el usuario que identifica la necesidad, el comprador que gestiona el pedido y el responsable financiero que aprueba. Tu plataforma tiene que soportar estos flujos con roles, aprobaciones y presupuestos."
+									"text": "En B2C, una persona decide y compra. En B2B, el proceso implica múltiples personas: el usuario que identifica la necesidad, el comprador que gestióna el pedido y el responsable financiero que aprueba. Tu plataforma tiene que soportar estos flujos con roles, aprobaciones y presupuestos."
 								}
 							]
 						},
@@ -2766,17 +2766,17 @@
 			},
 			{
 				"id": "post-3",
-				"slug": "mejores-plataformas-ecommerce-b2b-espana",
+				"slug": "mejores-plataformas-ecommerce-b2b-España",
 				"status": "published",
 				"published_at": "2025-02-10",
 				"data": {
-					"title": "Las mejores plataformas de eCommerce B2B para empresas en Espana",
-					"excerpt": "Comparativa de las principales plataformas de eCommerce B2B disponibles en el mercado espanol.",
+					"title": "Las mejores plataformas de eCommerce B2B para empresas en España",
+					"excerpt": "Comparativa de las principales plataformas de eCommerce B2B disponibles en el mercado español.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop",
 							"alt": "Dashboard de ecommerce en pantalla",
-							"filename": "plataformas-b2b-espana.jpg"
+							"filename": "plataformas-b2b-España.jpg"
 						}
 					},
 					"content": [
@@ -2786,7 +2786,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Elegir plataforma es una de las decisiones mas importantes al lanzar un eCommerce B2B. No hay una respuesta universal: depende de tu catalogo, tu ERP, tu equipo tecnico y tu presupuesto."
+									"text": "Elegir plataforma es una de las decisiónes mas importantes al lanzar un eCommerce B2B. No hay una respuesta universal: depende de tu catálogo, tu ERP, tu equipo técnico y tu presupuesto."
 								}
 							]
 						},
@@ -2806,7 +2806,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La opcion mas potente para catalogos grandes. Soporta nativamente cuentas de empresa, listas de precios personalizadas y flujos de aprobacion. La contrapartida es la complejidad y los costes altos. Recomendada para empresas con mas de 10.000 SKUs."
+									"text": "La opción mas potente para catálogos grandes. Soporta nativamente cuentas de empresa, listas de precios personalizadas y flujos de aprobacion. La contrapartida es la complejidad y los costes altos. Recomendada para empresas con mas de 10.000 SKUs."
 								}
 							]
 						},
@@ -2826,7 +2826,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Shopify Plus ha mejorado sus capacidades B2B. PrestaShop sigue siendo popular en Espana con modulos B2B maduros. Para PYMEs con catalogos de menos de 5.000 SKUs, ambas son opciones solidas con excelente relacion calidad-precio."
+									"text": "Shopify Plus ha mejorado sus capacidades B2B. PrestaShop sigue siendo popular en España con modulos B2B maduros. Para PYMEs con catálogos de menos de 5.000 SKUs, ambas son opciónes solidas con excelente relacion calidad-precio."
 								}
 							]
 						}
@@ -2846,7 +2846,7 @@
 						"magento",
 						"prestashop",
 						"shopify",
-						"espana"
+						"España"
 					]
 				}
 			},
@@ -2856,13 +2856,13 @@
 				"status": "published",
 				"published_at": "2025-01-28",
 				"data": {
-					"title": "Como lanzar tu tienda B2B online en 90 dias: paso a paso",
+					"title": "Cómo lanzar tu tienda B2B online en 90 días: paso a paso",
 					"excerpt": "Un plan de accion realista para poner en marcha tu eCommerce B2B en tres meses.",
 					"featured_image": {
 						"$media": {
 							"url": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&h=800&fit=crop",
 							"alt": "Persona trabajando en plan de proyecto",
-							"filename": "lanzar-b2b-90-dias.jpg"
+							"filename": "lanzar-b2b-90-días.jpg"
 						}
 					},
 					"content": [
@@ -2872,7 +2872,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Lanzar un eCommerce B2B no tiene por que ser un proyecto de 18 meses. Con el enfoque correcto, puedes tener un MVP funcional en 90 dias que cubra el 80% de las necesidades de tus clientes."
+									"text": "Lanzar un eCommerce B2B no tiene por qué ser un proyecto de 18 meses. Con el enfoque correcto, puedes tener un MVP funciónal en 90 días que cubra el 80% de las necesidades de tus clientes."
 								}
 							]
 						},
@@ -2882,7 +2882,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Semanas 1-4: Definicion y setup"
+									"text": "Semanas 1-4: Definición y setup"
 								}
 							]
 						},
@@ -2892,7 +2892,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Define tu alcance minimo. Selecciona la plataforma. Configura el entorno, el catalogo base y la integracion minima con tu ERP."
+									"text": "Define tu alcance mínimo. Seleccióna la plataforma. Configura el entorno, el catálogo base y la integración mínima con tu ERP."
 								}
 							]
 						},
@@ -2912,7 +2912,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Implementa los flujos de compra B2B. Conecta la sincronizacion bidireccional con el ERP. Testea con un grupo piloto de clientes reales. Corrige, forma al equipo comercial y lanza progresivamente."
+									"text": "Implementa los flujos de compra B2B. Conecta la sincronizacion bidirecciónal con el ERP. Testea con un grupo piloto de clientes reales. Corrige, forma al equipo comercial y lanza progresivamente."
 								}
 							]
 						}
@@ -2929,7 +2929,7 @@
 					],
 					"tag": [
 						"b2b",
-						"guia",
+						"guía",
 						"pyme"
 					]
 				}
@@ -2992,12 +2992,12 @@
 			},
 			{
 				"id": "post-6",
-				"slug": "agentes-ia-ecommerce-guia-practica",
+				"slug": "agentes-ia-ecommerce-guía-práctica",
 				"status": "published",
 				"published_at": "2024-12-20",
 				"data": {
-					"title": "Agentes de IA para eCommerce: guia practica para directivos",
-					"excerpt": "Que son los agentes de IA, como se aplican al eCommerce B2B y por donde empezar. Sin hype.",
+					"title": "Agentes de IA para eCommerce: guía práctica para directivos",
+					"excerpt": "Qué son los agentes de IA, como se aplican al eCommerce B2B y por donde empezar. Sin hype.",
 					"content": [
 						{
 							"_type": "block",
@@ -3005,7 +3005,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Los agentes de IA son programas autonomos que pueden percibir su entorno, tomar decisiones y ejecutar acciones. A diferencia de un chatbot tradicional, un agente analiza la situacion, planifica y actua."
+									"text": "Los agentes de IA son programas autónomos que pueden percibir su entorno, tomar decisiónes y ejecutar acciones. A diferencia de un chatbot tradicional, un agente analiza la situacion, planifica y actua."
 								}
 							]
 						},
@@ -3015,7 +3015,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Aplicaciones reales en eCommerce B2B"
+									"text": "Aplicaciónes reales en eCommerce B2B"
 								}
 							]
 						},
@@ -3025,7 +3025,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Un agente de atencion al cliente B2B consulta stock en tiempo real, verifica precios personalizados, procesa pedidos y gestiona incidencias. Un agente de ventas cualifica leads y prepara propuestas."
+									"text": "Un agente de atención al cliente B2B consulta stock en tiempo real, verifica precios personalizados, procesa pedidos y gestióna incidencias. Un agente de ventas cualifica leads y prepara propuestas."
 								}
 							]
 						},
@@ -3045,7 +3045,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Identifica el proceso que mas tiempo consume a tu equipo y que tiene reglas claras. Construye un agente para ese caso. Midelo durante un mes. Si funciona, escala."
+									"text": "Identifica el proceso que mas tiempo consume a tu equipo y que tiene reglas claras. Construye un agente para ese caso. Midelo durante un mes. Si funcióna, escala."
 								}
 							]
 						}
@@ -3058,23 +3058,23 @@
 				],
 				"taxonomies": {
 					"category": [
-						"tecnologia"
+						"tecnología"
 					],
 					"tag": [
 						"ia-agentes",
-						"guia",
+						"guía",
 						"b2b"
 					]
 				}
 			},
 			{
 				"id": "post-7",
-				"slug": "automatizar-atencion-cliente-ia-b2b",
+				"slug": "automatizar-atención-cliente-ia-b2b",
 				"status": "published",
 				"published_at": "2024-12-05",
 				"data": {
-					"title": "Como automatizar la atencion al cliente con IA en empresas B2B",
-					"excerpt": "La atencion al cliente B2B tiene particularidades que los chatbots genericos no resuelven.",
+					"title": "Cómo automatizar la atención al cliente con IA en empresas B2B",
+					"excerpt": "La atención al cliente B2B tiene particularidades que los chatbots genericos no resuelven.",
 					"content": [
 						{
 							"_type": "block",
@@ -3082,7 +3082,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La atencion al cliente en B2B es radicalmente diferente a la B2C. Tus clientes preguntan por disponibilidad de 500 unidades, por el estado de un pedido con 47 lineas, por facturas de hace tres meses. Un chatbot generico no puede con esto."
+									"text": "La atención al cliente en B2B es radicalmente diferente a la B2C. Tus clientes preguntan por disponibilidad de 500 unidades, por el estado de un pedido con 47 lineas, por facturas de hace tres meses. Un chatbot generico no puede con esto."
 								}
 							]
 						},
@@ -3092,7 +3092,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Lo que necesita un agente de atencion B2B"
+									"text": "Lo que necesita un agente de atención B2B"
 								}
 							]
 						},
@@ -3102,7 +3102,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Acceso en tiempo real al ERP. Conocimiento del historial del cliente. Capacidad para ejecutar acciones. Integracion con el CRM. Y lo mas importante: saber cuando derivar a un humano."
+									"text": "Acceso en tiempo real al ERP. Conocimiento del historial del cliente. Capacidad para ejecutar acciones. Integración con el CRM. Y lo mas importante: saber cuando derivar a un humano."
 								}
 							]
 						},
@@ -3112,7 +3112,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Resultados tipicos"
+									"text": "Resultados típicos"
 								}
 							]
 						},
@@ -3135,7 +3135,7 @@
 				],
 				"taxonomies": {
 					"category": [
-						"tecnologia"
+						"tecnología"
 					],
 					"tag": [
 						"ia-agentes",
@@ -3150,8 +3150,8 @@
 				"status": "published",
 				"published_at": "2024-11-18",
 				"data": {
-					"title": "IA generativa para catalogos de productos B2B: casos de uso reales",
-					"excerpt": "La IA generativa esta transformando la gestion de catalogos B2B. Casos reales de aplicacion.",
+					"title": "IA generativa para catálogos de productos B2B: casos de uso reales",
+					"excerpt": "La IA generativa esta transformando la gestión de catálogos B2B. Casos reales de aplicación.",
 					"content": [
 						{
 							"_type": "block",
@@ -3159,7 +3159,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Si tu catalogo B2B tiene mas de 1.000 productos, sabes lo que cuesta mantener fichas completas y actualizadas. La IA generativa esta cambiando esto de forma radical."
+									"text": "Si tu catálogo B2B tiene mas de 1.000 productos, sabes lo que cuesta mantener fichas completas y actualizadas. La IA generativa esta cambiando esto de forma radical."
 								}
 							]
 						},
@@ -3169,7 +3169,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Generacion de descripciones"
+									"text": "Generación de descripciónes"
 								}
 							]
 						},
@@ -3179,7 +3179,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "A partir de los atributos tecnicos, un sistema de IA puede generar descripciones comerciales optimizadas para SEO en segundos. Empresas han pasado de tardar 3 meses en catalogar 500 productos a hacerlo en una semana."
+									"text": "A partir de los atributos técnicos, un sistema de IA puede generar descripciónes comerciales optimizadas para SEO en segundos. Empresas han pasado de tardar 3 meses en catalogar 500 productos a hacerlo en una semana."
 								}
 							]
 						},
@@ -3199,7 +3199,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La IA puede enriquecer fichas existentes, sugerir categorias, generar etiquetas y crear traducciones de calidad muy superior a la traduccion automatica tradicional."
+									"text": "La IA puede enriquecer fichas existentes, sugerir categorías, generar etiquetas y crear traducciones de calidad muy superior a la traduccion automática tradicional."
 								}
 							]
 						}
@@ -3212,11 +3212,11 @@
 				],
 				"taxonomies": {
 					"category": [
-						"tecnologia"
+						"tecnología"
 					],
 					"tag": [
 						"ia-agentes",
-						"caso-de-exito",
+						"caso-de-éxito",
 						"b2b"
 					]
 				}
@@ -3227,7 +3227,7 @@
 				"status": "published",
 				"published_at": "2024-11-01",
 				"data": {
-					"title": "Chatbots de IA para ventas B2B: mas alla del soporte basico",
+					"title": "Chatbots de IA para ventas B2B: más allá del soporte básico",
 					"excerpt": "Los chatbots de IA en B2B pueden cualificar leads, preparar ofertas y cerrar ventas recurrentes.",
 					"content": [
 						{
@@ -3236,7 +3236,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La nueva generacion de chatbots de IA esta cambiando el juego en ventas B2B. Pueden mantener conversaciones comerciales completas, entender necesidades complejas y ejecutar transacciones."
+									"text": "La nueva generación de chatbots de IA esta cambiando el juego en ventas B2B. Pueden mantener conversaciones comerciales completas, entender necesidades complejas y ejecutar transacciones."
 								}
 							]
 						},
@@ -3246,7 +3246,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Cualificacion automatica de leads"
+									"text": "Cualificacion automática de leads"
 								}
 							]
 						},
@@ -3289,7 +3289,7 @@
 				],
 				"taxonomies": {
 					"category": [
-						"tecnologia"
+						"tecnología"
 					],
 					"tag": [
 						"chatbots",
@@ -3300,12 +3300,12 @@
 			},
 			{
 				"id": "post-10",
-				"slug": "automatizacion-procesos-comerciales-ia",
+				"slug": "automatización-procesos-comerciales-ia",
 				"status": "published",
 				"published_at": "2024-10-15",
 				"data": {
-					"title": "Automatizacion de procesos comerciales con IA: ROI real y como empezar",
-					"excerpt": "Datos concretos de ROI y una hoja de ruta para empezar con la automatizacion con IA.",
+					"title": "Automatización de procesos comerciales con IA: ROI real y cómo empezar",
+					"excerpt": "Datos concretos de ROI y una hoja de ruta para empezar con la automatización con IA.",
 					"content": [
 						{
 							"_type": "block",
@@ -3313,7 +3313,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Hay mucho ruido alrededor de la IA. Pero que pasa en la practica? Tras implementar sistemas de automatizacion en docenas de empresas B2B, puedo compartir numeros reales."
+									"text": "Hay mucho ruido alrededor de la IA. Pero que pasa en la práctica? Tras implementar sistemas de automatización en docenas de empresas B2B, puedo compartir números reales."
 								}
 							]
 						},
@@ -3323,7 +3323,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "ROI tipico por area"
+									"text": "ROI típico por area"
 								}
 							]
 						},
@@ -3333,7 +3333,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Atencion al cliente: reduccion del 40-60% del tiempo. Gestion de pedidos: reduccion del 70-90% del procesamiento manual. Catalogacion: reduccion del 80% del tiempo. Cualificacion de leads: aumento del 30-50% en conversion. Retorno tipico en 6-12 meses."
+									"text": "Atención al cliente: reducción del 40-60% del tiempo. Gestión de pedidos: reducción del 70-90% del procesamiento manual. Catalogación: reducción del 80% del tiempo. Cualificacion de leads: aumento del 30-50% en conversión. Retorno típico en 6-12 meses."
 								}
 							]
 						},
@@ -3353,7 +3353,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Audita tus procesos. Identifica los tres con mayor volumen y reglas claras. Prioriza por impacto. Implementa un piloto. Mide durante 30 dias. Escala o ajusta."
+									"text": "Audita tus procesos. Identifica los tres con mayor volumen y reglas claras. Prioriza por impacto. Implementa un piloto. Mide durante 30 días. Escala o ajusta."
 								}
 							]
 						}
@@ -3366,23 +3366,23 @@
 				],
 				"taxonomies": {
 					"category": [
-						"tecnologia"
+						"tecnología"
 					],
 					"tag": [
 						"ia-agentes",
 						"roi",
-						"guia"
+						"guía"
 					]
 				}
 			},
 			{
 				"id": "post-11",
-				"slug": "integracion-erp-ecommerce-por-que-importa",
+				"slug": "integración-erp-ecommerce-por-que-importa",
 				"status": "published",
 				"published_at": "2024-09-25",
 				"data": {
-					"title": "Integracion ERP-eCommerce: por que es critica para escalar tu negocio B2B",
-					"excerpt": "Sin integracion entre ERP y eCommerce, tu canal digital sera un cuello de botella.",
+					"title": "Integración ERP-eCommerce: por qué es crítica para escalar tu negocio B2B",
+					"excerpt": "Sin integración entre ERP y eCommerce, tu canal digital será un cuello de botella.",
 					"content": [
 						{
 							"_type": "block",
@@ -3390,7 +3390,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "He visto demasiados proyectos de eCommerce B2B que funcionan bien al principio y colapsan cuando escalan. El patron es siempre el mismo: la tienda funciona, pero alguien tiene que introducir cada pedido manualmente en el ERP."
+									"text": "He visto demásiados proyectos de eCommerce B2B que funciónan bien al principio y colapsan cuando escalan. El patron es siempre el mismo: la tienda funcióna, pero alguien tiene que introducir cada pedido manualmente en el ERP."
 								}
 							]
 						},
@@ -3400,7 +3400,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que debe integrar"
+									"text": "Qué debe integrar"
 								}
 							]
 						},
@@ -3410,7 +3410,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Catalogo, precios personalizados, stock en tiempo real, pedidos bidireccionales, estados de envio, datos de cliente y facturas. No todo desde el dia uno, pero el diseno debe contemplar la evolucion."
+									"text": "Catálogo, precios personalizados, stock en tiempo real, pedidos bidirecciónales, estados de envio, datos de cliente y facturas. No todo desde el día uno, pero el diseño debe contemplar la evolucion."
 								}
 							]
 						},
@@ -3420,7 +3420,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Patrones de integracion"
+									"text": "Patrones de integración"
 								}
 							]
 						},
@@ -3430,7 +3430,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Integracion directa API-to-API (simple, rigida), middleware dedicado (equilibrio) o plataformas de integracion como servicio (maxima flexibilidad, mayor coste)."
+									"text": "Integración directa API-to-API (simple, rigida), middleware dedicado (equilibrio) o plataformas de integración como servicio (máxima flexibilidad, mayor coste)."
 								}
 							]
 						}
@@ -3443,7 +3443,7 @@
 				],
 				"taxonomies": {
 					"category": [
-						"integracion-erp"
+						"integración-erp"
 					],
 					"tag": [
 						"sap",
@@ -3454,12 +3454,12 @@
 			},
 			{
 				"id": "post-12",
-				"slug": "sap-ecommerce-integracion-guia",
+				"slug": "sap-ecommerce-integración-guía",
 				"status": "published",
 				"published_at": "2024-09-10",
 				"data": {
-					"title": "Integracion SAP con eCommerce: guia tecnica y estrategica",
-					"excerpt": "SAP es el ERP mas usado en grandes empresas. Guia completa para integrarlo con eCommerce.",
+					"title": "Integración SAP con eCommerce: guía técnica y estratégica",
+					"excerpt": "SAP es el ERP mas usado en grandes empresas. Guía completa para integrarlo con eCommerce.",
 					"content": [
 						{
 							"_type": "block",
@@ -3467,7 +3467,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Integrar SAP con eCommerce es probablemente el proyecto tecnico mas complejo en el ecosistema B2B. Pero bien ejecutado, transforma completamente la operativa de una empresa."
+									"text": "Integrar SAP con eCommerce es probablemente el proyecto técnico mas complejo en el ecosistema B2B. Pero bien ejecutado, transforma completamente la operativa de una empresa."
 								}
 							]
 						},
@@ -3487,7 +3487,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "SAP Business One tiene una API REST moderna y conectores disponibles. SAP S/4HANA es mas complejo: APIs OData, IDocs, BAPIs y una arquitectura que requiere conocimiento profundo del ecosistema SAP."
+									"text": "SAP Business One tiene una API REST moderna y conectores disponibles. SAP S/4HANA es mas complejo: APIs OData, IDocs, BAPIs y una arquitectura qué requiere conocimiento profundo del ecosistema SAP."
 								}
 							]
 						},
@@ -3497,7 +3497,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Claves para el exito"
+									"text": "Claves para el éxito"
 								}
 							]
 						},
@@ -3507,7 +3507,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "No subestimes el mapeo de datos. Planifica la gestion de errores desde el principio. Implementa logs y alertas robustos. Involucra al equipo de SAP desde el primer dia."
+									"text": "No subestimes el mapeo de datos. Planifica la gestión de errores desde el principio. Implementa logs y alertas robustos. Involucra al equipo de SAP desde el primer día."
 								}
 							]
 						}
@@ -3520,11 +3520,11 @@
 				],
 				"taxonomies": {
 					"category": [
-						"integracion-erp"
+						"integración-erp"
 					],
 					"tag": [
 						"sap",
-						"guia",
+						"guía",
 						"b2b"
 					]
 				}
@@ -3535,7 +3535,7 @@
 				"status": "published",
 				"published_at": "2024-08-22",
 				"data": {
-					"title": "Odoo y eCommerce B2B: ventajas de una solucion integrada",
+					"title": "Odoo y eCommerce B2B: ventajas de una solución integrada",
 					"excerpt": "Odoo ofrece ERP y eCommerce en una misma plataforma. Cuando tiene sentido usarlo.",
 					"content": [
 						{
@@ -3544,7 +3544,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Odoo tiene una propuesta unica: ERP y eCommerce en una misma plataforma con integracion nativa. Lo que creas en el ERP aparece automaticamente en la tienda."
+									"text": "Odoo tiene una propuesta unica: ERP y eCommerce en una misma plataforma con integración nativa. Lo que creas en el ERP aparece automáticamente en la tienda."
 								}
 							]
 						},
@@ -3554,7 +3554,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Cuando Odoo es la mejor opcion"
+									"text": "Cuando Odoo es la mejor opción"
 								}
 							]
 						},
@@ -3564,7 +3564,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Si aun no tienes ERP, si tu catalogo es de tamano medio y si tu equipo es pequeno. Odoo elimina la complejidad de la integracion con una curva de aprendizaje razonable."
+									"text": "Si aun no tienes ERP, si tu catálogo es de tamano medio y si tu equipo es pequeño. Odoo elimina la complejidad de la integración con una curva de aprendizaje razonable."
 								}
 							]
 						},
@@ -3584,7 +3584,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El eCommerce de Odoo no tiene la flexibilidad de Magento o Shopify en personalizacion. Las funcionalidades B2B nativas son basicas. Si ya tienes un ERP consolidado, migrar solo por el eCommerce rara vez tiene sentido."
+									"text": "El eCommerce de Odoo no tiene la flexibilidad de Magento o Shopify en personalizacion. Las funciónalidades B2B nativas son básicas. Si ya tienes un ERP consolidado, migrar solo por el eCommerce rara vez tiene sentido."
 								}
 							]
 						}
@@ -3597,7 +3597,7 @@
 				],
 				"taxonomies": {
 					"category": [
-						"integracion-erp"
+						"integración-erp"
 					],
 					"tag": [
 						"odoo",
@@ -3608,12 +3608,12 @@
 			},
 			{
 				"id": "post-14",
-				"slug": "errores-comunes-integracion-erp-ecommerce",
+				"slug": "errores-comunes-integración-erp-ecommerce",
 				"status": "published",
 				"published_at": "2024-08-05",
 				"data": {
-					"title": "7 errores comunes en la integracion ERP-eCommerce y como evitarlos",
-					"excerpt": "Los errores que veo repetirse en proyectos de integracion y como evitarlos.",
+					"title": "7 errores comunes en la integración ERP-eCommerce y cómo evitarlos",
+					"excerpt": "Los errores que veo repetirse en proyectos de integración y cómo evitarlos.",
 					"content": [
 						{
 							"_type": "block",
@@ -3641,7 +3641,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "No mapear datos antes de empezar. Subestimar el volumen de datos. No planificar la gestion de errores. Estas tres omisiones causan la mayoria de fracasos en integraciones."
+									"text": "No mapear datos antes de empezar. Subestimar el volumen de datos. No planificar la gestión de errores. Estas tres omisiónes causan la mayoria de fracasos en integraciónes."
 								}
 							]
 						},
@@ -3661,7 +3661,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Sincronizacion en tiempo real cuando batch es suficiente. No implementar idempotencia. No monitorizar la integracion. Lanzar sin fase piloto. Cada uno de estos errores puede hundir un proyecto."
+									"text": "Sincronizacion en tiempo real cuando batch es suficiente. No implementar idempotencia. No monitorizar la integración. Lanzar sin fase piloto. Cada uno de estos errores puede hundir un proyecto."
 								}
 							]
 						}
@@ -3674,22 +3674,22 @@
 				],
 				"taxonomies": {
 					"category": [
-						"integracion-erp"
+						"integración-erp"
 					],
 					"tag": [
-						"guia",
+						"guía",
 						"b2b"
 					]
 				}
 			},
 			{
 				"id": "post-15",
-				"slug": "transformacion-digital-pymes-espana-2025",
+				"slug": "transformación-digital-pymes-España-2025",
 				"status": "published",
 				"published_at": "2024-07-18",
 				"data": {
-					"title": "Transformacion digital de PYMEs en Espana: estado actual y oportunidades en 2025",
-					"excerpt": "El estado de la transformacion digital en PYMEs espanolas y las oportunidades para 2025.",
+					"title": "Transformación digital de PYMEs en España: estado actual y oportunidades en 2025",
+					"excerpt": "El estado de la transformación digital en PYMEs españolas y las oportunidades para 2025.",
 					"content": [
 						{
 							"_type": "block",
@@ -3697,7 +3697,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Espana tiene mas del 99% de empresas con menos de 250 empleados. La transformacion digital de estas PYMEs es critica para la competitividad del pais, pero el avance es desigual."
+									"text": "España tiene mas del 99% de empresas con menos de 250 empleados. La transformación digital de estas PYMEs es crítica para la competitividad del país, pero el avance es desigual."
 								}
 							]
 						},
@@ -3717,7 +3717,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Los programas como Kit Digital han acelerado la adopcion basica. Pero hay una brecha entre tener presencia digital y estar realmente digitalizado. Muchas PYMEs tienen tienda online que apenas genera ventas."
+									"text": "Los programas como Kit Digital han acelerado la adopción básica. Pero hay una brecha entre tener presencia digital y estar realmente digitalizado. Muchas PYMEs tienen tienda online que apenas genera ventas."
 								}
 							]
 						},
@@ -3737,7 +3737,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La IA esta democratizando capacidades que antes solo tenian las grandes empresas. Las PYMEs que aprovechen estas oportunidades ahora tendran una ventaja competitiva dificil de igualar."
+									"text": "La IA esta democratizando capacidades que antes solo tenían las grandes empresas. Las PYMEs que aprovechen estas oportunidades ahora tendran una ventaja competitiva difícil de igualar."
 								}
 							]
 						}
@@ -3754,19 +3754,19 @@
 					],
 					"tag": [
 						"pyme",
-						"espana",
+						"España",
 						"tendencias"
 					]
 				}
 			},
 			{
 				"id": "post-16",
-				"slug": "digitalizacion-empresa-industrial-barcelona",
+				"slug": "digitalización-empresa-industrial-barcelona",
 				"status": "published",
 				"published_at": "2024-07-02",
 				"data": {
-					"title": "Digitalizacion de empresas industriales en Barcelona: casos y lecciones",
-					"excerpt": "Experiencias reales de empresas industriales en Barcelona que han dado el salto digital.",
+					"title": "Digitalización de empresas industriales en Barcelona: casos y lecciones",
+					"excerpt": "Experiencias reales de empresas industriales en Barcelona qué han dado el salto digital.",
 					"content": [
 						{
 							"_type": "block",
@@ -3774,7 +3774,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Barcelona y su area metropolitana concentran fabricantes de automocion, empresas quimicas, textiles y alimentacion. Muchas llevan decadas con procesos analogicos que limitan su crecimiento."
+									"text": "Barcelona y su área metropolitana concentran fabricantes de automocion, empresas quimicas, textiles y alimentacion. Muchas llevan decadas con procesos analógicos que limitan su crecimiento."
 								}
 							]
 						},
@@ -3794,7 +3794,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La resistencia inicial del equipo comercial se transforma en entusiasmo cuando el canal digital les libera de tareas administrativas. La integracion con el ERP es el mayor reto tecnico. El ROI mas rapido viene de automatizar pedidos recurrentes."
+									"text": "La resistencia inicial del equipo comercial se transforma en entusiasmo cuando el canal digital les libera de táreas administrativas. La integración con el ERP es el mayor reto técnico. El ROI mas rápido viene de automatizar pedidos recurrentes."
 								}
 							]
 						},
@@ -3814,7 +3814,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Barcelona tiene talento tecnico, comunidad emprendedora activa y programas de apoyo institucional. Para empresas industriales, la proximidad a este ecosistema es una ventaja competitiva."
+									"text": "Barcelona tiene talento técnico, comunidad emprendedora activa y programas de apoyo institucional. Para empresas industriales, la proximidad a este ecosistema es una ventaja competitiva."
 								}
 							]
 						}
@@ -3831,19 +3831,19 @@
 					],
 					"tag": [
 						"barcelona",
-						"caso-de-exito",
+						"caso-de-éxito",
 						"pyme"
 					]
 				}
 			},
 			{
 				"id": "post-17",
-				"slug": "kpis-transformacion-digital-b2b",
+				"slug": "kpis-transformación-digital-b2b",
 				"status": "published",
 				"published_at": "2024-06-15",
 				"data": {
-					"title": "KPIs de transformacion digital en B2B: que medir y por que",
-					"excerpt": "Los KPIs que realmente importan para medir el progreso de la transformacion digital en B2B.",
+					"title": "KPIs de transformación digital en B2B: qué medir y por qué",
+					"excerpt": "Los KPIs que realmente importan para medir el progreso de la transformación digital en B2B.",
 					"content": [
 						{
 							"_type": "block",
@@ -3851,7 +3851,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Sin KPIs claros definidos antes de empezar, es imposible saber si la transformacion digital esta generando valor o simplemente consumiendo recursos."
+									"text": "Sin KPIs claros definidos antes de empezar, es imposible saber si la transformación digital esta generando valor o simplemente consumiendo recursos."
 								}
 							]
 						},
@@ -3871,7 +3871,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Porcentaje de pedidos online vs total. Ticket medio online vs offline. Tasa de recompra. Tiempo desde pedido hasta entrega. Estos cuatro indicadores te dan una foto clara de la adopcion."
+									"text": "Porcentaje de pedidos online vs total. Ticket medio online vs offline. Tasa de recompra. Tiempo desde pedido hasta entrega. Estos cuatro indicadores te dan una foto clara de la adopción."
 								}
 							]
 						},
@@ -3891,7 +3891,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Tiempo de procesamiento de pedidos. Tasa de errores. Coste por pedido procesado. Tiempo dedicado a tareas manuales por el equipo comercial."
+									"text": "Tiempo de procesamiento de pedidos. Tasa de errores. Coste por pedido procesado. Tiempo dedicado a táreas manuales por el equipo comercial."
 								}
 							]
 						}
@@ -3909,7 +3909,7 @@
 					"tag": [
 						"roi",
 						"b2b",
-						"guia"
+						"guía"
 					]
 				}
 			},
@@ -3928,7 +3928,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Despues de anos asesorando a empresas sobre eCommerce B2B, hay preguntas que se repiten en casi todas las reuniones iniciales."
+									"text": "Después de anos asesorando a empresas sobre eCommerce B2B, hay preguntas que se repiten en casí todas las reuniónes iniciales."
 								}
 							]
 						},
@@ -3938,24 +3938,24 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"question": "Necesito una plataforma diferente para B2B y B2C?",
+									"questión": "Necesito una plataforma diferente para B2B y B2C?",
 									"answer": "Depende del volumen de cada canal. Si el B2B es tu negocio principal, te recomiendo una plataforma especializada o una instancia separada."
 								},
 								{
-									"question": "Cuanto tiempo tarda en estar operativo un eCommerce B2B?",
-									"answer": "Un MVP funcional se puede tener en 2-3 meses. Un proyecto completo con integracion ERP, entre 4 y 8 meses."
+									"questión": "Cuanto tiempo tarda en estar operativo un eCommerce B2B?",
+									"answer": "Un MVP funciónal se puede tener en 2-3 meses. Un proyecto completo con integración ERP, entre 4 y 8 meses."
 								},
 								{
-									"question": "Mis clientes no quieren comprar online, para que lo necesito?",
-									"answer": "En mi experiencia, no es que no quieran: es que no tienen una buena opcion. Cuando ofreces un portal con sus precios y pedidos en dos clics, la adopcion es sorprendentemente rapida."
+									"questión": "Mis clientes no quieren comprar online, para qué lo necesito?",
+									"answer": "En mi experiencia, no es que no quieran: es que no tienen una buena opción. Cuando ofreces un portal con sus precios y pedidos en dos clics, la adopción es sorprendentemente rápida."
 								},
 								{
-									"question": "Puedo empezar sin integrar el ERP?",
-									"answer": "Puedes, pero no mas de un mes de prueba. Sin integracion, cada pedido online genera trabajo manual que puede matar el proyecto."
+									"questión": "Puedo empezar sin integrar el ERP?",
+									"answer": "Puedes, pero no mas de un mes de prueba. Sin integración, cada pedido online genera trabajo manual que puede matar el proyecto."
 								},
 								{
-									"question": "Que ROI puedo esperar?",
-									"answer": "Reduccion del 40-70% en coste de procesamiento, aumento del 15-30% en ticket medio y apertura de ventas 24/7 que tipicamente representa un 20-30% del volumen total en el primer ano."
+									"questión": "Qué ROI puedo esperar?",
+									"answer": "Reducción del 40-70% en coste de procesamiento, aumento del 15-30% en ticket medio y apertura de ventas 24/7 que típicamente representa un 20-30% del volumen total en el primer ano."
 								}
 							]
 						}
@@ -3973,7 +3973,7 @@
 					"tag": [
 						"faq",
 						"b2b",
-						"guia"
+						"guía"
 					]
 				}
 			},
@@ -3992,7 +3992,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La IA esta en todas partes. Pero entre el hype y la realidad hay un abismo. Aqui van mis respuestas honestas a las preguntas mas frecuentes."
+									"text": "La IA está en todas partes. Pero entre el hype y la realidad hay un abismo. Aquí van mis respuestas honestas a las preguntas mas frecuentes."
 								}
 							]
 						},
@@ -4002,24 +4002,24 @@
 							"headline": "Preguntas frecuentes sobre IA",
 							"items": [
 								{
-									"question": "Mi empresa es pequena, tiene sentido invertir en IA?",
-									"answer": "Si, pero con expectativas realistas. Herramientas como ChatGPT o agentes preconfigurados pueden automatizar tareas concretas con inversion minima."
+									"questión": "Mi empresa es pequeña, tiene sentido invertir en IA?",
+									"answer": "Si, pero con expectativas realistas. Herramientas como ChatGPT o agentes preconfigurados pueden automatizar táreas concretas con inversión mínima."
 								},
 								{
-									"question": "Puede la IA reemplazar a mi equipo comercial?",
-									"answer": "No, y no deberia ser el objetivo. La IA automatiza lo repetitivo. Tu equipo aporta relacion, confianza y criterio. La combinacion es mas potente."
+									"questión": "Puede la IA reemplazar a mi equipo comercial?",
+									"answer": "No, y no debería ser el objetivo. La IA automatiza lo repetitivo. Tu equipo aporta relacion, confianza y criterio. La combinacion es mas potente."
 								},
 								{
-									"question": "Necesito datos perfectos para empezar con IA?",
-									"answer": "No perfectos, pero si minimamente estructurados y accesibles. Si tu catalogo esta en un Excel desactualizado, ese es el primer paso."
+									"questión": "Necesito datos perfectos para empezar con IA?",
+									"answer": "No perfectos, pero si mínimamente estructurados y accesibles. Si tu catálogo está en un Excel desactualizado, ese es el primer paso."
 								},
 								{
-									"question": "Cuanto cuesta implementar IA en una empresa B2B?",
-									"answer": "Un piloto: 5.000-20.000 euros. Un proyecto integral: 30.000-100.000 euros. ROI tipico: 6-12 meses."
+									"questión": "¿Cuánto cuesta implementar IA en una empresa B2B?",
+									"answer": "Un piloto: 5.000-20.000 euros. Un proyecto integral: 30.000-100.000 euros. ROI típico: 6-12 meses."
 								},
 								{
-									"question": "Que pasa con la privacidad y los datos de mis clientes?",
-									"answer": "Asegurate de cumplir con el RGPD y que los datos no se usen para entrenar modelos de terceros sin consentimiento. Existen opciones de IA en tu propia infraestructura."
+									"questión": "Qué pasa con la privacidad y los datos de mis clientes?",
+									"answer": "Asegurate de cumplir con el RGPD y que los datos no se usen para entrenar modelos de terceros sin consentimiento. Existen opciónes de IA en tu propia infraestructura."
 								}
 							]
 						}
@@ -4037,7 +4037,7 @@
 					"tag": [
 						"faq",
 						"ia-agentes",
-						"guia"
+						"guía"
 					]
 				}
 			},
@@ -4047,7 +4047,7 @@
 				"status": "published",
 				"published_at": "2024-04-20",
 				"data": {
-					"title": "Cuanto cuesta montar un eCommerce B2B? Guia de presupuestos 2025",
+					"title": "¿Cuánto cuesta montar un eCommerce B2B? Guía de presupuestos 2025",
 					"excerpt": "Desglose realista de costes para montar un eCommerce B2B segun el tamano de tu empresa.",
 					"content": [
 						{
@@ -4056,7 +4056,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La pregunta del millon. Cuanto cuesta montar un eCommerce B2B? La respuesta honesta es: depende. Pero puedo darte rangos realistas basados en proyectos reales."
+									"text": "La pregunta del millon. ¿Cuánto cuesta montar un eCommerce B2B? La respuesta honesta es: depende. Pero puedo darte rangos realistas basados en proyectos reales."
 								}
 							]
 						},
@@ -4066,7 +4066,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Rango basico: 15.000 - 40.000 euros"
+									"text": "Rango básico: 15.000 - 40.000 euros"
 								}
 							]
 						},
@@ -4076,7 +4076,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Para PYMEs con catalogo pequeno, plataforma tipo PrestaShop o Shopify, integracion basica con ERP y diseno sobre plantilla. Buena opcion para validar el canal digital."
+									"text": "Para PYMEs con catálogo pequeño, plataforma tipo PrestaShop o Shopify, integración básica con ERP y diseño sobre plantilla. Buena opción para validar el canal digital."
 								}
 							]
 						},
@@ -4096,7 +4096,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Para empresas medianas con funcionalidades B2B avanzadas, integracion completa con ERP y diseno a medida. Aqui entran la mayoria de proyectos serios."
+									"text": "Para empresas medianas con funciónalidades B2B avanzadas, integración completa con ERP y diseño a medida. Aquí entran la mayoria de proyectos serios."
 								}
 							]
 						},
@@ -4116,7 +4116,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Para grandes empresas con catalogos masivos, multiples almacenes e idiomas, integracion profunda con SAP y IA integrada. Presupuesta tambien un 15-25% anual para mantenimiento."
+									"text": "Para grandes empresas con catálogos masivos, múltiples almacénes e idiomas, integración profunda con SAP y IA integrada. Presupuesta también un 15-25% anual para mantenimiento."
 								}
 							]
 						}
@@ -4135,7 +4135,7 @@
 						"faq",
 						"b2b",
 						"roi",
-						"guia"
+						"guía"
 					]
 				}
 			},
@@ -4145,7 +4145,7 @@
 				"status": "published",
 				"published_at": "2026-04-08",
 				"data": {
-					"title": "Consultor para empresas industriales: cuando y por que te conviene contratar uno",
+					"title": "Consultor para empresas industriales: cuándo y por qué te conviene contratar uno",
 					"excerpt": "Cuando una empresa industrial necesita un consultor externo de eCommerce B2B, que aporta frente a una agencia o un equipo interno, y como evaluar el ROI real.",
 					"content": [
 						{
@@ -4154,7 +4154,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La mayoria de fabricantes y distribuidores que llegan a mi tienen el mismo problema: saben que necesitan vender online pero no saben por donde empezar, no tienen un equipo digital interno, y las agencias que han contactado les ofrecen 'paquetes' que no encajan con su realidad operativa. Aqui es donde entra la figura del consultor independiente."
+									"text": "La mayoria de fabricantes y distribuidores que llegan a mi tienen el mismo problema: saben qué necesitan vender online pero no saben por donde empezar, no tienen un equipo digital interno, y las agencias que han contactado les ofrecen 'paquetes' que no encajan con su realidad operativa. Aquí es donde entra la figura del consultor independiente."
 								}
 							]
 						},
@@ -4164,7 +4164,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que hace exactamente un consultor de eCommerce B2B"
+									"text": "Qué hace exactamente un consultor de eCommerce B2B"
 								}
 							]
 						},
@@ -4174,7 +4174,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Un consultor no es un programador, ni un diseñador, ni un community manager. Es alguien que entiende tu negocio (margenes, ciclos de venta, ERP, comerciales) y traduce eso a una arquitectura digital que funciona. En la practica eso significa: auditar lo que tienes, definir la estrategia, elegir las herramientas (plataforma eCommerce, integracion ERP, PIM, CRM), y supervisar la implementacion sin quedarte atado a un proveedor."
+									"text": "Un consultor no es un programador, ni un diseñador, ni un community manager. Es alguien qué entiende tu negocio (margenes, ciclos de venta, ERP, comerciales) y traduce eso a una arquitectura digital que funcióna. En la práctica eso significa: auditar lo que tienes, definir la estrategia, elegir las herramientas (plataforma eCommerce, integración ERP, PIM, CRM), y supervisar la implementacion sin quedarte atado a un proveedor."
 								}
 							]
 						},
@@ -4194,7 +4194,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La diferencia clave: una agencia te vende horas de produccion. Un consultor te vende criterio. Tienes que contratar consultor cuando todavia no sabes que necesitas, cuando vas a invertir bastante (mas de 30k) y quieres que alguien independiente valide cada decision, o cuando la complejidad esta en la integracion (ERP, logistica, multitarifa por cliente) y no en el diseño."
+									"text": "La diferencia clave: una agencia te vende horas de producción. Un consultor te vende criterio. Tienes que contratar consultor cuando todavía no sabes que necesitas, cuando vas a invertir bastante (mas de 30k) y quieres que alguien independiente valide cada decisión, o cuando la complejidad está en la integración (ERP, logistica, multitarifa por cliente) y no en el diseño."
 								}
 							]
 						},
@@ -4204,7 +4204,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Una agencia es la opcion correcta cuando ya tienes el plan claro, el alcance esta definido, y solo necesitas brazos que ejecuten."
+									"text": "Una agencia es la opción correcta cuando ya tienes el plan claro, el alcance esta definido, y solo necesitas brazos que ejecuten."
 								}
 							]
 						},
@@ -4224,7 +4224,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Un equipo interno full-time de eCommerce solo se justifica cuando vendes mas de 1-2 millones online al año o tienes operativa diaria intensa (catalogo cambiante, miles de pedidos, atencion al cliente B2B). Por debajo de eso, el coste fijo no compensa y conviene tirar de consultor + agencia + freelancers."
+									"text": "Un equipo interno full-time de eCommerce solo se justifica cuando vendes mas de 1-2 millones online al año o tienes operativa diaria intensa (catálogo cambiante, miles de pedidos, atención al cliente B2B). Por debajo de eso, el coste fijo no compensa y conviene tirar de consultor + agencia + freelancers."
 								}
 							]
 						},
@@ -4244,7 +4244,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El error mas comun es medir un consultor por horas trabajadas. La medida correcta es: cuantas decisiones malas te ha evitado tomar. Una sola decision tecnica equivocada en una migracion ERP o en la eleccion de plataforma puede costar 50.000-200.000 euros y un año de retraso. Si el consultor te evita una de esas, ya ha pagado su contrato 10 veces."
+									"text": "El error mas común es medir un consultor por horas trabajadas. La medida correcta es: cuantas decisiónes malas te ha evitado tomar. Una sola decisión técnica equivocada en una migración ERP o en la eleccion de plataforma puede costar 50.000-200.000 euros y un año de retraso. Si el consultor te evita una de esas, ya ha pagado su contrato 10 veces."
 								}
 							]
 						},
@@ -4254,7 +4254,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "En mi experiencia, una buena consultoria estrategica de 3-6 meses cuesta entre 8.000 y 25.000 euros segun el alcance, y el ROI llega antes de los 12 meses cuando hay decisiones tecnicas grandes en juego."
+									"text": "En mi experiencia, una buena consultoria estratégica de 3-6 meses cuestá entre 8.000 y 25.000 euros segun el alcance, y el ROI llega antes de los 12 meses cuando hay decisiónes técnicas grandes en juego."
 								}
 							]
 						},
@@ -4264,7 +4264,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que NO esperes de un consultor"
+									"text": "Qué NO esperes de un consultor"
 								}
 							]
 						},
@@ -4274,7 +4274,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "No esperes que escriba codigo, no esperes que te haga los disenos, no esperes que cierre proveedores en tu nombre, y no esperes que se quede 'para siempre'. El trabajo bien hecho de un consultor termina cuando tu equipo (interno o externo) puede operar sin el. Si te encuentras dependiendo del consultor para cada decision pasados los 6 meses, algo no esta funcionando."
+									"text": "No esperes que escriba codigo, no esperes que te haga los diseños, no esperes que cierre proveedores en tu nombre, y no esperes que se quede 'para siempre'. El trabajo bien hecho de un consultor termina cuando tu equipo (interno o externo) puede operar sin el. Si te encuentras dependiendo del consultor para cada decisión pasados los 6 meses, algo no esta funciónando."
 								}
 							]
 						},
@@ -4284,7 +4284,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Como elegir bien"
+									"text": "Cómo elegir bien"
 								}
 							]
 						},
@@ -4304,7 +4304,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Si quieres ver casos concretos de proyectos en empresas industriales y B2B, puedes revisar la seccion de proyectos. Y si crees que tu situacion encaja, hablamos sin compromiso desde la pagina de contacto."
+									"text": "Si quieres ver casos concretos de proyectos en empresas industriales y B2B, puedes revisar la seccion de proyectos. Y si crees que tu situacion encaja, hablamos sin compromiso desde la página de contacto."
 								}
 							]
 						}
@@ -4318,7 +4318,7 @@
 				"published_at": "2026-04-08",
 				"data": {
 					"title": "15+ años como consultor eCommerce B2B: lo que he aprendido sobre digitalizar empresas industriales",
-					"excerpt": "Una mirada honesta a 15 años trabajando con fabricantes, distribuidores y mayoristas. Las cosas que funcionan, las que no, y los errores que se repiten una y otra vez.",
+					"excerpt": "Una mirada honesta a 15 años trabajando con fabricantes, distribuidores y mayoristas. Las cosas que funciónan, las que no, y los errores que se repiten una y otra vez.",
 					"content": [
 						{
 							"_type": "block",
@@ -4326,7 +4326,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Llevo desde 2009 ayudando a empresas a vender online. Empece montando tiendas para PYMES en una etapa en la que 'tener pagina web' aun era un debate, y he acabado dirigiendo proyectos de transformacion digital para fabricantes industriales con ERPs complejos y catalogos de decenas de miles de referencias. Esto es lo que he visto."
+									"text": "Llevo desde 2009 ayudando a empresas a vender online. Empece montando tiendas para PYMES en una etapa en la qué 'tener página web' aun era un debate, y he acabado dirigiendo proyectos de transformación digital para fabricantes industriales con ERPs complejos y catálogos de decenas de miles de referencias. Esto es lo que he visto."
 								}
 							]
 						},
@@ -4336,7 +4336,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El sector industrial vende como en 1998 (todavia)"
+									"text": "El sector industrial vende como en 1998 (todavía)"
 								}
 							]
 						},
@@ -4346,7 +4346,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La mayoria de fabricantes con los que trabajo siguen teniendo procesos comerciales basados en email, telefono, PDF y Excel. No es porque no quieran cambiar, es porque cambiar implica tocar el ERP, retreinar comerciales y romper inercias de 30 años. La parte tecnica es la mas facil. La parte humana es la que para los proyectos."
+									"text": "La mayoria de fabricantes con los que trabajo siguen teniendo procesos comerciales basados en email, teléfono, PDF y Excel. No es porque no quieran cambiar, es porque cambiar implica tocar el ERP, retreinar comerciales y romper inercias de 30 años. La parte técnica es la mas fácil. La parte humana es la qué para los proyectos."
 								}
 							]
 						},
@@ -4366,7 +4366,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Casi todas las empresas que llegan ya han 'mirado plataformas'. Han hecho demos con Shopify, PrestaShop, Magento, BigCommerce, Sana Commerce... y vienen confundidas. La eleccion de plataforma deberia ser la ULTIMA decision, no la primera. Antes hay que definir: a quien vendes (cliente final, distribuidor, ambos), que datos tiene tu ERP, que integraciones necesitas, y cual es el presupuesto realista a 3 años. Sin eso, cualquier plataforma te quedara grande o pequeña."
+									"text": "Casí todas las empresas que llegan ya han 'mirado plataformas'. Han hecho demos con Shopify, PrestaShop, Magento, BigCommerce, Sana Commerce... y vienen confundidas. La eleccion de plataforma debería ser la ULTIMA decisión, no la primera. Antes hay que definir: a quien vendes (cliente final, distribuidor, ambos), que datos tiene tu ERP, que integraciónes necesitas, y cual es el presupuesto realista a 3 años. Sin eso, cualquier plataforma te quedara grande o pequeña."
 								}
 							]
 						},
@@ -4376,7 +4376,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Lo que mejor funciona en B2B industrial"
+									"text": "Lo que mejor funcióna en B2B industrial"
 								}
 							]
 						},
@@ -4386,7 +4386,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Tres cosas que casi siempre funcionan: precio personalizado por cliente (B2B no es B2C, los descuentos por contrato son la norma), pedidos rapidos por referencia/SKU (los clientes profesionales no quieren navegar el catalogo, quieren teclear codigos), y disponibilidad real conectada al ERP (los pedidos sin stock son la primera causa de baja de clientes B2B online)."
+									"text": "Tres cosas que casí siempre funciónan: precio personalizado por cliente (B2B no es B2C, los descuentos por contrato son la norma), pedidos rápidos por referencia/SKU (los clientes profesionales no quieren navegar el catálogo, quieren teclear codigos), y disponibilidad real conectada al ERP (los pedidos sin stock son la primera causa de baja de clientes B2B online)."
 								}
 							]
 						},
@@ -4396,7 +4396,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Lo que vende muy bien y casi nunca funciona"
+									"text": "Lo que vende muy bien y casí nunca funcióna"
 								}
 							]
 						},
@@ -4406,7 +4406,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El 'portal de cliente' con miles de funcionalidades. Las plataformas vendoras lo enseñan en demos preciosas y todos los directivos lo quieren. En la practica, la mayoria de funcionalidades nunca se usan, complican el proyecto y retrasan el go-live. Mejor MVP funcional en 3 meses que portal perfecto en 18."
+									"text": "El 'portal de cliente' con miles de funciónalidades. Las plataformas vendoras lo enseñan en demos preciosas y todos los directivos lo quieren. En la práctica, la mayoria de funciónalidades nunca se usan, complican el proyecto y retrasan el go-live. Mejor MVP funciónal en 3 meses que portal perfecto en 18."
 								}
 							]
 						},
@@ -4416,7 +4416,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El 80/20 de las integraciones ERP"
+									"text": "El 80/20 de las integraciónes ERP"
 								}
 							]
 						},
@@ -4426,7 +4426,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El 80% del valor de un eCommerce B2B esta en cuatro flujos: catalogo (productos + precios), stock, pedidos y clientes. Si esos cuatro funcionan en tiempo real con tu ERP (SAP B1, Business Central, Odoo, Sage o el que sea), tienes el 80% del proyecto resuelto. El 20% restante (devoluciones, facturas en PDF, contabilidad analitica) suele ser donde las consultoras meten meses de trabajo innecesario."
+									"text": "El 80% del valor de un eCommerce B2B está en cuatro flujos: catálogo (productos + precios), stock, pedidos y clientes. Si esos cuatro funciónan en tiempo real con tu ERP (SAP B1, Business Central, Odoo, Sage o el que sea), tienes el 80% del proyecto resuelto. El 20% restante (devoluciones, facturas en PDF, contabilidad analítica) suele ser donde las consultoras meten meses de trabajo innecesario."
 								}
 							]
 						},
@@ -4446,7 +4446,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Uno: subestimar la limpieza de datos del ERP. La gran mayoria de fabricantes tienen catalogos sucios, descripciones incompletas, fotos malas o inexistentes. Si lanzas online con eso, fracasas. Hay que meter 2-3 meses de limpieza de datos antes de empezar."
+									"text": "Uno: subestimar la limpieza de datos del ERP. La gran mayoria de fabricantes tienen catálogos sucios, descripciónes incompletas, fotos malas o inexistentes. Si lanzas online con eso, fracasas. Hay que meter 2-3 meses de limpieza de datos antes de empezar."
 								}
 							]
 						},
@@ -4456,7 +4456,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Dos: no involucrar a los comerciales desde el dia 1. Si los comerciales perciben el eCommerce como una amenaza a su comision, sabotean el proyecto. La solucion es estructurar el modelo para que el comercial cobre tambien por las ventas online de sus clientes (y se convierte en aliado)."
+									"text": "Dos: no involucrar a los comerciales desde el día 1. Si los comerciales perciben el eCommerce como una amenaza a su comisión, sabotean el proyecto. La solución es estructurar el modelo para qué el comercial cobre también por las ventas online de sus clientes (y se convierte en aliado)."
 								}
 							]
 						},
@@ -4466,7 +4466,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Tres: lanzar sin plan de migracion de clientes. Tener la web no sirve de nada si no haces un onboarding activo, formacion, soporte y seguimiento durante los primeros 6 meses. La adopcion no es automatica."
+									"text": "Tres: lanzar sin plan de migración de clientes. Tener la web no sirve de nada si no haces un onboarding activo, formación, soporte y seguimiento durante los primeros 6 meses. La adopción no es automática."
 								}
 							]
 						},
@@ -4476,7 +4476,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Que ha cambiado en 15 años"
+									"text": "Qué ha cambiado en 15 años"
 								}
 							]
 						},
@@ -4486,7 +4486,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El cambio mas grande es la madurez del cliente B2B. En 2009 tenia que convencer a cada empresa de que 'esto del eCommerce' tenia sentido. Hoy los directivos llegan ya convencidos y la conversacion es sobre como hacerlo bien, no sobre si hacerlo. Eso ha hecho que los proyectos sean mas grandes, mas tecnicos y con mas riesgo, pero tambien mas estrategicos."
+									"text": "El cambio más grande es la madurez del cliente B2B. En 2009 tenía qué convencer a cada empresa de qué 'esto del eCommerce' tenía sentido. Hoy los directivos llegan ya convencidos y la conversacion es sobre como hacerlo bien, no sobre si hacerlo. Eso ha hecho que los proyectos sean más grandes, mas técnicos y con mas riesgo, pero también mas estratégicos."
 								}
 							]
 						},
@@ -4496,7 +4496,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Lo que no ha cambiado: la diferencia entre un proyecto que funciona y uno que fracasa nunca es la tecnologia. Es siempre la decision, la disciplina y el seguimiento."
+									"text": "Lo que no ha cambiado: la diferencia entre un proyecto que funcióna y uno que fracasa nunca es la tecnología. Es siempre la decisión, la disciplina y el seguimiento."
 								}
 							]
 						},

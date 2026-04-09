@@ -29,14 +29,14 @@ interface FeaturedEntry {
 }
 
 const logoStrip = [
-	"Expansion",
+	"Expansión",
 	"La Vanguardia",
 	"Emprendedores",
 	"RTVE",
 	"Silicon.es",
 	"Europa Press",
 	"El Confidencial Digital",
-	"Que!",
+	"¡Qué!",
 ];
 
 const featured: FeaturedEntry[] = [
@@ -58,12 +58,12 @@ const featured: FeaturedEntry[] = [
 	{
 		media: "Emprendedores",
 		type: "Articulo",
-		typeLabel: "Articulo de opinion",
+		typeLabel: "Artículo de opinión",
 		headline: "La nueva arquitectura del eCommerce B2B industrial",
 		date: "Oct 2025",
 	},
 	{
-		media: "Expansion",
+		media: "Expansión",
 		type: "NDP",
 		typeLabel: "Nota de prensa",
 		headline: "eComm360 aterriza en Ecuador con cinco proyectos",
@@ -78,9 +78,9 @@ const featured: FeaturedEntry[] = [
 		url: "https://www.silicon.es/ecomm360-compra-alabazweb-y-refuerza-su-dominio-en-prestashop-2390045",
 	},
 	{
-		media: "Cronica Global / elEspanol",
+		media: "Crónica Global / El Español",
 		type: "Articulo",
-		typeLabel: "Articulo",
+		typeLabel: "Artículo",
 		headline: "La nueva arquitectura del eCommerce B2B industrial",
 		date: "Oct 2025",
 	},
@@ -90,9 +90,9 @@ const directory: DirectoryEntry[] = [
 	{ year: 2019, media: "La Vanguardia (Dinero)", title: "Entrevista — eCommerce B2B", type: "Entrevista" },
 	{ year: 2019, media: "RTVE Radio 4 — Club 21", title: "Entrevista con David Escamilla", type: "Entrevista" },
 	{ year: 2025, media: "Emprendedores", title: "La nueva arquitectura del eCommerce B2B industrial", type: "Articulo" },
-	{ year: 2025, media: "Cronica Global / elEspanol", title: "La nueva arquitectura del eCommerce B2B industrial", type: "Articulo" },
-	{ year: 2026, media: "Emprendedores", title: "eComm360 impulsa el exito digital con tiendas Shopify y ERP", type: "Articulo" },
-	{ year: 2018, media: "Expansion", title: "eComm360 aterriza en Ecuador con cinco proyectos", type: "NDP" },
+	{ year: 2025, media: "Crónica Global / El Español", title: "La nueva arquitectura del eCommerce B2B industrial", type: "Articulo" },
+	{ year: 2026, media: "Emprendedores", title: "eComm360 impulsa el éxito digital con tiendas Shopify y ERP", type: "Articulo" },
+	{ year: 2018, media: "Expansión", title: "eComm360 aterriza en Ecuador con cinco proyectos", type: "NDP" },
 	{ year: 2018, media: "La Vanguardia", title: "La consultora barcelonesa eComm360 aterriza en Ecuador", type: "NDP" },
 	{ year: 2018, media: "ABC (agencias)", title: "Consultora barcelonesa eComm360 aterriza en Ecuador", type: "NDP" },
 	{
@@ -113,8 +113,8 @@ const directory: DirectoryEntry[] = [
 	},
 	{
 		year: 2025,
-		media: "Automatica e Instrumentacion",
-		title: "La falta de innovacion en ventas frena el crecimiento industrial",
+		media: "Automática e Instrumentación",
+		title: "La falta de innovación en ventas frena el crecimiento industrial",
 		type: "NDP",
 		url: "https://www.automaticaeinstrumentacion.com/texto-diario/mostrar/5375130/falta-innovacion-procesos-venta-frena-crecimiento-industria",
 	},
@@ -128,15 +128,15 @@ const directory: DirectoryEntry[] = [
 	{
 		year: 2025,
 		media: "Menudas Empresas",
-		title: "Por que el 70% de las empresas industriales estan perdiendo ventas?",
+		title: "¿Por qué el 70% de las empresas industriales están perdiendo ventas?",
 		type: "NDP",
 		url: "https://menudasempresas.com/por-que-el-70-de-las-empresas-industriales-estan-perdiendo-ventas/",
 	},
-	{ year: 2026, media: "Europa Press", title: "eComm360 impulsa el exito digital con Shopify y gestion ERP", type: "NDP" },
+	{ year: 2026, media: "Europa Press", title: "eComm360 impulsa el éxito digital con Shopify y gestión ERP", type: "NDP" },
 	{ year: 2025, media: "El Confidencial Digital", title: "El cambio del eCommerce B2B industrial empieza por los datos", type: "NDP" },
-	{ year: 2025, media: "Region Digital", title: "La nueva arquitectura del eCommerce B2B industrial", type: "NDP" },
+	{ year: 2025, media: "Región Digital", title: "La nueva arquitectura del eCommerce B2B industrial", type: "NDP" },
 	{ year: 2025, media: "Periodista Digital", title: "Data Fabric, PIM e IA para transformar la eficiencia comercial", type: "NDP" },
-	{ year: 2025, media: "Que!", title: "La nueva arquitectura del eCommerce B2B industrial", type: "NDP" },
+	{ year: 2025, media: "¡Qué!", title: "La nueva arquitectura del eCommerce B2B industrial", type: "NDP" },
 ];
 
 // Sort directory by year desc
@@ -157,7 +157,7 @@ const breadcrumbs: BreadcrumbItem[] = [
 const mediaListSchema: JsonLd = buildItemListSchema({
 	name: "Apariciones en medios — Isaac Bosch",
 	description:
-		"Entrevistas, articulos de opinion y notas de prensa sobre Isaac Bosch y eComm360 desde 2018.",
+		"Entrevistas, artículos de opinión y notas de prensa sobre Isaac Bosch y eComm360 desde 2018.",
 	items: sortedDirectory.slice(0, 30).map((d) => ({
 		name: d.title,
 		url: d.url ?? "/medios",
@@ -168,7 +168,7 @@ const mediaListSchema: JsonLd = buildItemListSchema({
 
 <Base
 	title="Medios"
-	description="Apariciones de Isaac Bosch y eComm360 en prensa: entrevistas en La Vanguardia, RTVE, Emprendedores, Expansion, Silicon.es, Europa Press, El Confidencial Digital y mas. Mas de 200 publicaciones desde 2018."
+	description="Apariciones de Isaac Bosch y eComm360 en prensa: entrevistas en La Vanguardia, RTVE, Emprendedores, Expansión, Silicon.es, Europa Press, El Confidencial Digital y más. Más de 200 publicaciones desde 2018."
 	ogType="page"
 	ogSlug="medios"
 	breadcrumbs={breadcrumbs}
@@ -180,9 +180,9 @@ const mediaListSchema: JsonLd = buildItemListSchema({
 			<span class="page-eyebrow">Presencia en medios</span>
 			<h1 class="page-title">Sala de prensa</h1>
 			<p class="page-subtitle">
-				Mas de 6 anos apareciendo en medios especializados, prensa generalista
-				y radio nacional hablando de eCommerce B2B, integracion ERP y
-				transformacion digital industrial.
+				Más de 6 años apareciendo en medios especializados, prensa generalista
+				y radio nacional hablando de eCommerce B2B, integración ERP y
+				transformación digital industrial.
 			</p>
 		</header>
 
@@ -255,7 +255,7 @@ const mediaListSchema: JsonLd = buildItemListSchema({
 					</span>
 				</button>
 				<button type="button" class="filter-chip" data-filter="Articulo">
-					Articulos propios
+					Artículos propios
 					<span class="filter-count">
 						{sortedDirectory.filter((d) => d.type === "Articulo").length}
 					</span>
@@ -300,7 +300,7 @@ const mediaListSchema: JsonLd = buildItemListSchema({
 
 			<div class="dir-footer">
 				<button type="button" class="dir-toggle" id="dir-toggle">
-					<span class="dir-toggle-more">Ver mas ({sortedDirectory.length - 8} mas)</span>
+					<span class="dir-toggle-more">Ver más ({sortedDirectory.length - 8} más)</span>
 					<span class="dir-toggle-less">Ver menos</span>
 				</button>
 			</div>
