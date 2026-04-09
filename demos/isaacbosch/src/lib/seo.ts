@@ -196,6 +196,11 @@ export function buildProfessionalServiceSchema(): JsonLd {
 }
 
 // ===== WebSite schema with SearchAction (Sitelinks search) =====
+//
+// NOTE: EmDash core auto-emits a basic WebSite schema via EmDashHead.
+// This builder is kept for cases where a richer WebSite schema (with
+// SearchAction) is desired — but it must NOT be inyectado in Base.astro
+// to avoid duplicating the @type: WebSite block.
 
 export function buildWebSiteSchema(): JsonLd {
 	return {

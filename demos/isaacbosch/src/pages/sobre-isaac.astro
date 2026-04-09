@@ -8,7 +8,7 @@ import PressCard from "../components/PressCard.astro";
 import AuthorityStrip from "../components/AuthorityStrip.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import Credentials from "../components/Credentials.astro";
-import { buildPersonSchema, type BreadcrumbItem } from "../lib/seo";
+import type { BreadcrumbItem } from "../lib/seo";
 
 const { entry, cacheHint } = await getEmDashEntry("pages", "sobre-isaac");
 
@@ -31,7 +31,6 @@ const breadcrumbs: BreadcrumbItem[] = [
 	title={seo.title ?? "Sobre Isaac Bosch"}
 	description={seo.description ?? "Consultor eCommerce B2B y Fractional CIO en Barcelona. Fundador de eComm360, Integrafy y Approsearch."}
 	image={seo.ogImage}
-	jsonLd={buildPersonSchema()}
 	content={{ collection: "pages", id: entry.data.id, slug: entry.id }}
 	ogType="page"
 	ogSlug="sobre-isaac"

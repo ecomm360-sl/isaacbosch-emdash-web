@@ -12,8 +12,8 @@ import { SITE_NAME, TWITTER_HANDLE, SITE_URL } from "../data/site-meta";
 import {
 	buildOgImageUrl,
 	buildOrganizationSchema,
+	buildPersonSchema,
 	buildProfessionalServiceSchema,
-	buildWebSiteSchema,
 	buildBreadcrumbList,
 	buildSpeakableSchema,
 	getCanonicalUrl,
@@ -21,6 +21,17 @@ import {
 	type JsonLd,
 	type OgPageType,
 } from "../lib/seo";
+
+// Tracking IDs from public env vars (filled in Easypanel)
+const GTM_ID = import.meta.env.PUBLIC_GTM_ID as string | undefined;
+const GA4_ID = import.meta.env.PUBLIC_GA4_ID as string | undefined;
+const LINKEDIN_PARTNER_ID = import.meta.env.PUBLIC_LINKEDIN_PARTNER_ID as
+	| string
+	| undefined;
+const CLARITY_PROJECT_ID = import.meta.env.PUBLIC_CLARITY_PROJECT_ID as
+	| string
+	| undefined;
+const CALENDLY_URL = import.meta.env.PUBLIC_CALENDLY_URL as string | undefined;
 
 interface Props {
 	title: string;
@@ -92,11 +103,13 @@ const pageCtx = createPublicPageContext({
 
 const isLoggedIn = !!Astro.locals.user;
 
-// === Global JSON-LD: Organization + ProfessionalService + WebSite ===
+// === Global JSON-LD: Organization + ProfessionalService + Person ===
+// (WebSite schema is auto-emitted by EmDash core via EmDashHead — no need
+// to duplicate it here.)
 const globalSchemas: JsonLd[] = [
 	buildOrganizationSchema(),
 	buildProfessionalServiceSchema(),
-	buildWebSiteSchema(),
+	buildPersonSchema(),
 ];
 
 if (breadcrumbs && breadcrumbs.length > 0) {
@@ -122,6 +135,9 @@ const extraSchemas: JsonLd[] = jsonLd
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		{GTM_ID && <link rel="preconnect" href="https://www.googletagmanager.com" />}
+		{LINKEDIN_PARTNER_ID && <link rel="preconnect" href="https://snap.licdn.com" />}
+		{CLARITY_PROJECT_ID && <link rel="preconnect" href="https://www.clarity.ms" />}
 		<link rel="canonical" href={canonical} />
 		<link rel="alternate" hreflang="es" href={canonical} />
 		<link rel="alternate" hreflang="x-default" href={canonical} />
@@ -148,8 +164,72 @@ const extraSchemas: JsonLd[] = jsonLd
 				}
 			})();
 		</script>
+		{GTM_ID && (
+			<script is:inline define:vars={{ GTM_ID }}>
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || [];
+					w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+					var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s),
+						dl = l != "dataLayer" ? "&l=" + l : "";
+					j.async = true;
+					j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+					f.parentNode.insertBefore(j, f);
+				})(window, document, "script", "dataLayer", GTM_ID);
+			</script>
+		)}
+		{GA4_ID && (
+			<>
+				<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}></script>
+				<script is:inline define:vars={{ GA4_ID }}>
+					window.dataLayer = window.dataLayer || [];
+					function gtag() { dataLayer.push(arguments); }
+					gtag("js", new Date());
+					gtag("config", GA4_ID, { anonymize_ip: true });
+				</script>
+			</>
+		)}
+		{LINKEDIN_PARTNER_ID && (
+			<script is:inline define:vars={{ LINKEDIN_PARTNER_ID }}>
+				_linkedin_partner_id = LINKEDIN_PARTNER_ID;
+				window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+				window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+				(function (l) {
+					if (!l) {
+						window.lintrk = function (a, b) { window.lintrk.q.push([a, b]); };
+						window.lintrk.q = [];
+					}
+					var s = document.getElementsByTagName("script")[0];
+					var b = document.createElement("script");
+					b.type = "text/javascript"; b.async = true;
+					b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+					s.parentNode.insertBefore(b, s);
+				})(window.lintrk);
+			</script>
+		)}
+		{CLARITY_PROJECT_ID && (
+			<script is:inline define:vars={{ CLARITY_PROJECT_ID }}>
+				(function (c, l, a, r, i, t, y) {
+					c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+					t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+					y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+				})(window, document, "clarity", "script", CLARITY_PROJECT_ID);
+			</script>
+		)}
 	</head>
 	<body>
+		<a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+		{GTM_ID && (
+			<noscript>
+				<iframe
+					src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+					height="0"
+					width="0"
+					style="display:none;visibility:hidden"
+					title="Google Tag Manager"
+				></iframe>
+			</noscript>
+		)}
 		<EmDashBodyStart page={pageCtx} />
 		<header class="site-header">
 			<nav class="nav">
@@ -191,7 +271,7 @@ const extraSchemas: JsonLd[] = jsonLd
 			</nav>
 		</header>
 
-		<main>
+		<main id="main-content">
 			<slot />
 		</main>
 
@@ -523,6 +603,27 @@ const extraSchemas: JsonLd[] = jsonLd
 		</style>
 
 		<style>
+			/* === Skip to content (WCAG 2.4.1) === */
+			.skip-to-content {
+				position: absolute;
+				top: -100px;
+				left: var(--spacing-4);
+				z-index: 9999;
+				padding: var(--spacing-3) var(--spacing-5);
+				background: var(--color-text);
+				color: var(--color-bg);
+				border-radius: var(--radius-md);
+				font-size: var(--font-size-sm);
+				font-weight: 600;
+				text-decoration: none;
+				transition: top 0.2s ease;
+			}
+			.skip-to-content:focus {
+				top: var(--spacing-4);
+				outline: 2px solid var(--color-accent);
+				outline-offset: 2px;
+			}
+
 			.site-header {
 				position: sticky;
 				top: var(--spacing-4);

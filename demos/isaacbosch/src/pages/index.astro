@@ -6,6 +6,7 @@ import Base from "../layouts/Base.astro";
 import PostCard from "../components/PostCard.astro";
 import AuthorityStrip from "../components/AuthorityStrip.astro";
 import EcosystemBand from "../components/EcosystemBand.astro";
+import { buildFaqPageSchema } from "../lib/seo";
 
 const { entries: posts, cacheHint } = await getEmDashCollection("posts", {
 	limit: 3,
@@ -18,6 +19,40 @@ const sortedPosts = posts.toSorted((a, b) => {
 	const dateB = b.data.publishedAt?.getTime() ?? 0;
 	return dateB - dateA;
 });
+
+// FAQPage schema: los 5 problemas reformulados como preguntas frecuentes
+// que un directivo industrial podría hacer a un LLM (AEO).
+const homeFaqSchema = buildFaqPageSchema([
+	{
+		question:
+			"¿Por qué mi equipo procesa pedidos B2B a mano y cómo lo automatizo?",
+		answer:
+			"En la mayoría de empresas industriales, cada pedido pasa por un comercial que lo introduce manualmente en el ERP. Errores, duplicaciones, días de retraso. La solución es montar un canal eCommerce B2B integrado al ERP que permita a tus clientes hacer pedidos directamente, con sus precios contratados, viendo el stock real y enviando la orden directamente al ERP sin intervención manual. Es una consultoría de 3-6 meses según el alcance.",
+	},
+	{
+		question:
+			"¿Cómo integro mi ERP (SAP, Business Central, Odoo, Sage) con mi tienda online?",
+		answer:
+			"La integración ERP-eCommerce real cubre cuatro flujos: catálogo (productos + precios + tarifas multicliente), stock en tiempo real, pedidos (web → ERP) y clientes (alta y mantenimiento). Para SAP B1 hay middleware nativo y conectores tipo Sana/Magento. Para Business Central existen conectores oficiales con Shopify Plus. Para Odoo hay módulos propios. La elección depende del catálogo, el volumen de pedidos y la arquitectura del ERP.",
+	},
+	{
+		question:
+			"¿Qué procesos puedo automatizar con IA en una empresa industrial B2B?",
+		answer:
+			"Los casos de uso con mejor ROI son: catalogación automática de productos (descripciones, atributos, fotos), atención a consultas repetitivas de clientes (estado de pedidos, disponibilidad, plazos), generación de ofertas a partir de configuradores, seguimiento proactivo de pedidos parados, y enriquecimiento de fichas con información técnica. Un piloto de agente IA por proceso suele estar entre 8.000€ y 25.000€ con ROI a 6-12 meses.",
+	},
+	{
+		question: "¿Qué es un Fractional CIO y cuándo necesito uno?",
+		answer:
+			"Un Fractional CIO es un perfil senior de dirección tecnológica que trabaja part-time (1-2 días por semana) en empresas que no pueden o no quieren asumir el coste de un CIO full-time (100-150k€/año). Tiene sentido para empresas industriales de 20-200 personas con responsable IT operativo pero sin dirección estratégica. Aporta criterio C-level para decisiones de arquitectura, vendor selection, presupuestos plurianuales y roadmap tecnológico.",
+	},
+	{
+		question:
+			"¿Por qué los cursos de digitalización genéricos no funcionan en mi equipo?",
+		answer:
+			"Las masterclasses generalistas, suscripciones a plataformas de eLearning y bonificaciones de Fundae no enganchan porque el contenido no se aplica al sector, al stack ni a los problemas reales del equipo. La formación que sí funciona es la diseñada específicamente para tu empresa, con casos del propio negocio, ejecutada en sesiones cortas y con seguimiento real. Trabajo formaciones bonificables a medida para empresas industriales B2B.",
+	},
+]);
 ---
 
 <Base
@@ -25,6 +60,7 @@ const sortedPosts = posts.toSorted((a, b) => {
 	description="Convierto empresas industriales en negocios digitales que venden solos. Consultor eCommerce B2B, Fractional CIO y fundador de eComm360, Integrafy y Approsearch."
 	ogType="page"
 	ogSlug="home"
+	jsonLd={homeFaqSchema}
 >
 	<section class="hero">
 		<div class="hero-inner">

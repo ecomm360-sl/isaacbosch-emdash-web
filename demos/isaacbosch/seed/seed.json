@@ -8,7 +8,12 @@
 	},
 	"settings": {
 		"title": "Isaac Bosch",
-		"tagline": "Digitalizo y automatizo procesos integrando ERP, IA y Agentes Autónomos"
+		"tagline": "Digitalizo y automatizo procesos integrando ERP, IA y Agentes Autónomos",
+		"url": "https://isaacbosch.com",
+		"social": {
+			"linkedin": "https://www.linkedin.com/in/isaacbosch",
+			"twitter": "https://x.com/isaacbosch"
+		}
 	},
 	"collections": [
 		{
@@ -770,7 +775,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El modelo Fractional resuelve eso: un fee mensual fijo, un compromiso de horas dedicadas y acceso directo cuando hay que tomar decisiónes críticas. Mucho menor coste, ningun overhead, y resultados desde el primer mes."
+									"text": "El modelo Fractional resuelve eso: un fee mensual fijo, un compromiso de horas dedicadas y acceso directo cuando hay que tomar decisiones críticas. Mucho menor coste, ningun overhead, y resultados desde el primer mes."
 								}
 							]
 						},
@@ -797,7 +802,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Documento vivo que prioriza inversiónes, define hitos y conecta cada decisión con objetivos de negocio."
+									"text": "Documento vivo que prioriza inversiones, define hitos y conecta cada decisión con objetivos de negocio."
 								}
 							]
 						},
@@ -810,7 +815,7 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Decisiónes de plataforma. "
+									"text": "Decisiones de plataforma. "
 								},
 								{
 									"_type": "span",
@@ -865,7 +870,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Traduzco la complejidad técnica a metricas y decisiónes que el comite directivo entiende y puede actuar."
+									"text": "Traduzco la complejidad técnica a metricas y decisiones que el comite directivo entiende y puede actuar."
 								}
 							]
 						},
@@ -905,7 +910,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Entre 16 y 32 horas mensuales segun necesidad. Reunión ejecutiva semanal o quincenal con dirección. Disponibilidad asíncrona para decisiónes críticas. Una jornada presencial mensual en Barcelona o remoto si tu sede está en otro punto. Compromisos mínimos de 6 meses para ver resultados reales."
+									"text": "Entre 16 y 32 horas mensuales segun necesidad. Reunión ejecutiva semanal o quincenal con dirección. Disponibilidad asíncrona para decisiones críticas. Una jornada presencial mensual en Barcelona o remoto si tu sede está en otro punto. Compromisos mínimos de 6 meses para ver resultados reales."
 								}
 							]
 						},
@@ -915,23 +920,23 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"questión": "¿Cuánto cuesta?",
+									"question": "¿Cuánto cuesta?",
 									"answer": "Fee mensual segun horas dedicadas y duracion del compromiso. Tipicamente entre el 15% y el 35% del coste de un CIO full-time. Te paso una propuestá concreta tras una primera conversacion."
 								},
 								{
-									"questión": "Reemplazas a mi responsable IT actual?",
-									"answer": "No. Tu responsable IT sigue gestiónando operación, infraestructura y soporte. Yo cubro la capa estratégica qué normalmente le falta tiempo o experiencia para asumir."
+									"question": "Reemplazas a mi responsable IT actual?",
+									"answer": "No. Tu responsable IT sigue gestionando operación, infraestructura y soporte. Yo cubro la capa estratégica qué normalmente le falta tiempo o experiencia para asumir."
 								},
 								{
-									"questión": "Trabajas con varios clientes a la vez?",
+									"question": "Trabajas con varios clientes a la vez?",
 									"answer": "Si. El modelo Fractional implica precisamente repartir mi tiempo entre varios clientes que se benefician de un perfil senior sin asumir su coste integro. Un máximo de 4-5 clientes a la vez para garantizar dedicacion real."
 								},
 								{
-									"questión": "Necesito tener ya un equipo tecnico?",
+									"question": "Necesito tener ya un equipo tecnico?",
 									"answer": "No es imprescindible. Si no tienes equipo técnico interno, parte de mi rol incluye ayudarte a contratarlo o coordinar proveedores externos."
 								},
 								{
-									"questión": "Qué pasa al final del compromiso?",
+									"question": "Qué pasa al final del compromiso?",
 									"answer": "Te quedas con la documentacion, la hoja de ruta y un equipo (interno o externo) capaz de ejecutarla. Si el proyecto sigue necesitando supervisión estratégica, renovamos. Si no, salgo de la operación sin dejar dependencia."
 								}
 							]
@@ -1193,7 +1198,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Esta web recopila datos mínimos necesarios para su funciónamiento. No se comparten datos personales con terceros sin consentimiento explicito. Para ejercer tus derechos de acceso, rectificacion o supresion, contacta a traves de los datos indicados en la página de contacto."
+									"text": "Esta web recopila datos mínimos necesarios para su funcionamiento. No se comparten datos personales con terceros sin consentimiento explicito. Para ejercer tus derechos de acceso, rectificacion o supresion, contacta a traves de los datos indicados en la página de contacto."
 								}
 							]
 						},
@@ -1213,7 +1218,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Esta web utiliza cookies técnicas necesarias para el funciónamiento del sitio. No se utilizan cookies de rastreo ni publicidad."
+									"text": "Esta web utiliza cookies técnicas necesarias para el funcionamiento del sitio. No se utilizan cookies de rastreo ni publicidad."
 								}
 							]
 						}
@@ -1238,7 +1243,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Diseñar, implementar e integrar un canal de venta digital para empresas industriales y distribuidoras. No es solo poner una tienda online: es conectar tu ERP, automatizar pedidos recurrentes, gestiónar precios por cliente y darle a tu equipo comercial herramientas para vender mas con menos friccion."
+									"text": "Diseñar, implementar e integrar un canal de venta digital para empresas industriales y distribuidoras. No es solo poner una tienda online: es conectar tu ERP, automatizar pedidos recurrentes, gestionar precios por cliente y darle a tu equipo comercial herramientas para vender mas con menos friccion."
 								}
 							]
 						},
@@ -1362,7 +1367,7 @@
 								},
 								{
 									"year": "Fase 2",
-									"title": "Diseño de flujos funciónales",
+									"title": "Diseño de flujos funcionales",
 									"description": "Modelado de procesos: alta de cliente, gestión de catálogo, flujo de pedido, integración con almacén, facturacion."
 								},
 								{
@@ -1408,19 +1413,19 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"questión": "Cuanto dura un proyecto típico?",
-									"answer": "Entre 4 y 8 meses para una implementacion completa con integración ERP. Un MVP funciónal puedo entregarlo en 90 días si la situacion lo requiere."
+									"question": "¿Cuánto dura un proyecto típico?",
+									"answer": "Entre 4 y 8 meses para una implementacion completa con integración ERP. Un MVP funcional puedo entregarlo en 90 días si la situacion lo requiere."
 								},
 								{
-									"questión": "Trabajas con equipo propio o externo?",
+									"question": "Trabajas con equipo propio o externo?",
 									"answer": "Tengo equipo propio en eComm360 para implementaciones completas. También dirijo proyectos como consultor cuando el cliente ya tiene equipo técnico interno o agencia."
 								},
 								{
-									"questión": "Trabajas solo con empresas industriales?",
+									"question": "Trabajas solo con empresas industriales?",
 									"answer": "Es mi especialidad y donde aporto mas valor. Trabajo también con distribuidores y mayoristas. Para B2C puro o servicios profesionales hay consultores mejores que yo."
 								},
 								{
-									"questión": "Como cobras?",
+									"question": "Cómo cobras?",
 									"answer": "Proyectos cerrados con alcance definido o consultoria por horas para situaciones puntuales. Sin retainers eternos. Te interesa el resultado, no facturarme cada mes sin entregar valor."
 								}
 							]
@@ -1446,7 +1451,7 @@
 					"title": "Consultor de Agentes de IA y Automatizaciónes",
 					"icon": "cpu",
 					"order": 2,
-					"summary": "Diseño e implementacion de agentes IA autónomos que automatizan procesos comerciales, atención al cliente, catálogos y operaciónes B2B. Sin hype, con resultados medibles.",
+					"summary": "Diseño e implementacion de agentes IA autónomos que automatizan procesos comerciales, atención al cliente, catálogos y operaciones B2B. Sin hype, con resultados medibles.",
 					"content": [
 						{
 							"_type": "block",
@@ -1454,7 +1459,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Los agentes de IA van más allá de los chatbots. Son sistemas autónomos que perciben su entorno, toman decisiónes y ejecutan tareas. Aplicados al B2B industrial transforman la operativa diaria: atención al cliente, catálogo, ventas, soporte y back office."
+									"text": "Los agentes de IA van más allá de los chatbots. Son sistemas autónomos que perciben su entorno, toman decisiones y ejecutan tareas. Aplicados al B2B industrial transforman la operativa diaria: atención al cliente, catálogo, ventas, soporte y back office."
 								}
 							]
 						},
@@ -1504,7 +1509,7 @@
 									"marks": [
 										"strong"
 									],
-									"text": "Operaciónes. "
+									"text": "Operaciones. "
 								},
 								{
 									"_type": "span",
@@ -1525,7 +1530,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Generación automática de descripciónes de producto, traducciones, etiquetas SEO, posts y newsletters a partir de los atributos técnicos del ERP."
+									"text": "Generación automática de descripciones de producto, traducciones, etiquetas SEO, posts y newsletters a partir de los atributos técnicos del ERP."
 								}
 							]
 						},
@@ -1592,20 +1597,20 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"questión": "¿Cuánto cuesta un proyecto de IA aplicada?",
+									"question": "¿Cuánto cuesta un proyecto de IA aplicada?",
 									"answer": "Un piloto enfocado a un proceso concreto: 5.000-20.000 euros. Un proyecto integral con varios agentes conectados al ERP: 30.000-100.000 euros. ROI típico entre 6 y 12 meses."
 								},
 								{
-									"questión": "Necesito tener mis datos perfectos para empezar?",
+									"question": "Necesito tener mis datos perfectos para empezar?",
 									"answer": "No perfectos, pero si mínimamente estructurados. Si tu catálogo está en un Excel desactualizado, ese es el primer paso del proyecto."
 								},
 								{
-									"questión": "La IA va a reemplazar a mi equipo?",
+									"question": "La IA va a reemplazar a mi equipo?",
 									"answer": "No, y no debería ser el objetivo. La IA automatiza lo repetitivo. Tu equipo aporta criterio, relacion y excepciones. La combinacion es mas potente que cualquiera por separado."
 								},
 								{
-									"questión": "Qué pasa con los datos de mis clientes?",
-									"answer": "Cumplo RGPD por diseño. Existen opciónes de IA en infraestructura propia (Llama, Mistral, Claude empresarial) cuando la confidencialidad es crítica."
+									"question": "Qué pasa con los datos de mis clientes?",
+									"answer": "Cumplo RGPD por diseño. Existen opciones de IA en infraestructura propia (Llama, Mistral, Claude empresarial) cuando la confidencialidad es crítica."
 								}
 							]
 						},
@@ -1759,19 +1764,19 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"questión": "Cuanto tarda integrar un ERP con un eCommerce?",
+									"question": "¿Cuánto tarda integrar un ERP con un eCommerce?",
 									"answer": "Entre 6 semanas y 4 meses dependiendo del ERP, el volumen de datos y la complejidad de las reglas comerciales. Una integración básica de catálogo y pedidos puede estar lista en 6 semanas."
 								},
 								{
-									"questión": "Qué pasa si mi ERP es muy antiguo o muy custom?",
+									"question": "Qué pasa si mi ERP es muy antiguo o muy custom?",
 									"answer": "Trabajable. Construyo middleware a medida cuando los conectores estandar no llegan. He integrado ERPs propietarios sin documentacion pública."
 								},
 								{
-									"questión": "Sincronizacion en tiempo real o por lotes?",
+									"question": "Sincronizacion en tiempo real o por lotes?",
 									"answer": "Lo que tenga sentido para cada flujo. El stock suele necesitar tiempo real. El catálogo puede ser por lotes nocturnos. El pedido siempre tiempo real. No todo necesita ser instantaneo."
 								},
 								{
-									"questión": "Y el mantenimiento después?",
+									"question": "Y el mantenimiento después?",
 									"answer": "Toda integración necesita monitorizacion y soporte. Implemento logs, alertas y dashboards desde el día uno para qué tu equipo pueda ver el estado y reaccionar."
 								}
 							]
@@ -1927,7 +1932,7 @@
 								},
 								{
 									"_type": "span",
-									"text": "Acompanamiento individualizado para directivos, fundadores y responsables digitales que necesitan un sparring para decisiónes críticas."
+									"text": "Acompanamiento individualizado para directivos, fundadores y responsables digitales que necesitan un sparring para decisiones críticas."
 								}
 							]
 						},
@@ -1937,19 +1942,19 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"questión": "Cuanto dura una formación típica?",
+									"question": "¿Cuánto dura una formación típica?",
 									"answer": "Sesiones ejecutivas de medio día, programas intensivos de 2-5 días, o trayectos largos de 2-3 meses con sesiones semanales. Lo adapto al contexto."
 								},
 								{
-									"questión": "Trabajas con bonificacion FUNDAE?",
+									"question": "Trabajas con bonificacion FUNDAE?",
 									"answer": "Si, los programas In-Company son bonificables a traves de la Fundacion Estatal para la Formación en el Empleo. Te ayudo con la documentacion."
 								},
 								{
-									"questión": "Para qué niveles trabajas?",
-									"answer": "Desde comites de dirección (estrategia digital, decisiónes de plataforma) hasta equipos operativos (uso práctico de herramientas, IA aplicada). Adapto el contenido al nivel y rol."
+									"question": "Para qué niveles trabajas?",
+									"answer": "Desde comites de dirección (estrategia digital, decisiones de plataforma) hasta equipos operativos (uso práctico de herramientas, IA aplicada). Adapto el contenido al nivel y rol."
 								},
 								{
-									"questión": "Dais certificacion?",
+									"question": "Dais certificacion?",
 									"answer": "Si, certificado de aprovechamiento al finalizar cada programa, útil para itinerarios formativos internos y bonificacion FUNDAE."
 								}
 							]
@@ -1986,7 +1991,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "eComm360 es la agencia especializada en PrestaShop que funde en 2012, nacida con los primeros proyectos basados en la integración de B2B con ERP. Hoy es la empresa central del Grupo eCommsistema y mi base de operaciónes para todos los proyectos de consultoria, desarrollo e integración para empresas industriales y distribuidoras."
+									"text": "eComm360 es la agencia especializada en PrestaShop que funde en 2012, nacida con los primeros proyectos basados en la integración de B2B con ERP. Hoy es la empresa central del Grupo eCommsistema y mi base de operaciones para todos los proyectos de consultoria, desarrollo e integración para empresas industriales y distribuidoras."
 								}
 							]
 						},
@@ -2006,7 +2011,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Estrategia, implementacion y soporte de proyectos eCommerce B2B y B2C end-to-end. PrestaShop como plataforma prioritaria, con extensiónes a Shopify, soluciónes headless o desarrollos a medida cuando hace falta. Proyectos internacionales con desarrollo local en Barcelona."
+									"text": "Estrategia, implementacion y soporte de proyectos eCommerce B2B y B2C end-to-end. PrestaShop como plataforma prioritaria, con extensiones a Shopify, soluciónes headless o desarrollos a medida cuando hace falta. Proyectos internacionales con desarrollo local en Barcelona."
 								}
 							]
 						},
@@ -2233,7 +2238,7 @@
 					"title": "ApproSearch",
 					"client": "Producto",
 					"year": "En breve",
-					"summary": "El buscador personalizable. Motor de busqueda especializado en catálogos eCommerce con dos versiónes: open source sobre ElasticSearch y SaaS avanzado. Disponible en breve.",
+					"summary": "El buscador personalizable. Motor de busqueda especializado en catálogos eCommerce con dos versiones: open source sobre ElasticSearch y SaaS avanzado. Disponible en breve.",
 					"url": "",
 					"content": [
 						{
@@ -2252,7 +2257,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Dos versiónes"
+									"text": "Dos versiones"
 								}
 							]
 						},
@@ -2599,7 +2604,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El eCommerce B2B ha dejado de ser opciónal. En 2025, las empresas que no ofrecen un canal de venta digital a sus clientes profesionales estan perdiendo cuota de mercado frente a competidores que si lo hacen. Pero montar una tienda B2B online no es simplemente copiar el modelo B2C."
+									"text": "El eCommerce B2B ha dejado de ser opcional. En 2025, las empresas que no ofrecen un canal de venta digital a sus clientes profesionales estan perdiendo cuota de mercado frente a competidores que si lo hacen. Pero montar una tienda B2B online no es simplemente copiar el modelo B2C."
 								}
 							]
 						},
@@ -2639,7 +2644,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "La personalizacion basada en IA esta transformando la experiencia de compra B2B. Los catálogos se adaptan automáticamente al historial de cada cliente. Los portales self-service permiten a los compradores gestiónar sus pedidos sin intermediarios. La integración nativa con ERPs ya no es un nice-to-have, es un requisito básico."
+									"text": "La personalizacion basada en IA esta transformando la experiencia de compra B2B. Los catálogos se adaptan automáticamente al historial de cada cliente. Los portales self-service permiten a los compradores gestionar sus pedidos sin intermediarios. La integración nativa con ERPs ya no es un nice-to-have, es un requisito básico."
 								}
 							]
 						},
@@ -2786,7 +2791,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Elegir plataforma es una de las decisiónes mas importantes al lanzar un eCommerce B2B. No hay una respuesta universal: depende de tu catálogo, tu ERP, tu equipo técnico y tu presupuesto."
+									"text": "Elegir plataforma es una de las decisiones mas importantes al lanzar un eCommerce B2B. No hay una respuesta universal: depende de tu catálogo, tu ERP, tu equipo técnico y tu presupuesto."
 								}
 							]
 						},
@@ -2826,7 +2831,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Shopify Plus ha mejorado sus capacidades B2B. PrestaShop sigue siendo popular en España con modulos B2B maduros. Para PYMEs con catálogos de menos de 5.000 SKUs, ambas son opciónes solidas con excelente relacion calidad-precio."
+									"text": "Shopify Plus ha mejorado sus capacidades B2B. PrestaShop sigue siendo popular en España con modulos B2B maduros. Para PYMEs con catálogos de menos de 5.000 SKUs, ambas son opciones solidas con excelente relacion calidad-precio."
 								}
 							]
 						}
@@ -2872,7 +2877,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Lanzar un eCommerce B2B no tiene por qué ser un proyecto de 18 meses. Con el enfoque correcto, puedes tener un MVP funciónal en 90 días que cubra el 80% de las necesidades de tus clientes."
+									"text": "Lanzar un eCommerce B2B no tiene por qué ser un proyecto de 18 meses. Con el enfoque correcto, puedes tener un MVP funcional en 90 días que cubra el 80% de las necesidades de tus clientes."
 								}
 							]
 						},
@@ -2941,7 +2946,7 @@
 				"published_at": "2025-01-15",
 				"data": {
 					"title": "Marketplaces B2B: la gran oportunidad para fabricantes y distribuidores",
-					"excerpt": "Los marketplaces B2B estan cambiando las reglas para fabricantes. Como aprovecharlos sin perder el control.",
+					"excerpt": "Los marketplaces B2B estan cambiando las reglas para fabricantes. ¿Cómo aprovecharlos sin perder el control.",
 					"content": [
 						{
 							"_type": "block",
@@ -3005,7 +3010,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Los agentes de IA son programas autónomos que pueden percibir su entorno, tomar decisiónes y ejecutar acciones. A diferencia de un chatbot tradicional, un agente analiza la situacion, planifica y actua."
+									"text": "Los agentes de IA son programas autónomos que pueden percibir su entorno, tomar decisiones y ejecutar acciones. A diferencia de un chatbot tradicional, un agente analiza la situacion, planifica y actua."
 								}
 							]
 						},
@@ -3015,7 +3020,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Aplicaciónes reales en eCommerce B2B"
+									"text": "Aplicaciones reales en eCommerce B2B"
 								}
 							]
 						},
@@ -3169,7 +3174,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Generación de descripciónes"
+									"text": "Generación de descripciones"
 								}
 							]
 						},
@@ -3179,7 +3184,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "A partir de los atributos técnicos, un sistema de IA puede generar descripciónes comerciales optimizadas para SEO en segundos. Empresas han pasado de tardar 3 meses en catalogar 500 productos a hacerlo en una semana."
+									"text": "A partir de los atributos técnicos, un sistema de IA puede generar descripciones comerciales optimizadas para SEO en segundos. Empresas han pasado de tardar 3 meses en catalogar 500 productos a hacerlo en una semana."
 								}
 							]
 						},
@@ -3390,7 +3395,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "He visto demásiados proyectos de eCommerce B2B que funciónan bien al principio y colapsan cuando escalan. El patron es siempre el mismo: la tienda funcióna, pero alguien tiene que introducir cada pedido manualmente en el ERP."
+									"text": "He visto demásiados proyectos de eCommerce B2B que funcionan bien al principio y colapsan cuando escalan. El patron es siempre el mismo: la tienda funcióna, pero alguien tiene que introducir cada pedido manualmente en el ERP."
 								}
 							]
 						},
@@ -3554,7 +3559,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Cuando Odoo es la mejor opción"
+									"text": "¿Cuándo Odoo es la mejor opción"
 								}
 							]
 						},
@@ -3584,7 +3589,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El eCommerce de Odoo no tiene la flexibilidad de Magento o Shopify en personalizacion. Las funciónalidades B2B nativas son básicas. Si ya tienes un ERP consolidado, migrar solo por el eCommerce rara vez tiene sentido."
+									"text": "El eCommerce de Odoo no tiene la flexibilidad de Magento o Shopify en personalizacion. Las funcionalidades B2B nativas son básicas. Si ya tienes un ERP consolidado, migrar solo por el eCommerce rara vez tiene sentido."
 								}
 							]
 						}
@@ -3641,7 +3646,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "No mapear datos antes de empezar. Subestimar el volumen de datos. No planificar la gestión de errores. Estas tres omisiónes causan la mayoria de fracasos en integraciónes."
+									"text": "No mapear datos antes de empezar. Subestimar el volumen de datos. No planificar la gestión de errores. Estas tres omisiones causan la mayoria de fracasos en integraciónes."
 								}
 							]
 						},
@@ -3938,23 +3943,23 @@
 							"headline": "Preguntas frecuentes",
 							"items": [
 								{
-									"questión": "Necesito una plataforma diferente para B2B y B2C?",
+									"question": "¿Necesito una plataforma diferente para B2B y B2C?",
 									"answer": "Depende del volumen de cada canal. Si el B2B es tu negocio principal, te recomiendo una plataforma especializada o una instancia separada."
 								},
 								{
-									"questión": "Cuanto tiempo tarda en estar operativo un eCommerce B2B?",
-									"answer": "Un MVP funciónal se puede tener en 2-3 meses. Un proyecto completo con integración ERP, entre 4 y 8 meses."
+									"question": "¿Cuánto tiempo tarda en estar operativo un eCommerce B2B?",
+									"answer": "Un MVP funcional se puede tener en 2-3 meses. Un proyecto completo con integración ERP, entre 4 y 8 meses."
 								},
 								{
-									"questión": "Mis clientes no quieren comprar online, para qué lo necesito?",
+									"question": "¿Mis clientes no quieren comprar online, para qué lo necesito?",
 									"answer": "En mi experiencia, no es que no quieran: es que no tienen una buena opción. Cuando ofreces un portal con sus precios y pedidos en dos clics, la adopción es sorprendentemente rápida."
 								},
 								{
-									"questión": "Puedo empezar sin integrar el ERP?",
+									"question": "¿Puedo empezar sin integrar el ERP?",
 									"answer": "Puedes, pero no mas de un mes de prueba. Sin integración, cada pedido online genera trabajo manual que puede matar el proyecto."
 								},
 								{
-									"questión": "Qué ROI puedo esperar?",
+									"question": "¿Qué ROI puedo esperar?",
 									"answer": "Reducción del 40-70% en coste de procesamiento, aumento del 15-30% en ticket medio y apertura de ventas 24/7 que típicamente representa un 20-30% del volumen total en el primer ano."
 								}
 							]
@@ -4002,24 +4007,24 @@
 							"headline": "Preguntas frecuentes sobre IA",
 							"items": [
 								{
-									"questión": "Mi empresa es pequeña, tiene sentido invertir en IA?",
+									"question": "¿Mi empresa es pequeña, tiene sentido invertir en IA?",
 									"answer": "Si, pero con expectativas realistas. Herramientas como ChatGPT o agentes preconfigurados pueden automatizar táreas concretas con inversión mínima."
 								},
 								{
-									"questión": "Puede la IA reemplazar a mi equipo comercial?",
+									"question": "¿Puede la IA reemplazar a mi equipo comercial?",
 									"answer": "No, y no debería ser el objetivo. La IA automatiza lo repetitivo. Tu equipo aporta relacion, confianza y criterio. La combinacion es mas potente."
 								},
 								{
-									"questión": "Necesito datos perfectos para empezar con IA?",
+									"question": "¿Necesito datos perfectos para empezar con IA?",
 									"answer": "No perfectos, pero si mínimamente estructurados y accesibles. Si tu catálogo está en un Excel desactualizado, ese es el primer paso."
 								},
 								{
-									"questión": "¿Cuánto cuesta implementar IA en una empresa B2B?",
+									"question": "¿Cuánto cuesta implementar IA en una empresa B2B?",
 									"answer": "Un piloto: 5.000-20.000 euros. Un proyecto integral: 30.000-100.000 euros. ROI típico: 6-12 meses."
 								},
 								{
-									"questión": "Qué pasa con la privacidad y los datos de mis clientes?",
-									"answer": "Asegurate de cumplir con el RGPD y que los datos no se usen para entrenar modelos de terceros sin consentimiento. Existen opciónes de IA en tu propia infraestructura."
+									"question": "¿Qué pasa con la privacidad y los datos de mis clientes?",
+									"answer": "Asegurate de cumplir con el RGPD y que los datos no se usen para entrenar modelos de terceros sin consentimiento. Existen opciones de IA en tu propia infraestructura."
 								}
 							]
 						}
@@ -4096,7 +4101,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Para empresas medianas con funciónalidades B2B avanzadas, integración completa con ERP y diseño a medida. Aquí entran la mayoria de proyectos serios."
+									"text": "Para empresas medianas con funcionalidades B2B avanzadas, integración completa con ERP y diseño a medida. Aquí entran la mayoria de proyectos serios."
 								}
 							]
 						},
@@ -4146,7 +4151,7 @@
 				"published_at": "2026-04-08",
 				"data": {
 					"title": "Consultor para empresas industriales: cuándo y por qué te conviene contratar uno",
-					"excerpt": "Cuando una empresa industrial necesita un consultor externo de eCommerce B2B, que aporta frente a una agencia o un equipo interno, y como evaluar el ROI real.",
+					"excerpt": "¿Cuándo una empresa industrial necesita un consultor externo de eCommerce B2B, que aporta frente a una agencia o un equipo interno, y como evaluar el ROI real.",
 					"content": [
 						{
 							"_type": "block",
@@ -4184,7 +4189,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Cuando contratar un consultor en lugar de una agencia"
+									"text": "¿Cuándo contratar un consultor en lugar de una agencia"
 								}
 							]
 						},
@@ -4214,7 +4219,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Cuando tiene sentido un equipo interno"
+									"text": "¿Cuándo tiene sentido un equipo interno"
 								}
 							]
 						},
@@ -4234,7 +4239,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Como evaluar el ROI de un consultor"
+									"text": "Cómo evaluar el ROI de un consultor"
 								}
 							]
 						},
@@ -4244,7 +4249,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El error mas común es medir un consultor por horas trabajadas. La medida correcta es: cuantas decisiónes malas te ha evitado tomar. Una sola decisión técnica equivocada en una migración ERP o en la eleccion de plataforma puede costar 50.000-200.000 euros y un año de retraso. Si el consultor te evita una de esas, ya ha pagado su contrato 10 veces."
+									"text": "El error mas común es medir un consultor por horas trabajadas. La medida correcta es: cuantas decisiones malas te ha evitado tomar. Una sola decisión técnica equivocada en una migración ERP o en la eleccion de plataforma puede costar 50.000-200.000 euros y un año de retraso. Si el consultor te evita una de esas, ya ha pagado su contrato 10 veces."
 								}
 							]
 						},
@@ -4254,7 +4259,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "En mi experiencia, una buena consultoria estratégica de 3-6 meses cuestá entre 8.000 y 25.000 euros segun el alcance, y el ROI llega antes de los 12 meses cuando hay decisiónes técnicas grandes en juego."
+									"text": "En mi experiencia, una buena consultoria estratégica de 3-6 meses cuestá entre 8.000 y 25.000 euros segun el alcance, y el ROI llega antes de los 12 meses cuando hay decisiones técnicas grandes en juego."
 								}
 							]
 						},
@@ -4274,7 +4279,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "No esperes que escriba codigo, no esperes que te haga los diseños, no esperes que cierre proveedores en tu nombre, y no esperes que se quede 'para siempre'. El trabajo bien hecho de un consultor termina cuando tu equipo (interno o externo) puede operar sin el. Si te encuentras dependiendo del consultor para cada decisión pasados los 6 meses, algo no esta funciónando."
+									"text": "No esperes que escriba codigo, no esperes que te haga los diseños, no esperes que cierre proveedores en tu nombre, y no esperes que se quede 'para siempre'. El trabajo bien hecho de un consultor termina cuando tu equipo (interno o externo) puede operar sin el. Si te encuentras dependiendo del consultor para cada decisión pasados los 6 meses, algo no esta funcionando."
 								}
 							]
 						},
@@ -4318,7 +4323,7 @@
 				"published_at": "2026-04-08",
 				"data": {
 					"title": "15+ años como consultor eCommerce B2B: lo que he aprendido sobre digitalizar empresas industriales",
-					"excerpt": "Una mirada honesta a 15 años trabajando con fabricantes, distribuidores y mayoristas. Las cosas que funciónan, las que no, y los errores que se repiten una y otra vez.",
+					"excerpt": "Una mirada honesta a 15 años trabajando con fabricantes, distribuidores y mayoristas. Las cosas que funcionan, las que no, y los errores que se repiten una y otra vez.",
 					"content": [
 						{
 							"_type": "block",
@@ -4386,7 +4391,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Tres cosas que casí siempre funciónan: precio personalizado por cliente (B2B no es B2C, los descuentos por contrato son la norma), pedidos rápidos por referencia/SKU (los clientes profesionales no quieren navegar el catálogo, quieren teclear codigos), y disponibilidad real conectada al ERP (los pedidos sin stock son la primera causa de baja de clientes B2B online)."
+									"text": "Tres cosas que casí siempre funcionan: precio personalizado por cliente (B2B no es B2C, los descuentos por contrato son la norma), pedidos rápidos por referencia/SKU (los clientes profesionales no quieren navegar el catálogo, quieren teclear codigos), y disponibilidad real conectada al ERP (los pedidos sin stock son la primera causa de baja de clientes B2B online)."
 								}
 							]
 						},
@@ -4406,7 +4411,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El 'portal de cliente' con miles de funciónalidades. Las plataformas vendoras lo enseñan en demos preciosas y todos los directivos lo quieren. En la práctica, la mayoria de funciónalidades nunca se usan, complican el proyecto y retrasan el go-live. Mejor MVP funciónal en 3 meses que portal perfecto en 18."
+									"text": "El 'portal de cliente' con miles de funcionalidades. Las plataformas vendoras lo enseñan en demos preciosas y todos los directivos lo quieren. En la práctica, la mayoria de funcionalidades nunca se usan, complican el proyecto y retrasan el go-live. Mejor MVP funcional en 3 meses que portal perfecto en 18."
 								}
 							]
 						},
@@ -4426,7 +4431,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "El 80% del valor de un eCommerce B2B está en cuatro flujos: catálogo (productos + precios), stock, pedidos y clientes. Si esos cuatro funciónan en tiempo real con tu ERP (SAP B1, Business Central, Odoo, Sage o el que sea), tienes el 80% del proyecto resuelto. El 20% restante (devoluciones, facturas en PDF, contabilidad analítica) suele ser donde las consultoras meten meses de trabajo innecesario."
+									"text": "El 80% del valor de un eCommerce B2B está en cuatro flujos: catálogo (productos + precios), stock, pedidos y clientes. Si esos cuatro funcionan en tiempo real con tu ERP (SAP B1, Business Central, Odoo, Sage o el que sea), tienes el 80% del proyecto resuelto. El 20% restante (devoluciones, facturas en PDF, contabilidad analítica) suele ser donde las consultoras meten meses de trabajo innecesario."
 								}
 							]
 						},
@@ -4446,7 +4451,7 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Uno: subestimar la limpieza de datos del ERP. La gran mayoria de fabricantes tienen catálogos sucios, descripciónes incompletas, fotos malas o inexistentes. Si lanzas online con eso, fracasas. Hay que meter 2-3 meses de limpieza de datos antes de empezar."
+									"text": "Uno: subestimar la limpieza de datos del ERP. La gran mayoria de fabricantes tienen catálogos sucios, descripciones incompletas, fotos malas o inexistentes. Si lanzas online con eso, fracasas. Hay que meter 2-3 meses de limpieza de datos antes de empezar."
 								}
 							]
 						},
