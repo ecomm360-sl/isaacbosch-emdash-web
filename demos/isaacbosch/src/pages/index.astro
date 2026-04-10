@@ -350,6 +350,8 @@ const homeFaqSchema = buildFaqPageSchema([
 		gap: var(--spacing-3);
 		flex-wrap: wrap;
 		margin-bottom: var(--spacing-12);
+		/* Reserve space to prevent CLS when fonts load (swap reflow) */
+		min-height: 48px;
 	}
 
 	.hero-tagline-brand {
