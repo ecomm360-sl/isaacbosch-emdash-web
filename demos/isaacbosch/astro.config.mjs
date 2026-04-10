@@ -59,6 +59,8 @@ export default defineConfig({
 		"/tag/chatbots": { status: 301, destination: "/blog/etiqueta/chatbots" },
 		"/tag/espana": { status: 301, destination: "/blog/etiqueta/espana" },
 		"/tag/Espana": { status: 301, destination: "/blog/etiqueta/espana" },
+		// Legacy post with tilde in URL (from old WordPress/seed)
+		"/posts/prestashop-restructuracion": { status: 301, destination: "/blog" },
 		"/tag/faq": { status: 301, destination: "/blog/etiqueta/faq" },
 		"/tag/guia": { status: 301, destination: "/blog/etiqueta/guia" },
 		"/tag/magento": { status: 301, destination: "/blog/etiqueta/magento" },
