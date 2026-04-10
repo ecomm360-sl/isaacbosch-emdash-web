@@ -228,11 +228,11 @@
 					"label": "Estrategia B2B"
 				},
 				{
-					"slug": "integración-erp",
+					"slug": "integracion-erp",
 					"label": "Integración ERP"
 				},
 				{
-					"slug": "tecnología",
+					"slug": "tecnologia",
 					"label": "Tecnología"
 				},
 				{
@@ -283,7 +283,7 @@
 					"label": "Barcelona"
 				},
 				{
-					"slug": "España",
+					"slug": "Espana",
 					"label": "España"
 				},
 				{
@@ -303,7 +303,7 @@
 					"label": "ROI"
 				},
 				{
-					"slug": "caso-de-éxito",
+					"slug": "caso-de-exito",
 					"label": "Caso de Éxito"
 				},
 				{
@@ -311,7 +311,7 @@
 					"label": "Tendencias"
 				},
 				{
-					"slug": "guía",
+					"slug": "guia",
 					"label": "Guía"
 				},
 				{
@@ -459,13 +459,13 @@
 			"type": 301
 		},
 		{
-			"source": "/servicios/agentes-ia-automatización",
-			"destination": "/servicios/consultor-agentes-ia-automatizaciónes",
+			"source": "/servicios/agentes-ia-automatizacion",
+			"destination": "/servicios/consultor-agentes-ia-automatizaciones",
 			"type": 301
 		},
 		{
-			"source": "/servicios/formación-corporativa",
-			"destination": "/servicios/formación-empresarial-digitalización",
+			"source": "/servicios/formacion-corporativa",
+			"destination": "/servicios/formacion-empresarial-digitalizacion",
 			"type": 301
 		},
 		{
@@ -1580,7 +1580,7 @@
 			},
 			{
 				"id": "consultor-agentes-ia-automatizaciónes",
-				"slug": "consultor-agentes-ia-automatizaciónes",
+				"slug": "consultor-agentes-ia-automatizaciones",
 				"status": "published",
 				"data": {
 					"title": "Consultor de Agentes de IA y Automatizaciónes",
@@ -1764,7 +1764,7 @@
 			},
 			{
 				"id": "integración-erp-ecommerce",
-				"slug": "integración-erp-ecommerce",
+				"slug": "integracion-erp-ecommerce",
 				"status": "published",
 				"data": {
 					"title": "Integración ERP - eCommerce",
@@ -1931,7 +1931,7 @@
 			},
 			{
 				"id": "formación-empresarial-digitalización",
-				"slug": "formación-empresarial-digitalización",
+				"slug": "formacion-empresarial-digitalizacion",
 				"status": "published",
 				"data": {
 					"title": "Formación Empresarial en Digitalización",
@@ -2681,7 +2681,7 @@
 			},
 			{
 				"id": "press-2",
-				"slug": "transformación-digital-sector-b2b",
+				"slug": "transformacion-digital-sector-b2b",
 				"status": "published",
 				"data": {
 					"title": "Transformación digital en el sector B2B: Casos de éxito",
@@ -2693,7 +2693,7 @@
 			},
 			{
 				"id": "press-3",
-				"slug": "agentes-ia-autónomos-comercio-electronico",
+				"slug": "agentes-ia-autonomos-comercio-electronico",
 				"status": "published",
 				"data": {
 					"title": "Agentes IA autónomos: La nueva frontera del comercio electronico",
@@ -2705,7 +2705,7 @@
 			},
 			{
 				"id": "press-4",
-				"slug": "automatización-procesos-b2b-entrevista",
+				"slug": "automatizacion-procesos-b2b-entrevista",
 				"status": "published",
 				"data": {
 					"title": "Automatización de procesos B2B: Entrevista con Isaac Bosch",
@@ -2719,7 +2719,7 @@
 		"posts": [
 			{
 				"id": "post-1",
-				"slug": "guía-completa-ecommerce-b2b-2025",
+				"slug": "guia-completa-ecommerce-b2b-2025",
 				"status": "published",
 				"published_at": "2025-03-10",
 				"data": {
@@ -2906,7 +2906,7 @@
 			},
 			{
 				"id": "post-3",
-				"slug": "mejores-plataformas-ecommerce-b2b-España",
+				"slug": "mejores-plataformas-ecommerce-b2b-Espana",
 				"status": "published",
 				"published_at": "2025-02-10",
 				"data": {
@@ -3132,7 +3132,7 @@
 			},
 			{
 				"id": "post-6",
-				"slug": "agentes-ia-ecommerce-guía-práctica",
+				"slug": "agentes-ia-ecommerce-guia-practica",
 				"status": "published",
 				"published_at": "2024-12-20",
 				"data": {
@@ -3209,7 +3209,7 @@
 			},
 			{
 				"id": "post-7",
-				"slug": "automatizar-atención-cliente-ia-b2b",
+				"slug": "automatizar-atencion-cliente-ia-b2b",
 				"status": "published",
 				"published_at": "2024-12-05",
 				"data": {
@@ -3440,7 +3440,7 @@
 			},
 			{
 				"id": "post-10",
-				"slug": "automatización-procesos-comerciales-ia",
+				"slug": "automatizacion-procesos-comerciales-ia",
 				"status": "published",
 				"published_at": "2024-10-15",
 				"data": {
@@ -3517,7 +3517,7 @@
 			},
 			{
 				"id": "post-11",
-				"slug": "integración-erp-ecommerce-por-que-importa",
+				"slug": "integracion-erp-ecommerce-por-que-importa",
 				"status": "published",
 				"published_at": "2024-09-25",
 				"data": {
@@ -3594,7 +3594,7 @@
 			},
 			{
 				"id": "post-12",
-				"slug": "sap-ecommerce-integración-guía",
+				"slug": "sap-ecommerce-integracion-guia",
 				"status": "published",
 				"published_at": "2024-09-10",
 				"data": {
@@ -3748,7 +3748,7 @@
 			},
 			{
 				"id": "post-14",
-				"slug": "errores-comunes-integración-erp-ecommerce",
+				"slug": "errores-comunes-integracion-erp-ecommerce",
 				"status": "published",
 				"published_at": "2024-08-05",
 				"data": {
@@ -3824,7 +3824,7 @@
 			},
 			{
 				"id": "post-15",
-				"slug": "transformación-digital-pymes-España-2025",
+				"slug": "transformacion-digital-pymes-Espana-2025",
 				"status": "published",
 				"published_at": "2024-07-18",
 				"data": {
@@ -3901,7 +3901,7 @@
 			},
 			{
 				"id": "post-16",
-				"slug": "digitalización-empresa-industrial-barcelona",
+				"slug": "digitalizacion-empresa-industrial-barcelona",
 				"status": "published",
 				"published_at": "2024-07-02",
 				"data": {
@@ -3978,7 +3978,7 @@
 			},
 			{
 				"id": "post-17",
-				"slug": "kpis-transformación-digital-b2b",
+				"slug": "kpis-transformacion-digital-b2b",
 				"status": "published",
 				"published_at": "2024-06-15",
 				"data": {
