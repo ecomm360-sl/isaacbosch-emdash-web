@@ -71,6 +71,10 @@ export default defineConfig({
 		"/tag/shopify": { status: 301, destination: "/blog/etiqueta/shopify" },
 		"/tag/tendencias": { status: 301, destination: "/blog/etiqueta/tendencias" },
 	},
+	build: {
+		// Inline small stylesheets to eliminate render-blocking CSS requests
+		inlineStylesheets: "always",
+	},
 	image: {
 		layout: "constrained",
 		responsiveStyles: true,
