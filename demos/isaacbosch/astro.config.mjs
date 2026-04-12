@@ -39,6 +39,7 @@ export default defineConfig({
 		"/sobre-mi": { status: 301, destination: "/sobre-isaac" },
 		"/experiencia": { status: 301, destination: "/sobre-isaac" },
 		"/notes": { status: 301, destination: "/blog" },
+		"/news": { status: 301, destination: "/blog" },
 		"/projects": { status: 301, destination: "/proyectos" },
 		// /posts/* → /blog/*
 		"/posts/experiencia-consultor": { status: 301, destination: "/blog/experiencia-consultor" },
