@@ -41,6 +41,14 @@ export default defineConfig({
 		"/notes": { status: 301, destination: "/blog" },
 		"/news": { status: 301, destination: "/blog" },
 		"/projects": { status: 301, destination: "/proyectos" },
+		// Legacy WordPress URLs (Soft 404 en Search Console)
+		"/category/uncategorized": { status: 301, destination: "/blog" },
+		"/videos": { status: 301, destination: "/medios" },
+		"/prensa-proyectos": { status: 301, destination: "/medios" },
+		"/appointment": { status: 301, destination: "/contacto" },
+		"/metodologia": { status: 301, destination: "/sobre-isaac" },
+		"/reflexiones": { status: 301, destination: "/blog/categoria/reflexiones" },
+		"/how-to-get-hired-at-a-top-digital-marketing-agency": { status: 301, destination: "/blog" },
 		// /posts/* → /blog/*
 		"/posts/experiencia-consultor": { status: 301, destination: "/blog/experiencia-consultor" },
 		"/posts/consultor-empresas": { status: 301, destination: "/blog/consultor-empresas" },
